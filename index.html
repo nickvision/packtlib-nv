@@ -24,16 +24,26 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-        <li><a href="#">Library</a></li>
-        <li class="active"><a href="#">Currently Viewing <span class="sr-only">(current)</span></a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Library <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Collection</a></li>
+            <li><a href="#">Owned</a></li>
+            <li><a href="#">Playlists</a></li>
+            <li><a href="#">Bookmarks</a></li>
+          </ul>
+        </li>
+        
       </ul>
       <form class="navbar-form navbar-left" role="search">
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search the library">
+          <input type="text" class="form-control searchawesome" placeholder="    Search courses...">
         </div>
       </form>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#">Store</a></li>
+        <li class="active"><a href="#">Currently Viewing <span class="sr-only">(current)</span></a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Signed in as Oli <span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -66,7 +76,7 @@
    
     
   </div><!--end of .jumbotron-->
-  <div class="jumbotron hidden-xs" style="background:#5D5D5D;">
+  <div class="jumbotron hidden-xs" style="background:#F5F5F5;">
     <div class="container">
         <div class="btn-group btn-group-lg" >
       <button type="button" class="btn btn-default"><i class="fa fa-download fa-3" style="margin-right:5px;"></i> Download eBook</button>
@@ -80,8 +90,12 @@
         <li><a href="#">Download PDF</a></li>
       </ul>
     </div>
-     <button type="button" class="btn btn-default btn-lg" style="margin-left:15px;"><i class="fa fa-plus fa-3" style="margin-right:5px;"></i> Add to Collection</button>
      <button type="button" class="btn btn-default btn-lg" style="margin-left:15px;"><i class="fa fa-code-fork fa-3" style="margin-right:5px;"></i> Fork Project Files</button>
+         <div class="btn-group btn-group-lg" role="group" aria-label="..." style="margin-left:15px;">
+              <button type="button" class="btn btn-default"><i class="fa fa-plus fa-3" style="margin-right:5px;"></i> Add to Collection</button>
+              <button type="button" class="btn btn-default"><i class="fa fa-moon-o fa-lg"></i></button>
+              <button type="button" class="btn btn-default"><i class="fa fa-font fa-lg"></i></button>
+        </div>
     </div>
   </div>
 
@@ -158,7 +172,7 @@
         <code class="literal">data_json</code>, and to access the JSON feed, we will have to use this variable in the <code class="literal">data_json_feed.html</code> file:</p><div class="mediaobject"><img src="https://www.packtpub.com/graphics/9781783286034/graphics/6034OS_03_05.jpg" class="img-responsive"></div><p>Another thing to note is the use of a new method called <code class="literal">console.log</code>. Browsers such as Mozilla Firefox, Google Chrome, and Apple Safari profile a console panel for run-time JavaScript development and debugging. <a id="id89" class="indexterm"></a>The use of the JavaScript function <code class="literal">alert</code> is discouraged due to its obtrusive behavior. <code class="literal">console.log</code>, on the other hand, is unobtrusive and logs its messages to the <a id="id90" class="indexterm"></a>console. From here on, we will refrain from using the <code class="literal">alert</code> method and will use <code class="literal">console.log</code> to print data into the console window. Google Chrome and Apple Safari come with developer tools already installed; to view the console, right-click on the page and click on <span class="strong"><strong>Inspect Element</strong></span>. Both of them come with a <span class="strong"><strong>Console</strong></span> tab that allows us to work with our logging. Firefox is dependent on Firebug; in <a class="link ng-scope" href="#" linkend="ch08" ng-click="changePageInner($event)">Chapter 8</a>, <span class="emphasis"><em>Debugging JSON</em></span>, I will walk you through the installation steps of Firebug.</p><div class="mediaobject"><img src="https://www.packtpub.com/graphics/9781783286034/graphics/6034OS_03_06.jpg" class="img-responsive"></div><p>When we load the <a id="id91" class="indexterm"></a>
         <code class="literal">data_json_feed.html</code> file into the Firefox browser, open up our console window, and click on the <span class="strong"><strong>DOM</strong></span> tab, we are going to see a list of 100 <code class="literal">employee</code> objects. If our object is small and has one or <a id="id92" class="indexterm"></a>two child objects, we would prefer using their numeric indexes to access them; in this case, as we have a huge number of child objects, it <a id="id93" class="indexterm"></a>is not realistic to target objects based on static indexes.</p><div class="mediaobject"><img src="https://www.packtpub.com/graphics/9781783286034/graphics/6034OS_03_07.jpg" class="img-responsive"></div></div>
         </section>
-        <section class="packtlib-version v2"><!--?xml version="1.0" encoding="UTF-8"?-->
+        <section id="ch03lvl1sec18"><!--?xml version="1.0" encoding="UTF-8"?-->
 
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Performing complex operations</title><meta name="generator" content="DocBook XSL Stylesheets V1.74.0"><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="ch03lvl1sec18"></a>Performing complex operations</h2></div></div><hr></div><p>To tackle an array of objects, we have to handle them in an iterative method. We will have to come up with an iterative solution in which we target one object at a time; once the object is <a id="id94" class="indexterm"></a>accessed, we would not target that object another time. This allows us to maintain data integrity as we can avoid accessing the same object multiple times, thereby avoiding any redundancies. The <a id="id95" class="indexterm"></a>looping statements in JavaScript are the <code class="literal">while</code> <a id="id96" class="indexterm"></a>loop and the <code class="literal">for</code> loop. Let <a id="id97" class="indexterm"></a>us take a quick look at how we can use these looping techniques to traverse through our employees' array.</p><div class="mediaobject"><img src="https://www.packtpub.com/graphics/9781783286034/graphics/6034OS_03_08.jpg" class="img-responsive"></div><p>In the <code class="literal">while_employees_traversal.html</code> file, we are importing the <code class="literal">data.js</code> file, which we had <a id="id98" class="indexterm"></a>examined in the previous section. The <code class="literal">data_json</code> <a id="id99" class="indexterm"></a>variable inside the <code class="literal">data.js</code> file consists of an array of objects that are imported into this HTML page. In the <code class="literal">script</code> tags, we are setting up two variables: the <code class="literal">i</code> variable to hold a starting counter and the <code class="literal">employeeCount</code> <a id="id100" class="indexterm"></a>variable to hold the counter of the total number of objects in <code class="literal">data_json</code>. To retrieve the number of items that exists in an array, we can use the <code class="literal">.length</code> <a id="id101" class="indexterm"></a>property that is provided by JavaScript. There are three important supporting blocks for a <code class="literal">while</code> loop: the condition, statements in the <code class="literal">while</code> loop, and either the increment or decrement operation based on the condition. Let us take a quick look at these three separately:</p><div class="mediaobject"><img src="https://www.packtpub.com/graphics/9781783286034/graphics/6034OS_03_09.jpg" class="img-responsive"></div><p>We are initializing the variable <code class="literal">i</code> to zero and the condition that we are looking for is if zero is less than the number of items in the variable <a id="id102" class="indexterm"></a>
         <code class="literal">data_json</code>, then proceed into the loop.</p><div class="mediaobject"><img src="https://www.packtpub.com/graphics/9781783286034/graphics/6034OS_03_10.jpg" class="img-responsive"></div><p>If the condition is true, the statements inside the loop are executed, until they hit the incrementing condition:</p><div class="mediaobject"><img src="https://www.packtpub.com/graphics/9781783286034/graphics/6034OS_03_11.jpg" class="img-responsive"></div><p>Once the incrementing operator approaches, the value of the <code class="literal">i</code> variable is incremented by 1, and it will go back to the initial step of the <code class="literal">while</code> loop. At the initial step, the condition is again verified to check if <code class="literal">i</code> is still less than the number of items <a id="id103" class="indexterm"></a>in <code class="literal">data_json</code>. If that were true, it would again enter the loop and execute the statements. This process continues to repeat itself until the value of variable <code class="literal">i</code> is equal to that of <code class="literal">employeeCount</code>. At that point, the <code class="literal">while</code> loop's execution is complete, and the statements inside the <code class="literal">while</code> loop are maintained as logs in the console window of the browser. Before running the HTML file, <code class="literal">while_employees_traversal.html</code>, verify that the <code class="literal">data.json</code> file is in <a id="id104" class="indexterm"></a>the same directory as the HTML file. Load this HTML file into a browser of your choice (Chrome, Firefox, or Safari are recommended), open up the console window by right-clicking on the web page and clicking on <span class="strong"><strong>Inspect Element</strong></span> if you are on Chrome or Safari. The employee numbers should be displayed on the console window:</p><div class="mediaobject"><img src="https://www.packtpub.com/graphics/9781783286034/graphics/6034OS_03_12.jpg" class="img-responsive"></div><p>To retrieve the employee's first name and <a id="id105" class="indexterm"></a>last name, we will concatenate the <code class="literal">first_name</code> and <code class="literal">last_name</code> keys in the <code class="literal">employee</code> object:</p><div class="mediaobject"><img src="https://www.packtpub.com/graphics/9781783286034/graphics/6034OS_03_13.jpg" class="img-responsive"></div><p>We can use the same technique to <a id="id106" class="indexterm"></a>retrieve the rest of the keys such as <code class="literal">birth_date</code>, <code class="literal">gender</code>, and <code class="literal">hire_date</code>, except for <code class="literal">titles</code>. A quick glance at the JSON feed explains that unlike the rest of the keys, <code class="literal">titles</code> is an object or an array of objects. The <code class="literal">titles</code> object contains all the titles that the employee has held since joining the company. Some employees have one title, while others have more than one; so the former would be an object by itself, while the latter would be an array of objects, each containing a <code class="literal">title</code> object. To handle this case, we would have to check if the employee has one title or more than one title. If the person has one title, we should print the data, and if the person has more than one title, we would have to iterate them through the array of <code class="literal">title</code> objects to print all the titles that the <a id="id107" class="indexterm"></a>employee has.</p><div class="mediaobject"><img src="https://www.packtpub.com/graphics/9781783286034/graphics/6034OS_03_14.jpg" class="img-responsive"></div><p>The existent code in the <code class="literal">script</code> tags has to be replaced with the previous code, provided to retrieve the titles of the employee. In this script, we are using the variables <code class="literal">i</code> and <code class="literal">employeeCount</code> from our earlier script. We have introduced a new condition to check if the <code class="literal">titles</code> key for a particular employee is an <a id="id108" class="indexterm"></a>
@@ -360,8 +374,22 @@
       </div>
 
         <div class="col-md-3 col-lg-4 scrollspy hidden-xs hidden-sm">
+            <div class="btn-group btn-group-justified" role="group" aria-label=""  style="margin-top:15px;">
+              <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default active">Contents</button>
+              </div>
+              <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default">Bookmarks</button>
+              </div>
+            </div>
+            <ol class="breadcrumb text-center small bookmark-text" style="margin-top:15px;">
+              <li class="active"><i class="fa fa-bookmark" style="margin-right:5px;"></i>Double click to + / - bookmark sections</a></li>
+            </ol>
+
         <ul id="nav" class="nav main" data-spy="affix" data-offset-top="60" data-offset-bottom="200">
-          <div class="form-group" style="margin:15px;"> <input type="text" class="form-control" placeholder="Search this title"> </div>
+          <div class="text-center small" style="margin-top:15px; font-weight:700; color:rgba(0,0,0,0.6);">JavaScript and JSON Essentials</div>
+          <div class="form-group" style="margin:15px;"> <input type="text" class="form-control searchawesome" placeholder="    Search this Title..."> </div>
+          <div class="text-center small bookmark-text"></div>
           <li>
                 <a href="#pref05">Preface</a>
 
@@ -398,7 +426,7 @@
                 <a href="#ch04">4. AJAX Calls with JSON Data</a>
                 <ul class="nav">
                     <li><a href="#ch04lvl1sec21">Requirements for AJAX</a></li>
-                    <li><a href="#ch04lvl1sec22">Hosting JSON</a></li>
+                    <li><a href="#ch04lvl1sec22">Hosting JSON<i class="fa fa-bookmark pull-right bookmark-icon" style="margin-left:5px;"></i></a></li>
                     <li><a href="#ch04lvl1sec23">Making your first AJAX Call</a></li>
                     <li><a href="#ch04lvl1sec24">Parsing JSON Data</a></li>
                     <li><a href="#ch04lvl1sec25">Summary</a></li>
@@ -447,7 +475,7 @@
   </div><!--end of .container-->
   
   <section class="application">
-    <div class="container">
+    <div class="container book">
       <h2>What should I do next?</h2>
       <div class="row">
         <div class="col-sm-3 col-lg-2" style="margin-top:20px;">
@@ -455,11 +483,6 @@
         </div>
         <div class="col-sm-9 col-lg-10">
           <h3>JavaScript JSON Cookbook</h3>
-            <ul>
-                <li>Create fast and dynamic JavaScript applications that implement JSON</li>
-                <li>Practical examples to show you how to leverage JSON from a variety of application domains</li>
-                <li>Become the go-to person for building JSON-enabled web applications in your organization</li>
-            </ul>
 
             <p>If you're writing applications that move structured data from one place to another, this book is for you. This is especially true if you've been using XML to do the job because it's entirely possible that you could do much of the same work with less code and less data overhead in JSON.</p>
             <p>While the book's chapters make some distinction between the client and server sides of an application, it doesn't matter if you're a frontend, backend, or full-stack developer. The principles behind using JSON apply to both the client and the server, and in fact, developers who understand both sides of the equation generally craft the best applications.</p>

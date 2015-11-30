@@ -10,6 +10,14 @@ body {
 	line-height: 1.8em;
 }
 
+.bookmark-icon {
+	color: rgba(0,0,0,0.3);
+}
+
+.bookmark-text {
+	color: rgba(0,0,0,0.5);
+}
+}
 .navbar {
     margin-bottom: 0px;
 }
@@ -22,6 +30,7 @@ body {
 .navbar-default {
     background-color: #fafafa;
     border-color: #e7e7e7;
+    margin-bottom: 0px;
 }
 
 .mediaobject img {
@@ -34,6 +43,10 @@ h1, h2 {
 
 h3 span {
   color: #286090;
+}
+
+.searchawesome {
+    font-family: FontAwesome, Raleway;
 }
 
 .jumbotron {
