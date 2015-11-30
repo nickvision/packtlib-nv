@@ -10,6 +10,12 @@ body {
 	line-height: 1.8em;
 }
 
+.video {
+	margin-top:30px;
+	font-size:1.2em;
+	line-height: 1.8em;
+}
+
 .bookmark-icon {
 	color: rgba(0,0,0,0.3);
 }
