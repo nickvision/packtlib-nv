@@ -45,10 +45,10 @@ h3 span {
   color: #286090;
 }
 
-.affix>li>a {
+.toc>li>a {
 	font-size: 12px;
 }
-.affix>li>.nav>li>a {
+.toc>li>.nav>li>a {
 	font-size: 11px;
 	padding-top: 8px;
 	padding-bottom: 8px;
