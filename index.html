@@ -3,6 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet " href="css/bootstrap.min.css">
     <link rel="stylesheet " href="css/font-awesome.min.css">
     <link rel="stylesheet " href="css/docs.css">
@@ -43,7 +45,7 @@
       </form>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#">Store</a></li>
-        <li class="active"><a href="#">Currently Viewing <span class="sr-only">(current)</span></a></li>
+        <li class="active"><a href="#">Course<span class="sr-only">(current)</span></a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Signed in as Oli <span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -79,7 +81,7 @@
   <div class="jumbotron hidden-xs" style="background:#F5F5F5;">
     <div class="container">
         <div class="btn-group btn-group-lg" >
-      <button type="button" class="btn btn-default"><i class="fa fa-download fa-3" style="margin-right:5px;"></i> Download eBook</button>
+      <button type="button" class="btn btn-default"><i class="fa fa-download fa-3" style="margin-right:5px;"></i> Download</button>
       <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <span class="caret"></span>
         <span class="sr-only">Toggle Dropdown</span>
@@ -497,16 +499,15 @@
     <p class="text-center">© Packt Publishing Limited. All Rights Reserved</p>
   </footer> 
 
-<script src="js/jquery.js"></script>
-<script src="js/bootstrap.min.js"></script>
-  <script>
-$('#nav').affix({
-    offset: {
-        top: $('#nav').offset().top,
-        bottom: $('footer').outerHeight(true) + $('.application').outerHeight(true) + 40
-    }
-});
-//# sourceURL=pen.js
-</script>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        $('#nav').affix({
+            offset: {
+                top: $('#nav').offset().top,
+                bottom: $('footer').outerHeight(true) + $('.application').outerHeight(true) + 40
+            }
+        });
+    </script>
 </body>
 </html>
