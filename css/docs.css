@@ -50,6 +50,8 @@ h3 span {
 }
 .affix>li>.nav>li>a {
 	font-size: 11px;
+	padding-top: 8px;
+	padding-bottom: 8px;
 }
 
 
