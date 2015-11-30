@@ -45,9 +45,13 @@ h3 span {
   color: #286090;
 }
 
-.searchawesome {
-    font-family: FontAwesome, Raleway;
+.affix>li>a {
+	font-size: 12px;
 }
+.affix>li>.nav>li>a {
+	font-size: 11px;
+}
+
 
 .jumbotron {
   border-radius: 0px;
