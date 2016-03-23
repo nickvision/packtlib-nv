@@ -3062,6 +3062,10 @@ fieldset[disabled] a.btn {
 .btn-default {
   color: #333;
   background-color: #fff;
+
+}
+.input-group-btn .btn-default {
+    border-color: #ccc;
 }
 .btn-default:focus,
 .btn-default.focus {
@@ -4728,10 +4732,10 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   padding: 6px 12px;
   margin-left: -1px;
   line-height: 1.42857143;
-  color: #D65E1A;
+  color: #B8BDE4;
   text-decoration: none;
-  background-color: #fff;
-  border: 1px solid #ddd;
+  background-color: rgba(0,0,0,0.5);
+  border: 1px solid rgba(255,255,255,0.1);
 }
 .pagination > li:first-child > a,
 .pagination > li:first-child > span {
@@ -4762,8 +4766,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   z-index: 3;
   color: #fff;
   cursor: default;
-  background-color: #D65E1A;
-  border-color: #D65E1A;
+  background-color: rgba(255,255,255,0.1);
 }
 .pagination > .disabled > span,
 .pagination > .disabled > span:hover,
@@ -5289,9 +5292,9 @@ button.list-group-item {
 .list-group-item.disabled,
 .list-group-item.disabled:hover,
 .list-group-item.disabled:focus {
-  color: #777;
+  color: #CACACA;
   cursor: not-allowed;
-  background-color: #eee;
+  background-color: rgba(0,0,0,0.4);
 }
 .list-group-item.disabled .list-group-item-heading,
 .list-group-item.disabled:hover .list-group-item-heading,
