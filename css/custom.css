@@ -1,8 +1,11 @@
 /*Boostrap Overwritten Rules*/
 body {
 	font-family: Roboto, Helvetica, sans-serif;
-  background:#7074A1  url('http://www.dreamtemplate.com/dreamcodes/bg_images/color/c20.jpg') no-repeat center top;
-  background-attachment: fixed;
+  background:#7074A1  url('http://www.dreamtemplate.com/dreamcodes/bg_images/color/c20.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 h2 {
   font-family: Roboto ,Helvetica,Arial,sans-serif;
