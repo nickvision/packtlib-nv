@@ -14,7 +14,7 @@ h2 {
   font-size: 36px;
   color: #fff;
 }
-.reader-container h2 {
+.reader-container h2, .reader-container h4 {
   color: #333;
 }
 .reader-container {
@@ -37,6 +37,10 @@ h1, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 strong {
   font-size: 1.1em;
   font-weight: 300;
+}
+.reader-container strong {
+  font-size: 1em;
+  font-weight: 700;
 }
 .incomplete-section {
 	margin-left: -25px;
