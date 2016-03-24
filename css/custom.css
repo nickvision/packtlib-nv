@@ -79,9 +79,6 @@ strong {
     margin-right: 10px;
     height: 55px;
 }
-.reader-container .dropdown-menu > li > a {
-    font-family: Roboto, Helvetica, sans-serif;
-}
 .list-name {
 	white-space: nowrap;
     overflow: hidden;
@@ -584,6 +581,10 @@ blockquote p {
 }
 .incomplete-section {
 	margin-left: 10px;
+}
+.reader-container .dropdown-menu > li > a {
+    font-family: Roboto, Helvetica, sans-serif;
+    font-size: 1.4rem;
 }
 @media(min-width:768px) {
 	.reader-container p {
