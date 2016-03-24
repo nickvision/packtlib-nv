@@ -57,13 +57,15 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                   </button>
-                  <a class="navbar-brand" href="library.html"><img class="brand-logo" src="images/white-packt.png"/></a>
-                  <a class="navbar-brand toggle-nav" href="#menu-toggle" id="menu-toggle"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span></a>                </div>
+                  <a class="navbar-brand toggle-nav" href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars fa-lg"></i></a>
+                </div>
                 <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li class=""><a href="library.html">Dashboard</a></li>
+                        <li class=""><a href="library.html">Collection</a></li>
+                    </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="library.html">Library</a></li>
-                        <li><a href="https://www.packtpub.com">Store</a></li>
-                        <li class="dropdown"> 
+                        <li class="dropdown">
                         <a href="#" class="dropdown-toggle visible-xs" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account<span class="caret ml5"></span>
                         </a>
                         <a href="#" class="dropdown-toggle navbar-avatar-link hidden-xs" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -74,7 +76,7 @@
                             <li><a href="#">View Subscriptions</a></li> 
                             <li><a href="#">View Licences</a></li> 
                             <li role="separator" class="divider"></li> 
-                            <li><a href="libary-lo.html">Logout</a></li> 
+                            <li><a href="library-lo.html">Logout</a></li> 
                         </ul> 
                     </li>
                     </ul>
@@ -82,7 +84,7 @@
                         <div class="form-group pull-right" style="display:inline;">
                             <div class="input-group">
                               <input class="form-control" type="text" placeholder="Search the library...">
-                              <span class="input-group-btn"><a href="search.html" class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></a></span>
+                              <span class="input-group-btn"><a href="search.html" class="btn btn-default" type="button"><i class="fa fa-search"></i></a></span>
                             </div>
                         </div>
                     </form>
@@ -93,7 +95,7 @@
         <div id="sidebar-wrapper">
 
             <ul class="sidebar-nav">
-                <ul id="toc" class="nav nav-tabs mt15" role="tablist">
+                <ul id="toc" class="nav nav-pills mt15" role="tablist">
                     <li class="active ml15" style="text-indent: 0px;">
                         <a href="#contents" id="contents-tab" role="tab" data-toggle="tab" aria-controls="contents" aria-expanded="true">Contents</a>
                     </li>
@@ -103,24 +105,21 @@
                 </ul>
                 <div id="TocContent" class="tab-content">
                     <div role="tabpanel" class="tab-pane fade in active pt15" id="contents" aria-labelledby="contents-tab"> 
-                        <form class="col-sm-12 mt15 mb15">
-                            <input type="text" class="form-control" placeholder="Search this title..." id="box">
-                        </form>
                         <div class="clearfix"></div>
-                        <li><a href="front-page.html">Learning C++ by Creating Games with UE4</a></li>
+                        <li><a href="front-page.html" class="incomplete-section">Learning C++ by Creating Games with UE4</a></li>
                         <li><a href="#" class="completed-section">Preface</a></li>
                         <li><a href="#" class="completed-section">1. Preparing your Data</a></li>
                         <li><a class="completed-section" href="#">2. Driving Visual Analysis with Automated Automobiles</a></li>
-                        <li class="active"><a href="index.html">3. Looping</a></li> 
-                        <li class="sub-nav"><a href="for-loop.html">The for loop</a></li>
+                        <li class="active"><a href="index.html" class="incomplete-section">3. Looping</a></li> 
+                        <li class="sub-nav"><a href="for-loop.html" class="incomplete-section">The for loop</a></li>
                         <li class="sub-nav"><a href="#" class="completed-section">The for/while loop</a></li>
-                        <li class="sub-nav"><a href="#">The 'if' loop</a></li>
-                        <li class="sub-nav"><a href="#">Looping with Unreal Engine</a></li>
-                        <li><a href="#">4. Forms and Entries</a></li>
-                        <li><a href="#">5. Functions and Macros</a></li>
-                        <li><a href="#">6. Dynamic Memory Allocation</a></li>
-                        <li><a href="#">7. If, Else and Switch</a></li>
-                        <li><a href="#">8. Actors and Roles</a></li>
+                        <li class="sub-nav"><a href="#" class="incomplete-section">The 'if' loop</a></li>
+                        <li class="sub-nav"><a href="#" class="incomplete-section">Looping with Unreal Engine</a></li>
+                        <li><a href="#" class="incomplete-section">4. Forms and Entries</a></li>
+                        <li><a href="#" class="incomplete-section">5. Functions and Macros</a></li>
+                        <li><a href="#" class="incomplete-section">6. Dynamic Memory Allocation</a></li>
+                        <li><a href="#" class="incomplete-section">7. If, Else and Switch</a></li>
+                        <li><a href="#" class="incomplete-section">8. Actors and Roles</a></li>
                     </div>
                     <div role="tabpanel" class="tab-pane fade pt15" id="bookmark" aria-labelledby="bookmark-tab"> 
                         <li><a href="#" class="completed-section">Preface</a></li>
@@ -135,7 +134,7 @@
 <div id="page-content-wrapper" class="book-page ng-scope">
 
     <!-- ngInclude:  --><div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="ng-scope container-fluid">               
-                <div class="col-sm-12 col-lg-offset-1 col-lg-10 col-xl-offset-2 col-xl-8 ng-scope">
+                <div class="reader-container col-sm-12 col-lg-offset-1 col-lg-10 col-xl-offset-2 col-xl-8 ng-scope">
                     
                     <div class="row">
                         <div class="btn-group mb10" role="group">
@@ -164,6 +163,18 @@
                                 <div class="packtlib-version v2"><!--?xml version="1.0" encoding="UTF-8"?-->
                                     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Downloading and Installing Linux</title><meta name="generator" content="DocBook XSL Stylesheets V1.74.0"><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="ch03lvl1sec27"></a>Downloading and Installing Linux</h2></div></div><hr></div>
                                     <div id="myElement"></div>
+                                    <script type="text/javascript">
+                                        jwplayer("myElement").setup({
+                                            file: "videos/video.mp4",
+                                            width: "100%",
+                                            displaytitle: "Downloading and Installing Linux",
+                                            aspectratio: "16:9",
+                                            title: "Downloading and Installing Linux",
+                                            displaytitle: true,
+                                            skin: "glow",
+                                            sharing: {}
+                                        });
+                                    </script>
                     <div class="well mt15"><p>Make your code more readable for yourself and others using Python's communal coding standard.</p>
                         <ul>
                         <li>Spaces versus tabs</li>
@@ -181,11 +192,12 @@
                     </div>
                     <div class="row"> 
                         <hr>
-                    </div>
-</div></div>
-                                        <div class="text-center col-sm-12 mb20">
+                           <div class="text-center col-sm-12 mb20">
                         <small>ISBN 9781783983704 © Packt Publishing Limited. All Rights Reserved </small>
                     </div>
+                    </div>
+</div></div>
+                                     
                 </div>
 </div>
 </div>

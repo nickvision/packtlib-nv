@@ -141,9 +141,6 @@ strong {
 .sidebar-nav>.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
 	background-color: rgba(113,103,137,0.5) !important;
 }
-#TocContent {
-  background-color: rgba(113,103,137,0.5);
-}
 .tabbed-content {
 	border-top-right-radius: 0px;
     border-top-left-radius: 0px;
