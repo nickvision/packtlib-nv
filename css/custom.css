@@ -751,11 +751,11 @@ span.input-group-btn button.btn {
   padding-bottom: 0px;
 }
 .sm-card {
-  height: 200px;
+  height: 175px;
   width: 100%;
 }
 .sm-card>.panel-heading {
-  height: 200px;
+  height: 175px;
 }
 .element-item.owned {
   opacity: 0.5;
