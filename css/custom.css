@@ -842,3 +842,7 @@ span.input-group-btn button.btn {
 .panel-heading>.img-thumbnail,.modal-header>.img-thumbnail,.panel-heading>.col-sm-12>.img-thumbnail {
   border:3px solid rgba(47, 47, 47, 0.19)
 }
+.panel-progress {
+  border-left: 10px solid rgba(255,255,255,0.5);
+  position: absolute;
+}
