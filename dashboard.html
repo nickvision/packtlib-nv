@@ -110,7 +110,7 @@
         <div id="sidebar-wrapper">
 
             <ul class="sidebar-nav">
-                    <li class="active"><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu">Home</span><span class="pull-right mr5"><i class="fa fa-refresh fa-lg"></i></span></a>    </li>
+                    <li class="active"><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu">Continue</span><span class="pull-right mr5"><i class="fa fa-refresh fa-lg"></i></span></a>    </li>
                     <li><a href="select-goal.html" class="sidenav-menu-holder"><span class="sidenav-menu">Create a New Plan  </span><span class="pull-right mr5"><i class="fa fa-bullseye fa-lg"></i></span></a>    </li>
                     <li><a href="library.html" class="sidenav-menu-holder"><span class="sidenav-menu">Explore the Library  </span><span class="pull-right mr5"><i class="fa fa-archive fa-lg"></i></span></a>    </li>
                     <li><a href="dashboard-bookmark.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Bookmarks </span><span class="pull-right mr5">6<i class="fa fa-bookmark fa-lg"></i></span></a>    </li>
@@ -126,7 +126,8 @@
             <div class="jumbotron heading">
                 <div class="container-fluid">
                   <div class="col-sm-6">
-                    <h1>Oli Huggins </h1>
+                    <img src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/8/000/222/015/06be2f6.jpg" alt="..." class="img-responsive img-thumbnail">
+                    <h1 class="mt15">Oli Huggins </h1>
                     <ol class="breadcrumb row mt0">
                       <li class="active mt5"><b>Current Plan:</b> Become a Python Developer @ Nginx</li>
                     </ol>
@@ -135,253 +136,139 @@
                       </div>
                     </div>
                   </div>
+                   <div class="col-sm-6 hidden-xs">
+                        <div class="thumbnail pt20 pull-right">
+                            <ol><span class="skill-counter mr20"><i class="fa fa-file-text fa-lg mr10"></i> 4 Skill(s)</span><a href="dashboard-profile.html">View My Skills</a></ol>
+                        </div>
+                   </div>
                 </div>
             </div>
             <div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="container-fluid">               
                 <div class="row">
                         <div class="col-sm-12">
-                          <div class="">
-                            <div class="col-sm-12">
-                              <div class="panel panel-default panel-dashboard-nav hidden-xs">
-                                  <ul id="myTabs" class="nav nav-pills nav-justified dashboard-nav" role="tablist">
-                                      <li class="active">
-                                          <a href="#featured" ng-click="$event.preventDefault();" id="featured-tab" role="tab" data-toggle="tab" aria-controls="featured" aria-expanded="true">In Progress</a>
-                                      </li>
-                                      <li>
-                                          <a href="#video" ng-click="$event.preventDefault();" role="tab" id="video-tab" data-toggle="tab" aria-controls="video">My Skills</a>
-                                      </li>
-                                      <li>
-                                          <a href="#playlists" ng-click="$event.preventDefault();" role="tab" id="playlists-tab" data-toggle="tab" aria-controls="playlists">What's Next?</a>
-                                      </li>
-                                  </ul>
-                              </div>
+                          <div class="panel-group col-sm-8" id="accordion" role="tablist" aria-multiselectable="true">
+                              <!-- Skill Card Start -->
+                              <div class="panel panel-default">
+                                <div class="panel-heading python clickable" data-toggle="collapse" href="#showCard" data-parent="#accordion">
+                                    <button type="button" class="close" data-toggle="modal" data-target="#myModal"><span aria-hidden="true">×</span></button>
+                                    <img class="tech-icon img-thumbnail hidden-xs" src="images/tech/python.png"/>
+                                    <h1 class="card-heading">Python Fundamentals </h1>                                
+                                </div>
+                                <div class="collapse in" id="showCard">
+                                  <div class="panel-body python skillcard">
+                                    <div class="col-sm-12 top-skillcard">
+                                      <p>Python is one of the easiest languages to get started with. It has a human readable syntax, and fully featured (“batteries included”) standard library to help you get things done right away. It is your portal in to a new world of productive development.</p>
+                                    </div>
+                                    <div class="col-sm-8 left-skillcard mb20">
+                                          <ul class="learning-points">
+                                            <li>Install and set up Python on Mac, Windows or Linux</li>
+                                            <li>Write elegant, reusable, and efficient Python code to use in your future projects</li>
+                                            <li>Use Git to manage your Python code</li>
+                                            <li>Write Python scripts to automate daily tasks, and other software</li>
+                                            <li>Use unit tests to write better code, faster</li>
+                                          </ul>
+                                      <a href="dashboard2.html" class="btn btn-success ml55 mb20">I know all of this <i class="glyphicon glyphicon-ok ml10"></i></a>
+                                    </div>
+                                    <div class="col-sm-4 right-skillcard mb20 pt20">                                          
+                                            <p class="concat mb0"><b>Python Essentials</b><!-- <b class="pull-right">76%</b> --></p>
+                                            <small class="mt0 mb0 concat">By Steven Lott</small>
+                                            <p class="concat mb0"><small><strong>Last Viewed:</strong> Chapter 9: Advancing Python</small></p>
+                                            <a href="index.html" class="btn btn-primary btn-block mt5">Continue</a>
+                                            <hr>
+                                            <p class="concat mb0"><b>Mastering Python [Video]</b><!-- <b class="pull-right">12%</b> --></p>
+                                            <small class="mt0 mb0 concat">By Daniel Arbuckle</small>
+                                            <p class="concat mb0"><small><strong>Last Viewed:</strong> Chapter 4: Mastering Python Essentials</small></p>
+                                            <a href="index.html" class="btn btn-primary btn-block mt5">Continue</a>
+                                    </div>
+                                  </div>
+                                </div>
                             </div>
-                              <div id="myTabContent" class="tab-content">
-                                  <div role="tabpanel" class="tab-pane fade in active" id="featured" aria-labelledby="featured-tab">
-                                    <div class="panel-group col-sm-8" id="accordion" role="tablist" aria-multiselectable="true">
-                                      <!-- Skill Card Start -->
-                                      <div class="panel panel-default">
-                                        <div class="panel-heading python clickable" data-toggle="collapse" href="#showCard" data-parent="#accordion">
-                                            <button type="button" class="close" data-toggle="modal" data-target="#myModal"><span aria-hidden="true">×</span></button>
-                                            <img class="tech-icon img-thumbnail hidden-xs" src="images/tech/python.png"/>
-                                            <h1 class="card-heading">Python Fundamentals </h1>                                
-                                        </div>
-                                        <div class="collapse in" id="showCard">
-                                          <div class="panel-body python skillcard">
-                                            <div class="col-sm-12 top-skillcard">
-                                              <div class="progress mb20">
-                                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 22.3%;">
-                                                </div>
-                                              </div>
-                                              <p>Python is one of the easiest languages to get started with. It has a human readable syntax, and fully featured (“batteries included”) standard library to help you get things done right away. It is your portal in to a new world of productive development.</p>
-                                            </div>
-                                            <div class="col-sm-8 left-skillcard mb20">
-                                                  <ul class="learning-points">
-                                                    <li>Install and set up Python on Mac, Windows or Linux</li>
-                                                    <li>Write elegant, reusable, and efficient Python code to use in your future projects</li>
-                                                    <li>Use Git to manage your Python code</li>
-                                                    <li>Write Python scripts to automate daily tasks, and other software</li>
-                                                    <li>Use unit tests to write better code, faster</li>
-                                                  </ul>
-                                              <a href="dashboard2.html" class="btn btn-info ml55 mb20"><i class="fa fa-refresh mr10"></i>Retake Assessment</a>
-                                              <a href="dashboard2.html" class="btn btn-success ml55 mb20">I know all of this<i class="glyphicon glyphicon-ok ml10"></i></a>
-
-                                            </div>
-
-                                            <div class="col-sm-4 right-skillcard mb20 pt20">                                          
-                                                    <p class="concat mb0"><b>Python Essentials</b><!-- <b class="pull-right">76%</b> --></p>
-                                                    <small class="mt0 mb0 concat">By Steven Lott</small>
-                                                    <p class="concat mb0"><small><strong>Last Viewed:</strong> Chapter 9: Advancing Python</small></p>
-                                                    <a href="index.html" class="btn btn-primary btn-block mt5">Continue</a>
-                                                    <hr>
-                                                    <p class="concat mb0"><b>Mastering Python [Video]</b><!-- <b class="pull-right">12%</b> --></p>
-                                                    <small class="mt0 mb0 concat">By Daniel Arbuckle</small>
-                                                    <p class="concat mb0"><small><strong>Last Viewed:</strong> Chapter 4: Mastering Python Essentials</small></p>
-                                                    <a href="index.html" class="btn btn-primary btn-block mt5">Continue</a>
-                                            </div>
-
-                                          </div>
-                                        </div>
+                          <!-- Skill Card Start -->
+                              <div class="panel panel-default">
+                                <div class="panel-heading python clickable" data-toggle="collapse" href="#showCard1" data-parent="#accordion">
+                                    <button data-toggle="modal" data-target="#myModal" type="button" class="close"><span aria-hidden="true">×</span></button>
+                                    <img class="tech-icon img-thumbnail hidden-xs" src="images/tech/python.png"/> 
+                                    <h1 class="card-heading">High Performance Python</h1>
+                                </div>
+                                <div class="collapse" id="showCard1">
+                                  <div class="panel-body python skillcard">
+                                    <div class="col-sm-12 top-skillcard">
+                                      <p>Performance bottlenecks can break otherwise great applications and it’s important that you know how to avoid them. High performance techniques can help your applications scale, and perform consistently; no matter how much data you’re crunching or how many users you’re serving.</p>
                                     </div>
-                                  <!-- Skill Card Start -->
-                                      <div class="panel panel-default">
-                                        <div class="panel-heading python clickable" data-toggle="collapse" href="#showCard1" data-parent="#accordion">
-                                            <button data-toggle="modal" data-target="#myModal" type="button" class="close"><span aria-hidden="true">×</span></button>
-                                            <img class="tech-icon img-thumbnail hidden-xs" src="images/tech/python.png"/> 
-                                            <h1 class="card-heading">High Performance Python</h1>
-                                        </div>
-                                        <div class="collapse" id="showCard1">
-                                          <div class="panel-body python skillcard">
-                                            <div class="col-sm-12 top-skillcard">
-                                              <p>Performance bottlenecks can break otherwise great applications and it’s important that you know how to avoid them. High performance techniques can help your applications scale, and perform consistently; no matter how much data you’re crunching or how many users you’re serving.</p>
-                                            </div>
-                                            <div class="col-sm-8 left-skillcard mb20">
-                                                <ul class="learning-points">
-                                                  <li>Use Cython to create blazing fast applications using Python and C</li>
-                                                  <li>Master code optimization techniques, and learn about all 16 classic design patterns to help super-charge your applications</li>
-                                                  <li>Deploy decorators, design patters, and various optimization techniques to use Python 3.5 effectively</li>
-                                                </ul>
-                                               <a href="dashboard2.html" class="btn btn-success ml55 mb20">I know all of this <i class="glyphicon glyphicon-ok ml10"></i></a>
-                                               <a href="dashboard2.html" class="btn btn-success ml55 mb20">Take an Assessment<i class="glyphicon glyphicon-ok ml10"></i></a>
-                                              </div>
-                                              <div class="col-sm-4 right-skillcard mb20 pt20">
-                                                <p class="concat mb0"><b>Mastering Python High Performance</b><!-- <b class="pull-right">20%</b> --></p>
-                                                <small class="mt0 mb0 concat">By Brian Gooding</small>
-                                                <p class="concat mb0"><small><strong>Last Viewed:</strong> Chapter 1: Advancing Python Performance</small></p>
-                                                <a href="index.html" class="btn btn-primary btn-block mt5">Continue</a>
-                                                <hr>
-                                                <p class="concat mb0"><b>Mastering Python Design Patterns</b><!-- <b class="pull-right">0%</b> --></p>
-                                                <small class="mt0 mb0 concat">By Siobhan Matthews</small>
-                                                <a href="index.html" class="btn btn-primary btn-block mt5">Start</a>
-                                              </div>
-                                            </div>
-                                        </div>
-                                  </div>
-                                  <!-- Skill Card Start -->
-                                      <div class="panel panel-default">
-                                        <div class="panel-heading django clickable " data-toggle="collapse" href="#showCard2" data-parent="#accordion">
-                                            <button data-toggle="modal" data-target="#myModal" type="button" class="close"><span aria-hidden="true">×</span></button>
-                                            <img class="tech-icon img-thumbnail hidden-xs" src="images/tech/django.png"/> 
-                                            <h1 class="card-heading">Production Ready Django</h1>
-                                        </div>
-                                        <div class="collapse" id="showCard2">
-                                          <div class="panel-body django skillcard">
-                                            <div class="col-sm-12 top-skillcard">
-                                              <p>Django is the framework that powers some of the world’s most popular websites and web applications, such as Instagram, Pinterest and Disqus.</p>
-                                              <p>Scaling Django, both in terms of features and users, is difficult. As with any framework, it is more balanced towards developer efficiency than performance and optimization. “Production Ready Django” will help you gain the skills you need to create robust applications that are ready to go live.</p>
-                                            </div>
-                                            <div class="col-sm-8 left-skillcard mb20">
-                                              <ul class="learning-points">
-                                                <li>Use common design patterns that can help you write better, more efficient, Django code</li>
-                                                <li>Reduce your future maintenance burden with well-tested, cleaner Python code</li>
-                                                <li>Create a rich user experience using Ajax and other JavaScript techniques</li>
-                                              </ul>
-                                              <a href="dashboard2.html" class="btn btn-success ml55 mb20">I know all of this <i class="glyphicon glyphicon-ok ml10"></i></a>
-                                            </div>
-                                            <div class="col-sm-4 right-skillcard mb20 pt20">
-                                                  <p class="concat mb0"><b>Django Design Patterns and Best Practices</b><!-- <b class="pull-right">0%</b> --></p>
-                                                  <small class="mt0 mb0 concat">By Brian Gooding</small>
-                                                  <a href="index.html" class="btn btn-primary btn-block mt5">Start</a>
-                                                  <hr>
-                                                  <p class="concat mb0"><b>Web Development with Django Cookbook</b><!-- <b class="pull-right">0%</b> --></p>
-                                                  <small class="mt0 mb0 concat">By Siobhan Matthews</small>
-                                                  <a href="index.html" class="btn btn-primary btn-block mt5">Start</a>
-                                                  <hr>
-                                                  <p class="concat mb0"><b>Django for Advanced Developers</b><!-- <b class="pull-right">0%</b> --></p>
-                                                  <small class="mt0 mb0 concat">By Siobhan Matthews</small>
-                                                  <a href="index.html" class="btn btn-primary btn-block mt5">Start</a>
-                                            </div>
-                                          </div>
-                                        </div>
-                                  </div>
-                                  <!-- Skill Card End -->
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <div ng-show="last_viewed.title" class="panel panel-default mb0">
-                                          <div class="panel-heading">
-                                              <h3 class="panel-title">Continue Viewing:</h3>
-                                          </div>
-                                          <div class="panel-body">
-                                              <strong ng-bind-html="last_viewed.title" class="ng-binding">Mastering Django Web Development [Video]</strong>
-                                              <p><small ng-bind-html="last_viewed.sub_title" class="ng-binding">Explore and master the advanced features of Django to build professional, manageable web applications</small></p>
-                                              <p ng-show="last_viewed.section_title" class="ng-hide"><strong>Last section:</strong> <span ng-bind-html="last_viewed.section_title" class="ng-binding"></span><span ng-bind-html="last_viewed.section_title" class="ng-binding">Chapter 2: Machine learning and Large-scale datasets</span></p>
-                                              <a href="index.html" class="btn btn-primary btn-block">Continue</a>
-                                          </div>
-                                        </div>
-                                    </div>
-                                  </div>
-                                  <div role="tabpanel" class="tab-pane fade" id="video" aria-labelledby="video-tab">
-                                    <div class="col-sm-12">
-                                      <div class="input-group mb20 mt10">
-                                        <span class="input-group-addon" id="basic-addon1"><i class="fa fa-search"></i></span>
-                                        <input type="text" class="form-control quicksearch" placeholder="Search for a Skill">
+                                    <div class="col-sm-8 left-skillcard mb20">
+                                        <ul class="learning-points">
+                                          <li>Use Cython to create blazing fast applications using Python and C</li>
+                                          <li>Master code optimization techniques, and learn about all 16 classic design patterns to help super-charge your applications</li>
+                                          <li>Deploy decorators, design patters, and various optimization techniques to use Python 3.5 effectively</li>
+                                        </ul>
+                                       <a href="dashboard2.html" class="btn btn-success ml55 mb20">I know all of this <i class="glyphicon glyphicon-ok ml10"></i></a>
                                       </div>
-                                      <div class="btn-group mb40 mt0" id="filters">
-                                          <button class="btn btn-default active" data-filter="*">Show All</button>
-                                          <button class="btn btn-default" data-filter=".program">Programming</button>
-                                          <button class="btn btn-default" data-filter=".dev">Development</button>
-                                          <button class="btn btn-default" data-filter=".admin">Administration</button>
-                                          <button class="btn btn-default" data-filter="ss">Soft Skills</button>
-                                          <button class="btn btn-default" data-filter=".tech">Technical Concepts and Tasks</button>
-                                        </div>
-                                      <div class="grid row">
-                                          <!-- Skill Card -->
-                                          <div class="element-item program col-sm-12" data-category="program">
-                                            <div class="panel panel-default clickable" data-toggle="modal" data-target="#myModal">
-                                              <div class="panel-heading django">                                            
-                                                <img class="tech-icon-sm img-thumbnail pull-left mr15" src="images/tech/django.png"/>
-                                                <h2 class="sm-card-heading ml15 mb0"><b>Django Up To Speed</b> - Proficiency: 76.5% <small class="ml10">Last Assessment: 11/05/2015</small></h2>
-                                                <div class="progress mt15 mb5">
-                                                  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 76.5%;">
-                                                  </div>
-                                                </div>
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <!-- Skill Card END -->
-                                          <!-- Skill Card -->
-                                          <div class="element-item program col-sm-12" data-category="program">
-                                            <div class="panel panel-default clickable" data-toggle="modal" data-target="#myModal">
-                                              <div class="panel-heading java">                                            
-                                                <img class="tech-icon-sm img-thumbnail pull-left mr15" src="images/tech/java.png"/>
-                                                <h2 class="sm-card-heading ml15 mb0"><b>RESTful Java Programming</b>- Proficiency: 55.2% <small class="ml10">Last Assessment: 03/02/2016</small></h2>
-                                                <div class="progress mt15 mb5">
-                                                  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 55.2%;">
-                                                  </div>
-                                                </div>
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <!-- Skill Card END -->
-                                          <!-- Skill Card -->
-                                          <div class="element-item program col-sm-12" data-category="program">
-                                            <div class="panel panel-default clickable" data-toggle="modal" data-target="#myModal">
-                                              <div class="panel-heading java">                                            
-                                                <img class="tech-icon-sm img-thumbnail pull-left mr15" src="images/tech/java.png"/>
-                                                <h2 class="sm-card-heading ml15 mb0"><b>Reactive Java Programming</b> - Proficiency: 12.8% <small class="ml10">Last Assessment: 19/02/2015</small></h2>
-                                                <div class="progress mt15 mb5">
-                                                  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 12.8%;">
-                                                  </div>
-                                                </div>
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <!-- Skill Card END -->
-                                          <!-- Skill Card -->
-                                          <div class="element-item admin col-sm-12" data-category="admin">
-                                            <div class="panel panel-default clickable" data-toggle="modal" data-target="#myModal">
-                                              <div class="panel-heading mysql">                                            
-                                                <img class="tech-icon-sm img-thumbnail pull-left mr15" src="images/tech/mysql.png"/>
-                                                <h2 class="sm-card-heading ml15 mb0"><b>MySQL Administration</b> - Assessment Not Completed</h2>
-                                                <div class="progress mt15 mb5">
-                                                  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
-                                                  </div>
-                                                </div>
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <!-- Skill Card END -->
-                                          <!-- Skill Card -->
-                                          <div class="element-item tech col-sm-12" data-category="tech">
-                                            <div class="panel panel-default clickable" data-toggle="modal" data-target="#myModal">
-                                              <div class="panel-heading git">                                            
-                                                <img class="tech-icon-sm img-thumbnail pull-left mr15" src="images/tech/git.png"/>
-                                                <h2 class="sm-card-heading mt25 ml15 mb25"><b>Git Fundamentals</b></h2>
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <!-- Skill Card END -->
-                                          
-                                        </div>
-                                  </div>
-
-                                  </div>
-                                  <div role="tabpanel" class="tab-pane fade" id="playlists" aria-labelledby="playlists-tab">
-                                    <h1>Who Knows?</h1>
-                                  </div>
-                              </div>
+                                      <div class="col-sm-4 right-skillcard mb20 pt20">
+                                        <p class="concat mb0"><b>Mastering Python High Performance</b><!-- <b class="pull-right">20%</b> --></p>
+                                        <small class="mt0 mb0 concat">By Brian Gooding</small>
+                                        <p class="concat mb0"><small><strong>Last Viewed:</strong> Chapter 1: Advancing Python Performance</small></p>
+                                        <a href="index.html" class="btn btn-primary btn-block mt5">Continue</a>
+                                        <hr>
+                                        <p class="concat mb0"><b>Mastering Python Design Patterns</b><!-- <b class="pull-right">0%</b> --></p>
+                                        <small class="mt0 mb0 concat">By Siobhan Matthews</small>
+                                        <a href="index.html" class="btn btn-primary btn-block mt5">Start</a>
+                                      </div>
+                                    </div>
+                                </div>
                           </div>
-                        
+                          <!-- Skill Card Start -->
+                              <div class="panel panel-default">
+                                <div class="panel-heading django clickable " data-toggle="collapse" href="#showCard2" data-parent="#accordion">
+                                    <button data-toggle="modal" data-target="#myModal" type="button" class="close"><span aria-hidden="true">×</span></button>
+                                    <img class="tech-icon img-thumbnail hidden-xs" src="images/tech/django.png"/> 
+                                    <h1 class="card-heading">Production Ready Django</h1>
+                                </div>
+                                <div class="collapse" id="showCard2">
+                                  <div class="panel-body django skillcard">
+                                    <div class="col-sm-12 top-skillcard">
+                                      <p>Django is the framework that powers some of the world’s most popular websites and web applications, such as Instagram, Pinterest and Disqus.</p>
+                                      <p>Scaling Django, both in terms of features and users, is difficult. As with any framework, it is more balanced towards developer efficiency than performance and optimization. “Production Ready Django” will help you gain the skills you need to create robust applications that are ready to go live.</p>
+                                    </div>
+                                    <div class="col-sm-8 left-skillcard mb20">
+                                      <ul class="learning-points">
+                                        <li>Use common design patterns that can help you write better, more efficient, Django code</li>
+                                        <li>Reduce your future maintenance burden with well-tested, cleaner Python code</li>
+                                        <li>Create a rich user experience using Ajax and other JavaScript techniques</li>
+                                      </ul>
+                                      <a href="dashboard2.html" class="btn btn-success ml55 mb20">I know all of this <i class="glyphicon glyphicon-ok ml10"></i></a>
+                                    </div>
+                                    <div class="col-sm-4 right-skillcard mb20 pt20">
+                                          <p class="concat mb0"><b>Django Design Patterns and Best Practices</b><!-- <b class="pull-right">0%</b> --></p>
+                                          <small class="mt0 mb0 concat">By Brian Gooding</small>
+                                          <a href="index.html" class="btn btn-primary btn-block mt5">Start</a>
+                                          <hr>
+                                          <p class="concat mb0"><b>Web Development with Django Cookbook</b><!-- <b class="pull-right">0%</b> --></p>
+                                          <small class="mt0 mb0 concat">By Siobhan Matthews</small>
+                                          <a href="index.html" class="btn btn-primary btn-block mt5">Start</a>
+                                          <hr>
+                                          <p class="concat mb0"><b>Django for Advanced Developers</b><!-- <b class="pull-right">0%</b> --></p>
+                                          <small class="mt0 mb0 concat">By Siobhan Matthews</small>
+                                          <a href="index.html" class="btn btn-primary btn-block mt5">Start</a>
+                                    </div>
+                                  </div>
+                                </div>
+                          </div>
+                          <!-- Skill Card End -->
+                            </div>
+                            <div class="col-sm-4">
+                                <div ng-show="last_viewed.title" class="panel panel-default mb0">
+                                  <div class="panel-heading">
+                                      <h3 class="panel-title">Continue Viewing:</h3>
+                                  </div>
+                                  <div class="panel-body">
+                                      <strong ng-bind-html="last_viewed.title" class="ng-binding">Mastering Django Web Development [Video]</strong>
+                                      <p><small ng-bind-html="last_viewed.sub_title" class="ng-binding">Explore and master the advanced features of Django to build professional, manageable web applications</small></p>
+                                      <p ng-show="last_viewed.section_title" class="ng-hide"><strong>Last section:</strong> <span ng-bind-html="last_viewed.section_title" class="ng-binding"></span><span ng-bind-html="last_viewed.section_title" class="ng-binding">Chapter 2: Machine learning and Large-scale datasets</span></p>
+                                      <a href="index.html" class="btn btn-primary btn-block">Continue</a>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
                   </div><!-- row -->
 			</div><!-- /#book-wrapper -->
 		</div><!-- /#page-content-wrapper -->
