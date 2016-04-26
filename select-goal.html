@@ -13,6 +13,7 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
     <!-- Custom CSS -->
@@ -20,6 +21,10 @@
     <link href="css/custom.css" rel="stylesheet">
     <link href="css/general.css" rel="stylesheet">
     <link href="css/bootstrap-xl.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+
+    <!-- Devicons -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
 
     <!-- Prism -->
     <link rel="stylesheet" href="css/prism.css">
@@ -89,10 +94,9 @@
         <div id="sidebar-wrapper">
 
             <ul class="sidebar-nav">
-                    <li class=""><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu">In Progress</span><span class="pull-right mr5"><i class="fa fa-refresh fa-lg"></i></span></a>    </li>
-                    <li><a href="dashboard-profile.html" class="sidenav-menu-holder"><span class="sidenav-menu">Skills Profile </span><span class="pull-right mr5"><i class="fa fa-line-chart fa-lg"></i></span></a>    </li>
-                    <li><a href="select-goal.html" class="sidenav-menu-holder"><span class="sidenav-menu">Goals  </span><span class="pull-right mr5"><i class="fa fa-bullseye fa-lg"></i></span></a>    </li>
-                    <li><a href="library.html" class="sidenav-menu-holder"><span class="sidenav-menu">Library  </span><span class="pull-right mr5"><i class="fa fa-archive fa-lg"></i></span></a>    </li>
+                    <li ><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu">Continue</span><span class="pull-right mr5"><i class="fa fa-refresh fa-lg"></i></span></a>    </li>
+                    <li class="active"><a href="select-goal.html" class="sidenav-menu-holder"><span class="sidenav-menu">Create a New Plan </span><span class="pull-right mr5"><i class="fa fa-bullseye fa-lg"></i></span></a>    </li>
+                    <li><a href="library.html" class="sidenav-menu-holder"><span class="sidenav-menu">Explore the Library  </span><span class="pull-right mr5"><i class="fa fa-archive fa-lg"></i></span></a>    </li>
                     <li><a href="dashboard-bookmark.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Bookmarks </span><span class="pull-right mr5">6<i class="fa fa-bookmark fa-lg"></i></span></a>    </li>
                     <li><a href="dashboard-collection.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Collection </span><span class="pull-right mr5">12<i class="fa fa-plus fa-lg"></i></span></a>    </li>
                     <li><a href="dashboard-owned.html" class="sidenav-menu-holder"><span class="sidenav-menu">Purchases  </span><span class="pull-right mr5">7<i class="fa fa-shopping-bag fa-lg"></i></span></a>    </li>
@@ -102,43 +106,75 @@
 
         <!-- /#sidebar-wrapper -->
 
-        <div id="page-content-wrapper" class="book-page ng-scope">
+        <div id="page-content-wrapper" class="">
             <div class="jumbotron heading">
                 <div class="container-fluid">
                   <div class="col-sm-12">
-                    <h1>404</h1>
+                    <h1>What's your motivation?</h1>
                     <ol class="breadcrumb row mt0">
-                      <li class="active mt5">Page not found</li>
+                      <li class="active mt5">Choose Motivation</li>
                     </ol>
                   </div>
                 </div>
             </div>
-
-    <!-- ngInclude:  --><div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="ng-scope container-fluid">               
-                <div class="col-sm-12">
-                    
-                    <div class="row">
+            <div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="container-fluid">               
+                <div class="row">
                         <div class="col-sm-12">
-                            <h4 class="mb20"> We're not sure what happened there, but one of the following may have happened...</h4>
-                            <ul>
-                                <li> The page you are trying to find no longer exists</li>
-                                <li> The content you are trying to access hasn't been published yet </li>
-                                <li> You entered the URL incorrectly </li>
-                                <li> We accidentally linked you to something that doesn't exist (our bad) </li>
-                            </ul>
-                            <br>
-                            <span class="hidden-xs"><a href="dashboard.html" class="btn btn-primary pull-right">Take me back to the Dashboard</a></span>
-                            <span class="visible-xs"><a href="dashboard.html" class="btn btn-primary btn-block btn-lg">Back to Dashboard</a></span>
+                            <!-- <div class="col-sm-12 mt20 mb40">
+                            <h2 class="mb20"><i class="fa fa-users mr15"></i> See Where I Stack Up</h2>
+                            <p class="mt10">Compare your skill set to other developers and see how you stack up against the competition</p>
+                            <a href="select-sector.html" class="btn btn-primary btn-block mt15">Select</a>
+                          </div> -->
+                          <h3 class="text-center mb50 ">What's <b> motivating</b> you to learn today?</h3>
+                          <div class="col-sm-offset-1 col-sm-4 mb20">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="mb20">I want to advance my career</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <p class="">Want to know how you compare to the top 10% of developers? Stay ahead of the curve and understand the skills you need to stay up to date.</p>
+                                </div>
+                                <div class="panel-footer">
+                                    <a href="select-career.html" class="btn btn-primary btn-block">Select</a>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="col-sm-2 text-center">
+                            <h2 class="mt60">OR</h2>
                         </div>
-                    </div>
-
-</div></div>
-                </div>
-</div>
-</div>
-
-    </div>
-    <!-- /#wrapper -->
+                          <div class="col-sm-4">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="mb20">I want to stay up to date with the latest skills</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <p class="">Keep your Skills up to date and don't fall behind...else that guy who sits behind you will have your job in a couple of months!</p>
+                                </div>
+                                <div class="panel-footer">
+                                    <a href="select-category.html" class="btn btn-primary btn-block">Select</a>
+                                </div>
+                            </div>
+                          </div>
+                          <!-- <div class="col-sm-4">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h2 class="mb20">View All Cards</h2>
+                                </div>
+                                <div class="panel-body">
+                                    <p class="">Find a specific Skill that you need for a project or just want to learn for the kicks! The ultimate way to procrastinate on a rainy day...</p>
+                                </div>
+                                <div class="panel-footer">
+                                    <a href="select-skills.html" class="btn btn-primary btn-block">Select</a>
+                                </div>
+                            </div>
+                          </div> -->
+                          
+                        </div>
+                  </div><!-- row -->
+			</div><!-- /#book-wrapper -->
+		</div><!-- /#page-content-wrapper -->
+	</div><!-- /#wrapper -->
+    
 
     <!-- JAVASCRIPT BLOCKS -->
 

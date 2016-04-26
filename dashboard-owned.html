@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Learning C++ by Creating Games with UE4 - Chapter 3. Looping</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/general.css" rel="stylesheet">
+    <link href="css/bootstrap-xl.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+
+    <!-- Devicons -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+
+    <!-- Prism -->
+    <link rel="stylesheet" href="css/prism.css">
+
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:100,300,400,700' rel='stylesheet' type='text/css'>
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body class="language-markup">
+
+  
+
+    <div id="wrapper">
+
+        <!-- Top Nav Bar -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand toggle-nav" href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars fa-lg"></i></a>
+                  <a class="brand-logo active" href="dashboard.html"><i class="fa fa-map fa-lg mr5"></i><b> MAPT</b></a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#contact"><i class="fa fa-question-circle fa-lg mr5"></i> Help</a></li>
+                        <li class="dropdown">
+                        <a href="#" class="dropdown-toggle visible-xs" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account<span class="caret ml5"></span>
+                        </a>
+                        <a href="#" class="dropdown-toggle navbar-avatar-link hidden-xs" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <img src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/8/000/222/015/06be2f6.jpg" alt="..." class="img-circle img-responsive navbar-avatar">
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li> <a href="#">View Account</a></li> 
+                            <li><a href="#">View Subscriptions</a></li> 
+                            <li><a href="#">View Licences</a></li> 
+                            <li role="separator" class="divider"></li> 
+                            <li><a href="library-lo.html">Logout</a></li> 
+                        </ul> 
+                    </li>
+                    </ul>
+                    <form class="navbar-form navbar-right search-nav-collapse">
+                        <div class="form-group pull-right" style="display:inline;">
+                            <div class="input-group">
+                              <input class="form-control" type="text" placeholder="Search the library...">
+                              <span class="input-group-btn"><button href="search.html" class="btn btn-default" type="button"><i class="fa fa-search"></i></span></button></span>
+                            </div>
+                        </div>
+                    </form>
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+
+            <ul class="sidebar-nav">
+              <li><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu">Continue</span><span class="pull-right mr5"><i class="fa fa-refresh fa-lg"></i></span></a>    </li>
+                    <li><a href="select-goal.html" class="sidenav-menu-holder"><span class="sidenav-menu">Create a New Plan  </span><span class="pull-right mr5"><i class="fa fa-bullseye fa-lg"></i></span></a>    </li>
+                    <li ><a href="library.html" class="sidenav-menu-holder"><span class="sidenav-menu">Explore the Library  </span><span class="pull-right mr5"><i class="fa fa-archive fa-lg"></i></span></a>    </li>
+                    <li><a href="dashboard-bookmark.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Bookmarks </span><span class="pull-right mr5">6<i class="fa fa-bookmark fa-lg"></i></span></a>    </li>
+                    <li><a href="dashboard-collection.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Collection </span><span class="pull-right mr5">12<i class="fa fa-plus fa-lg"></i></span></a>    </li>
+                    <li class="active"><a href="dashboard-owned.html" class="sidenav-menu-holder"><span class="sidenav-menu">Purchases  </span><span class="pull-right mr5">7<i class="fa fa-shopping-bag fa-lg"></i></span></a>    </li>
+            </ul>
+        </div>
+
+        <!-- /#sidebar-wrapper -->
+
+        <div id="page-content-wrapper" class="">
+            <div class="jumbotron heading">
+                <div class="container-fluid">
+                  <div class="col-sm-12">
+                    <h1>Purchases</h1>
+                    <ol class="breadcrumb row mt0">
+                      <li class="active mt5">Dashboard</li>
+                    </ol>
+                  </div>
+                </div>
+            </div>
+            <div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="container-fluid">               
+                <div class="row">
+                        <div class="col-sm-12">
+                          <div ng-show="dashboard_counts.owned > 0" class="col-sm-offset-6 col-md-offset-8 col-lg-offset-9 col-sm-6 col-md-4 col-lg-3 mb20">
+                              <select ng-change="sort_myOwned($event)" class="form-control ng-pristine ng-untouched ng-valid" name="sorted_myOwned" data-ng-options="o.name for o in dropdown_options_sort_owned track by o.id" data-ng-model="dropdown_selectedOption_sort"><option value="mostRecent" selected="selected" label="Sort by Most Recent">Sort by Most Recent</option><option value="oldest" label="Sort by Oldest">Sort by Oldest</option><option value="sortAZ" label="Sort A-Z">Sort A-Z</option><option value="sortZA" label="Sort Z-A">Sort Z-A</option></select>
+                          </div>
+                          <div class="col-sm-12">
+                            <div ng-show="dashboard_counts.owned > 0" class="panel panel-default">
+                                <ul class="list-group">
+                                    <!-- ngRepeat: (key, value) in myOwned.docs --><a ng-repeat="(key, value) in myOwned.docs" href="/packtlib/book/GeneralAll-Books/9781785886805" class="list-group-item list-name ng-scope">
+                                        <strong ng-bind-html="value.title | replace_ebook" class="ng-binding">Docker High Performance </strong>
+                                        <span class="animate-switch-container hidden-xs" ng-switch="" on="value.book_series">
+                                            <!-- ngSwitchWhen: learning -->
+                                            <!-- ngSwitchWhen: beginners guide -->
+                                            <!-- ngSwitchWhen: mastering --><span class="badge-master badge pull-right ng-scope" ng-switch-when="mastering">Expert</span><!-- end ngSwitchWhen: -->
+                                            <!-- ngSwitchWhen: essentials -->
+                                            <!-- ngSwitchWhen: blueprints -->
+                                            <!-- ngSwitchWhen: cookbook -->
+                                            <!-- ngSwitchWhen: by example -->
+                                            <!-- ngSwitchDefault:  -->
+                                        </span><br>
+                                        <small class="pull-left ng-binding">By Allan Espinosa</small>
+                                        <br>
+                                        <small class="pull-left title-duration ng-binding"><i class="fa fa-clock-o mr5"></i>4 hours 48 minutes</small>
+                                        <!-- ngIf: value.publication_date --><small ng-if="value.publication_date" class="pull-right mr10 ng-binding ng-scope">Jan 2016</small><!-- end ngIf: value.publication_date -->
+                                        <!-- ngIf: value.publication_date_video -->
+                                        <div class="clearfix">
+                                        </div>
+                                    </a><!-- end ngRepeat: (key, value) in myOwned.docs --><a ng-repeat="(key, value) in myOwned.docs" href="/packtlib/book/GeneralAll-Books/9781785281341" class="list-group-item list-name ng-scope">
+                                        <strong ng-bind-html="value.title | replace_ebook" class="ng-binding">Mastering JavaScript </strong>
+                                        <span class="animate-switch-container hidden-xs" ng-switch="" on="value.book_series">
+                                            <!-- ngSwitchWhen: learning -->
+                                            <!-- ngSwitchWhen: beginners guide -->
+                                            <!-- ngSwitchWhen: mastering --><span class="badge-master badge pull-right ng-scope" ng-switch-when="mastering">Expert</span><!-- end ngSwitchWhen: -->
+                                            <!-- ngSwitchWhen: essentials -->
+                                            <!-- ngSwitchWhen: blueprints -->
+                                            <!-- ngSwitchWhen: cookbook -->
+                                            <!-- ngSwitchWhen: by example -->
+                                            <!-- ngSwitchDefault:  -->
+                                        </span><br>
+                                        <small class="pull-left ng-binding">By Ved Antani</small>
+                                        <br>
+                                        <small class="pull-left title-duration ng-binding"><i class="fa fa-clock-o mr5"></i>7 hours 30 minutes</small>
+                                        <!-- ngIf: value.publication_date --><small ng-if="value.publication_date" class="pull-right mr10 ng-binding ng-scope">Jan 2016</small><!-- end ngIf: value.publication_date -->
+                                        <!-- ngIf: value.publication_date_video -->
+                                        <div class="clearfix">
+                                        </div>
+                                    </a><!-- end ngRepeat: (key, value) in myOwned.docs --><a ng-repeat="(key, value) in myOwned.docs" href="/packtlib/book/GeneralAll-Books/9781784399689" class="list-group-item list-name ng-scope">
+                                        <strong ng-bind-html="value.title | replace_ebook" class="ng-binding">Practical Machine Learning </strong>
+                                        <span class="animate-switch-container hidden-xs" ng-switch="" on="value.book_series">
+                                            <!-- ngSwitchWhen: learning --><span class="badge-learn badge pull-right ng-scope" ng-switch-when="learning">Learner</span><!-- end ngSwitchWhen: -->
+                                            <!-- ngSwitchWhen: beginners guide -->
+                                            <!-- ngSwitchWhen: mastering -->
+                                            <!-- ngSwitchWhen: essentials -->
+                                            <!-- ngSwitchWhen: blueprints -->
+                                            <!-- ngSwitchWhen: cookbook -->
+                                            <!-- ngSwitchWhen: by example -->
+                                            <!-- ngSwitchDefault:  -->
+                                        </span><br>
+                                        <small class="pull-left ng-binding">By Sunila Gollapudi</small>
+                                        <br>
+                                        <small class="pull-left title-duration ng-binding"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small>
+                                        <!-- ngIf: value.publication_date --><small ng-if="value.publication_date" class="pull-right mr10 ng-binding ng-scope">Jan 2016</small><!-- end ngIf: value.publication_date -->
+                                        <!-- ngIf: value.publication_date_video -->
+                                        <div class="clearfix">
+                                        </div>
+                                    </a><!-- end ngRepeat: (key, value) in myOwned.docs --><a ng-repeat="(key, value) in myOwned.docs" href="/packtlib/book/GeneralAll-Books/9781785884931" class="list-group-item list-name ng-scope">
+                                        <strong ng-bind-html="value.title | replace_ebook" class="ng-binding">Mathematica Data Analysis </strong>
+                                        <span class="animate-switch-container hidden-xs" ng-switch="" on="value.book_series">
+                                            <!-- ngSwitchWhen: learning --><span class="badge-learn badge pull-right ng-scope" ng-switch-when="learning">Learner</span><!-- end ngSwitchWhen: -->
+                                            <!-- ngSwitchWhen: beginners guide -->
+                                            <!-- ngSwitchWhen: mastering -->
+                                            <!-- ngSwitchWhen: essentials -->
+                                            <!-- ngSwitchWhen: blueprints -->
+                                            <!-- ngSwitchWhen: cookbook -->
+                                            <!-- ngSwitchWhen: by example -->
+                                            <!-- ngSwitchDefault:  -->
+                                        </span><br>
+                                        <small class="pull-left ng-binding">By Sergiy Suchok</small>
+                                        <br>
+                                        <small class="pull-left title-duration ng-binding"><i class="fa fa-clock-o mr5"></i>4 hours 55 minutes</small>
+                                        <!-- ngIf: value.publication_date --><small ng-if="value.publication_date" class="pull-right mr10 ng-binding ng-scope">Jan 2015</small><!-- end ngIf: value.publication_date -->
+                                        <!-- ngIf: value.publication_date_video -->
+                                        <div class="clearfix">
+                                        </div>
+                                    </a><!-- end ngRepeat: (key, value) in myOwned.docs --><a ng-repeat="(key, value) in myOwned.docs" href="/packtlib/video/Web-DevelopmentGeneral/9781783554157" class="list-group-item list-name ng-scope">
+                                        <strong ng-bind-html="value.title | replace_ebook" class="ng-binding">Learning Django Web Development [Video]</strong>
+                                        <span class="animate-switch-container hidden-xs" ng-switch="" on="value.book_series">
+                                            <!-- ngSwitchWhen: learning -->
+                                            <!-- ngSwitchWhen: beginners guide -->
+                                            <!-- ngSwitchWhen: mastering -->
+                                            <!-- ngSwitchWhen: essentials -->
+                                            <!-- ngSwitchWhen: blueprints -->
+                                            <!-- ngSwitchWhen: cookbook -->
+                                            <!-- ngSwitchWhen: by example -->
+                                            <!-- ngSwitchDefault:  --><span class="badge-general badge pull-right ng-scope" ng-switch-default="">General</span><!-- end ngSwitchWhen: -->
+                                        </span><br>
+                                        <small class="pull-left ng-binding">By Matthew Nuzum</small>
+                                        <br>
+                                        <small class="pull-left title-duration ng-binding"><i class="fa fa-clock-o mr5"></i>1 hour 40 minutes</small>
+                                        <!-- ngIf: value.publication_date --><small ng-if="value.publication_date" class="pull-right mr10 ng-binding ng-scope">Jan 2015</small><!-- end ngIf: value.publication_date -->
+                                        <!-- ngIf: value.publication_date_video -->
+                                        <div class="clearfix">
+                                        </div>
+                                    </a><!-- end ngRepeat: (key, value) in myOwned.docs --><a ng-repeat="(key, value) in myOwned.docs" href="/packtlib/book/GeneralAll-Books/9781783289004" class="list-group-item list-name ng-scope">
+                                        <strong ng-bind-html="value.title | replace_ebook" class="ng-binding">Building Probabilistic Graphical Models with Python </strong>
+                                        <span class="animate-switch-container hidden-xs" ng-switch="" on="value.book_series">
+                                            <!-- ngSwitchWhen: learning -->
+                                            <!-- ngSwitchWhen: beginners guide -->
+                                            <!-- ngSwitchWhen: mastering -->
+                                            <!-- ngSwitchWhen: essentials -->
+                                            <!-- ngSwitchWhen: blueprints -->
+                                            <!-- ngSwitchWhen: cookbook -->
+                                            <!-- ngSwitchWhen: by example -->
+                                            <!-- ngSwitchDefault:  --><span class="badge-general badge pull-right ng-scope" ng-switch-default="">General</span><!-- end ngSwitchWhen: -->
+                                        </span><br>
+                                        <small class="pull-left ng-binding">By Kiran R Karkera</small>
+                                        <br>
+                                        <small class="pull-left title-duration ng-binding"><i class="fa fa-clock-o mr5"></i>5 hours 09 minutes</small>
+                                        <!-- ngIf: value.publication_date --><small ng-if="value.publication_date" class="pull-right mr10 ng-binding ng-scope">Jan 2014</small><!-- end ngIf: value.publication_date -->
+                                        <!-- ngIf: value.publication_date_video -->
+                                        <div class="clearfix">
+                                        </div>
+                                    </a><!-- end ngRepeat: (key, value) in myOwned.docs --><a ng-repeat="(key, value) in myOwned.docs" href="/packtlib/book/GeneralAll-Books/9781849518307" class="list-group-item list-name ng-scope">
+                                        <strong ng-bind-html="value.title | replace_ebook" class="ng-binding">Selenium 2 Testing Tools: Beginner's Guide </strong>
+                                        <span class="animate-switch-container hidden-xs" ng-switch="" on="value.book_series">
+                                            <!-- ngSwitchWhen: learning -->
+                                            <!-- ngSwitchWhen: beginners guide --><span class="badge-learn badge pull-right ng-scope" ng-switch-when="beginners guide">Learner</span><!-- end ngSwitchWhen: -->
+                                            <!-- ngSwitchWhen: mastering -->
+                                            <!-- ngSwitchWhen: essentials -->
+                                            <!-- ngSwitchWhen: blueprints -->
+                                            <!-- ngSwitchWhen: cookbook -->
+                                            <!-- ngSwitchWhen: by example -->
+                                            <!-- ngSwitchDefault:  -->
+                                        </span><br>
+                                        <small class="pull-left ng-binding">By David Burns</small>
+                                        <br>
+                                        <small class="pull-left title-duration ng-binding"><i class="fa fa-clock-o mr5"></i>6 hours 57 minutes</small>
+                                        <!-- ngIf: value.publication_date --><small ng-if="value.publication_date" class="pull-right mr10 ng-binding ng-scope">Jan 2012</small><!-- end ngIf: value.publication_date -->
+                                        <!-- ngIf: value.publication_date_video -->
+                                        <div class="clearfix">
+                                        </div>
+                                    </a><!-- end ngRepeat: (key, value) in myOwned.docs -->
+                                </ul>
+                                <div class="panel-footer text-right ng-hide" ng-show="myOwned.pagination > 1">
+                                    <nav>
+                                        <ul class="pagination">
+                                            <li id="paginationNumber" data-page="owned" ng-click="$event.preventDefault();click_pagination($event, myOwned.previous, 'owned');" class="disabled">
+                                                <a href="#" aria-label="Previous">
+                                                    <span aria-hidden="true">«</span>
+                                                </a>
+                                            </li>
+                                            <!-- ngRepeat: i in getNumber(myOwned.pagination) track by $index --><li ng-repeat="i in getNumber(myOwned.pagination) track by $index" id="paginationNumber" ng-class="{active: myOwned.offset == $index}" data-page="owned" ng-click="$event.preventDefault();click_pagination($event, $index, 'owned');" class="ng-scope active">
+                                                    <a href="#" class="ng-binding">1</a>
+                                            </li><!-- end ngRepeat: i in getNumber(myOwned.pagination) track by $index -->
+                                            <li id="paginationNumber" data-page="owned" ng-click="$event.preventDefault();click_pagination($event, myOwned.next, 'owned');" class="disabled"> 
+                                                <a href="#" aria-label="Next">
+                                                    <span aria-hidden="true">»</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+
+                        </div>
+                  </div><!-- row -->
+			</div><!-- /#book-wrapper -->
+		</div><!-- /#page-content-wrapper -->
+	</div><!-- /#wrapper -->
+    
+
+    <!-- JAVASCRIPT BLOCKS -->
+
+    <!-- jQuery Script-->
+    <script src="js/jquery.js"></script>
+    <!-- Syntax Highlighting Script -->
+    <script src="js/prism.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Sidebar Toggle Script -->
+    <script src="js/simple-sidebar.js"></script>
+
+</body>
+
+</html>

@@ -13,6 +13,7 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
     <!-- Custom CSS -->
@@ -20,6 +21,10 @@
     <link href="css/custom.css" rel="stylesheet">
     <link href="css/general.css" rel="stylesheet">
     <link href="css/bootstrap-xl.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+
+    <!-- Devicons -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
 
     <!-- Prism -->
     <link rel="stylesheet" href="css/prism.css">
@@ -89,9 +94,9 @@
         <div id="sidebar-wrapper">
 
             <ul class="sidebar-nav">
-                    <li class=""><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu">In Progress</span><span class="pull-right mr5"><i class="fa fa-refresh fa-lg"></i></span></a>    </li>
+                    <li ><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu">In Progress</span><span class="pull-right mr5"><i class="fa fa-refresh fa-lg"></i></span></a>    </li>
                     <li><a href="dashboard-profile.html" class="sidenav-menu-holder"><span class="sidenav-menu">Skills Profile </span><span class="pull-right mr5"><i class="fa fa-line-chart fa-lg"></i></span></a>    </li>
-                    <li><a href="select-goal.html" class="sidenav-menu-holder"><span class="sidenav-menu">Goals  </span><span class="pull-right mr5"><i class="fa fa-bullseye fa-lg"></i></span></a>    </li>
+                    <li class="active"><a href="select-goal.html" class="sidenav-menu-holder"><span class="sidenav-menu">Goals  </span><span class="pull-right mr5"><i class="fa fa-bullseye fa-lg"></i></span></a>    </li>
                     <li><a href="library.html" class="sidenav-menu-holder"><span class="sidenav-menu">Library  </span><span class="pull-right mr5"><i class="fa fa-archive fa-lg"></i></span></a>    </li>
                     <li><a href="dashboard-bookmark.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Bookmarks </span><span class="pull-right mr5">6<i class="fa fa-bookmark fa-lg"></i></span></a>    </li>
                     <li><a href="dashboard-collection.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Collection </span><span class="pull-right mr5">12<i class="fa fa-plus fa-lg"></i></span></a>    </li>
@@ -102,43 +107,98 @@
 
         <!-- /#sidebar-wrapper -->
 
-        <div id="page-content-wrapper" class="book-page ng-scope">
+        <div id="page-content-wrapper" class="">
             <div class="jumbotron heading">
                 <div class="container-fluid">
                   <div class="col-sm-12">
-                    <h1>404</h1>
+                    <h1>Stack Up</h1>
                     <ol class="breadcrumb row mt0">
-                      <li class="active mt5">Page not found</li>
+                      <li><a href="select-goal.html">Select Goal</a></li>
+                      <li class="active mt5">Stack Up</li>
                     </ol>
                   </div>
                 </div>
             </div>
-
-    <!-- ngInclude:  --><div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="ng-scope container-fluid">               
-                <div class="col-sm-12">
-                    
-                    <div class="row">
+            <div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="container-fluid">               
+                <div class="row">
                         <div class="col-sm-12">
-                            <h4 class="mb20"> We're not sure what happened there, but one of the following may have happened...</h4>
-                            <ul>
-                                <li> The page you are trying to find no longer exists</li>
-                                <li> The content you are trying to access hasn't been published yet </li>
-                                <li> You entered the URL incorrectly </li>
-                                <li> We accidentally linked you to something that doesn't exist (our bad) </li>
-                            </ul>
-                            <br>
-                            <span class="hidden-xs"><a href="dashboard.html" class="btn btn-primary pull-right">Take me back to the Dashboard</a></span>
-                            <span class="visible-xs"><a href="dashboard.html" class="btn btn-primary btn-block btn-lg">Back to Dashboard</a></span>
+                          <h3 class="text-center mb30 mt0">Please provide more <b> Details</b> about your role and skillset</h3>
+                          <div class="">
+                            <form class="form-horizontal">
+                              <div class="form-group">
+                                <div class="col-sm-6 mb20">
+                                  <select class="form-control">
+                                    <option>Select your Continent</option>
+                                    <option>North America</option>
+                                    <option>South America</option>
+                                    <option>Asia</option>
+                                    <option>Africa</option>
+                                    <option>Europe</option>
+                                    <option>Australia</option>
+                                  </select>
+                                </div>
+                                <div class="col-sm-6 mb20">
+                                  <select class="form-control">
+                                    <option>Select your Country</option>
+                                    <option>England</option>
+                                    <option>Ireland</option>
+                                    <option>Scotland</option>
+                                    <option>Wales</option>
+                                    <option>Northern Ireland</option>
+                                    <option>France</option>
+                                    <option>Germany</option>
+                                  </select>
+                                </div>
+                                <div class="col-sm-6 mb20">
+                                  <select class="form-control">
+                                    <option>Select an Industry</option>
+                                    <option>Web Development</option>
+                                    <option>App Development</option>
+                                    <option>Data Science</option>
+                                    <option>Business Intelligence</option>
+                                  </select>
+                                </div>
+                                <div class="col-sm-6 mb20">
+                                  <select class="form-control">
+                                    <option>Select a Role</option>
+                                    <option>Front-end Web Developer</option>
+                                    <option>Full-Stack Web Developer</option>
+                                    <option>Back-End Web Developer</option>
+                                  </select>
+                                </div>
+                                <div class="col-sm-4">
+                                  <select class="form-control">
+                                    <option>Company Size</option>
+                                    <option>Unemployed</option>
+                                    <option>Freelancer</option>
+                                    <option>1-10 employees</option>
+                                    <option>11-50 employees</option>
+                                    <option>51-200 employees</option>
+                                    <option>201-1000 employees</option>
+                                    <option>1000+ employees</option>
+                                  </select>
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="text" class="form-control" placeholder="Enter your Current Salary i.e. 22000">
+                                </div>
+                                <div class="col-sm-4">
+                                  <select class="form-control">
+                                      <option>Select Currency</option>
+                                      <option>$ US Dollars</option>
+                                      <option>British Pounds</option>
+                                      <option>$ Australian Dollars</option>
+                                    </select>
+                                </div>
+                              </div>
+                              <a href="select-skill-list.html" class="btn btn-primary pull-right btn-lg mt20">Next Step</a>
+                          </form>
+                          </div>
                         </div>
-                    </div>
-
-</div></div>
-                </div>
-</div>
-</div>
-
-    </div>
-    <!-- /#wrapper -->
+                  </div><!-- row -->
+      </div><!-- /#book-wrapper -->
+    </div><!-- /#page-content-wrapper -->
+  </div><!-- /#wrapper -->
+    
 
     <!-- JAVASCRIPT BLOCKS -->
 

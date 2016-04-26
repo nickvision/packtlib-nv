@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Learning C++ by Creating Games with UE4 - Chapter 3. Looping</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/general.css" rel="stylesheet">
+    <link href="css/bootstrap-xl.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+
+    <!-- Devicons -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+
+    <!-- Prism -->
+    <link rel="stylesheet" href="css/prism.css">
+
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:100,300,400,700' rel='stylesheet' type='text/css'>
+    
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body class="language-markup">
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h1 class="mt10 mb10"><i class="devicon-python-plain mr15"></i> Python Fundamentals</h1>
+      </div>
+      <div class="modal-body">
+        <div class="panel-body">
+            <div class="col-sm-12">
+              <p>Python is one of the easiest languages to get started with. It has a human readable syntax, and fully featured (“batteries included”) standard library to help you get things done right away. It is your portal in to a new world of productive development.</p>
+              <hr>
+            </div>
+
+            <div class="col-sm-12">
+                  <ul class="learning-points">
+                    <li>Install and set up Python on Mac, Windows or Linux</li>
+                    <li>Write elegant, reusable, and efficient Python code to use in your future projects</li>
+                    <li>Use Git to manage your Python code</li>
+                    <li>Write Python scripts to automate daily tasks, and other software</li>
+                    <li>Use unit tests to write better code, faster</li>
+                  </ul>
+            </div>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#" class="btn btn-default btn-block mt15">Select Skill</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+
+    <div id="wrapper">
+
+        <!-- Top Nav Bar -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand toggle-nav" href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars fa-lg"></i></a>
+                  <a class="brand-logo active" href="dashboard.html"><i class="fa fa-map fa-lg mr5"></i><b> MAPT</b></a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#contact"><i class="fa fa-question-circle fa-lg mr5"></i> Help</a></li>
+                        <li class="dropdown">
+                        <a href="#" class="dropdown-toggle visible-xs" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account<span class="caret ml5"></span>
+                        </a>
+                        <a href="#" class="dropdown-toggle navbar-avatar-link hidden-xs" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <img src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/8/000/222/015/06be2f6.jpg" alt="..." class="img-circle img-responsive navbar-avatar">
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li> <a href="#">View Account</a></li> 
+                            <li><a href="#">View Subscriptions</a></li> 
+                            <li><a href="#">View Licences</a></li> 
+                            <li role="separator" class="divider"></li> 
+                            <li><a href="library-lo.html">Logout</a></li> 
+                        </ul> 
+                    </li>
+                    </ul>
+                    <form class="navbar-form navbar-right search-nav-collapse">
+                        <div class="form-group pull-right" style="display:inline;">
+                            <div class="input-group">
+                              <input class="form-control" type="text" placeholder="Search the library...">
+                              <span class="input-group-btn"><button href="search.html" class="btn btn-default" type="button"><i class="fa fa-search"></i></span></button></span>
+                            </div>
+                        </div>
+                    </form>
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+
+            <ul class="sidebar-nav">
+                    <li ><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu">In Progress</span><span class="pull-right mr5"><i class="fa fa-refresh fa-lg"></i></span></a>    </li>
+                    <li><a href="dashboard-profile.html" class="sidenav-menu-holder"><span class="sidenav-menu">Skills Profile </span><span class="pull-right mr5"><i class="fa fa-line-chart fa-lg"></i></span></a>    </li>
+                    <li class="active"><a href="select-goal.html" class="sidenav-menu-holder"><span class="sidenav-menu">Goals  </span><span class="pull-right mr5"><i class="fa fa-bullseye fa-lg"></i></span></a>    </li>
+                    <li><a href="library.html" class="sidenav-menu-holder"><span class="sidenav-menu">Library  </span><span class="pull-right mr5"><i class="fa fa-archive fa-lg"></i></span></a>    </li>
+                    <li><a href="dashboard-bookmark.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Bookmarks </span><span class="pull-right mr5">6<i class="fa fa-bookmark fa-lg"></i></span></a>    </li>
+                    <li><a href="dashboard-collection.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Collection </span><span class="pull-right mr5">12<i class="fa fa-plus fa-lg"></i></span></a>    </li>
+                    <li><a href="dashboard-owned.html" class="sidenav-menu-holder"><span class="sidenav-menu">Purchases  </span><span class="pull-right mr5">7<i class="fa fa-shopping-bag fa-lg"></i></span></a>    </li>
+                
+            </ul>
+        </div>
+
+        <!-- /#sidebar-wrapper -->
+
+        <div id="page-content-wrapper" class="">
+            <div class="jumbotron heading">
+                <div class="container-fluid">
+                  <div class="col-sm-12">
+                    <h1>Select Skills</h1>
+                    <ol class="breadcrumb row mt0">
+                      <li><a href="select-goal.html">Select Goal</a></li>
+                      <li><a href="select-sector.html">Stack Up</a></li>
+                      <li class="active mt5">Select Skills</li>
+                    </ol>
+                  </div>
+                </div>
+            </div>
+            <div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="container-fluid">               
+                <div class="row">
+                        <div class="col-sm-12">
+                          <h3 class="text-center mb30 mt0">Please select the <b> Skills</b> you currently have</h3>
+                          <input type="text" class="form-control mb20 quicksearch" placeholder="Search for a Skill">
+                          <div class="btn-group filters-btn-group mb20" id="filters">
+                            <button class="btn btn-default active" data-filter="*">Show All</button>
+                            <button class="btn btn-default" data-filter=".program">Programming</button>
+                            <button class="btn btn-default" data-filter=".dev">Development</button>
+                            <button class="btn btn-default" data-filter=".admin">Administration</button>
+                            <button class="btn btn-default" data-filter=".tech">Technical Concepts and Tasks</button>
+                          </div>
+
+                          <div class="grid row">
+                            <!-- Skill Card -->
+                            <div class="element-item program col-sm-3" data-category="program">
+                              <div class="panel panel-default text-center">
+                                <div class="panel-title mt20">
+                                  <i class="devicon-python-plain sm-card-icon"></i>
+                                </div>
+                                <div class="panel-body">
+                                  <h4>Python Fundamentals</h4>
+                                  <a href="#" class="btn btn-primary btn-block mt15">Select Skill</a>
+                                  <a href="#" class="btn btn-default btn-block mt5" data-toggle="modal" data-target="#myModal"><i class="fa fa-info mr5"></i> More Info</a>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- Skill Card END -->
+                            <!-- Skill Card -->
+                            <div class="element-item program col-sm-3" data-category="program">
+                              <div class="panel panel-default text-center">
+                                <div class="panel-title mt20">
+                                  <i class="devicon-python-plain sm-card-icon"></i>
+                                </div>
+                                <div class="panel-body">
+                                  <h4>High Performance Python</h4>
+                                  <a href="#" class="btn btn-primary btn-block mt15">Select Skill</a>
+                                  <a href="#" class="btn btn-default btn-block mt5" data-toggle="modal" data-target="#myModal"><i class="fa fa-info mr5"></i> More Info</a>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- Skill Card END -->
+                            <!-- Skill Card -->
+                            <div class="element-item program col-sm-3" data-category="program">
+                              <div class="panel panel-default text-center">
+                                <div class="panel-title mt20">
+                                  <i class="devicon-python-plain sm-card-icon"></i>
+                                </div>
+                                <div class="panel-body">
+                                  <h4>Unlocking Python Objects</h4>
+                                  <a href="#" class="btn btn-success btn-block mt15">Selected</a>
+                                  <a href="#" class="btn btn-default btn-block mt5" data-toggle="modal" data-target="#myModal"><i class="fa fa-info mr5"></i> More Info</a>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- Skill Card END -->
+                            <!-- Skill Card -->
+                            <div class="element-item program col-sm-3" data-category="program">
+                              <div class="panel panel-default text-center">
+                                <div class="panel-title mt20">
+                                  <i class="devicon-python-plain sm-card-icon"></i>
+                                </div>
+                                <div class="panel-body">
+                                  <h4>Testing Python</h4>
+                                  <a href="#" class="btn btn-success btn-block mt15">Selected</a>
+                                  <a href="#" class="btn btn-default btn-block mt5" data-toggle="modal" data-target="#myModal"><i class="fa fa-info mr5"></i> More Info</a>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- Skill Card END -->
+                            <!-- Skill Card -->
+                            <div class="element-item tech col-sm-3" data-category="tech">
+                              <div class="panel panel-default text-center">
+                                <div class="panel-title mt20">
+                                  <i class="devicon-python-plain sm-card-icon"></i>
+                                </div>
+                                <div class="panel-body">
+                                  <h4>Data Analysis with Python</h4>
+                                  <a href="#" class="btn btn-primary btn-block mt15">Select Skill</a>
+                                  <a href="#" class="btn btn-default btn-block mt5" data-toggle="modal" data-target="#myModal"><i class="fa fa-info mr5"></i> More Info</a>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- Skill Card END -->
+                            <!-- Skill Card -->
+                            <div class="element-item program col-sm-3" data-category="program">
+                              <div class="panel panel-default text-center">
+                                <div class="panel-title mt20">
+                                  <i class="devicon-django-plain sm-card-icon"></i>
+                                </div>
+                                <div class="panel-body">
+                                  <h4>Production Ready Django</h4>
+                                  <a href="#" class="btn btn-primary btn-block mt15">Select Skill</a>
+                                  <a href="#" class="btn btn-default btn-block mt5" data-toggle="modal" data-target="#myModal"><i class="fa fa-info mr5"></i> More Info</a>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- Skill Card END -->
+                            <!-- Skill Card -->
+                            <div class="element-item program col-sm-3" data-category="program">
+                              <div class="panel panel-default text-center">
+                                <div class="panel-title mt20">
+                                  <i class="devicon-django-plain sm-card-icon"></i>
+                                </div>
+                                <div class="panel-body">
+                                  <h4>Django Up To Speed</h4>
+                                  <a href="#" class="btn btn-primary btn-block mt15">Select Skill</a>
+                                  <a href="#" class="btn btn-default btn-block mt5" data-toggle="modal" data-target="#myModal"><i class="fa fa-info mr5"></i> More Info</a>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- Skill Card END -->
+                            <!-- Skill Card -->
+                            <div class="element-item program col-sm-3" data-category="program">
+                              <div class="panel panel-default text-center">
+                                <div class="panel-title mt20">
+                                  <i class="devicon-java-plain sm-card-icon"></i>
+                                </div>
+                                <div class="panel-body">
+                                  <h4>Reactive Java Programming</h4>
+                                  <a href="#" class="btn btn-primary btn-block mt15">Select Skill</a>
+                                  <a href="#" class="btn btn-default btn-block mt5" data-toggle="modal" data-target="#myModal"><i class="fa fa-info mr5"></i> More Info</a>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- Skill Card END -->
+                            <!-- Skill Card -->
+                            <div class="element-item program col-sm-3" data-category="program">
+                              <div class="panel panel-default text-center">
+                                <div class="panel-title mt20">
+                                  <i class="devicon-java-plain sm-card-icon"></i>
+                                </div>
+                                <div class="panel-body">
+                                  <h4>RESTful Java Programming</h4>
+                                  <a href="#" class="btn btn-primary btn-block mt15">Select Skill</a>
+                                  <a href="#" class="btn btn-default btn-block mt5" data-toggle="modal" data-target="#myModal"><i class="fa fa-info mr5"></i> More Info</a>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- Skill Card END -->
+                            <!-- Skill Card -->
+                            <div class="element-item dev col-sm-3" data-category="dev">
+                              <div class="panel panel-default text-center">
+                                <div class="panel-title mt20">
+                                  <i class="devicon-android-plain sm-card-icon"></i>
+                                </div>
+                                <div class="panel-body">
+                                  <h4>Android Development Fundamentals</h4>
+                                  <a href="#" class="btn btn-primary btn-block mt15">Select Skill</a>
+                                  <a href="#" class="btn btn-default btn-block mt5" data-toggle="modal" data-target="#myModal"><i class="fa fa-info mr5"></i> More Info</a>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- Skill Card END -->
+                            <!-- Skill Card -->
+                            <div class="element-item dev col-sm-3" data-category="dev">
+                              <div class="panel panel-default text-center">
+                                <div class="panel-title mt20">
+                                  <i class="devicon-android-plain sm-card-icon"></i>
+                                </div>
+                                <div class="panel-body">
+                                  <h4>Android UI Design</h4>
+                                  <a href="#" class="btn btn-primary btn-block mt15">Select Skill</a>
+                                  <a href="#" class="btn btn-default btn-block mt5" data-toggle="modal" data-target="#myModal"><i class="fa fa-info mr5"></i> More Info</a>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- Skill Card END -->
+                            <!-- Skill Card -->
+                            <div class="element-item dev col-sm-3" data-category="dev">
+                              <div class="panel panel-default text-center">
+                                <div class="panel-title mt20">
+                                  <i class="devicon-android-plain sm-card-icon"></i>
+                                </div>
+                                <div class="panel-body">
+                                  <h4>Advanced Android Development</h4>
+                                  <a href="#" class="btn btn-primary btn-block mt15">Select Skill</a>
+                                  <a href="#" class="btn btn-default btn-block mt5" data-toggle="modal" data-target="#myModal"><i class="fa fa-info mr5"></i> More Info</a>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- Skill Card END -->
+                            <!-- Skill Card -->
+                            <div class="element-item dev col-sm-3" data-category="dev">
+                              <div class="panel panel-default text-center">
+                                <div class="panel-title mt20">
+                                  <i class="devicon-android-plain sm-card-icon"></i>
+                                </div>
+                                <div class="panel-body">
+                                  <h4>Android High Performance Programming</h4>
+                                  <a href="#" class="btn btn-primary btn-block mt15">Select Skill</a>
+                                  <a href="#" class="btn btn-default btn-block mt5" data-toggle="modal" data-target="#myModal"><i class="fa fa-info mr5"></i> More Info</a>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- Skill Card END -->
+                            <!-- Skill Card -->
+                            <div class="element-item software col-sm-3" data-category="software">
+                              <div class="panel panel-default text-center">
+                                <div class="panel-title mt20">
+                                  <i class="devicon-android-plain sm-card-icon"></i>
+                                </div>
+                                <div class="panel-body">
+                                  <h4>Android Studio Basics</h4>
+                                  <a href="#" class="btn btn-primary btn-block mt15">Select Skill</a>
+                                  <a href="#" class="btn btn-default btn-block mt5" data-toggle="modal" data-target="#myModal"><i class="fa fa-info mr5"></i> More Info</a>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- Skill Card END -->
+                            <!-- Skill Card -->
+                            <div class="element-item software col-sm-3" data-category="software">
+                              <div class="panel panel-default text-center">
+                                <div class="panel-title mt20">
+                                  <i class="devicon-git-plain sm-card-icon"></i>
+                                </div>
+                                <div class="panel-body">
+                                  <h4>Git Fundamentals</h4>
+                                  <a href="#" class="btn btn-primary btn-block mt15">Select Skill</a>
+                                  <a href="#" class="btn btn-default btn-block mt5" data-toggle="modal" data-target="#myModal"><i class="fa fa-info mr5"></i> More Info</a>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- Skill Card END -->
+                            <!-- Skill Card -->
+                            <div class="element-item software col-sm-3" data-category="software">
+                              <div class="panel panel-default text-center">
+                                <div class="panel-title mt20">
+                                  <i class="devicon-confluence-plain sm-card-icon"></i>
+                                </div>
+                                <div class="panel-body">
+                                  <h4>Jira Administration</h4>
+                                  <a href="#" class="btn btn-primary btn-block mt15">Select Skill</a>
+                                  <a href="#" class="btn btn-default btn-block mt5" data-toggle="modal" data-target="#myModal"><i class="fa fa-info mr5"></i> More Info</a>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- Skill Card END -->
+                            <!-- Skill Card -->
+                            <div class="element-item software col-sm-3" data-category="software">
+                              <div class="panel panel-default text-center">
+                                <div class="panel-title mt20">
+                                  <i class="devicon-confluence-plain sm-card-icon"></i>
+                                </div>
+                                <div class="panel-body">
+                                  <h4>Jira Administration</h4>
+                                  <a href="#" class="btn btn-primary btn-block mt15">Select Skill</a>
+                                  <a href="#" class="btn btn-default btn-block mt5" data-toggle="modal" data-target="#myModal"><i class="fa fa-info mr5"></i> More Info</a>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- Skill Card END -->
+                            <!-- Skill Card -->
+                            <div class="element-item admin col-sm-3" data-category="admin">
+                              <div class="panel panel-default text-center">
+                                <div class="panel-title mt20">
+                                  <i class="devicon-docker-plain sm-card-icon"></i>
+                                </div>
+                                <div class="panel-body">
+                                  <h4>Docker Fundamentals</h4>
+                                  <a href="#" class="btn btn-primary btn-block mt15">Select Skill</a>
+                                  <a href="#" class="btn btn-default btn-block mt5" data-toggle="modal" data-target="#myModal"><i class="fa fa-info mr5"></i> More Info</a>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- Skill Card END -->
+                            <!-- Skill Card -->
+                            <div class="element-item dev col-sm-3" data-category="dev">
+                              <div class="panel panel-default text-center">
+                                <div class="panel-title mt20">
+                                  <i class="devicon-mysql-plain sm-card-icon"></i>
+                                </div>
+                                <div class="panel-body">
+                                  <h4>MySQL Basics</h4>
+                                  <a href="#" class="btn btn-primary btn-block mt15">Select Skill</a>
+                                  <a href="#" class="btn btn-default btn-block mt5" data-toggle="modal" data-target="#myModal"><i class="fa fa-info mr5"></i> More Info</a>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- Skill Card END -->
+                            <!-- Skill Card -->
+                            <div class="element-item admin col-sm-3" data-category="admin">
+                              <div class="panel panel-default text-center">
+                                <div class="panel-title mt20">
+                                  <i class="devicon-mysql-plain sm-card-icon"></i>
+                                </div>
+                                <div class="panel-body">
+                                  <h4>MySQL Administration</h4>
+                                  <a href="#" class="btn btn-primary btn-block mt15">Select Skill</a>
+                                  <a href="#" class="btn btn-default btn-block mt5" data-toggle="modal" data-target="#myModal"><i class="fa fa-info mr5"></i> More Info</a>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- Skill Card END -->
+                            
+                          </div>
+                          <a href="dashboard-profile.html" class="btn btn-default pull-left btn-lg mt20 mb20">Back</a>
+                          <a href="dashboard-profile.html" class="btn btn-primary pull-right btn-lg mt20 mb20">Finish</a>
+                        </div>
+                  </div><!-- row -->
+			</div><!-- /#book-wrapper -->
+		</div><!-- /#page-content-wrapper -->
+	</div><!-- /#wrapper -->
+    
+
+    <!-- JAVASCRIPT BLOCKS -->
+
+    <!-- jQuery Script-->
+    <script src="js/jquery.js"></script>
+    <!-- Syntax Highlighting Script -->
+    <script src="js/prism.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Sidebar Toggle Script -->
+    <script src="js/simple-sidebar.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js"></script>
+    <script type="text/javascript">
+    $( function() {
+  // quick search regex
+  var qsRegex;
+  var buttonFilter;
+  
+  // init Isotope
+  var $container = $('.grid').isotope({
+    itemSelector: '.element-item',
+    layoutMode: 'fitRows',
+    filter: function() {
+      var $this = $(this);
+      var searchResult = qsRegex ? $this.text().match( qsRegex ) : true;
+      var buttonResult = buttonFilter ? $this.is( buttonFilter ) : true;
+      return searchResult && buttonResult;
+    }
+  });
+
+  $('#filters').on( 'click', 'button', function() {
+    buttonFilter = $( this ).attr('data-filter');
+    $container.isotope();
+  });
+  
+  // use value of search field to filter
+  var $quicksearch = $('.quicksearch').keyup( debounce( function() {
+    qsRegex = new RegExp( $quicksearch.val(), 'gi' );
+    $container.isotope();
+  }) );
+
+  
+    // change is-checked class on buttons
+  $('.button-group').each( function( i, buttonGroup ) {
+    var $buttonGroup = $( buttonGroup );
+    $buttonGroup.on( 'click', 'button', function() {
+      $buttonGroup.find('.is-checked').removeClass('is-checked');
+      $( this ).addClass('is-checked');
+    });
+  });
+  
+  
+});
+
+// debounce so filtering doesn't happen every millisecond
+function debounce( fn, threshold ) {
+  var timeout;
+  return function debounced() {
+    if ( timeout ) {
+      clearTimeout( timeout );
+    }
+    function delayed() {
+      fn();
+      timeout = null;
+    }
+    setTimeout( delayed, threshold || 100 );
+  };
+}
+
+    </script>
+  
+
+</body>
+
+</html>

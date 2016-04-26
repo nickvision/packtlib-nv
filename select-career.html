@@ -13,6 +13,7 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
     <!-- Custom CSS -->
@@ -20,6 +21,10 @@
     <link href="css/custom.css" rel="stylesheet">
     <link href="css/general.css" rel="stylesheet">
     <link href="css/bootstrap-xl.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+
+    <!-- Devicons -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
 
     <!-- Prism -->
     <link rel="stylesheet" href="css/prism.css">
@@ -88,11 +93,10 @@
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
 
-            <ul class="sidebar-nav">
-                    <li class=""><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu">In Progress</span><span class="pull-right mr5"><i class="fa fa-refresh fa-lg"></i></span></a>    </li>
-                    <li><a href="dashboard-profile.html" class="sidenav-menu-holder"><span class="sidenav-menu">Skills Profile </span><span class="pull-right mr5"><i class="fa fa-line-chart fa-lg"></i></span></a>    </li>
-                    <li><a href="select-goal.html" class="sidenav-menu-holder"><span class="sidenav-menu">Goals  </span><span class="pull-right mr5"><i class="fa fa-bullseye fa-lg"></i></span></a>    </li>
-                    <li><a href="library.html" class="sidenav-menu-holder"><span class="sidenav-menu">Library  </span><span class="pull-right mr5"><i class="fa fa-archive fa-lg"></i></span></a>    </li>
+           <ul class="sidebar-nav">
+                    <li ><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu">Continue</span><span class="pull-right mr5"><i class="fa fa-refresh fa-lg"></i></span></a>    </li>
+                    <li class="active"><a href="select-goal.html" class="sidenav-menu-holder"><span class="sidenav-menu">Create a New Plan </span><span class="pull-right mr5"><i class="fa fa-bullseye fa-lg"></i></span></a>    </li>
+                    <li><a href="library.html" class="sidenav-menu-holder"><span class="sidenav-menu">Explore the Library  </span><span class="pull-right mr5"><i class="fa fa-archive fa-lg"></i></span></a>    </li>
                     <li><a href="dashboard-bookmark.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Bookmarks </span><span class="pull-right mr5">6<i class="fa fa-bookmark fa-lg"></i></span></a>    </li>
                     <li><a href="dashboard-collection.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Collection </span><span class="pull-right mr5">12<i class="fa fa-plus fa-lg"></i></span></a>    </li>
                     <li><a href="dashboard-owned.html" class="sidenav-menu-holder"><span class="sidenav-menu">Purchases  </span><span class="pull-right mr5">7<i class="fa fa-shopping-bag fa-lg"></i></span></a>    </li>
@@ -102,43 +106,91 @@
 
         <!-- /#sidebar-wrapper -->
 
-        <div id="page-content-wrapper" class="book-page ng-scope">
+        <div id="page-content-wrapper" class="">
             <div class="jumbotron heading">
                 <div class="container-fluid">
                   <div class="col-sm-12">
-                    <h1>404</h1>
+                    <h1>Select Career</h1>
                     <ol class="breadcrumb row mt0">
-                      <li class="active mt5">Page not found</li>
+                      <li><a href="select-goal.html">Choose Motivation</a></li>
+                      <li class="active mt5">Select Career</li>
                     </ol>
                   </div>
                 </div>
             </div>
-
-    <!-- ngInclude:  --><div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="ng-scope container-fluid">               
-                <div class="col-sm-12">
-                    
-                    <div class="row">
+            <div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="container-fluid">               
+                <div class="row">
                         <div class="col-sm-12">
-                            <h4 class="mb20"> We're not sure what happened there, but one of the following may have happened...</h4>
-                            <ul>
-                                <li> The page you are trying to find no longer exists</li>
-                                <li> The content you are trying to access hasn't been published yet </li>
-                                <li> You entered the URL incorrectly </li>
-                                <li> We accidentally linked you to something that doesn't exist (our bad) </li>
-                            </ul>
-                            <br>
-                            <span class="hidden-xs"><a href="dashboard.html" class="btn btn-primary pull-right">Take me back to the Dashboard</a></span>
-                            <span class="visible-xs"><a href="dashboard.html" class="btn btn-primary btn-block btn-lg">Back to Dashboard</a></span>
+                          <h3 class="text-center mb30 mt0">Select the<b> Career</b> that best fits the industry you are currently working in</h3>
+                          <div class=" col-md-4">
+                            <div class="panel panel-default">
+                              <div class="panel-body">
+                                <h2>Web Developer</h2>
+                                <small>Est. Income: $130K</small>
+                                <br/>
+                                <hr>
+                                <div class="progress mt20">
+                                  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                                    <span class="sr-only"></span>
+                                  </div>
+                                </div>
+                                <div class="col-xs-12">
+                                  <div class="thumbnail text-center pt20">
+                                    <i class="fa fa-file-text fa-3x pb10"></i><p class="skill-counter"><b>0/27</b></p>
+                                  </div>
+                                  <a class="btn btn-primary btn-block" href="select-role.html"> Select</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class=" col-md-4">
+                            <div class="panel panel-default">
+                              <div class="panel-body">
+                                <h2>App Developer</h2>
+                                <small>Est. Income: $102-110K</small>
+                                <br/>
+                                <hr>
+                                <div class="progress mt20">
+                                  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 22%;">
+                                    <span class="sr-only"></span>
+                                  </div>
+                                </div>
+                                <div class="col-xs-12">
+                                  <div class="thumbnail text-center pt20">
+                                    <i class="fa fa-file-text fa-3x pb10"></i><p class="skill-counter"><b>4/24</b></p>
+                                  </div>
+                                  <a class="btn btn-primary btn-block" href="select-role.html"> Select</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class=" col-md-4">
+                            <div class="panel panel-default">
+                              <div class="panel-body">
+                                <h2> Data Scientist</h2>
+                                <small>Est. Income: $102-110K</small>
+                                <br/>
+                                <hr>
+                                <div class="progress mt20">
+                                  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                                    <span class="sr-only"></span>
+                                  </div>
+                                </div>
+                                <div class="col-xs-12">
+                                  <div class="thumbnail text-center pt20">
+                                    <i class="fa fa-file-text fa-3x pb10"></i><p class="skill-counter"><b>0/14</b></p>
+                                  </div>
+                                  <a class="btn btn-primary btn-block" href="select-role.html"> Select</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
-                    </div>
-
-</div></div>
-                </div>
-</div>
-</div>
-
-    </div>
-    <!-- /#wrapper -->
+                  </div><!-- row -->
+			</div><!-- /#book-wrapper -->
+		</div><!-- /#page-content-wrapper -->
+	</div><!-- /#wrapper -->
+    
 
     <!-- JAVASCRIPT BLOCKS -->
 
