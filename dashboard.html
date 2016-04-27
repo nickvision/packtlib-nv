@@ -136,11 +136,6 @@
                       </div>
                     </div>
                   </div>
-                   <div class="col-sm-4 hidden-xs">
-                        <div class="thumbnail pt20 pull-right">
-                            <ol><span class="skill-counter mr20"><i class="fa fa-file-text fa-lg mr10"></i> 4 Skill(s)</span><a href="dashboard-profile.html">View My Skills</a></ol>
-                        </div>
-                   </div>
                 </div>
             </div>
             <div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="container-fluid">               
@@ -270,7 +265,28 @@
                                       <a href="index.html" class="btn btn-primary btn-block">Continue</a>
                                   </div>
                                 </div>
+                                <div ng-show="last_viewed.title" class="panel panel-default mb0 mt20">
+                                  <div class="panel-heading">
+                                      <h3 class="panel-title">Recent Achievements</h3>
+                                  </div>
+                                  <div class="panel-body text-center">
+                                    <div class="col-sm-4">
+                                      <img class="mb10 img-responsive" src="images/charming-python.png"/>
+                                      <p>Charming Python</p>
+                                    </div>
+                                    <div class="col-sm-4">
+                                      <img class="mb10 img-responsive" src="images/offensive-python.png"/>
+                                      <p>Offensive Python</p>
+                                    </div>
+                                    <div class="col-sm-4">
+                                      <img class="mb10 img-responsive" src="images/unleash-hadoop.png"/>
+                                      <p>Unleash Hadoop</p>
+                                    </div>
+                                      <!-- <ol><span class="skill-counter mr20"><i class="fa fa-file-text fa-lg mr10"></i> 4 Skill(s)</span><a href="dashboard-profile.html">View My Skills</a></ol> -->
+                                  </div>
+                                </div>
                             </div>
+
                         </div>
                   </div><!-- row -->
 			</div><!-- /#book-wrapper -->
