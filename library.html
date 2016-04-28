@@ -190,48 +190,7 @@
                           </ul>
                         </div> 
                       </div>
-                      <div class="col-sm-9 col-xl-4 col-lg-4">
-                          <div ng-show="last_viewed.title" class="panel panel-default">
-                              <div class="panel-heading">
-                                  <h3 class="panel-title">You last viewed:</h3>
-                              </div>
-                              <div class="panel-body">
-                                  <strong ng-bind-html="last_viewed.title" class="ng-binding">Mastering Django Web Development [Video]</strong>
-                                  <p><small ng-bind-html="last_viewed.sub_title" class="ng-binding">Explore and master the advanced features of Django to build professional, manageable web applications</small></p>
-                                  <p ng-show="last_viewed.section_title" class="ng-hide"><strong>Last section:</strong> <span ng-bind-html="last_viewed.section_title" class="ng-binding"></span></p>
-                              </div>
-                              <div class="panel-footer text-right">
-                                  <a href="index.html" class="btn btn-primary">Continue</a>
-                              </div>
-                          </div>
-                          <!-- ngIf: free_tokens || sub --><ol class="breadcrumb hidden-xs ng-scope" ng-if="free_tokens || sub">
-                              <li><i class="fa fa-ticket mr10"></i>You have <strong class="ng-binding">24</strong> Free Course token(s) remaining</li>
-                          </ol><!-- end ngIf: free_tokens || sub -->
-
-                          <!-- ngIf: sub && !freetrial --><div class="panel panel-default ng-scope" ng-if="sub &amp;&amp; !freetrial">
-                              <div class="panel-heading">
-                                  <h3 class="panel-title">Monthly Progress Tracker:</h3>
-                              </div>
-                              <div class="panel-body">
-                                  <h4 class="lg-title"><strong class="ng-binding">0</strong> Section(s) Completed<small class="pull-right ng-binding">25</small></h4>
-                                  <div class="progress">
-                                      <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
-                                          <span class="sr-only ng-binding">0% Complete (success)</span>
-                                      </div>
-                                  </div>
-                                  <h4 class="lg-title"><strong class="ng-binding">0</strong>hr(s) <strong class="ng-binding">0 </strong>min(s) spent learning<small class="pull-right ng-binding">4hrs</small></h4>
-                                  <div class="progress">
-                                      <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
-                                          <span class="sr-only ng-binding">0% Complete (success)</span>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div class="panel-footer">
-                                  <small>You will receive a Course token when you spend more than 4 hours learning in a month and complete 25 sections. Each Course token can be redeemed for any eBook or Video from the library.</small>
-                              </div>
-                          </div><!-- end ngIf: sub && !freetrial -->
-                      </div>
-                      <div class="col-sm-9 col-lg-5 col-xl-6">
+                      <div class="col-sm-9 col-lg-9 col-xl-10">
                           <ul id="recommendationTabs" class="nav nav-pills nav-stacked text-center mt25 mb25 visible-xs" role="tablist">
                               <li class="active">
                                   <a href="#popular" role="tab" data-toggle="tab" aria-controls="popular" ng-click="$event.preventDefault();" aria-expanded="true">Popular</a>
@@ -243,16 +202,13 @@
                           </ul>
                           <ul id="recommendationTabs" class="nav nav-pills nav-justified hidden-xs" role="tablist">
                               <li class="active">
-                                  <a href="#popular" role="tab" data-toggle="tab" aria-controls="popular" ng-click="$event.preventDefault();" aria-expanded="true">Popular <span class="hidden-md"></span></a>
+                                  <a href="#popular" role="tab" data-toggle="tab" aria-controls="popular" ng-click="$event.preventDefault();" aria-expanded="false">Popular</a>
                               </li>
                               <li class="">
-                                  <a href="#new" role="tab" data-toggle="tab" aria-controls="new" ng-click="$event.preventDefault();getFiveRecent($event);" aria-expanded="false">New</a>
+                                  <a href="#new" role="tab" data-toggle="tab" aria-controls="new" ng-click="$event.preventDefault();libraryController.getFiveRecent($event);" aria-expanded="false">New</a>
                               </li>
                               <li class="">
-                                  <a href="#new" role="tab" data-toggle="tab" aria-controls="new" ng-click="$event.preventDefault();getFiveRecent($event);" aria-expanded="false">Recommended</a>
-                              </li>
-                              <li>
-                                  <!-- ngIf: userRecommendations -->
+                                  <!-- ngIf: libraryController.userRecommendations --><a href="#recommended" ng-click="$event.preventDefault();" role="tab" data-toggle="tab" aria-controls="recommended" aria-expanded="true" ng-if="libraryController.userRecommendations" class="ng-scope">Recommended</a><!-- end ngIf: libraryController.userRecommendations -->
                               </li>
                           </ul>
                           <div class="tab-content mt15">
