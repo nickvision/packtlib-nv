@@ -80,6 +80,9 @@ h1, .h1 {
 	background:rgba(226, 122, 63, 0.7);
 	float: right;
 }
+.badge-general {
+  background:rgba(138, 138, 138, 0.7)
+}
 .lg-title {
 	font-size: 14px;
 	font-weight: 500;
