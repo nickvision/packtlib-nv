@@ -266,10 +266,8 @@
                                       <a href="index.html" class="btn btn-primary btn-block">Continue</a>
                                   </div>
                                 </div> -->
-                                <ol class="breadcrumb hidden-xs ng-scope" ng-if="free_tokens || sub">
-                                    <li><i class="fa fa-ticket mr10"></i>You have <strong class="ng-binding">24</strong> Free Course token(s) remaining</li>
-                                </ol><!-- end ngIf: free_tokens || sub -->
-                                <div ng-show="last_viewed.title" class="panel panel-default mb0 mt20">
+                                
+                                <div ng-show="last_viewed.title" class="panel panel-default mb0">
                                   <div class="panel-heading">
                                       <h3 class="panel-title">Recent Badges</h3>
                                   </div>
@@ -290,6 +288,9 @@
                                       <!-- <ol><span class="skill-counter mr20"><i class="fa fa-file-text fa-lg mr10"></i> 4 Skill(s)</span><a href="dashboard-profile.html">View My Skills</a></ol> -->
                                   </div>
                                 </div>
+                                <ol class="breadcrumb hidden-xs ng-scope mt20" ng-if="free_tokens || sub">
+                                    <li><i class="fa fa-ticket mr10"></i>You have <strong class="ng-binding">24</strong> Free Course token(s) remaining</li>
+                                </ol><!-- end ngIf: free_tokens || sub -->
                                 <!-- ngIf: sub && !freetrial --><div class="panel panel-default ng-scope mt20" ng-if="sub &amp;&amp; !freetrial">
                                     <div class="panel-heading">
                                         <h3 class="panel-title">Monthly Progress Tracker:</h3>
