@@ -711,10 +711,12 @@ span.input-group-btn button.btn {
     content: "\00a0";
 }
 .tech-icon {
-  height:60px;
-  padding: 5px;
-  float: left;
-  margin-right: 10px;
+    height: 80px;
+    padding: 5px;
+    float: left;
+    margin-right: 10px;
+    margin-left: -10px;
+    margin-top: -10px;
 }
 .tech-icon-sm {
   height: 70px;
@@ -735,6 +737,7 @@ span.input-group-btn button.btn {
   font-size: 16px;
   font-weight: 500;
   margin-bottom: 10px;
+  padding: 5px;
 }
 .left-skillcard li {
   list-style-position: outside;
@@ -750,13 +753,13 @@ span.input-group-btn button.btn {
   padding: 20px;
   padding-bottom: 0px;
 }
-.sm-card {
+/*.sm-card {
   height: 175px;
   width: 100%;
 }
 .sm-card>.panel-heading {
   height: 175px;
-}
+}*/
 .element-item.owned {
   opacity: 0.5;
   filter: alpha(opacity=50);
