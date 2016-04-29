@@ -705,12 +705,6 @@ span.input-group-btn button.btn {
     padding-bottom: 15px;
     border-bottom: 1px solid #eee;
 }
-.panel-body {
-  background: whitesmoke;
-}
-.modal-body>.panel-body {
-  background: #fff;
-}
 .breadcrumb.title-buttons > li + li:before {
     padding: 0 5px;
     color: #ccc;
