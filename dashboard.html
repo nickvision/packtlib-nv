@@ -75,7 +75,7 @@
                     <span class="icon-bar"></span>
                   </button>
                   <a class="navbar-brand toggle-nav" href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars fa-lg"></i></a>
-                  <a class="brand-logo active" href="dashboard.html"><i class="fa fa-map fa-lg mr5"></i><b> MAPT</b></a>
+                  <a class="brand-logo active" href="dashboard.html"><img src="images/mapt-logo.png"/></a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
@@ -110,10 +110,10 @@
         <div id="sidebar-wrapper">
 
             <ul class="sidebar-nav">
-                    <li class="active"><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Plan</span><span class="pull-right mr5"><i class="fa fa-refresh fa-lg"></i></span></a>    </li>
-                    <li><a href="dashboard-profile.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Skills  </span><span class="pull-right mr5"><i class="fa fa-bullseye fa-lg"></i></span></a>    </li>
-                    <li><a href="select-goal.html" class="sidenav-menu-holder"><span class="sidenav-menu">Create a New Plan  </span><span class="pull-right mr5"><i class="fa fa-bullseye fa-lg"></i></span></a>    </li>
-                    <li><a href="library.html" class="sidenav-menu-holder"><span class="sidenav-menu">Explore the Library  </span><span class="pull-right mr5"><i class="fa fa-archive fa-lg"></i></span></a>    </li>
+                    <li class="active"><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu">Current Path</span><span class="pull-right mr5"><i class="fa fa-refresh fa-lg"></i></span></a>    </li>
+                    <li><a href="dashboard-profile.html" class="sidenav-menu-holder"><span class="sidenav-menu">Passport  </span><span class="pull-right mr5"><i class="fa fa-bullseye fa-lg"></i></span></a>    </li>
+                    <li><a href="select-goal.html" class="sidenav-menu-holder"><span class="sidenav-menu">Set a New Destination</span><span class="pull-right mr5"><i class="fa fa-bullseye fa-lg"></i></span></a>    </li>
+                    <li><a href="library.html" class="sidenav-menu-holder"><span class="sidenav-menu">Library  </span><span class="pull-right mr5"><i class="fa fa-archive fa-lg"></i></span></a>    </li>
                     <li><a href="dashboard-bookmark.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Bookmarks </span><span class="pull-right mr5">6<i class="fa fa-bookmark fa-lg"></i></span></a>    </li>
                     <li><a href="dashboard-collection.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Collection </span><span class="pull-right mr5">12<i class="fa fa-plus fa-lg"></i></span></a>    </li>
                     <li><a href="dashboard-owned.html" class="sidenav-menu-holder"><span class="sidenav-menu">Purchases  </span><span class="pull-right mr5">7<i class="fa fa-shopping-bag fa-lg"></i></span></a>    </li>
@@ -130,33 +130,59 @@
                     <img src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/8/000/222/015/06be2f6.jpg" alt="..." class="img-responsive img-thumbnail">
                     <h1 class="mt15">Oli Huggins </h1>
                     <ol class="breadcrumb row mt0">
-                      <li class="active mt5"><b>Current Plan:</b> Become a Python Developer @ Nginx</li>
+                      <li class="active mt5"><b>Destination:</b> Become a Python Developer @ Nginx</li>
                     </ol>
-                    <div class="progress">
+                    <!-- <div class="progress">
                       <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
                       </div>
-                    </div>
+                    </div> -->
                   </div>
                 </div>
             </div>
             <div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="container-fluid">               
                 <div class="row">
                         <div class="col-sm-12">
-                          <div class="panel-group col-sm-8" id="accordion" role="tablist" aria-multiselectable="true">
+                          <div class="col-sm-12">
+                                <div class="alert alert-info alert-dismissable" role="alert">
+                                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                  <i class="fa fa-info-circle fa-lg mr15"></i>Your <strong>Path</strong> provides an overview of everything you're currently learning. See how close you are to your <strong>Destination</strong> and access the resources you need to get there
+                                </div>
+                            </div>
+                          <div class="col-sm-2">
+                            <div ng-show="last_viewed.title" class="panel panel-default mb0 hidden-xs">
+                                  <div class="panel-heading text-center">
+                                      <h3 class="panel-title">My Progress</h3>
+                                  </div>
+                                  <div class="panel-body text-center">
+                                    <a href="#" data-toggle="tooltip" title="Unlocking Python Data Objects"><img class=" tech-icon-progress" src="images/tech/python.png"></a>
+                                    <div class="skill-connector"></div>
+                                    <a href="#" data-toggle="tooltip" title="Django Up to Speed"><img class=" tech-icon-progress" src="images/tech/django.png"></a>
+                                    <div class="skill-connector incomplete"></div>
+                                    <a href="#" data-toggle="tooltip" title="Python Fundamentals"><img class="tech-icon-progress incomplete" src="images/tech/python.png"></a>
+                                    <div class="skill-connector incomplete"></div>
+                                    <a href="#" data-toggle="tooltip" title="High Peformance Python"><img class=" tech-icon-progress incomplete" src="images/tech/python.png"></a>
+                                    <div class="skill-connector incomplete"></div>
+                                    <a href="#" data-toggle="tooltip" title="Production Ready Django"><img class="tech-icon-progress incomplete" src="images/tech/django.png"></a>
+                                  </div>
+                            </div>
+                          </div>
+                          <div class="panel-group col-sm-10" id="accordion" role="tablist" aria-multiselectable="true">
                               <!-- Skill Card Start -->
                               <div class="panel panel-default">
                                 <div class="panel-heading python clickable" data-toggle="collapse" href="#showCard" data-parent="#accordion">
                                     <button type="button" class="close" data-toggle="modal" data-target="#myModal"><span aria-hidden="true">×</span></button>
                                     <img class="tech-icon hidden-xs" src="images/tech/python.png"/>
-                                    <h1 class="card-heading">Python Fundamentals </h1>                               
+                                    <h1 class="card-heading mb0 mt5">Python Fundamentals </h1>
+                                    <p class="concat mb0 mt10"><small><strong>Last Viewed:</strong> Chapter 9: Advancing Python from Python Essentials</small></p>                               
                                 </div>
                                 <div class="collapse in" id="showCard">
                                   <div class="panel-body python skillcard">
-                                    <div class="col-sm-12 top-skillcard">
+                                    <div class="col-sm-6 top-skillcard">
                                       <p class="">Current Score<b> 17.7%</b> <a target="_blank" href="https://candidate.devskiller.com/exam.html?PREVIEW-E1615-U930-1461762813161#/" class="ml15">Retake Assessment</a></p> 
-                                      <p>Python is one of the easiest languages to get started with. It has a human readable syntax, and fully featured (“batteries included”) standard library to help you get things done right away. It is your portal in to a new world of productive development.</p>
-                                    </div>
-                                    <div class="col-sm-8 left-skillcard mb20">
+                                      <!-- <p>Python is one of the easiest languages to get started with. It has a human readable syntax, and fully featured (“batteries included”) standard library to help you get things done right away. It is your portal in to a new world of productive development.</p> -->
+                                      <div class="left-skillcard">
                                           <ul class="learning-points">
                                             <li>Install and set up Python on Mac, Windows or Linux</li>
                                             <li>Write elegant, reusable, and efficient Python code to use in your future projects</li>
@@ -166,16 +192,28 @@
                                           </ul>
                                       <a href="dashboard2.html" class="btn btn-success ml55 mb20">I know all of this <i class="glyphicon glyphicon-ok ml10"></i></a>
                                     </div>
-                                    <div class="col-sm-4 right-skillcard mb20 pt20">                                          
+                                    </div>
+                                    <div class="col-sm-6 right-skillcard mb20 pt20">
+                                          <div class="col-sm-3">
+                                            <img src="https://www.packtpub.com/sites/default/files/B03671_MockupCover_Normal.jpg" class="img-responsive img-thumbnail"/>
+                                          </div>
+                                          <div class="col-sm-9">                                       
                                             <p class="concat mb0"><b>Python Essentials</b><!-- <b class="pull-right">76%</b> --></p>
-                                            <small class="mt0 mb0 concat">By Steven Lott</small>
+                                            <small class="mt0 mb0 concat">By Steven Lott</small>                                            
                                             <p class="concat mb0"><small><strong>Last Viewed:</strong> Chapter 9: Advancing Python</small></p>
                                             <a href="index.html" class="btn btn-primary btn-block mt5">Continue</a>
-                                            <hr>
+                                          </div>
+                                          <div class="clearfix"></div>
+                                          <hr>
+                                          <div class="col-sm-3">
+                                            <img src="https://www.packtpub.com/sites/default/files/bookretailers/9781783988969.jpg" class="img-responsive img-thumbnail"/>
+                                          </div>
+                                          <div class="col-sm-9">
                                             <p class="concat mb0"><b>Mastering Python [Video]</b><!-- <b class="pull-right">12%</b> --></p>
                                             <small class="mt0 mb0 concat">By Daniel Arbuckle</small>
                                             <p class="concat mb0"><small><strong>Last Viewed:</strong> Chapter 4: Mastering Python Essentials</small></p>
                                             <a href="index.html" class="btn btn-primary btn-block mt5">Continue</a>
+                                          </div>
                                     </div>
                                   </div>
                                 </div>
@@ -185,15 +223,15 @@
                                 <div class="panel-heading python clickable" data-toggle="collapse" href="#showCard1" data-parent="#accordion">
                                     <button data-toggle="modal" data-target="#myModal" type="button" class="close"><span aria-hidden="true">×</span></button>
                                     <img class="tech-icon hidden-xs" src="images/tech/python.png"/> 
-                                    <h1 class="card-heading">High Performance Python</h1>
+                                    <h1 class="card-heading mb0 mt5">High Performance Python</h1>
+                                    <p class="concat mb0 mt10"><small><strong>Last Viewed:</strong> Chapter 1: Advancing Python Performance from Mastering Python High Performance</small></p>
                                 </div>
                                 <div class="collapse" id="showCard1">
                                   <div class="panel-body python skillcard">
-                                    <div class="col-sm-12 top-skillcard">
+                                    <div class="col-sm-6 top-skillcard">
                                       <p class="">Current Score<b> 5.2%</b> <a target="_blank" href="https://candidate.devskiller.com/exam.html?PREVIEW-E1615-U930-1461762813161#/" class="ml15">Retake Assessment</a></p> 
-                                      <p>Performance bottlenecks can break otherwise great applications and it’s important that you know how to avoid them. High performance techniques can help your applications scale, and perform consistently; no matter how much data you’re crunching or how many users you’re serving.</p>
-                                    </div>
-                                    <div class="col-sm-8 left-skillcard mb20">
+                                      <!-- <p>Performance bottlenecks can break otherwise great applications and it’s important that you know how to avoid them. High performance techniques can help your applications scale, and perform consistently; no matter how much data you’re crunching or how many users you’re serving.</p> -->
+                                      <div class="left-skillcard">
                                         <ul class="learning-points">
                                           <li>Use Cython to create blazing fast applications using Python and C</li>
                                           <li>Master code optimization techniques, and learn about all 16 classic design patterns to help super-charge your applications</li>
@@ -201,15 +239,27 @@
                                         </ul>
                                        <a href="dashboard2.html" class="btn btn-success ml55 mb20">I know all of this <i class="glyphicon glyphicon-ok ml10"></i></a>
                                       </div>
-                                      <div class="col-sm-4 right-skillcard mb20 pt20">
-                                        <p class="concat mb0"><b>Mastering Python High Performance</b><!-- <b class="pull-right">20%</b> --></p>
-                                        <small class="mt0 mb0 concat">By Brian Gooding</small>
-                                        <p class="concat mb0"><small><strong>Last Viewed:</strong> Chapter 1: Advancing Python Performance</small></p>
-                                        <a href="index.html" class="btn btn-primary btn-block mt5">Continue</a>
-                                        <hr>
-                                        <p class="concat mb0"><b>Mastering Python Design Patterns</b><!-- <b class="pull-right">0%</b> --></p>
-                                        <small class="mt0 mb0 concat">By Siobhan Matthews</small>
-                                        <a href="index.html" class="btn btn-primary btn-block mt5">Start</a>
+                                    </div>
+                                      <div class="col-sm-6 right-skillcard mb20 pt20">
+                                        <div class="col-sm-3">
+                                          <img src="https://www.packtpub.com/sites/default/files/9300OS.jpg" class="img-responsive img-thumbnail"/>
+                                        </div>
+                                        <div class="col-sm-9">
+                                          <p class="concat mb0"><b>Mastering Python High Performance</b><!-- <b class="pull-right">20%</b> --></p>
+                                          <small class="mt0 mb0 concat">By Brian Gooding</small>
+                                          <p class="concat mb0"><small><strong>Last Viewed:</strong> Chapter 1: Advancing Python Performance</small></p>
+                                          <a href="index.html" class="btn btn-primary btn-block mt5">Continue</a>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                          <hr>
+                                        <div class="col-sm-3">
+                                          <img src="https://dz13w8afd47il.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/9324OS_Mastering%20Python%20Design%20Patterns_Frontcover.jpg" class="img-responsive img-thumbnail"/>
+                                        </div>
+                                        <div class="col-sm-9">
+                                          <p class="concat mb0"><b>Mastering Python Design Patterns</b><!-- <b class="pull-right">0%</b> --></p>
+                                          <small class="mt0 mb0 concat">By Siobhan Matthews</small>
+                                          <a href="index.html" class="btn btn-primary btn-block mt5">Get Started</a>
+                                        </div>
                                       </div>
                                     </div>
                                 </div>
@@ -219,16 +269,16 @@
                                 <div class="panel-heading django clickable " data-toggle="collapse" href="#showCard2" data-parent="#accordion">
                                     <button data-toggle="modal" data-target="#myModal" type="button" class="close"><span aria-hidden="true">×</span></button>
                                     <img class="tech-icon hidden-xs" src="images/tech/django.png"/> 
-                                    <h1 class="card-heading">Production Ready Django</h1>
+                                    <h1 class="card-heading mb0 mt5">Production Ready Django</h1>
+                                    <p class="concat mb0 mt10"><small><strong>Not Started</strong></small></p>
                                 </div>
                                 <div class="collapse" id="showCard2">
                                   <div class="panel-body django skillcard">
-                                    <div class="col-sm-12 top-skillcard">
+                                    <div class="col-sm-6 top-skillcard">
                                       <p class=""><a target="_blank" href="https://candidate.devskiller.com/exam.html?PREVIEW-E1615-U930-1461762813161#/" class="">Take Assessment</a></p> 
-                                      <p>Django is the framework that powers some of the world’s most popular websites and web applications, such as Instagram, Pinterest and Disqus.</p>
-                                      <p>Scaling Django, both in terms of features and users, is difficult. As with any framework, it is more balanced towards developer efficiency than performance and optimization. “Production Ready Django” will help you gain the skills you need to create robust applications that are ready to go live.</p>
-                                    </div>
-                                    <div class="col-sm-8 left-skillcard mb20">
+                                      <!-- <p>Django is the framework that powers some of the world’s most popular websites and web applications, such as Instagram, Pinterest and Disqus.</p>
+                                      <p>Scaling Django, both in terms of features and users, is difficult. As with any framework, it is more balanced towards developer efficiency than performance and optimization. “Production Ready Django” will help you gain the skills you need to create robust applications that are ready to go live.</p> -->
+                                      <div class=" left-skillcard">
                                       <ul class="learning-points">
                                         <li>Use common design patterns that can help you write better, more efficient, Django code</li>
                                         <li>Reduce your future maintenance burden with well-tested, cleaner Python code</li>
@@ -236,84 +286,42 @@
                                       </ul>
                                       <a href="dashboard2.html" class="btn btn-success ml55 mb20">I know all of this <i class="glyphicon glyphicon-ok ml10"></i></a>
                                     </div>
-                                    <div class="col-sm-4 right-skillcard mb20 pt20">
+                                    </div>
+                                    
+                                    <div class="col-sm-6 right-skillcard mb20 pt20">
+                                        <div class="col-sm-3">
+                                          <img src="https://www.packtpub.com/sites/default/files/6644OS.jpg" class="img-responsive img-thumbnail"/>
+                                        </div>
+                                        <div class="col-sm-9">
                                           <p class="concat mb0"><b>Django Design Patterns and Best Practices</b><!-- <b class="pull-right">0%</b> --></p>
                                           <small class="mt0 mb0 concat">By Brian Gooding</small>
-                                          <a href="index.html" class="btn btn-primary btn-block mt5">Start</a>
+                                          <a href="index.html" class="btn btn-primary btn-block mt5">Get Started</a>
+                                        </div>
+                                        <div class="clearfix"></div>
                                           <hr>
+                                        <div class="col-sm-3">
+                                          <img src="https://www.packtpub.com/sites/default/files/6775O9S_Web%20Development%20with%20Django%20Cookbook-%20Second%20Edition.jpg" class="img-responsive img-thumbnail"/>
+                                        </div>
+                                        <div class="col-sm-9">
                                           <p class="concat mb0"><b>Web Development with Django Cookbook</b><!-- <b class="pull-right">0%</b> --></p>
                                           <small class="mt0 mb0 concat">By Siobhan Matthews</small>
-                                          <a href="index.html" class="btn btn-primary btn-block mt5">Start</a>
+                                          <a href="index.html" class="btn btn-primary btn-block mt5">Get Started</a>
+                                        </div>
+                                        <div class="clearfix"></div>
                                           <hr>
+                                        <div class="col-sm-3">
+                                          <img src="https://d255esdrn735hr.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/B00698_MockupCover_Normal_.jpg" class="img-responsive img-thumbnail"/>
+                                        </div>
+                                        <div class="col-sm-9">
                                           <p class="concat mb0"><b>Django for Advanced Developers</b><!-- <b class="pull-right">0%</b> --></p>
                                           <small class="mt0 mb0 concat">By Siobhan Matthews</small>
-                                          <a href="index.html" class="btn btn-primary btn-block mt5">Start</a>
+                                          <a href="index.html" class="btn btn-primary btn-block mt5">Get Started</a>
+                                        </div>
                                     </div>
                                   </div>
                                 </div>
                           </div>
                           <!-- Skill Card End -->
-                            </div>
-                            <div class="col-sm-4">
-                                <!-- <div ng-show="last_viewed.title" class="panel panel-default mb0">
-                                  <div class="panel-heading">
-                                      <h3 class="panel-title">Continue Viewing</h3>
-                                  </div>
-                                  <div class="panel-body">
-                                      <strong ng-bind-html="last_viewed.title" class="ng-binding">Mastering Django Web Development [Video]</strong>
-                                      <p><small ng-bind-html="last_viewed.sub_title" class="ng-binding">Explore and master the advanced features of Django to build professional, manageable web applications</small></p>
-                                      <p ng-show="last_viewed.section_title" class="ng-hide"><strong>Last section:</strong> <span ng-bind-html="last_viewed.section_title" class="ng-binding"></span><span ng-bind-html="last_viewed.section_title" class="ng-binding">Chapter 2: Machine learning and Large-scale datasets</span></p>
-                                      <a href="index.html" class="btn btn-primary btn-block">Continue</a>
-                                  </div>
-                                </div> -->
-                                
-                                <div ng-show="last_viewed.title" class="panel panel-default mb0">
-                                  <div class="panel-heading">
-                                      <h3 class="panel-title">Recent Badges</h3>
-                                  </div>
-                                  <div class="panel-body text-center">
-                                    <div class="col-sm-4 mb10">
-                                      <img class="mb10 img-responsive" src="images/charming-python.png"/>
-                                      <p>Charming Python</p>
-                                    </div>
-                                    <div class="col-sm-4 mb10">
-                                      <img class="mb10 img-responsive" src="images/offensive-python.png"/>
-                                      <p>Offensive Python</p>
-                                    </div>
-                                    <div class="col-sm-4 mb10">
-                                      <img class="mb10 img-responsive" src="images/unleash-hadoop.png"/>
-                                      <p>Unleash Hadoop</p>
-                                    </div>
-                                    <a href="dashboard-achievements.html">View All Badges</a>
-                                      <!-- <ol><span class="skill-counter mr20"><i class="fa fa-file-text fa-lg mr10"></i> 4 Skill(s)</span><a href="dashboard-profile.html">View My Skills</a></ol> -->
-                                  </div>
-                                </div>
-                                <ol class="breadcrumb hidden-xs ng-scope mt20" ng-if="free_tokens || sub">
-                                    <li><i class="fa fa-ticket mr10"></i>You have <strong class="ng-binding">24</strong> Free Course token(s) remaining</li>
-                                </ol><!-- end ngIf: free_tokens || sub -->
-                                <!-- ngIf: sub && !freetrial --><div class="panel panel-default ng-scope mt20" ng-if="sub &amp;&amp; !freetrial">
-                                    <div class="panel-heading">
-                                        <h3 class="panel-title">Monthly Progress Tracker:</h3>
-                                    </div>
-                                    <div class="panel-body">
-                                        <h4 class="lg-title"><strong class="ng-binding">5</strong> Section(s) Completed<small class="pull-right ng-binding">25</small></h4>
-                                        <div class="progress">
-                                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-                                                <span class="sr-only ng-binding">20% Complete (success)</span>
-                                            </div>
-                                        </div>
-                                        <h4 class="lg-title"><strong class="ng-binding">2</strong>hr(s) <strong class="ng-binding">2 </strong>min(s) spent learning<small class="pull-right ng-binding">4hrs</small></h4>
-                                        <div class="progress">
-                                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 51%">
-                                                <span class="sr-only ng-binding">51% Complete (success)</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="panel-footer">
-                                        <small>You will receive a Course token when you spend more than 4 hours learning in a month and complete 25 sections. Each Course token can be redeemed for any eBook or Video from the library.</small>
-                                    </div>
-                                </div><!-- end ngIf: sub && !freetrial -->
-                                
                             </div>
 
                         </div>
@@ -333,6 +341,11 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- Sidebar Toggle Script -->
     <script src="js/simple-sidebar.js"></script>
+    <script type="text/javascript">
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+      })
+    </script>
 
 </body>
 

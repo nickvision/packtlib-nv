@@ -1,6 +1,9 @@
 /*Boostrap Overwritten Rules*/
 body {
 	font-family: Roboto, Helvetica, sans-serif;
+  background: #F9F9F9;
+  background: url('images/bg.jpg');
+  background-size: cover;
 }
 h2, h3, h4, h5, h6, .h2, .h3, .h4, .h5, .h6 {
     font-family: Roboto ,Helvetica,Arial,sans-serif;
@@ -557,12 +560,16 @@ blockquote p {
 .jumbotron.heading {
     padding-bottom: 15px;
     padding-top: 65px;
-    background: #677280;
+    background: #FFF;
+    background-image: url('images/banner-edge.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    border-bottom: 2px solid #13AE92;
 }
 .jumbotron h1 {
   font-weight: 100;
   font-size: 24px;
-  color: white;
+  color: #333;
 }
 
 .jumbotron .img-thumbnail {
@@ -591,13 +598,13 @@ blockquote p {
     font-size: 14px;
 }
 .jumbotron ol>li {
-      color: rgba(255,255,255,0.7) !important;
+      color: rgba(0,0,0,0.7) !important;
 }
 .jumbotron ol a:hover,.jumbotron ol a:focus {
     text-decoration: none;
 }
 .jumbotron ol a {
-    color: rgba(255,255,255,0.9);
+    color: rgba(0,0,0,0.9);
 }
 .jumbotron .progress {
   height: 3px;
@@ -693,19 +700,16 @@ span.input-group-btn button.btn {
     padding-bottom: 20px;*/
 }
 .top-skillcard {
-    background-color: whitesmoke;
     padding:  25px;
     padding-left: 40px;
     padding-bottom: 15px;
     border-bottom: 1px solid #eee;
 }
-.right-skillcard {
-/*    background-color: white;
-    border-left: 1px solid #eee;
-    float: none;
-    display: table-cell;
-    padding: 15px;
-    padding-bottom: 20px;*/
+.panel-body {
+  background: whitesmoke;
+}
+.modal-body>.panel-body {
+  background: #fff;
 }
 .breadcrumb.title-buttons > li + li:before {
     padding: 0 5px;
@@ -721,6 +725,31 @@ span.input-group-btn button.btn {
     margin-left: -10px;
     margin-top: -10px;
 }
+.skill-connector {
+    background: #507EAB;
+    height: 15px;
+    width: 3px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: -6px;
+    margin-bottom: -6px;
+}
+.skill-connector.incomplete {
+  background: #C2CCDB;
+}
+.tech-icon-progress {
+    height: 70px;
+    padding: 5px;
+}
+.tech-icon-progress.incomplete {
+  -webkit-filter: opacity(30%); /* Chrome, Safari, Opera */
+  filter: opacity(30%);
+}
+/*.tech-icon-progress.inprogress {
+  border-radius: 10px;
+  border:3px solid #13AE92;
+  background: white;
+}*/
 .tech-icon-sm {
   height: 70px;
   width: auto;
@@ -732,7 +761,7 @@ span.input-group-btn button.btn {
 .card-heading {
   margin-top: 15px;
   font-size: 24px;
-  font-weight: 500;
+  font-weight: 300;
   margin-bottom: 20px;
 }
 .sm-card-heading {
@@ -741,10 +770,11 @@ span.input-group-btn button.btn {
   font-weight: 500;
   margin-bottom: 10px;
   padding: 5px;
+
 }
+
 .left-skillcard li {
   list-style-position: outside;
-
   line-height: 1.8em;
   background: url(images/bullet.png) no-repeat left top;
   padding: 0px 0px 10px 35px;
@@ -756,13 +786,22 @@ span.input-group-btn button.btn {
   padding: 20px;
   padding-bottom: 0px;
 }
-/*.sm-card {
-  height: 175px;
+.sm-card {
+  height: 210px;
   width: 100%;
 }
 .sm-card>.panel-heading {
+  height: 210px;
+  border-bottom: 1px solid #ccc;
+}
+.sm-card-cs {
   height: 175px;
-}*/
+  width: 100%;
+}
+.sm-card-cs>.panel-heading {
+  height: 175px;
+  border-bottom: 1px solid #ccc;
+}
 .element-item.owned {
   opacity: 0.5;
   filter: alpha(opacity=50);
@@ -837,13 +876,17 @@ span.input-group-btn button.btn {
   }
 }
 .brand-logo.active {
-  background: #E7E7E7;
+  background: #F8F8F8;
 }
 .brand-logo:hover,
 .brand-logo:focus {
   text-decoration: none;
   color: #677280;
   background: rgba(0,0,0,0.1);
+}
+.brand-logo img {
+  height: 27px;
+  margin-top: -3px;
 }
 .panel-heading>.img-thumbnail,.modal-header>.img-thumbnail,.panel-heading>.col-sm-12>.img-thumbnail {
   border:3px solid rgba(47, 47, 47, 0.19)
