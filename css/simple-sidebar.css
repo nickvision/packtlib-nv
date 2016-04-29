@@ -60,7 +60,7 @@
 .sub-nav a {
     font-size: 12px !important;
     line-height: 18px;
-    background: #596573;
+    background: #1EA78E;
     text-indent: 35px;
 }
 
@@ -80,10 +80,10 @@
     border-bottom: none;
 }
 .sidebar-nav .nav-pills .active a, .sidebar-nav .nav-pills .active a:focus{
-    background:#465261;
+    background:#17927C;
 }
 .sidebar-nav .nav-pills a{
-    background:#596573;
+    background:#19826F;
 }
 .sidebar-nav h4 {
     color: white;

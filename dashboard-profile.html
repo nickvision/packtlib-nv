@@ -156,6 +156,14 @@
             <div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="container-fluid">               
                 <div class="row">
                         <div class="col-sm-12">
+                            <div class="col-sm-12">
+                                <div class="alert alert-info alert-dismissable" role="alert">
+                                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                  <i class="fa fa-info-circle fa-lg mr15"></i>Your <strong>Passport</strong> will show you where you've been and what you've done. Use it to keep track of the Skills you've learned and track your progress.
+                                </div>
+                            </div>
                             <div class="col-sm-3">
                               <ol class="breadcrumb hidden-xs ng-scope" ng-if="free_tokens || sub">
                                     <li><i class="fa fa-ticket mr10"></i>You have <strong class="ng-binding">24</strong> Free Course token(s) remaining</li>

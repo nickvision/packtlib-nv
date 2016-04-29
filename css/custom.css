@@ -529,7 +529,7 @@ blockquote p {
 }
 /*Section Complete on titles*/
 .completed-section {
-	border-left: 5px solid #51A796;
+	border-left: 5px solid #fff;
 }
 @media(min-width:768px) {
 	.reader-container p {
