@@ -113,9 +113,7 @@
                   <div class="col-sm-12">
                     <h1>Python Developer</h1>
                     <ol class="breadcrumb row mt0">
-                      <li><a href="select-goal.html">Choose Motivation</a></li>
-                      <li><a href="select-career.html">Select Career</a></li>
-                      <li><a href="select-role.html">Select Role</a></li>
+                      <li><a href="select-goal.html">Back to Start</a></li>
                       <li class="active mt5">Python Developer</li>
                     </ol>
                   </div>
@@ -124,44 +122,67 @@
             <div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="container-fluid">               
                 <div class="row">
                         <div class="col-sm-12">
-                          <div class="col-sm-3">
-                            <div class="panel panel-default">
-                              <div class="panel-heading">
-                                <h3 class="panel-title">My Path</h3>
-                              </div>
-                              <div class="panel-body">
-                                <div class="panel panel-default  text-center clickable sm-card-cs" data-toggle="modal" data-target="#myModal">
-                                  <div class="panel-heading python">
-                                        <div class="inner-card-sm">
-                                          <img class="tech-icon-sm" src="images/tech/python.png"/>
-                                          <h1 class="sm-card-heading">Python Fundamentals</h1>
-                                        </div>
+                          <div class="col-sm-9">
+                            <h2 class="">Good news! You have 28% of the required Skills</h2>
+                            <hr>
+                            <p class="strong">We've prepared a recommended learning path of the exact content you will need to stay ahead of the curve as a Python Developer. Click 'Get Started' below to jump in straight away.</p>
+                            <h3 class="mb20">Additional Required Skills:</h3>
+                            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                              <div class="panel panel-default" data-toggle="modal" data-target="#myModal">
+                                <div class="panel-heading python clickable" data-toggle="collapse" href="#showCard" data-parent="#accordion">
+                                  Python Fundamentals
+                                </div>
+                                <div class="collapse" id="showCard" aria-expanded="true">
+                                  <div class="panel-body">
+                                    <p>Python is one of the easiest languages to get started with. It has a human readable syntax, and fully featured (“batteries included”) standard library to help you get things done right away. It is your portal in to a new world of productive development.</p>
                                   </div>
                                 </div>
-                                <div class="panel panel-default  text-center clickable sm-card-cs" data-toggle="modal" data-target="#myModal">
-                                  <div class="panel-heading python">
-                                        <div class="inner-card-sm">
-                                          <img class="tech-icon-sm" src="images/tech/python.png"/>
-                                          <h1 class="sm-card-heading">High Performance Python</h1>
-                                        </div>
+                              </div>
+                              <div class="panel panel-default" data-toggle="modal" data-target="#myModal">
+                                <div class="panel-heading python clickable" data-toggle="collapse" href="#showCard1" data-parent="#accordion">
+                                  High Peformance Python
+                                </div>
+                                <div class="collapse" id="showCard1" aria-expanded="true">
+                                  <div class="panel-body">
+                                    <p>Performance bottlenecks can break otherwise great applications and it’s important that you know how to avoid them. High performance techniques can help your applications scale, and perform consistently; no matter how much data you’re crunching or how many users you’re serving.</p>
                                   </div>
-                                </div> 
-                                <div class="panel panel-default  text-center clickable sm-card-cs" data-toggle="modal" data-target="#myModal">
-                                  <div class="panel-heading django">
-                                        <div class="inner-card-sm">
-                                          <img class="tech-icon-sm" src="images/tech/django.png"/>
-                                          <h1 class="sm-card-heading">Production Ready Django</h1>
-                                        </div>
+                                </div>
+                              </div>
+                              <div class="panel panel-default" data-toggle="modal" data-target="#myModal">
+                                <div class="panel-heading django clickable" data-toggle="collapse" href="#showCard2" data-parent="#accordion">
+                                  Production Ready Django
+                                </div>
+                                <div class="collapse" id="showCard2" aria-expanded="true">
+                                  <div class="panel-body">
+                                    <p>Django is the framework that powers some of the world’s most popular websites and web applications, such as Instagram, Pinterest and Disqus.</p>
+                                    <p>Scaling Django, both in terms of features and users, is difficult. As with any framework, it is more balanced towards developer efficiency than performance and optimization. “Production Ready Django” will help you gain the skills you need to create robust applications that are ready to go live.</p>
                                   </div>
-                                </div> 
+                                </div>
                               </div>
                             </div>
-                          </div>
-                          <div class="col-sm-6">
-                            <h3 class="text-center mb20">The way ahead is clear, follow your path!</h3>
                             <a href="dashboard.html" class="btn btn-primary btn-lg btn-block">Get Started</a>
                           </div>
                           <div class="col-sm-3">
+                            
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <h3 class="panel-title">Skills I Have</h3>
+                              </div>
+                              <div class="panel-body">
+                                  <div class="panel panel-default" data-toggle="modal" data-target="#myModal">
+                                    <div class="panel-heading python">
+                                     Unlocking Python Objects
+                                    </div>
+                                  </div>
+                                  <div class="panel panel-default" data-toggle="modal" data-target="#myModal">
+                                    <div class="panel-heading django">
+                                     Django Up To Speed
+                                    </div>
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- <div class="col-sm-3">
                             <div ng-show="last_viewed.title" class="panel panel-default mb0 hidden-xs">
                               <div class="panel-heading text-center">
                                   <h3 class="panel-title">My Progress</h3>
@@ -178,7 +199,7 @@
                                 <a href="#" data-toggle="tooltip" title="Production Ready Django"><img class="tech-icon-progress incomplete" src="images/tech/django.png"></a>
                               </div>
                             </div>
-                          </div>
+                          </div> -->
                         </div>
                   </div><!-- row -->
       </div><!-- /#book-wrapper -->

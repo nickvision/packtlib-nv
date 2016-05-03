@@ -122,29 +122,54 @@
             <div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="container-fluid">               
                 <div class="row">
                         <div class="col-sm-12">
+                          <div class="col-sm-12">
+                            <div class="alert alert-info alert-dismissable" role="alert">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                                Quickly <strong>Sort</strong> through the Skills to create a bespoke Plan for what you need to learn
+                            </div>
+                          </div>
                           <div class="col-sm-3">
                             <div class="panel panel-default">
                               <div class="panel-heading">
-                                <h3 class="panel-title">Skills I Need</h3>
+                                <h3 class="panel-title">5 Skill Cards(s) Remaining</h3>
                               </div>
                               <div class="panel-body">
-                                  <div class="ni-progress">
-                                      <h4 class="">Nothing to Learn</h4>
+                                  <div class="panel panel-default" data-toggle="modal" data-target="#myModal">
+                                  <div class="panel-heading python">
+                                    <b>Python Fundamentals</b>
                                   </div>
+                                </div>
+                                <div class="panel panel-default" data-toggle="modal" data-target="#myModal">
+                                  <div class="panel-heading python">
+                                   Unlocking Python Objects
+                                  </div>
+                                </div>
+                                <div class="panel panel-default" data-toggle="modal" data-target="#myModal">
+                                  <div class="panel-heading python">
+                                    High Performance Python
+                                  </div>
+                                </div>
+                                <div class="panel panel-default" data-toggle="modal" data-target="#myModal">
+                                  <div class="panel-heading django">
+                                   Django Up To Speed
+                                  </div>
+                                </div>
+                                <div class="panel panel-default" data-toggle="modal" data-target="#myModal">
+                                  <div class="panel-heading django">
+                                    Production Ready Django
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           </div>
                           <div class="col-sm-6">
-                            <div class="alert alert-info alert-dismissable" role="alert">
-                              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                              </button>
-                              Quickly <strong>Sort</strong> through the Skills to create a bespoke Plan for what you need to learn
-                            </div>
+                            
                             <div class="panel panel-default mb20">
                               <div class="panel-heading python clickable" data-toggle="collapse" href="#showCard" data-parent="#accordion">
-                                    <span class="mb0 card-count pull-right"><i class="fa fa-file-text"></i> 1/5</span>
-                                    <img class="tech-icon" src="images/tech/python.png"/> 
+<!--                                     <span class="mb0 card-count pull-right"><i class="fa fa-file-text"></i> 1/5</span>
+ -->                                    <img class="tech-icon" src="images/tech/python.png"/> 
                                     <h1 class="card-heading">Python Fundamentals </h1>                                
                               </div>
                               <div class="panel-body python left-skillcard">
@@ -164,6 +189,16 @@
                             <div class="clearfix mb30"></div>
                           </div>
                           <div class="col-sm-3">
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <h3 class="panel-title">Skills I Need</h3>
+                              </div>
+                              <div class="panel-body">
+                                  <div class="ni-progress">
+                                      <h4 class="">Nothing to Learn</h4>
+                                  </div>
+                              </div>
+                            </div>
                             <div class="panel panel-default">
                               <div class="panel-heading">
                                 <h3 class="panel-title">Skills I Have</h3>
