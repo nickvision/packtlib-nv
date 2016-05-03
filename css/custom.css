@@ -531,6 +531,12 @@ blockquote p {
 .completed-section {
 	border-left: 5px solid #fff;
 }
+.simple-feefo-logo {
+  height: 10px;
+  margin-top: -4px;
+  width: auto;
+  margin-left: 5px;
+}
 @media(min-width:768px) {
 	.reader-container p {
 		font-size: 1.6rem;
