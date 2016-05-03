@@ -746,10 +746,12 @@ span.input-group-btn button.btn {
 .tech-icon-progress {
     height: 70px;
     padding: 5px;
-}
-.tech-icon-progress.incomplete {
-  -webkit-filter: opacity(30%); /* Chrome, Safari, Opera */
+    -webkit-filter: opacity(30%); /* Chrome, Safari, Opera */
   filter: opacity(30%);
+}
+.tech-icon-progress.active {
+  -webkit-filter:none; /* Chrome, Safari, Opera */
+  filter: opacity(0%);
 }
 /*.tech-icon-progress.inprogress {
   border-radius: 10px;

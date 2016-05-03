@@ -94,10 +94,10 @@
         <div id="sidebar-wrapper">
 
             <ul class="sidebar-nav">
-                    <li ><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu">Current Path</span><span class="pull-right mr5"><i class="fa fa-refresh fa-lg"></i></span></a>    </li>
-                    <li><a href="dashboard-profile.html" class="sidenav-menu-holder"><span class="sidenav-menu">Passport  </span><span class="pull-right mr5"><i class="fa fa-bullseye fa-lg"></i></span></a>    </li>
-                    <li class="active"><a href="select-goal.html" class="sidenav-menu-holder"><span class="sidenav-menu">Set a New Destination</span><span class="pull-right mr5"><i class="fa fa-bullseye fa-lg"></i></span></a>    </li>
-                    <li><a href="library.html" class="sidenav-menu-holder"><span class="sidenav-menu">Library  </span><span class="pull-right mr5"><i class="fa fa-archive fa-lg"></i></span></a>    </li>
+                    <li ><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu">Current Plan</span><span class="pull-right mr5"><i class="fa fa-refresh fa-lg"></i></span></a>    </li>
+                    <li><a href="dashboard-profile.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Skills  </span><span class="pull-right mr5"><i class="fa fa-bullseye fa-lg"></i></span></a>    </li>
+                    <li class="active"><a href="select-goal.html" class="sidenav-menu-holder"><span class="sidenav-menu">Stay Relevant</span><span class="pull-right mr5"><i class="fa fa-bullseye fa-lg"></i></span></a>    </li>
+                    <li><a href="library.html" class="sidenav-menu-holder"><span class="sidenav-menu">Explore  </span><span class="pull-right mr5"><i class="fa fa-archive fa-lg"></i></span></a>    </li>
                     <li><a href="dashboard-bookmark.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Bookmarks </span><span class="pull-right mr5">6<i class="fa fa-bookmark fa-lg"></i></span></a>    </li>
                     <li><a href="dashboard-collection.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Collection </span><span class="pull-right mr5">12<i class="fa fa-plus fa-lg"></i></span></a>    </li>
                     <li><a href="dashboard-owned.html" class="sidenav-menu-holder"><span class="sidenav-menu">Purchases  </span><span class="pull-right mr5">7<i class="fa fa-shopping-bag fa-lg"></i></span></a>    </li>
@@ -111,32 +111,42 @@
             <div class="jumbotron heading">
                 <div class="container-fluid">
                   <div class="col-sm-12">
-                    <h1>Create a new journey</h1>
-                    <ol class="breadcrumb row mt0">
-                      <li class="active mt5">Choose Motivation</li>
+                    <h1>Stay Relevant</h1>
+                    <ol class="breadcrumb row mt0"
+get>                      <li class="active mt5">A Bit About You</li>
                     </ol>
                   </div>
                 </div>
             </div>
             <div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="container-fluid">               
                 <div class="row">
-                        <div class="col-sm-12">
-                            <div class="col-sm-12">
-                                <div class="alert alert-info alert-dismissable" role="alert">
-                                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                  </button>
-                                  <i class="fa fa-info-circle fa-lg mr15"></i>Compare your current skillset to your dream job. Or explore uncharted territory
-and learn something new. 
-                                </div>
+                    <div class="col-sm-12">
+                          <h3 class="text-center mb40">Tell us a bit about yourself and we'll show you the <b>skills</b> you should be learning.</h3>
+                          <div class="col-sm-6">
+                            <p>To help you stay ahead of the curve, our team of World Class editors have identfied the core and trending skills required in today's job market. Looking at data from millions of developers, they have condensed the knowledge required in these roles into 'Skill Cards' to help you understand how you stack up.
+                            </p>
+                          </div>
+                          <div class="col-sm-6 mb20">
+                              <select class="form-control">
+                                <option>Select an Industry</option>
+                                <option>Web Development</option>
+                                <option>App Development</option>
+                                <option>Data Science</option>
+                                <option>Business Intelligence</option>
+                              </select>
                             </div>
-                            <!-- <div class="col-sm-12 mt20 mb40">
-                            <h2 class="mb20"><i class="fa fa-users mr15"></i> See Where I Stack Up</h2>
-                            <p class="mt10">Compare your skill set to other developers and see how you stack up against the competition</p>
-                            <a href="select-sector.html" class="btn btn-primary btn-block mt15">Select</a>
-                          </div> -->
-                          <h3 class="text-center ">What is motivating you to  <to> learn</b> today?</h3>
-                          <div class="col-sm-5 mb20">
+                            <div class="col-sm-6 mb20">
+                              <select class="form-control">
+                                <option>Select a Role</option>
+                                <option>Python Developer</option>
+                                <option>iOS Developer</option>
+                                <option>Android Developer</option>
+                              </select>
+                              <a href="card-sort.html" class="btn btn-primary pull-right btn-lg mt20">Next Step</a>
+                            </div>
+                            
+                        </div>
+                          <!-- <div class="col-sm-5 mb20">
                             <div class="">
                                 <div class="">
                                     <h3 class="mb20 text-center">I want to advance my career.</h3>
@@ -168,7 +178,7 @@ updated.</p>
                                     <a href="select-category.html" class="btn btn-primary btn-block">Select</a>
                                 </div>
                             </div>
-                          </div>
+                          </div> -->
                           <!-- <div class="col-sm-4">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
