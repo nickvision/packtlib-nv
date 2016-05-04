@@ -57,10 +57,15 @@ h1, .h1 {
     font-family: Roboto, Helvetica, sans-serif;
 }
 .list-name {
-	white-space: nowrap;
+	 white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     padding: 24px;
+}
+.concat {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .brand-logo {
 	height: 18px;
@@ -786,9 +791,20 @@ span.input-group-btn button.btn {
   line-height: 1.8em;
   background: url(images/bullet.png) no-repeat left top;
   padding: 0px 0px 10px 35px;
-  /* reset styles (optional): */
   list-style: none;
   margin: 0;
+}
+.left-skillcard-sm li {
+    list-style-position: outside;
+    line-height: 1.8em;
+    background: url(images/bullet.png) no-repeat left top;
+    background-size: 20px;
+    padding: 1px 0px 10px 30px;
+    list-style: none;
+    margin: 0;
+}
+.left-skillcard-sm ul {
+  padding-left: 0px;
 }
 .left-skillcard ul {
   padding: 20px;
