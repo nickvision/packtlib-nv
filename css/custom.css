@@ -123,10 +123,6 @@ h1, .h1 {
 .sidebar-nav>.nav-tabs>li.active {
 	background: none;
 }
-.sidebar-nav>.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
-	background-color: #465261;
-  color: white;
-}
 .sidebar-nav>li>h5 {
   color: rgba(255,255,255,0.8);
   font-weight: 500;
@@ -191,7 +187,6 @@ h1, .h1 {
 .modal-content {
 	border: 5px solid rgba(220, 220, 220, 0.7);
 }
-
 /*Custom Reader Style*/
 .reader-container p, .reader-container ul {
     font-size: 1.6rem;
@@ -736,6 +731,9 @@ span.input-group-btn button.btn {
     margin-left: -10px;
     margin-top: -10px;
 }
+.tech-icon.drop {
+  height: 50px;
+}
 .skill-connector {
     background: #507EAB;
     height: 15px;
@@ -794,17 +792,16 @@ span.input-group-btn button.btn {
   list-style: none;
   margin: 0;
 }
-.left-skillcard-sm li {
-    list-style-position: outside;
-    line-height: 1.8em;
-    background: url(images/bullet.png) no-repeat left top;
-    background-size: 20px;
-    padding: 1px 0px 10px 30px;
-    list-style: none;
-    margin: 0;
+.learning-skillcard li {
+  list-style-position: outside;
+  line-height: 2.2em;
+  background: url(images/bullet.png) no-repeat left top;
+  padding: 0px 0px 10px 35px;
+  list-style: none;
+  margin: 0;
 }
-.left-skillcard-sm ul {
-  padding-left: 0px;
+.learning-skillcard ul {
+  padding-left: 10px;
 }
 .left-skillcard ul {
   padding: 20px;
@@ -845,36 +842,28 @@ span.input-group-btn button.btn {
   margin-right: 15px;
 }
 .python {
-  border:none;
   border-left: 10px solid #2b5b84 !important;
 }
 .mysql {
-  border:none;
   border-left: 10px solid #f8981d !important;
 } 
 
 .django {
-  border:none;
   border-left: 10px solid #40684A !important;
 }
 .java {
-  border:none;
   border-left: 10px solid #2962B0  !important;
 }
 .docker {
-  border:none;
   border-left: 10px solid #46b0e7  !important;
 }
 .jira {
-  border:none;
   border-left: 10px solid #205081  !important;
 }
 .android {
-  border:none;
   border-left: 10px solid #9ACA42  !important;
 }
 .git {
-  border:none;
   border-left: 10px solid #f05033  !important;
 }
 .ni-progress {

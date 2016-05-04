@@ -110,10 +110,8 @@
         <div id="sidebar-wrapper">
 
             <ul class="sidebar-nav">
-                    <li class="active"><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu">Current Path</span><span class="pull-right mr5"><i class="fa fa-refresh fa-lg"></i></span></a>    </li>
-                    <li><a href="dashboard-profile.html" class="sidenav-menu-holder"><span class="sidenav-menu">Passport  </span><span class="pull-right mr5"><i class="fa fa-bullseye fa-lg"></i></span></a>    </li>
-                    <li><a href="select-goal.html" class="sidenav-menu-holder"><span class="sidenav-menu">Set a New Destination</span><span class="pull-right mr5"><i class="fa fa-bullseye fa-lg"></i></span></a>    </li>
-                    <li><a href="library.html" class="sidenav-menu-holder"><span class="sidenav-menu">Library  </span><span class="pull-right mr5"><i class="fa fa-archive fa-lg"></i></span></a>    </li>
+                    <li class="active"><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu">Dashboard</span><span class="pull-right mr5"><i class="fa fa-refresh fa-lg"></i></span></a>    </li>
+                    <li><a href="library.html" class="sidenav-menu-holder"><span class="sidenav-menu">Explore the Library </span><span class="pull-right mr5"><i class="fa fa-archive fa-lg"></i></span></a>    </li>
                     <li><a href="dashboard-bookmark.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Bookmarks </span><span class="pull-right mr5">6<i class="fa fa-bookmark fa-lg"></i></span></a>    </li>
                     <li><a href="dashboard-collection.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Collection </span><span class="pull-right mr5">12<i class="fa fa-plus fa-lg"></i></span></a>    </li>
                     <li><a href="dashboard-owned.html" class="sidenav-menu-holder"><span class="sidenav-menu">Purchases  </span><span class="pull-right mr5">7<i class="fa fa-shopping-bag fa-lg"></i></span></a>    </li>
@@ -130,241 +128,134 @@
                     <img src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/8/000/222/015/06be2f6.jpg" alt="..." class="img-responsive img-thumbnail">
                     <h1 class="mt15">Oli Huggins </h1>
                     <ol class="breadcrumb row mt0">
-                      <li class="active mt5"><b>Destination:</b> Become a Python Developer @ Nginx</li>
+                      <li class="active mt5"><b>Current Role:</b> Python Developer <a href="select-goal.html"><small><i class="fa fa-cog"></i></small></a></li>
                     </ol>
-                    <!-- <div class="progress">
-                      <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-                      </div>
-                    </div> -->
                   </div>
                 </div>
             </div>
             <div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="container-fluid">               
                 <div class="row">
-                        <div class="col-sm-12">
-                          <div class="col-sm-12">
-                                <div class="alert alert-info alert-dismissable" role="alert">
-                                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                  </button>
-                                  <i class="fa fa-info-circle fa-lg mr15"></i>Your <strong>Current Plan</strong> shows you the Skills you still need to learn to stay ahead of the curve. 
-                                </div>
-                            </div>
-                          <div class="panel-group col-sm-12 col-xl-8" id="accordion" role="tablist" aria-multiselectable="true">
-                              <!-- Skill Card Start -->
-                              <div class="panel panel-default">
-                                <div class="panel-heading python clickable" data-toggle="collapse" href="#showCard" data-parent="#accordion">
-                                    <button type="button" class="close" data-toggle="modal" data-target="#myModal"><span aria-hidden="true">×</span></button>
-                                    <img class="tech-icon hidden-xs" src="images/tech/python.png"/>
-                                    <h1 class="card-heading mb0 mt5">Python Fundamentals </h1>
-                                    <p class="concat mb0 mt10"><strong>Last Viewed:</strong> Chapter 9: Advancing Python from Python Essentials</p>                               
-                                </div>
-                                <div class="collapse in" id="showCard">
-                                  <div class="panel-body python skillcard">
-                                    <div class="col-sm-5 top-skillcard">
-                                      <p class="">Current Score<b> 17.7%</b> <a target="_blank" href="https://candidate.devskiller.com/exam.html?PREVIEW-E1618-U930-1462263378765" class="ml15">Retake Assessment</a></p> 
-                                      <!-- <p>Python is one of the easiest languages to get started with. It has a human readable syntax, and fully featured (“batteries included”) standard library to help you get things done right away. It is your portal in to a new world of productive development.</p> -->
-                                      <div class="left-skillcard-sm mt30">
-                                          <ul class="learning-points ml0">
-                                            <small>
-                                              <li>Install and set up Python on Mac, Windows or Linux</li>
-                                              <li>Write elegant, reusable, and efficient Python code to use in your future projects</li>
-                                              <li>Use Git to manage your Python code</li>
-                                              <li>Write Python scripts to automate daily tasks, and other software</li>
-                                              <li>Use unit tests to write better code, faster</li>
-                                            </small>
-                                          </ul>
-                                      <a href="dashboard2.html" class="btn btn-success mr15 btn-block mt20 mb20">I know all of this <i class="glyphicon glyphicon-ok ml10"></i></a>
-                                    </div>
-                                    </div>
-                                    <div class="col-sm-7 right-skillcard mb20 pt20">
-                                          <div class="col-sm-4">
-                                            <a href="index.html"><img src="https://www.packtpub.com/sites/default/files/B03671_MockupCover_Normal.jpg" class="img-responsive img-thumbnail"/></a>
-                                          </div>
-                                          <div class="col-sm-8">                                       
-                                            <p class="concat mb0"><b>Python Essentials</b><!-- <b class="pull-right">76%</b> --></p>
-                                            <p class="mt0 mb5 mr10 concat">By Steven Lott</p>
-                                            <!-- Feefo Star Rating -->
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                            <img src="https://dz13w8afd47il.cloudfront.net/sites/all/themes/packt_v4/images/feefo-logo-simple.png" class="simple-feefo-logo">    
-                                            <!-- Feefo Star Rating END -->                       
-                                            <p class="concat mb0 mt10"><strong>Last Viewed:</strong> Chapter 9: Advancing Python</p>
-                                            <a href="index.html" class="btn btn-primary btn-block mt10">Continue</a>
-                                          </div>
-                                          <div class="clearfix"></div>
-                                          <hr>
-                                          <div class="col-sm-4">
-                                            <a href="index.html"><img src="https://www.packtpub.com/sites/default/files/bookretailers/9781783988969.jpg" class="img-responsive img-thumbnail"/></a>
-                                          </div>
-                                          <div class="col-sm-8">
-                                            <p class="concat mb0"><b>Mastering Python [Video]</b><!-- <b class="pull-right">12%</b> --></p>
-                                            <p class="mt0 mb5 concat">By Daniel Arbuckle</p>
-                                            <!-- Feefo Star Rating -->
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <img src="https://dz13w8afd47il.cloudfront.net/sites/all/themes/packt_v4/images/feefo-logo-simple.png" class="simple-feefo-logo">    
-                                            <!-- Feefo Star Rating END -->    
-                                            <p class="concat mb0 mt10"><strong>Last Viewed:</strong> Chapter 4: Mastering Python Essentials</p>
-                                            <a href="index.html" class="btn btn-primary btn-block mt10">Continue</a>
-                                          </div>
-                                    </div>
-                                  </div>
-                                </div>
-                            </div>
-                          <!-- Skill Card Start -->
-                              <div class="panel panel-default">
-                                <div class="panel-heading python clickable" data-toggle="collapse" href="#showCard1" data-parent="#accordion">
-                                    <button data-toggle="modal" data-target="#myModal" type="button" class="close"><span aria-hidden="true">×</span></button>
-                                    <img class="tech-icon hidden-xs" src="images/tech/python.png"/> 
-                                    <h1 class="card-heading mb0 mt5">High Performance Python</h1>
-                                    <p class="concat mb0 mt10"><strong>Last Viewed:</strong> Chapter 1: Advancing Python Performance from Mastering Python High Performance</p>
-                                </div>
-                                <div class="collapse" id="showCard1">
-                                  <div class="panel-body python skillcard">
-                                    <div class="col-sm-5 top-skillcard">
-                                      <p class="">Current Score<b> 5.2%</b> <a target="_blank" href="https://candidate.devskiller.com/exam.html?PREVIEW-E1618-U930-1462263378765" class="ml15">Retake Assessment</a></p> 
-                                      <!-- <p>Performance bottlenecks can break otherwise great applications and it’s important that you know how to avoid them. High performance techniques can help your applications scale, and perform consistently; no matter how much data you’re crunching or how many users you’re serving.</p> -->
-                                      <div class="left-skillcard-sm mt30">
-                                        <ul class="learning-points">
-                                          <small>
-                                            <li>Use Cython to create blazing fast applications using Python and C</li>
-                                            <li>Master code optimization techniques, and learn about all 16 classic design patterns to help super-charge your applications</li>
-                                            <li>Deploy decorators, design patters, and various optimization techniques to use Python 3.5 effectively</li>
-                                          </small>
-                                        </ul>
-                                       <a href="dashboard2.html" class="btn btn-success mr15 btn-block mt20 mb20">I know all of this <i class="glyphicon glyphicon-ok ml10"></i></a>
-                                      </div>
-                                    </div>
-                                      <div class="col-sm-7 right-skillcard mb20 pt20">
-                                        <div class="col-sm-4">
-                                          <a href="index.html"><img src="https://www.packtpub.com/sites/default/files/9300OS.jpg" class="img-responsive img-thumbnail"/></a>
-                                        </div>
-                                        <div class="col-sm-8">
-                                          <p class="concat mb0"><b>Mastering Python High Performance</b><!-- <b class="pull-right">20%</b> --></p>
-                                          <p class="mt0 mb5 mr10 concat">By Brian Gooding</p>
-                                          <!-- Feefo Star Rating -->
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                            <img src="https://dz13w8afd47il.cloudfront.net/sites/all/themes/packt_v4/images/feefo-logo-simple.png" class="simple-feefo-logo">    
-                                            <!-- Feefo Star Rating END -->    
-                                          <p class="concat mb0 mt10"><strong>Last Viewed:</strong> Chapter 1: Advancing Python Performance</p>
-                                          <a href="index.html" class="btn btn-primary btn-block mt10">Continue</a>
-                                        </div>
-                                        <div class="clearfix"></div>
-                                          <hr>
-                                        <div class="col-sm-4">
-                                          <a href="index.html"><img src="https://dz13w8afd47il.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/9324OS_Mastering%20Python%20Design%20Patterns_Frontcover.jpg" class="img-responsive img-thumbnail"/></a>
-                                        </div>
-                                        <div class="col-sm-8">
-                                          <p class="concat mb0"><b>Mastering Python Design Patterns</b><!-- <b class="pull-right">0%</b> --></p>
-                                          <p class="mt0 mb5 mr10 concat">By Siobhan Matthews</p>
-                                          <!-- Feefo Star Rating -->
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                            <img src="https://dz13w8afd47il.cloudfront.net/sites/all/themes/packt_v4/images/feefo-logo-simple.png" class="simple-feefo-logo">    
-                                            <!-- Feefo Star Rating END -->    
-                                          <a href="index.html" class="btn btn-primary btn-block mt10">Get Started</a>
+                        <div class="">
+                            <div class="col-sm-12">
+                              <ul id="recommendationTabs" class="nav nav-tabs hidden-xs" role="tablist">
+                                  <li class="active">
+                                      <a href="#popular" role="tab" data-toggle="tab" aria-controls="popular" ng-click="$event.preventDefault();" aria-expanded="false">Current Learning</a>
+                                  </li>
+                                  <li class="">
+                                      <a href="#recommended" ng-click="$event.preventDefault();" role="tab" data-toggle="tab" aria-controls="recommended" aria-expanded="true" ng-if="libraryController.userRecommendations" class="ng-scope">What I've Done</a>
+                                  </li>
+                              </ul>
+                              <div class="tab-content mt15">
+                                  <div role="tabpanel" class="tab-pane fade active in" id="popular" aria-labelledby="popular-tab">
+                                    <div class="">
+                                      <div class="col-sm-6">
+                                        <div class="alert alert-info mt5" role="alert">
+                                          <i class="fa fa-info-circle fa-lg mr15 "></i>Click the <b>Skill Card</b> on the right to select what you would like to learn
                                         </div>
                                       </div>
-                                    </div>
-                                </div>
-                          </div>
-                          <!-- Skill Card Start -->
-                              <div class="panel panel-default">
-                                <div class="panel-heading django clickable " data-toggle="collapse" href="#showCard2" data-parent="#accordion">
-                                    <button data-toggle="modal" data-target="#myModal" type="button" class="close"><span aria-hidden="true">×</span></button>
-                                    <img class="tech-icon hidden-xs" src="images/tech/django.png"/> 
-                                    <h1 class="card-heading mb0 mt5">Production Ready Django</h1>
-                                    <p class="concat mb0 mt10"><strong>Not Started</strong></p>
-                                </div>
-                                <div class="collapse" id="showCard2">
-                                  <div class="panel-body django skillcard">
-                                    <div class="col-sm-5 top-skillcard">
-                                      <p class=""><a target="_blank" href="https://candidate.devskiller.com/exam.html?PREVIEW-E1618-U930-1462263378765" class="">Take Assessment</a></p> 
-                                      <div class=" left-skillcard-sm mt30">
-                                      <ul class="learning-points">
-                                        <small>
-                                          <li>Use common design patterns that can help you write better, more efficient, Django code</li>
-                                          <li>Reduce your future maintenance burden with well-tested, cleaner Python code</li>
-                                          <li>Create a rich user experience using Ajax and other JavaScript techniques</li>
-                                        </small>
-                                      </ul>
-                                      <a href="dashboard2.html" class="btn btn-success mr15 btn-block mt20 mb20">I know all of this <i class="glyphicon glyphicon-ok ml10"></i></a>
-                                    </div>
+                                      <div class="col-sm-6">
+                                       <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                          <div class="panel panel-default">
+                                            <div class="panel-heading clickable python" role="tab" id="headingOne"  data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                              <button type="button" class="close" data-toggle="modal" data-target="#myModal"><span aria-hidden="true">×</span></button>
+                                              <img class="tech-icon drop hidden-xs" src="images/tech/python.png"/>
+                                              <h1 class="card-heading mb5 mt0">Python Fundamentals</h1>
+                                            </div>
+                                            <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                                <div class="list-group">
+                                                  <a href="#" class="list-group-item pt15 pb15 python">
+                                                    <button type="button" class="close" data-toggle="modal" data-target="#myModal"><span aria-hidden="true">×</span></button>
+                                                    <img class="tech-icon drop hidden-xs" src="images/tech/python.png"/>
+                                                    <h1 class="card-heading mb5 mt0">High Performance Python </h1>
+                                                  </a>
+                                                  <a href="#" class="list-group-item pt15 pb15 django">
+                                                    <button type="button" class="close" data-toggle="modal" data-target="#myModal"><span aria-hidden="true">×</span></button>
+                                                    <img class="tech-icon drop hidden-xs" src="images/tech/django.png"/>
+                                                    <h1 class="card-heading mb5 mt0">Production Ready Django </h1>
+                                                  </a>
+                                                </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="clearfix"></div>
+                                      <div class="col-sm-5 col-xl-6">
+                                        <div class="panel panel-default">
+                                          <div class="panel-heading">
+                                            <h3 class="panel-title">What I'm Currently Learning</h3>
+                                          </div>
+                                          <div class="panel-body learning-skillcard">
+                                            <ul class="learning-points">
+                                                <li>Install and set up Python on Mac, Windows or Linux</li>
+                                                <li>Write elegant, reusable, and efficient Python code to use in your future projects</li>
+                                                <li>Use Git to manage your Python code</li>
+                                                <li>Write Python scripts to automate daily tasks, and other software</li>
+                                                <li>Use unit tests to write better code, faster</li>
+                                            </ul>
+                                            <a href="dashboard2.html" class="btn btn-default btn-block mt10 mb5">I know all of this <i class="glyphicon glyphicon-ok ml10"></i></a>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="col-sm-7 col-xl-6">
+                                        <div class="panel panel-default">
+                                          <div class="panel-heading">
+                                            <h3 class="panel-title">Recommended Resources</h3>
+                                          </div>
+                                          <ul class="list-group">
+                                              <a ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
+                                              <img src="https://d1ldz4te4covpm.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/9689_B03980_Practical%20Machine%20Learning_.jpg" class="img-product-list"/>
+                                                  <strong ng-bind-html="fivePopular.title" class="ng-binding">Python Essentials</strong>
+                                                  <span class="animate-switch-container hidden-xs" ng-switch="" on="fivePopular.field_book_series">
+                                                     <span class="badge-learn badge pull-right ng-scope" ng-switch-when="learning">Learner</span>
+                                                  </span><br>
+                                                  <p>By Steven Lott</p>
+                                                    <!-- Feefo Star Rating -->
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                                    <img src="https://dz13w8afd47il.cloudfront.net/sites/all/themes/packt_v4/images/feefo-logo-simple.png" class="simple-feefo-logo">    
+                                                    <!-- Feefo Star Rating END -->    
+                                                  <br>
+                                                  <p class="concat mb0 mt10"><strong>Last Viewed:</strong> Chapter 9: Advancing Python</p>
+                                                  
+                                                </a>
+                                              <a ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
+                                                  <img src="https://d1ldz4te4covpm.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/8751OS_1698_Learning%20Drupal%208.jpg" class="img-product-list"/>
+                                                  <strong ng-bind-html="fivePopular.title" class="ng-binding">Learning Drupal 8</strong>
+                                                  <span class="animate-switch-container hidden-xs" ng-switch="" on="fivePopular.field_book_series">
+                                                      <span class="badge-learn badge pull-right ng-scope" ng-switch-when="learning">Learner</span>
+                                                  </span><br>
+                                                  <p>By Nick Abbott</p>
+                                                  <!-- Feefo Star Rating -->
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                    <img src="https://dz13w8afd47il.cloudfront.net/sites/all/themes/packt_v4/images/feefo-logo-simple.png" class="simple-feefo-logo">    
+                                                    <!-- Feefo Star Rating END -->   
+                                                  <br>
+                                                  <p class="concat mb0 mt10"><strong>Last Viewed:</strong> Chapter 2: Beginning Drupal</p>
+                                              </a>
+                                            </ul>
+                                          </div>
+                                        </div>
+      
                                     </div>
                                     
-                                    <div class="col-sm-7 right-skillcard mb20 pt20">
-                                        <div class="col-sm-4">
-                                          <a href="index.html"><img src="https://www.packtpub.com/sites/default/files/6644OS.jpg" class="img-responsive img-thumbnail"/></a>
-                                        </div>
-                                        <div class="col-sm-8">
-                                          <p class="concat mb0"><b>Django Design Patterns and Best Practices</b><!-- <b class="pull-right">0%</b> --></p>
-                                          <p class="mt0 mb5 mr10 concat">By Brian Gooding</p>
-                                          <!-- Feefo Star Rating -->
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <img src="https://dz13w8afd47il.cloudfront.net/sites/all/themes/packt_v4/images/feefo-logo-simple.png" class="simple-feefo-logo">    
-                                            <!-- Feefo Star Rating END -->    
-                                          <a href="index.html" class="btn btn-primary btn-block mt10">Get Started</a>
-                                        </div>
-                                        <div class="clearfix"></div>
-                                          <hr>
-                                        <div class="col-sm-4">
-                                          <a href="index.html"><img src="https://www.packtpub.com/sites/default/files/6775O9S_Web%20Development%20with%20Django%20Cookbook-%20Second%20Edition.jpg" class="img-responsive img-thumbnail"/></a>
-                                        </div>
-                                        <div class="col-sm-8">
-                                          <p class="concat mb0"><b>Web Development with Django Cookbook</b><!-- <b class="pull-right">0%</b> --></p>
-                                          <p class="mt0 mb5 mr10 concat">By Siobhan Matthews</p>
-                                          <!-- Feefo Star Rating -->
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                            <img src="https://dz13w8afd47il.cloudfront.net/sites/all/themes/packt_v4/images/feefo-logo-simple.png" class="simple-feefo-logo">    
-                                            <!-- Feefo Star Rating END -->    
-                                          <a href="index.html" class="btn btn-primary btn-block mt10">Get Started</a>
-                                        </div>
-                                        <div class="clearfix"></div>
-                                          <hr>
-                                        <div class="col-sm-4">
-                                          <a href="index.html"><img src="https://d255esdrn735hr.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/B00698_MockupCover_Normal_.jpg" class="img-responsive img-thumbnail"/></a>
-                                        </div>
-                                        <div class="col-sm-8">
-                                          <p class="concat mb0"><b>Django for Advanced Developers</b><!-- <b class="pull-right">0%</b> --></p>
-                                          <p class="mt0 mb5 mr10 concat">By Siobhan Matthews</p>
-                                          <!-- Feefo Star Rating -->
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <img src="https://dz13w8afd47il.cloudfront.net/sites/all/themes/packt_v4/images/feefo-logo-simple.png" class="simple-feefo-logo">    
-                                            <!-- Feefo Star Rating END -->    
-                                          <a href="index.html" class="btn btn-primary btn-block mt10">Get Started</a>
-                                        </div>
+                                     
                                     </div>
+
+
+                                  <div role="tabpanel" class="tab-pane fade" id="recommended" aria-labelledby="recommended-tab">
+                                    
                                   </div>
-                                </div>
+
+                              </div>
                           </div>
-                          <!-- Skill Card End -->
-                            </div>
+                          
 
                         </div>
                   </div><!-- row -->
@@ -388,6 +279,40 @@
         $('[data-toggle="tooltip"]').tooltip()
       })
     </script>
+    <script src="js/progressbar.min.js"></script>
+    <script type="text/javascript">
+    var bar = new ProgressBar.Circle('#progress-circle', {
+      color: '#aaa',
+      // This has to be the same size as the maximum width to
+      // prevent clipping
+      strokeWidth: 6,
+      trailWidth: 1,
+      easing: 'bounce',
+      duration: 1600,
+      text: {
+        autoStyleContainer: false,
+      },
+      from: { color: '#aaa', width: 1 },
+      to: { color: '#333', width: 4 },
+      // Set default step function for all animate calls
+      step: function(state, circle) {
+        circle.path.setAttribute('stroke', state.color);
+        circle.path.setAttribute('stroke-width', state.width);
+
+        var value = Math.round(circle.value() * 100);
+        if (value === 0) {
+          circle.setText('');
+        } else {
+          circle.setText(value);
+        }
+
+      }
+    });
+    bar.text.style.fontFamily = '"Roboto", Helvetica, sans-serif';
+    bar.text.style.fontSize = '3rem';
+
+    bar.animate(1.0);  // Number from 0.0 to 1.0
+</script>
 
 </body>
 
