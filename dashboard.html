@@ -111,7 +111,7 @@
 
             <ul class="sidebar-nav">
                     <li class="active"><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu">Dashboard</span><span class="pull-right mr5"><i class="fa fa-refresh fa-lg"></i></span></a>    </li>
-                    <li><a href="library.html" class="sidenav-menu-holder"><span class="sidenav-menu">Explore the Library </span><span class="pull-right mr5"><i class="fa fa-archive fa-lg"></i></span></a>    </li>
+                    <li><a href="library.html" class="sidenav-menu-holder"><span class="sidenav-menu">Explore The Library </span><span class="pull-right mr5"><i class="fa fa-archive fa-lg"></i></span></a>    </li>
                     <li><a href="dashboard-bookmark.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Bookmarks </span><span class="pull-right mr5">6<i class="fa fa-bookmark fa-lg"></i></span></a>    </li>
                     <li><a href="dashboard-collection.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Collection </span><span class="pull-right mr5">12<i class="fa fa-plus fa-lg"></i></span></a>    </li>
                     <li><a href="dashboard-owned.html" class="sidenav-menu-holder"><span class="sidenav-menu">Purchases  </span><span class="pull-right mr5">7<i class="fa fa-shopping-bag fa-lg"></i></span></a>    </li>
@@ -218,7 +218,7 @@
                                                     <img src="https://dz13w8afd47il.cloudfront.net/sites/all/themes/packt_v4/images/feefo-logo-simple.png" class="simple-feefo-logo">    
                                                     <!-- Feefo Star Rating END -->    
                                                   <br>
-                                                  <p class="concat mb0 mt10"><strong>Last Viewed:</strong> Chapter 9: Advancing Python</p>
+                                                  <p class="concat mb0 mt10"><strong>Continue Viewing:</strong> Chapter 9: Advancing Python</p>
                                                   
                                                 </a>
                                               <a ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
@@ -237,7 +237,7 @@
                                                     <img src="https://dz13w8afd47il.cloudfront.net/sites/all/themes/packt_v4/images/feefo-logo-simple.png" class="simple-feefo-logo">    
                                                     <!-- Feefo Star Rating END -->   
                                                   <br>
-                                                  <p class="concat mb0 mt10"><strong>Last Viewed:</strong> Chapter 2: Beginning Drupal</p>
+                                                  <p class="concat mb0 mt10"><strong>Continue Viewing:</strong> Chapter 2: Beginning Drupal</p>
                                               </a>
                                             </ul>
                                           </div>
@@ -250,8 +250,80 @@
 
 
                                   <div role="tabpanel" class="tab-pane fade" id="recommended" aria-labelledby="recommended-tab">
-                                    
+                                    <div class="col-sm-12 col-lg-4 col-xl-3">
+                                      <div class="panel panel-default ng-scope">
+                                           <div class="panel-heading">
+                                                <h3 class="panel-title">Python Developer Progress:</h3>
+                                            </div>
+                                            <div class="panel-body">
+                                                <h4 class="lg-title"><strong class="ng-binding">2</strong> Card(s) Completed<small class="pull-right ng-binding">5</small></h4>
+                                                <div class="progress">
+                                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                                        <span class="sr-only ng-binding">20% Complete (success)</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                      <div class="panel panel-default ng-scope">
+                                           <div class="panel-heading">
+                                                <h3 class="panel-title">Monthly Progress Tracker:</h3>
+                                            </div>
+                                            <div class="panel-body">
+                                                <h4 class="lg-title"><strong class="ng-binding">5</strong> Section(s) Completed<small class="pull-right ng-binding">25</small></h4>
+                                                <div class="progress">
+                                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                                        <span class="sr-only ng-binding">20% Complete (success)</span>
+                                                    </div>
+                                                </div>
+                                                <h4 class="lg-title"><strong class="ng-binding">2</strong>hr(s) <strong class="ng-binding">2 </strong>min(s) spent learning<small class="pull-right ng-binding">4hrs</small></h4>
+                                                <div class="progress">
+                                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 51%">
+                                                        <span class="sr-only ng-binding">51% Complete (success)</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="panel-footer">
+                                                <small>You will receive a Course token when you spend more than 4 hours learning in a month and complete 25 sections. Each Course token can be redeemed for any eBook or Video from the library.</small>
+                                            </div>
+                                        </div>
+                                        <ol class="breadcrumb hidden-xs ng-scope" ng-if="free_tokens || sub">
+                                            <li><i class="fa fa-ticket mr10"></i>You have <strong class="ng-binding">24</strong> Free Course token(s) remaining</li>
+                                      </ol>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <h3>My Skill Cards</h3>
+                                        <hr>
+                                        <div class="grid row">
+                                            <div class="element-item program col-sm-4 col-xl-2 text-center" data-category="program">
+                                              <img class="img-responsive" src="images/tech/django.png"/>
+                                              <h2 class="sm-card-heading">Django Up To Speed</h2>     
+                                              <p class="mt10 pl5">Score<b> 67.7%</b></p>
+                                            </div>
+                                            <div class="element-item program col-sm-4 col-xl-2 text-center" data-category="program">                  
+                                              <img class="img-responsive" src="images/tech/java.png"/>
+                                              <h2 class="sm-card-heading">RESTful Java Programming</h2>
+                                              <p class="mt10 pl5">Score<b> 42.1%</b></p>
+                                            </div>
+                                            <div class="element-item program col-sm-4 col-xl-2 text-center" data-category="program">
+                                              <img class="img-responsive" src="images/tech/java.png"/>
+                                              <h2 class="sm-card-heading">Reactive Java Programming</h2>
+                                              <p class="mt10 pl5">Score<b> 98.2%</b></p>
+                                            </div>
+                                            <div class="element-item admin col-sm-4 col-xl-2 text-center" data-category="admin">
+                                              <img class="img-responsive" src="images/tech/mysql.png"/>
+                                              <h2 class="sm-card-heading">MySQL Administration</h2> 
+                                            </div>
+                                            <div class="element-item tech col-sm-4 col-xl-2 text-center" data-category="tech">               
+                                              <img class="img-responsive" src="images/tech/git.png"/>
+                                              <h2 class="sm-card-heading">Git Fundamentals</h2>
+                                              <p class="mt10 pl5">Score<b> 0.00%</b></p>
+                                            </div>
+                                          </div>
+                                          <hr>
+                                            <h4 class="text-center">What are you really capable of? Why not discover <a href="select-skills.html">New Skills</a> to Unlock?</h4>
+                                    </div>
                                   </div>
+
 
                               </div>
                           </div>
@@ -274,45 +346,65 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- Sidebar Toggle Script -->
     <script src="js/simple-sidebar.js"></script>
-    <script type="text/javascript">
-      $(function () {
-        $('[data-toggle="tooltip"]').tooltip()
-      })
-    </script>
-    <script src="js/progressbar.min.js"></script>
-    <script type="text/javascript">
-    var bar = new ProgressBar.Circle('#progress-circle', {
-      color: '#aaa',
-      // This has to be the same size as the maximum width to
-      // prevent clipping
-      strokeWidth: 6,
-      trailWidth: 1,
-      easing: 'bounce',
-      duration: 1600,
-      text: {
-        autoStyleContainer: false,
-      },
-      from: { color: '#aaa', width: 1 },
-      to: { color: '#333', width: 4 },
-      // Set default step function for all animate calls
-      step: function(state, circle) {
-        circle.path.setAttribute('stroke', state.color);
-        circle.path.setAttribute('stroke-width', state.width);
 
-        var value = Math.round(circle.value() * 100);
-        if (value === 0) {
-          circle.setText('');
-        } else {
-          circle.setText(value);
-        }
+    <script type="text/javascript">
+    $( function() {
+  // quick search regex
+  var qsRegex;
+  var buttonFilter;
+  
+  // init Isotope
+  var $container = $('.grid').isotope({
+    itemSelector: '.element-item',
+    layoutMode: 'fitRows',
+    filter: function() {
+      var $this = $(this);
+      var searchResult = qsRegex ? $this.text().match( qsRegex ) : true;
+      var buttonResult = buttonFilter ? $this.is( buttonFilter ) : true;
+      return searchResult && buttonResult;
+    }
+  });
 
-      }
+  $('#filters').on( 'click', 'button', function() {
+    buttonFilter = $( this ).attr('data-filter');
+    $container.isotope();
+  });
+  
+  // use value of search field to filter
+  var $quicksearch = $('.quicksearch').keyup( debounce( function() {
+    qsRegex = new RegExp( $quicksearch.val(), 'gi' );
+    $container.isotope();
+  }) );
+
+  
+    // change is-checked class on buttons
+  $('.btn-group').each( function( i, buttonGroup ) {
+    var $buttonGroup = $( buttonGroup );
+    $buttonGroup.on( 'click', 'button', function() {
+      $buttonGroup.find('.active').removeClass('active');
+      $( this ).addClass('active');
     });
-    bar.text.style.fontFamily = '"Roboto", Helvetica, sans-serif';
-    bar.text.style.fontSize = '3rem';
+  });
+  
+  
+});
 
-    bar.animate(1.0);  // Number from 0.0 to 1.0
-</script>
+// debounce so filtering doesn't happen every millisecond
+function debounce( fn, threshold ) {
+  var timeout;
+  return function debounced() {
+    if ( timeout ) {
+      clearTimeout( timeout );
+    }
+    function delayed() {
+      fn();
+      timeout = null;
+    }
+    setTimeout( delayed, threshold || 100 );
+  };
+}
+
+    </script>
 
 </body>
 
