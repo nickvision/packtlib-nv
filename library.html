@@ -127,14 +127,11 @@
         <div id="sidebar-wrapper">
 
             <ul class="sidebar-nav">
-                    <li ><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu">Current Path</span><span class="pull-right mr5"><i class="fa fa-refresh fa-lg"></i></span></a>    </li>
-                    <li><a href="dashboard-profile.html" class="sidenav-menu-holder"><span class="sidenav-menu">Passport  </span><span class="pull-right mr5"><i class="fa fa-bullseye fa-lg"></i></span></a>    </li>
-                    <li><a href="select-goal.html" class="sidenav-menu-holder"><span class="sidenav-menu">Set a New Destination</span><span class="pull-right mr5"><i class="fa fa-bullseye fa-lg"></i></span></a>    </li>
-                    <li class="active"><a href="library.html" class="sidenav-menu-holder"><span class="sidenav-menu">Library  </span><span class="pull-right mr5"><i class="fa fa-archive fa-lg"></i></span></a>    </li>
-                    <li><a href="dashboard-bookmark.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Bookmarks </span><span class="pull-right mr5">6<i class="fa fa-bookmark fa-lg"></i></span></a>    </li>
-                    <li><a href="dashboard-collection.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Collection </span><span class="pull-right mr5">12<i class="fa fa-plus fa-lg"></i></span></a>    </li>
-                    <li><a href="dashboard-owned.html" class="sidenav-menu-holder"><span class="sidenav-menu">Purchases  </span><span class="pull-right mr5">7<i class="fa fa-shopping-bag fa-lg"></i></span></a>    </li>
-                
+              <li><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu">Dashboard</span><span class="pull-right mr5"><i class="fa fa-refresh fa-lg"></i></span></a>    </li>
+              <li class="active"><a href="library.html" class="sidenav-menu-holder"><span class="sidenav-menu">Explore The Library </span><span class="pull-right mr5"><i class="fa fa-archive fa-lg"></i></span></a>    </li>
+              <li><a href="dashboard-bookmark.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Bookmarks </span><span class="pull-right mr5">6<i class="fa fa-bookmark fa-lg"></i></span></a>    </li>
+              <li><a href="dashboard-collection.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Collection </span><span class="pull-right mr5">12<i class="fa fa-plus fa-lg"></i></span></a>    </li>
+              <li><a href="dashboard-owned.html" class="sidenav-menu-holder"><span class="sidenav-menu">Purchases  </span><span class="pull-right mr5">7<i class="fa fa-shopping-bag fa-lg"></i></span></a>    </li>
             </ul>
         </div>
 
@@ -146,7 +143,8 @@
                   <div class="col-sm-12">
                     <h1>Library</h1>
                     <ol class="breadcrumb row mt0">
-                      <li class="active mt5">Courses</li>
+                      <li class="active mt5">Browse our vast collection of courses by topic and see what skills are trending around
+the world.</li>
                     </ol>
                   </div>
                 </div>
@@ -154,15 +152,6 @@
             <div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="container-fluid">               
                 <div class="row">
                   <div class="col-sm-12">
-                      <div class="col-sm-12">
-                          <div class="alert alert-info alert-dismissable" role="alert">
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                              <span aria-hidden="true">&times;</span>
-                            </button>
-                            <i class="fa fa-info-circle fa-lg mr15"></i>Browse our vast collection of courses by topic and see what skills are trending around
-the world.
-                          </div>
-                      </div>
                       <div class="col-sm-3 col-lg-2 col-xl-2">
                         <div class="panel panel-default">
                           <!-- Default panel contents -->
@@ -536,34 +525,6 @@ the world.
 
                       </div>
                     </div>
-                    <div class="col-sm-12 col-lg-4 col-xl-3">
-                        
-                        <div class="panel panel-default ng-scope">
-                             <div class="panel-heading">
-                                  <h3 class="panel-title">Monthly Progress Tracker:</h3>
-                              </div>
-                              <div class="panel-body">
-                                  <h4 class="lg-title"><strong class="ng-binding">5</strong> Section(s) Completed<small class="pull-right ng-binding">25</small></h4>
-                                  <div class="progress">
-                                      <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-                                          <span class="sr-only ng-binding">20% Complete (success)</span>
-                                      </div>
-                                  </div>
-                                  <h4 class="lg-title"><strong class="ng-binding">2</strong>hr(s) <strong class="ng-binding">2 </strong>min(s) spent learning<small class="pull-right ng-binding">4hrs</small></h4>
-                                  <div class="progress">
-                                      <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 51%">
-                                          <span class="sr-only ng-binding">51% Complete (success)</span>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div class="panel-footer">
-                                  <small>You will receive a Course token when you spend more than 4 hours learning in a month and complete 25 sections. Each Course token can be redeemed for any eBook or Video from the library.</small>
-                              </div>
-                          </div>
-                          <ol class="breadcrumb hidden-xs ng-scope" ng-if="free_tokens || sub">
-                              <li><i class="fa fa-ticket mr10"></i>You have <strong class="ng-binding">24</strong> Free Course token(s) remaining</li>
-                        </ol>
-                      </div>
                 </div><!-- row -->
 			</div><!-- /#book-wrapper -->
 		</div><!-- /#page-content-wrapper -->

@@ -94,14 +94,11 @@
         <div id="sidebar-wrapper">
 
            <ul class="sidebar-nav">
-                    <li ><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu">Current Path</span><span class="pull-right mr5"><i class="fa fa-refresh fa-lg"></i></span></a>    </li>
-                    <li><a href="dashboard-profile.html" class="sidenav-menu-holder"><span class="sidenav-menu">Passport  </span><span class="pull-right mr5"><i class="fa fa-bullseye fa-lg"></i></span></a>    </li>
-                    <li><a href="select-goal.html" class="sidenav-menu-holder"><span class="sidenav-menu">Set a New Destination</span><span class="pull-right mr5"><i class="fa fa-bullseye fa-lg"></i></span></a>    </li>
-                    <li><a href="library.html" class="sidenav-menu-holder"><span class="sidenav-menu">Library  </span><span class="pull-right mr5"><i class="fa fa-archive fa-lg"></i></span></a>    </li>
-                    <li><a href="dashboard-bookmark.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Bookmarks </span><span class="pull-right mr5">6<i class="fa fa-bookmark fa-lg"></i></span></a>    </li>
-                    <li class="active"><a href="dashboard-collection.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Collection </span><span class="pull-right mr5">12<i class="fa fa-plus fa-lg"></i></span></a>    </li>
-                    <li><a href="dashboard-owned.html" class="sidenav-menu-holder"><span class="sidenav-menu">Purchases  </span><span class="pull-right mr5">7<i class="fa fa-shopping-bag fa-lg"></i></span></a>    </li>
-                
+              <li><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu">Dashboard</span><span class="pull-right mr5"><i class="fa fa-refresh fa-lg"></i></span></a>    </li>
+              <li><a href="library.html" class="sidenav-menu-holder"><span class="sidenav-menu">Explore The Library </span><span class="pull-right mr5"><i class="fa fa-archive fa-lg"></i></span></a>    </li>
+              <li ><a href="dashboard-bookmark.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Bookmarks </span><span class="pull-right mr5">6<i class="fa fa-bookmark fa-lg"></i></span></a>    </li>
+              <li class="active"><a href="dashboard-collection.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Collection </span><span class="pull-right mr5">12<i class="fa fa-plus fa-lg"></i></span></a>    </li>
+              <li><a href="dashboard-owned.html" class="sidenav-menu-holder"><span class="sidenav-menu">Purchases  </span><span class="pull-right mr5">7<i class="fa fa-shopping-bag fa-lg"></i></span></a>    </li>
             </ul>
         </div>
 
@@ -113,7 +110,7 @@
                   <div class="col-sm-12">
                     <h1>My Collection</h1>
                     <ol class="breadcrumb row mt0">
-                      <li class="active mt5">Dashboard</li>
+                      <li class="active mt5">If you ever find a course that you need to ear mark, save it to your <strong>Collection</strong> and always ensure you can access it quickly and effectively. </li>
                     </ol>
                   </div>
                 </div>
@@ -121,191 +118,206 @@
             <div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="container-fluid">               
                 <div class="row">
                         <div class="col-sm-12">
-                            <div class="col-sm-12">
-                                <div class="alert alert-info alert-dismissable" role="alert">
-                                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                  </button>
-                                  <i class="fa fa-info-circle fa-lg mr15"></i>If you ever find a course that you need to ear mark, save it to your <strong>Collection</strong> and always ensure you can access it quickly and effectively. 
-                                </div>
-                            </div>
                           <div ng-show="myList[0]" class="col-sm-offset-6 col-md-offset-8 col-lg-offset-9 col-sm-6 col-md-4 col-lg-3 mb20">
                               <select ng-change="sort_myList($event)" class="form-control ng-pristine ng-untouched ng-valid" name="sorted_myList" data-ng-options="o.name for o in dropdown_options_sort track by o.id" data-ng-model="dropdown_selectedOption_sort"><option value="mostRecent" selected="selected" label="Sort by Most Recent">Sort by Most Recent</option><option value="mostPopular" label="Sort by Most Popular">Sort by Most Popular</option><option value="oldest" label="Sort by Oldest">Sort by Oldest</option><option value="sortAZ" label="Sort A-Z">Sort A-Z</option><option value="sortZA" label="Sort Z-A">Sort Z-A</option></select>
                           </div>
                           <div class="col-sm-12">
                             <div ng-show="myList[0]" class="panel panel-default">
                                 <ul class="list-group">
-                                    <!-- ngRepeat: (key, value) in myList --><a ng-repeat="(key, value) in myList" href="/packtlib/book/All-Books/9781785289897" class="list-group-item list-name">
-                                        <strong ng-bind-html="value.title" class="ng-binding">Magento 2 Development Essentials</strong>
-                                        <span class="animate-switch-container hidden-xs" ng-switch="" on="value.book_series">
-                                            <!-- ngSwitchWhen: learning -->
-                                            <!-- ngSwitchWhen: beginners guide -->
-                                            <!-- ngSwitchWhen: mastering -->
-                                            <!-- ngSwitchWhen: essentials --><span class="badge-learn badge pull-right ng-scope" ng-switch-when="essentials">Learner</span><!-- end ngSwitchWhen: -->
-                                            <!-- ngSwitchWhen: blueprints -->
-                                            <!-- ngSwitchWhen: cookbook -->
-                                            <!-- ngSwitchWhen: by example -->
-                                            <!-- ngSwitchDefault:  -->
-                                        </span><br>
-                                        <small class="pull-left ng-binding">By Fernando J. Miguel</small>
-                                        <br>
-                                        <small class="pull-left title-duration ng-binding"><i class="fa fa-clock-o mr5"></i>5 hours 20 minutes</small><!-- ngIf: value.publication_date --><small ng-if="value.publication_date" class="pull-right mr10 ng-binding ng-scope">Jan 2016</small><!-- end ngIf: value.publication_date -->
-                                        <div class="clearfix">
-                                        </div>
-                                    </a><!-- end ngRepeat: (key, value) in myList --><a ng-repeat="(key, value) in myList" href="/packtlib/video/Web-Development/9781785883156" class="list-group-item list-name">
-                                        <strong ng-bind-html="value.title" class="ng-binding">Learning PHP 7 [Video]</strong>
-                                        <span class="animate-switch-container hidden-xs" ng-switch="" on="value.book_series">
-                                            <!-- ngSwitchWhen: learning -->
-                                            <!-- ngSwitchWhen: beginners guide -->
-                                            <!-- ngSwitchWhen: mastering -->
-                                            <!-- ngSwitchWhen: essentials -->
-                                            <!-- ngSwitchWhen: blueprints -->
-                                            <!-- ngSwitchWhen: cookbook -->
-                                            <!-- ngSwitchWhen: by example -->
-                                            <!-- ngSwitchDefault:  --><span class="badge-general badge pull-right ng-scope" ng-switch-default="">General</span><!-- end ngSwitchWhen: -->
-                                        </span><br>
-                                        <small class="pull-left ng-binding">By Nicola Pietroluongo</small>
-                                        <br>
-                                        <small class="pull-left title-duration ng-binding"><i class="fa fa-clock-o mr5"></i>2 hours and 45 minutes</small><!-- ngIf: value.publication_date --><small ng-if="value.publication_date" class="pull-right mr10 ng-binding ng-scope">Jan 2016</small><!-- end ngIf: value.publication_date -->
-                                        <div class="clearfix">
-                                        </div>
-                                    </a><!-- end ngRepeat: (key, value) in myList --><a ng-repeat="(key, value) in myList" href="/packtlib/book/All-Books/9781784393649" class="list-group-item list-name">
-                                        <strong ng-bind-html="value.title" class="ng-binding">Learning Web Component Development</strong>
-                                        <span class="animate-switch-container hidden-xs" ng-switch="" on="value.book_series">
-                                            <!-- ngSwitchWhen: learning --><span class="badge-learn badge pull-right ng-scope" ng-switch-when="learning">Learner</span><!-- end ngSwitchWhen: -->
-                                            <!-- ngSwitchWhen: beginners guide -->
-                                            <!-- ngSwitchWhen: mastering -->
-                                            <!-- ngSwitchWhen: essentials -->
-                                            <!-- ngSwitchWhen: blueprints -->
-                                            <!-- ngSwitchWhen: cookbook -->
-                                            <!-- ngSwitchWhen: by example -->
-                                            <!-- ngSwitchDefault:  -->
-                                        </span><br>
-                                        <small class="pull-left ng-binding">By Sandeep Kumar Patel</small>
-                                        <br>
-                                        <small class="pull-left title-duration ng-binding"><i class="fa fa-clock-o mr5"></i>7 hours 40 minutes</small><!-- ngIf: value.publication_date --><small ng-if="value.publication_date" class="pull-right mr10 ng-binding ng-scope">Jan 2015</small><!-- end ngIf: value.publication_date -->
-                                        <div class="clearfix">
-                                        </div>
-                                    </a><!-- end ngRepeat: (key, value) in myList --><a ng-repeat="(key, value) in myList" href="/packtlib/video/Web-Development/9781784391874" class="list-group-item list-name">
-                                        <strong ng-bind-html="value.title" class="ng-binding">Mastering CSS [Video]</strong>
-                                        <span class="animate-switch-container hidden-xs" ng-switch="" on="value.book_series">
-                                            <!-- ngSwitchWhen: learning -->
-                                            <!-- ngSwitchWhen: beginners guide -->
-                                            <!-- ngSwitchWhen: mastering -->
-                                            <!-- ngSwitchWhen: essentials -->
-                                            <!-- ngSwitchWhen: blueprints -->
-                                            <!-- ngSwitchWhen: cookbook -->
-                                            <!-- ngSwitchWhen: by example -->
-                                            <!-- ngSwitchDefault:  --><span class="badge-general badge pull-right ng-scope" ng-switch-default="">General</span><!-- end ngSwitchWhen: -->
-                                        </span><br>
-                                        <small class="pull-left ng-binding">By Rich Finelli </small>
-                                        <br>
-                                        <small class="pull-left title-duration ng-binding"><i class="fa fa-clock-o mr5"></i>4 hours and 44 minutes</small><!-- ngIf: value.publication_date --><small ng-if="value.publication_date" class="pull-right mr10 ng-binding ng-scope">Jan 2015</small><!-- end ngIf: value.publication_date -->
-                                        <div class="clearfix">
-                                        </div>
-                                    </a><!-- end ngRepeat: (key, value) in myList --><a ng-repeat="(key, value) in myList" href="/packtlib/video/Big-Data-and-Business-Intelligence/9781783988969" class="list-group-item list-name">
-                                        <strong ng-bind-html="value.title" class="ng-binding">Mastering Python [Video]</strong>
-                                        <span class="animate-switch-container hidden-xs" ng-switch="" on="value.book_series">
-                                            <!-- ngSwitchWhen: learning -->
-                                            <!-- ngSwitchWhen: beginners guide -->
-                                            <!-- ngSwitchWhen: mastering -->
-                                            <!-- ngSwitchWhen: essentials -->
-                                            <!-- ngSwitchWhen: blueprints -->
-                                            <!-- ngSwitchWhen: cookbook -->
-                                            <!-- ngSwitchWhen: by example -->
-                                            <!-- ngSwitchDefault:  --><span class="badge-general badge pull-right ng-scope" ng-switch-default="">General</span><!-- end ngSwitchWhen: -->
-                                        </span><br>
-                                        <small class="pull-left ng-binding">By Daniel Arbuckle</small>
-                                        <br>
-                                        <small class="pull-left title-duration ng-binding"><i class="fa fa-clock-o mr5"></i>2 Hours 35 minutes</small><!-- ngIf: value.publication_date --><small ng-if="value.publication_date" class="pull-right mr10 ng-binding ng-scope">Jan 2015</small><!-- end ngIf: value.publication_date -->
-                                        <div class="clearfix">
-                                        </div>
-                                    </a><!-- end ngRepeat: (key, value) in myList --><a ng-repeat="(key, value) in myList" href="/packtlib/video/Web-Development/9781784395063" class="list-group-item list-name">
-                                        <strong ng-bind-html="value.title" class="ng-binding">Mastering MEAN Web Development [Video]</strong>
-                                        <span class="animate-switch-container hidden-xs" ng-switch="" on="value.book_series">
-                                            <!-- ngSwitchWhen: learning -->
-                                            <!-- ngSwitchWhen: beginners guide -->
-                                            <!-- ngSwitchWhen: mastering -->
-                                            <!-- ngSwitchWhen: essentials -->
-                                            <!-- ngSwitchWhen: blueprints -->
-                                            <!-- ngSwitchWhen: cookbook -->
-                                            <!-- ngSwitchWhen: by example -->
-                                            <!-- ngSwitchDefault:  --><span class="badge-general badge pull-right ng-scope" ng-switch-default="">General</span><!-- end ngSwitchWhen: -->
-                                        </span><br>
-                                        <small class="pull-left ng-binding">By Luke Madera</small>
-                                        <br>
-                                        <small class="pull-left title-duration ng-binding"><i class="fa fa-clock-o mr5"></i>3 Hours 36 minutes</small><!-- ngIf: value.publication_date --><small ng-if="value.publication_date" class="pull-right mr10 ng-binding ng-scope">Jan 2015</small><!-- end ngIf: value.publication_date -->
-                                        <div class="clearfix">
-                                        </div>
-                                    </a><!-- end ngRepeat: (key, value) in myList --><a ng-repeat="(key, value) in myList" href="/packtlib/video/Web-Development/9781783554157" class="list-group-item list-name">
-                                        <strong ng-bind-html="value.title" class="ng-binding">Learning Django Web Development [Video]</strong>
-                                        <span class="animate-switch-container hidden-xs" ng-switch="" on="value.book_series">
-                                            <!-- ngSwitchWhen: learning -->
-                                            <!-- ngSwitchWhen: beginners guide -->
-                                            <!-- ngSwitchWhen: mastering -->
-                                            <!-- ngSwitchWhen: essentials -->
-                                            <!-- ngSwitchWhen: blueprints -->
-                                            <!-- ngSwitchWhen: cookbook -->
-                                            <!-- ngSwitchWhen: by example -->
-                                            <!-- ngSwitchDefault:  --><span class="badge-general badge pull-right ng-scope" ng-switch-default="">General</span><!-- end ngSwitchWhen: -->
-                                        </span><br>
-                                        <small class="pull-left ng-binding">By Matthew Nuzum</small>
-                                        <br>
-                                        <small class="pull-left title-duration ng-binding"><i class="fa fa-clock-o mr5"></i>1 hour 40 minutes</small><!-- ngIf: value.publication_date --><small ng-if="value.publication_date" class="pull-right mr10 ng-binding ng-scope">Jan 2015</small><!-- end ngIf: value.publication_date -->
-                                        <div class="clearfix">
-                                        </div>
-                                    </a><!-- end ngRepeat: (key, value) in myList --><a ng-repeat="(key, value) in myList" href="/packtlib/book/All-Books/9781783984480" class="list-group-item list-name">
-                                        <strong ng-bind-html="value.title" class="ng-binding">Building Scalable Apps with Redis and Node.js</strong>
-                                        <span class="animate-switch-container hidden-xs" ng-switch="" on="value.book_series">
-                                            <!-- ngSwitchWhen: learning -->
-                                            <!-- ngSwitchWhen: beginners guide -->
-                                            <!-- ngSwitchWhen: mastering -->
-                                            <!-- ngSwitchWhen: essentials -->
-                                            <!-- ngSwitchWhen: blueprints -->
-                                            <!-- ngSwitchWhen: cookbook -->
-                                            <!-- ngSwitchWhen: by example -->
-                                            <!-- ngSwitchDefault:  --><span class="badge-general badge pull-right ng-scope" ng-switch-default="">General</span><!-- end ngSwitchWhen: -->
-                                        </span><br>
-                                        <small class="pull-left ng-binding">By Joshua Johanan</small>
-                                        <br>
-                                        <small class="pull-left title-duration ng-binding"><i class="fa fa-clock-o mr5"></i>9 hours 28 minutes</small><!-- ngIf: value.publication_date --><small ng-if="value.publication_date" class="pull-right mr10 ng-binding ng-scope">Jan 2014</small><!-- end ngIf: value.publication_date -->
-                                        <div class="clearfix">
-                                        </div>
-                                    </a><!-- end ngRepeat: (key, value) in myList --><a ng-repeat="(key, value) in myList" href="/packtlib/book/All-Books/9781783553334" class="list-group-item list-name">
-                                        <strong ng-bind-html="value.title" class="ng-binding">Learning Python Data Visualization</strong>
-                                        <span class="animate-switch-container hidden-xs" ng-switch="" on="value.book_series">
-                                            <!-- ngSwitchWhen: learning --><span class="badge-learn badge pull-right ng-scope" ng-switch-when="learning">Learner</span><!-- end ngSwitchWhen: -->
-                                            <!-- ngSwitchWhen: beginners guide -->
-                                            <!-- ngSwitchWhen: mastering -->
-                                            <!-- ngSwitchWhen: essentials -->
-                                            <!-- ngSwitchWhen: blueprints -->
-                                            <!-- ngSwitchWhen: cookbook -->
-                                            <!-- ngSwitchWhen: by example -->
-                                            <!-- ngSwitchDefault:  -->
-                                        </span><br>
-                                        <small class="pull-left ng-binding">By Chad R. Adams</small>
-                                        <br>
-                                        <small class="pull-left title-duration ng-binding"><i class="fa fa-clock-o mr5"></i>6 hours 21 minutes</small><!-- ngIf: value.publication_date --><small ng-if="value.publication_date" class="pull-right mr10 ng-binding ng-scope">Jan 2014</small><!-- end ngIf: value.publication_date -->
-                                        <div class="clearfix">
-                                        </div>
-                                    </a><!-- end ngRepeat: (key, value) in myList --><a ng-repeat="(key, value) in myList" href="/packtlib/book/All-Books/9781849689786" class="list-group-item list-name">
-                                        <strong ng-bind-html="value.title" class="ng-binding">Tableau Data Visualization Cookbook</strong>
-                                        <span class="animate-switch-container hidden-xs" ng-switch="" on="value.book_series">
-                                            <!-- ngSwitchWhen: learning -->
-                                            <!-- ngSwitchWhen: beginners guide -->
-                                            <!-- ngSwitchWhen: mastering -->
-                                            <!-- ngSwitchWhen: essentials -->
-                                            <!-- ngSwitchWhen: blueprints -->
-                                            <!-- ngSwitchWhen: cookbook --><span class="badge-build badge pull-right ng-scope" ng-switch-when="cookbook">Projects</span><!-- end ngSwitchWhen: -->
-                                            <!-- ngSwitchWhen: by example -->
-                                            <!-- ngSwitchDefault:  -->
-                                        </span><br>
-                                        <small class="pull-left ng-binding">By Ashutosh Nandeshwar</small>
-                                        <br>
-                                        <small class="pull-left title-duration ng-binding"><i class="fa fa-clock-o mr5"></i>5 hours 09 minutes</small><!-- ngIf: value.publication_date --><small ng-if="value.publication_date" class="pull-right mr10 ng-binding ng-scope">Jan 2013</small><!-- end ngIf: value.publication_date -->
-                                        <div class="clearfix">
-                                        </div>
-                                    </a><!-- end ngRepeat: (key, value) in myList -->
+                                    <a ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
+                                          <img src="https://d1ldz4te4covpm.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/9689_B03980_Practical%20Machine%20Learning_.jpg" class="img-product-list"/>
+                                              <strong ng-bind-html="fivePopular.title" class="ng-binding">Practical Machine Learning</strong>
+                                              <span class="animate-switch-container hidden-xs" ng-switch="" on="fivePopular.field_book_series">
+                                                 <span class="badge-learn badge pull-right ng-scope" ng-switch-when="learning">Learner</span>
+                                              </span><br>
+                                              <p>By Sunila Gollapudi</p>
+                                                <!-- Feefo Star Rating -->
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                                <img src="https://dz13w8afd47il.cloudfront.net/sites/all/themes/packt_v4/images/feefo-logo-simple.png" class="simple-feefo-logo">    
+                                                <!-- Feefo Star Rating END -->    
+                                              <br>
+
+                                              <small class="pull-left title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small><small ng-if="fivePopular.field_date_of_publication[0].value" class="pull-right mr10 ng-binding ng-scope mt10">Jan 2016</small>
+                                              <div class="clearfix">
+                                              </div>
+                                          </a><a ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
+                                              <img src="https://d1ldz4te4covpm.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/8751OS_1698_Learning%20Drupal%208.jpg" class="img-product-list"/>
+                                              <strong ng-bind-html="fivePopular.title" class="ng-binding">Learning Drupal 8</strong>
+                                              <span class="animate-switch-container hidden-xs" ng-switch="" on="fivePopular.field_book_series">
+                                                  <span class="badge-learn badge pull-right ng-scope" ng-switch-when="learning">Learner</span>
+                                              </span><br>
+                                              <p>By Nick Abbott</p>
+                                              <!-- Feefo Star Rating -->
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                <img src="https://dz13w8afd47il.cloudfront.net/sites/all/themes/packt_v4/images/feefo-logo-simple.png" class="simple-feefo-logo">    
+                                                <!-- Feefo Star Rating END -->   
+                                              <br>
+                                              <small class="pull-left title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>9 hours 50 minutes</small><small ng-if="fivePopular.field_date_of_publication[0].value" class="pull-right mr10 ng-binding ng-scope mt10">Jan 2016</small>
+                                              <div class="clearfix">
+                                              </div>
+                                          </a><a ng-repeat="(key, fivePopular) in fivePopular" href="/packtlib/book/Web-Development/9781785281341" class="list-group-item list-name ng-scope">
+                                              <img src="https://dz13w8afd47il.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/4709_1341OS_Mastering%20JavaScript.jpg" class="img-product-list"/>
+                                              <strong ng-bind-html="fivePopular.title" class="ng-binding">Mastering JavaScript</strong>
+                                              <span class="animate-switch-container hidden-xs" ng-switch="" on="fivePopular.field_book_series">
+                                                 <span class="badge-master badge pull-right ng-scope" ng-switch-when="mastering">Expert</span>
+                                              </span><br>
+                                              <p>By Ved Antani</p>
+                                              <!-- Feefo Star Rating -->
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                                <img src="https://dz13w8afd47il.cloudfront.net/sites/all/themes/packt_v4/images/feefo-logo-simple.png" class="simple-feefo-logo">    
+                                                <!-- Feefo Star Rating END -->  
+                                              <br>
+                                              <small class="pull-left title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>7 hours 30 minutes</small><small ng-if="fivePopular.field_date_of_publication[0].value" class="pull-right mr10 ng-binding ng-scope mt10">Jan 2016</small>
+                                              <div class="clearfix">
+                                              </div>
+                                          </a><a ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
+                                              <img src="https://d1ldz4te4covpm.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/3261OS_1782_Learning%20Predictive%20Analytics%20with%20Python.jpg" class="img-product-list"/>
+                                              <strong ng-bind-html="fivePopular.title" class="ng-binding">Learning Predictive Analytics with Python</strong>
+                                              <span class="animate-switch-container hidden-xs" ng-switch="" on="fivePopular.field_book_series">
+                                                  <span class="badge-learn badge pull-right ng-scope" ng-switch-when="learning">Learner</span>
+                                              </span><br>
+                                              <p>By Ashish Kumar</p>
+                                              <!-- Feefo Star Rating -->
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                <img src="https://dz13w8afd47il.cloudfront.net/sites/all/themes/packt_v4/images/feefo-logo-simple.png" class="simple-feefo-logo">    
+                                                <!-- Feefo Star Rating END -->   
+                                              <br>
+                                              <small class="pull-left title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>10 hours 37 minutes</small><small ng-if="fivePopular.field_date_of_publication[0].value" class="pull-right mr10 ng-binding ng-scope mt10">Feb 2016</small>
+                                              <div class="clearfix">
+                                              </div>
+                                          </a><a ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
+                                              <img src="https://d255esdrn735hr.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/bookretailers/9781783989805_new.jpg" class="img-product-list"/>
+                                              <strong ng-bind-html="fivePopular.title" class="ng-binding">Mastering Django Web Development [Video]</strong>
+                                              <span class="animate-switch-container hidden-xs" ng-switch="" on="fivePopular.field_book_series">
+                                                  <span class="badge-master badge pull-right ng-scope" ng-switch-when="mastering">Expert</span>
+                                              </span><br>
+                                              <p>By Kevin Veroneau </p>
+                                              <!-- Feefo Star Rating -->
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                                <img src="https://dz13w8afd47il.cloudfront.net/sites/all/themes/packt_v4/images/feefo-logo-simple.png" class="simple-feefo-logo">    
+                                                <!-- Feefo Star Rating END -->  
+                                              <br>
+                                              <small class="pull-left title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>1 hour</small><small ng-if="fivePopular.field_date_of_publication[0].value" class="pull-right mr10 ng-binding ng-scope mt10">Jan 2016</small>
+                                              <div class="clearfix">
+                                              </div>
+                                          </a>
+                                          <a ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
+                                          <img src="https://d1ldz4te4covpm.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/9689_B03980_Practical%20Machine%20Learning_.jpg" class="img-product-list"/>
+                                              <strong ng-bind-html="fivePopular.title" class="ng-binding">Practical Machine Learning</strong>
+                                              <span class="animate-switch-container hidden-xs" ng-switch="" on="fivePopular.field_book_series">
+                                                 <span class="badge-learn badge pull-right ng-scope" ng-switch-when="learning">Learner</span>
+                                              </span><br>
+                                              <p>By Sunila Gollapudi</p>
+                                                <!-- Feefo Star Rating -->
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                                <img src="https://dz13w8afd47il.cloudfront.net/sites/all/themes/packt_v4/images/feefo-logo-simple.png" class="simple-feefo-logo">    
+                                                <!-- Feefo Star Rating END -->    
+                                              <br>
+
+                                              <small class="pull-left title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small><small ng-if="fivePopular.field_date_of_publication[0].value" class="pull-right mr10 ng-binding ng-scope mt10">Jan 2016</small>
+                                              <div class="clearfix">
+                                              </div>
+                                          </a><a ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
+                                              <img src="https://d1ldz4te4covpm.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/8751OS_1698_Learning%20Drupal%208.jpg" class="img-product-list"/>
+                                              <strong ng-bind-html="fivePopular.title" class="ng-binding">Learning Drupal 8</strong>
+                                              <span class="animate-switch-container hidden-xs" ng-switch="" on="fivePopular.field_book_series">
+                                                  <span class="badge-learn badge pull-right ng-scope" ng-switch-when="learning">Learner</span>
+                                              </span><br>
+                                              <p>By Nick Abbott</p>
+                                              <!-- Feefo Star Rating -->
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                <img src="https://dz13w8afd47il.cloudfront.net/sites/all/themes/packt_v4/images/feefo-logo-simple.png" class="simple-feefo-logo">    
+                                                <!-- Feefo Star Rating END -->   
+                                              <br>
+                                              <small class="pull-left title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>9 hours 50 minutes</small><small ng-if="fivePopular.field_date_of_publication[0].value" class="pull-right mr10 ng-binding ng-scope mt10">Jan 2016</small>
+                                              <div class="clearfix">
+                                              </div>
+                                          </a><a ng-repeat="(key, fivePopular) in fivePopular" href="/packtlib/book/Web-Development/9781785281341" class="list-group-item list-name ng-scope">
+                                              <img src="https://dz13w8afd47il.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/4709_1341OS_Mastering%20JavaScript.jpg" class="img-product-list"/>
+                                              <strong ng-bind-html="fivePopular.title" class="ng-binding">Mastering JavaScript</strong>
+                                              <span class="animate-switch-container hidden-xs" ng-switch="" on="fivePopular.field_book_series">
+                                                 <span class="badge-master badge pull-right ng-scope" ng-switch-when="mastering">Expert</span>
+                                              </span><br>
+                                              <p>By Ved Antani</p>
+                                              <!-- Feefo Star Rating -->
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                                <img src="https://dz13w8afd47il.cloudfront.net/sites/all/themes/packt_v4/images/feefo-logo-simple.png" class="simple-feefo-logo">    
+                                                <!-- Feefo Star Rating END -->  
+                                              <br>
+                                              <small class="pull-left title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>7 hours 30 minutes</small><small ng-if="fivePopular.field_date_of_publication[0].value" class="pull-right mr10 ng-binding ng-scope mt10">Jan 2016</small>
+                                              <div class="clearfix">
+                                              </div>
+                                          </a><a ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
+                                              <img src="https://d1ldz4te4covpm.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/3261OS_1782_Learning%20Predictive%20Analytics%20with%20Python.jpg" class="img-product-list"/>
+                                              <strong ng-bind-html="fivePopular.title" class="ng-binding">Learning Predictive Analytics with Python</strong>
+                                              <span class="animate-switch-container hidden-xs" ng-switch="" on="fivePopular.field_book_series">
+                                                  <span class="badge-learn badge pull-right ng-scope" ng-switch-when="learning">Learner</span>
+                                              </span><br>
+                                              <p>By Ashish Kumar</p>
+                                              <!-- Feefo Star Rating -->
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                <img src="https://dz13w8afd47il.cloudfront.net/sites/all/themes/packt_v4/images/feefo-logo-simple.png" class="simple-feefo-logo">    
+                                                <!-- Feefo Star Rating END -->   
+                                              <br>
+                                              <small class="pull-left title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>10 hours 37 minutes</small><small ng-if="fivePopular.field_date_of_publication[0].value" class="pull-right mr10 ng-binding ng-scope mt10">Feb 2016</small>
+                                              <div class="clearfix">
+                                              </div>
+                                          </a><a ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
+                                              <img src="https://d255esdrn735hr.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/bookretailers/9781783989805_new.jpg" class="img-product-list"/>
+                                              <strong ng-bind-html="fivePopular.title" class="ng-binding">Mastering Django Web Development [Video]</strong>
+                                              <span class="animate-switch-container hidden-xs" ng-switch="" on="fivePopular.field_book_series">
+                                                  <span class="badge-master badge pull-right ng-scope" ng-switch-when="mastering">Expert</span>
+                                              </span><br>
+                                              <p>By Kevin Veroneau </p>
+                                              <!-- Feefo Star Rating -->
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                                <img src="https://dz13w8afd47il.cloudfront.net/sites/all/themes/packt_v4/images/feefo-logo-simple.png" class="simple-feefo-logo">    
+                                                <!-- Feefo Star Rating END -->  
+                                              <br>
+                                              <small class="pull-left title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>1 hour</small><small ng-if="fivePopular.field_date_of_publication[0].value" class="pull-right mr10 ng-binding ng-scope mt10">Jan 2016</small>
+                                              <div class="clearfix">
+                                              </div>
+                                          </a>
                                 </ul>
                                 <div class="panel-footer text-right" ng-show="myList.pagination > 1">
                                     <nav>
