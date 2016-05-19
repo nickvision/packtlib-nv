@@ -131,7 +131,7 @@
                             <div class="col-sm-12">
                               <ul id="recommendationTabs" class="nav nav-tabs hidden-xs" role="tablist">
                                   <li class="active">
-                                      <a href="#popular" role="tab" data-toggle="tab" aria-controls="popular" ng-click="$event.preventDefault();" aria-expanded="false"><h5>Current Learning</h5></a>
+                                      <a href="#popular" role="tab" data-toggle="tab" aria-controls="popular" ng-click="$event.preventDefault();" aria-expanded="false"><h5>In Progress</h5></a>
                                   </li>
                                   <li class="">
                                       <a href="#recommended" ng-click="$event.preventDefault();" role="tab" data-toggle="tab" aria-controls="recommended" aria-expanded="true" ng-if="libraryController.userRecommendations" class="ng-scope"><h5>What I've Done</h5></a>
@@ -140,30 +140,25 @@
                               <div class="tab-content mt15">
                                   <div role="tabpanel" class="tab-pane fade active in" id="popular" aria-labelledby="popular-tab">
                                     <div class="">
-                                      <div class="col-sm-6">
-                                        <div class="alert alert-warning mt5" role="alert">
-                                          <i class="fa fa-info-circle fa-lg mr15 "></i>Click the <b>Skill Deck</b> on the right to select the <b>Card</b> you want to learn
-                                        </div>
-                                      </div>
-                                      <div class="col-sm-6">
+                                      <div class="col-sm-12">
                                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                                           <div class="panel panel-default">
                                             <div class="panel-heading clickable" role="tab" id="headingOne"  data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                               <button type="button" class="close" data-toggle="modal" data-target="#myModal"><span aria-hidden="true">×</span></button>
                                               <img class="tech-icon drop hidden-xs" src="images/tech/python.png"/>
-                                              <h1 class="card-heading mb5 mt0">Python Fundamentals</h1>
+                                              <span class="card-heading mb5 mt0">Python Fundamentals</span>
                                             </div>
                                             <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
                                                 <div class="list-group">
                                                   <a href="#" class="list-group-item pt15 pb15">
                                                     <button type="button" class="close" data-toggle="modal" data-target="#myModal"><span aria-hidden="true">×</span></button>
                                                     <img class="tech-icon drop hidden-xs" src="images/tech/python.png"/>
-                                                    <h1 class="card-heading mb5 mt0">High Performance Python </h1>
+                                                    <span class="card-heading mb5 mt0">High Performance Python </span>
                                                   </a>
                                                   <a href="#" class="list-group-item pt15 pb15">
                                                     <button type="button" class="close" data-toggle="modal" data-target="#myModal"><span aria-hidden="true">×</span></button>
                                                     <img class="tech-icon drop hidden-xs" src="images/tech/django.png"/>
-                                                    <h1 class="card-heading mb5 mt0">Production Ready Django </h1>
+                                                    <span class="card-heading mb5 mt0">Production Ready Django </span>
                                                   </a>
                                                   <a href="select-skills.html" class="list-group-item pt15 pb15 text-center">
                                                     <b style="color:rgba(0,0,0,0.4);"><i class="fa fa-plus mr15"></i>Add New Skill Cards to your Deck</b>
@@ -243,7 +238,7 @@
 
 
                                   <div role="tabpanel" class="tab-pane fade" id="recommended" aria-labelledby="recommended-tab">
-                                    <div class="col-sm-3">
+                                    <div class="col-sm-5 col-xl-6">
                                       <div class="panel panel-default ng-scope">
                                            <div class="panel-heading">
                                                 <h3 class="panel-title">Monthly Progress Tracker:</h3>
@@ -270,35 +265,33 @@
                                             <li><i class="fa fa-ticket mr10"></i>You have <strong class="ng-binding">24</strong> Free Course token(s) remaining</li>
                                       </ol>
                                     </div>
-                                    <div class="col-sm-9">
-                                        <h3>My Skill Cards</h3>
-                                        <hr>
+                                    <div class="col-sm-7 col-xl-6">
                                         <div class="panel panel-default">
                                           <div class="list-group">
                                             <a href="#" class="list-group-item pt15 pb15">
                                               <button type="button" class="close" data-toggle="modal" data-target="#myModal"><span aria-hidden="true">×</span></button>
                                               <img class="tech-icon drop hidden-xs" src="images/tech/django.png">
-                                              <h1 class="card-heading mb5 mt0">Django Up To Speed</h1>
+                                              <span  class="card-heading mb5 mt0">Django Up To Speed</span>
                                             </a>
                                             <a href="#" class="list-group-item pt15 pb15">
                                               <button type="button" class="close" data-toggle="modal" data-target="#myModal"><span aria-hidden="true">×</span></button>
                                               <img class="tech-icon drop hidden-xs" src="images/tech/java.png">
-                                              <h1 class="card-heading mb5 mt0">RESTful Java Programming</h1>
+                                              <span  class="card-heading mb5 mt0">RESTful Java Programming</span>
                                             </a>
                                             <a href="#" class="list-group-item pt15 pb15">
                                               <button type="button" class="close" data-toggle="modal" data-target="#myModal"><span aria-hidden="true">×</span></button>
                                               <img class="tech-icon drop hidden-xs" src="images/tech/java.png">
-                                              <h1 class="card-heading mb5 mt0">Reactive Java Programming</h1>
+                                              <span  class="card-heading mb5 mt0">Reactive Java Programming</span>
                                             </a>
                                             <a href="#" class="list-group-item pt15 pb15">
                                               <button type="button" class="close" data-toggle="modal" data-target="#myModal"><span aria-hidden="true">×</span></button>
                                               <img class="tech-icon drop hidden-xs" src="images/tech/mysql.png">
-                                              <h1 class="card-heading mb5 mt0">MySQL Administration</h1>
+                                              <span  class="card-heading mb5 mt0">MySQL Administration</span>
                                             </a>
                                             <a href="#" class="list-group-item pt15 pb15">
                                               <button type="button" class="close" data-toggle="modal" data-target="#myModal"><span aria-hidden="true">×</span></button>
                                               <img class="tech-icon drop hidden-xs" src="images/tech/git.png">
-                                              <h1 class="card-heading mb5 mt0">Git Fundamentals</h1>
+                                              <span class="card-heading mb5 mt0">Git Fundamentals</span>
                                             </a>
                                             <a href="select-skills.html" class="list-group-item pt15 pb15 text-center">
                                               <b style="color:rgba(0,0,0,0.4);"><i class="fa fa-plus mr15"></i>Add New Skill Cards to your Deck</b>

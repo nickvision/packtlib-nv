@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="css/prism.css">
 
     <!-- Fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Roboto:100,300,400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -54,16 +54,16 @@
                     <span class="icon-bar"></span>
                   </button>
                   <a class="navbar-brand toggle-nav" href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars fa-lg"></i></a>
-                  <a class="brand-logo" href="dashboard.html"><i class="fa fa-map fa-lg mr5"></i><b> MAPT</b></a>
+                  <a class="brand-logo" href="dashboard.html"><img src="images/mapt.png"/></a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#contact"><i class="fa fa-question-circle fa-lg mr5"></i> Help</a></li>
+                        <li><a href="#contact">Help</a></li>
                         <li class="dropdown">
                         <a href="#" class="dropdown-toggle visible-xs" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account<span class="caret ml5"></span>
                         </a>
                         <a href="#" class="dropdown-toggle navbar-avatar-link hidden-xs" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                            <img src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/8/000/222/015/06be2f6.jpg" alt="..." class="img-circle img-responsive navbar-avatar">
+                            <img src="images/avatar.jpeg" alt="..." class="img-circle img-responsive navbar-avatar">
                         </a>
                         <ul class="dropdown-menu">
                             <li> <a href="#">View Account</a></li> 
@@ -76,10 +76,7 @@
                     </ul>
                     <form class="navbar-form navbar-right search-nav-collapse">
                         <div class="form-group pull-right" style="display:inline;">
-                            <div class="input-group">
-                              <input class="form-control" type="text" placeholder="Search the library...">
-                              <span class="input-group-btn"><button href="search.html" class="btn btn-default" type="button"><i class="fa fa-search"></i></span></button></span>
-                            </div>
+                              <input class="form-control" type="text" placeholder="Search for a title...">
                         </div>
                     </form>
                 </div><!--/.nav-collapse -->
@@ -100,10 +97,7 @@
                 <div id="TocContent" class="tab-content">
                     <div role="tabpanel" class="tab-pane fade in active pt15" id="contents" aria-labelledby="contents-tab"> 
                         <form class="col-sm-12 mb15 ng-pristine ng-valid ng-scope" ng-submit="sidebarSearchSubmit()" ng-if="currentPage != 'video'">
-                            <div class="input-group">
                                <input type="text" class="form-control book_search_query" ng-keyup="sidebarSearchChange()" placeholder="Search this title...">
-                               <span class="input-group-btn"><button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button></span>
-                            </div>
                         </form>
                         <div class="clearfix"></div>
                         <li class="active"><a href="front-page.html">Mastering JavaScript</a></li>
@@ -241,6 +235,11 @@
                                         <div ng-bind-html="book_data.author_description" class="ng-binding"><p>Dr. Joshua F. Wiley is a lecturer at Monash University and a senior partner at Elkhart Group Limited, a statistical consultancy. He earned his PhD from the University of California, Los Angeles. His research focuses on using advanced quantitative methods to understand the complex interplays of psychological, social, and physiological processes in relation to psychological and physical health. In statistics and data science, Joshua focuses on biostatistics and is interested in reproducible research and graphical displays of data and statistical models. Through consulting at Elkhart Group Limited and his former work at the UCLA Statistical Consulting Group, Joshua has helped a wide array of clients, ranging from experienced researchers to biotechnology companies. He develops or codevelops a number of R packages including varian, a package to conduct Bayesian scale-location structural equation models, and MplusAutomation, a popular package that links R to the commercial Mplus software.</p></div>
                                     </div>
                                 </div>
+                                <h3>Details</h3>
+                            <p><b>Author(s):</b> Ved Antani</p>
+                            <p><b>Release Date:</b> January 2016</p>
+                            <p><b>ISBN 13:</b> 9781783983704</p>
+                            <p><b>Time to Complete:</b> 10 hours 26 minutes</p>
                                 <hr>
                                 <div class="text-center col-sm-12 mb35">
                                     <small class="ng-binding">ISBN 9781785280580 © Packt Publishing Limited. All Rights Reserved </small>
@@ -251,11 +250,7 @@
                             <a href="index.html"><img src="http://dz13w8afd47il.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/4709_1341OS_Mastering JavaScript.jpg" class="img-responsive"></a>
                             <a href="index.html" class="btn btn-primary btn-block btn-lg mt20">Continue</a>
                             <a href="index.html" class="btn btn-default btn-block btn-lg mt10 visible-xs"><i class="fa fa-plus fa-lg mr5"></i> Collection</a>
-                            <h3>Details</h3>
-                            <p><b>Author(s):</b> Ved Antani</p>
-                            <p><b>Release Date:</b> January 2016</p>
-                            <p><b>ISBN 13:</b> 9781783983704</p>
-                            <p><b>Time to Complete:</b> 10 hours 26 minutes</p>
+                            
                         </div>
                         
                     </div>
