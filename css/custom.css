@@ -1,19 +1,26 @@
 /*Boostrap Overwritten Rules*/
+@font-face {
+    font-family: BrandonText;
+    src: url(fonts/BrandonText.otf);
+}
 body {
-	font-family: Roboto, Helvetica, sans-serif;
+	font-family: BrandonText, Helvetica, sans-serif;
   background: #F9F9F9;
-  background: url('images/bg.jpg');
-  background-size: cover;
 }
 h2, h3, h4, h5, h6, .h2, .h3, .h4, .h5, .h6 {
-    font-family: Roboto ,Helvetica,Arial,sans-serif;
+    font-family: BrandonText ,Helvetica,Arial,sans-serif;
     font-weight: 300;
     line-height: 1.1;
 }
 h1, .h1 {
-    font-family: Roboto ,Helvetica,Arial,sans-serif;
-    font-weight: 100;
+    font-family: 'Montserrat' ,Helvetica,Arial,sans-serif;
+    font-weight: 500;
     line-height: 1.1;
+}
+.list-group h1 {
+  font-size: 16px;
+  margin: 0px;
+  padding: 0px;
 }
 .table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
     border-top: none;
@@ -26,9 +33,7 @@ h1, .h1 {
     border-radius: 0;
 }
 .navbar-avatar {
-	height: 35px;
-	margin-top: -8px;
-	border: 2px solid #FFF;
+	height: 44px;
 }
 .sidebar-avatar {
   height: 80px;
@@ -36,7 +41,7 @@ h1, .h1 {
   border: 2px solid #FFF;
 }
 .navbar-avatar-link {
-	padding-bottom:7px !important;
+  padding: 10px !important;
 }
 .btn {
 	border-radius: 0;
@@ -529,7 +534,7 @@ blockquote p {
 }
 /*Section Complete on titles*/
 .completed-section {
-	border-left: 5px solid #fff;
+	border-left: 5px solid #F9953D;
 }
 .simple-feefo-logo {
   height: 10px;
@@ -565,12 +570,9 @@ blockquote p {
 /* New CSS Rules for Skills Platform */
 .jumbotron.heading {
     padding-bottom: 15px;
-    padding-top: 65px;
+    padding-top: 79px;
     background: #FFF;
-    background-image: url('images/banner-edge.png');
-    background-repeat: no-repeat;
-    background-position: right;
-    border-bottom: 2px solid #13AE92;
+    border-bottom: 4px solid #F9953D;
 }
 .jumbotron h1 {
   font-weight: 100;
@@ -888,7 +890,7 @@ span.input-group-btn button.btn {
   margin-left: -1px;
   float: left;
   text-align: center;
-  height: 50px;
+  height: 64px;
   padding: 15px 15px;
   font-size: 18px;
   line-height: 20px;
@@ -908,8 +910,9 @@ span.input-group-btn button.btn {
   background: rgba(0,0,0,0.1);
 }
 .brand-logo img {
-  height: 27px;
-  margin-top: -3px;
+  height: 28px;
+  margin-top: 4px;
+  margin-left: -10px;
 }
 .panel-heading>.img-thumbnail,.modal-header>.img-thumbnail,.panel-heading>.col-sm-12>.img-thumbnail {
   border:3px solid rgba(47, 47, 47, 0.19)

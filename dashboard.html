@@ -20,7 +20,6 @@
     <link href="css/custom.css" rel="stylesheet">
     <link href="css/general.css" rel="stylesheet">
     <link href="css/bootstrap-xl.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
 
     <!-- Devicons -->
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
@@ -29,7 +28,7 @@
     <link rel="stylesheet" href="css/prism.css">
 
     <!-- Fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Roboto:100,300,400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -75,16 +74,16 @@
                     <span class="icon-bar"></span>
                   </button>
                   <a class="navbar-brand toggle-nav" href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars fa-lg"></i></a>
-                  <a class="brand-logo active" href="dashboard.html"><img src="images/mapt-logo.png"/></a>
+                  <a class="brand-logo" href="dashboard.html"><img src="images/mapt.png"/></a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#contact"><i class="fa fa-question-circle fa-lg mr5"></i> Help</a></li>
+                        <li><a href="#contact">Help</a></li>
                         <li class="dropdown">
                         <a href="#" class="dropdown-toggle visible-xs" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account<span class="caret ml5"></span>
                         </a>
                         <a href="#" class="dropdown-toggle navbar-avatar-link hidden-xs" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                            <img src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/8/000/222/015/06be2f6.jpg" alt="..." class="img-circle img-responsive navbar-avatar">
+                            <img src="images/avatar.jpeg" alt="..." class="img-circle img-responsive navbar-avatar">
                         </a>
                         <ul class="dropdown-menu">
                             <li> <a href="#">View Account</a></li> 
@@ -97,10 +96,7 @@
                     </ul>
                     <form class="navbar-form navbar-right search-nav-collapse">
                         <div class="form-group pull-right" style="display:inline;">
-                            <div class="input-group">
-                              <input class="form-control" type="text" placeholder="Search the library...">
-                              <span class="input-group-btn"><button href="search.html" class="btn btn-default" type="button"><i class="fa fa-search"></i></span></button></span>
-                            </div>
+                              <input class="form-control" type="text" placeholder="Search for a title...">
                         </div>
                     </form>
                 </div><!--/.nav-collapse -->
@@ -121,18 +117,11 @@
         <!-- /#sidebar-wrapper -->
 
         <div id="page-content-wrapper" class="">
-            <div class="jumbotron heading">
+            <div class="jumbotron heading mb0">
                 <div class="container-fluid">
                   <div class="col-sm-8">
-                    <img src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/8/000/222/015/06be2f6.jpg" alt="..." class="img-responsive img-thumbnail">
-                    <h1 class="mt5 mb0">Oli Huggins </h1>
-                      <p class="active mt10 mb0"><b>Current Focus:</b> Python Developer <a href="select-goal.html" class="ml10"><small><i class="fa fa-refresh mr5"></i> Change Focus</small></a></p>
-                      <p class="active mt0"><small>3/5 Skill Cards Remaining</small></p>
-                    <div class="progress hidden-xs">
-                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                            <span class="sr-only ng-binding">40% Complete (success)</span>
-                        </div>
-                    </div>
+                    <h1 class="">Oli Huggins </h1>
+                      <p class="active mt0"><b>Current Focus:</b> Python Developer <a href="select-goal.html" class="ml10"><small><i class="fa fa-refresh mr5"></i> Change Focus</small></a></p>                    
                   </div>
                 </div>
             </div>
@@ -142,17 +131,17 @@
                             <div class="col-sm-12">
                               <ul id="recommendationTabs" class="nav nav-tabs hidden-xs" role="tablist">
                                   <li class="active">
-                                      <a href="#popular" role="tab" data-toggle="tab" aria-controls="popular" ng-click="$event.preventDefault();" aria-expanded="false">Current Learning</a>
+                                      <a href="#popular" role="tab" data-toggle="tab" aria-controls="popular" ng-click="$event.preventDefault();" aria-expanded="false"><h5>Current Learning</h5></a>
                                   </li>
                                   <li class="">
-                                      <a href="#recommended" ng-click="$event.preventDefault();" role="tab" data-toggle="tab" aria-controls="recommended" aria-expanded="true" ng-if="libraryController.userRecommendations" class="ng-scope">What I've Done</a>
+                                      <a href="#recommended" ng-click="$event.preventDefault();" role="tab" data-toggle="tab" aria-controls="recommended" aria-expanded="true" ng-if="libraryController.userRecommendations" class="ng-scope"><h5>What I've Done</h5></a>
                                   </li>
                               </ul>
                               <div class="tab-content mt15">
                                   <div role="tabpanel" class="tab-pane fade active in" id="popular" aria-labelledby="popular-tab">
                                     <div class="">
                                       <div class="col-sm-6">
-                                        <div class="alert alert-info mt5" role="alert">
+                                        <div class="alert alert-warning mt5" role="alert">
                                           <i class="fa fa-info-circle fa-lg mr15 "></i>Click the <b>Skill Deck</b> on the right to select the <b>Card</b> you want to learn
                                         </div>
                                       </div>
@@ -209,12 +198,10 @@
                                             <h3 class="panel-title">Card Resources</h3>
                                           </div>
                                           <ul class="list-group">
-                                              <a ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
+                                              <a href="index.html" ng-repeat="(key, fivePopular) in fivePopular" class="list-group-item list-name ng-scope">
                                               <img src="https://d1ldz4te4covpm.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/9689_B03980_Practical%20Machine%20Learning_.jpg" class="img-product-list"/>
-                                                  <strong ng-bind-html="fivePopular.title" class="ng-binding">Python Essentials</strong>
-                                                  <span class="animate-switch-container hidden-xs" ng-switch="" on="fivePopular.field_book_series">
-                                                     <span class="badge-learn badge pull-right ng-scope" ng-switch-when="learning">Learner</span>
-                                                  </span><br>
+                                                  <h1>Python Essentials</strong>
+                                                  </h1>
                                                   <p>By Steven Lott</p>
                                                     <!-- Feefo Star Rating -->
                                                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -225,15 +212,14 @@
                                                     <img src="https://dz13w8afd47il.cloudfront.net/sites/all/themes/packt_v4/images/feefo-logo-simple.png" class="simple-feefo-logo">    
                                                     <!-- Feefo Star Rating END -->    
                                                   <br>
-                                                  <p class="concat mb0 mt10"><strong>Continue Viewing:</strong> Chapter 9: Advancing Python</p>
+                                                  <p class="concat mb0 mt10"><strong>Last Viewed:</strong> Chapter 9: Advancing Python</p>
+
+                                                  
                                                   
                                                 </a>
-                                              <a ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
+                                              <a href="index.html" ng-repeat="(key, fivePopular) in fivePopular" class="list-group-item list-name ng-scope">
                                                   <img src="https://d1ldz4te4covpm.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/8751OS_1698_Learning%20Drupal%208.jpg" class="img-product-list"/>
-                                                  <strong ng-bind-html="fivePopular.title" class="ng-binding">Learning Drupal 8</strong>
-                                                  <span class="animate-switch-container hidden-xs" ng-switch="" on="fivePopular.field_book_series">
-                                                      <span class="badge-learn badge pull-right ng-scope" ng-switch-when="learning">Learner</span>
-                                                  </span><br>
+                                                  <h1>Learning Drupal 8</h1>
                                                   <p>By Nick Abbott</p>
                                                   <!-- Feefo Star Rating -->
                                                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -242,9 +228,9 @@
                                                     <i class="fa fa-star" aria-hidden="true"></i>
                                                     <i class="fa fa-star-o" aria-hidden="true"></i>
                                                     <img src="https://dz13w8afd47il.cloudfront.net/sites/all/themes/packt_v4/images/feefo-logo-simple.png" class="simple-feefo-logo">    
-                                                    <!-- Feefo Star Rating END -->   
+                                                    <!-- Feefo Star Rating END --> 
                                                   <br>
-                                                  <p class="concat mb0 mt10"><strong>Continue Viewing:</strong> Chapter 2: Beginning Drupal</p>
+                                                  <p class="concat mb0 mt10"><strong>Last Viewed:</strong> Chapter 2: Beginning Drupal</p>
                                               </a>
                                             </ul>
                                           </div>

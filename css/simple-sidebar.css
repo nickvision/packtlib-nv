@@ -22,13 +22,14 @@
     z-index: 1000;
     position: fixed;
     left: 250px;
-    top: 50px;
+    top: 64px;
     width: 0;
     height: 100%;
     margin-left: -250px;
     overflow-y: auto;
     overflow-x: hidden;
-    background: #17927C;
+    background: #fff;
+    border-right: 1px solid #ddd;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -60,7 +61,7 @@
 .sub-nav a {
     font-size: 12px !important;
     line-height: 18px;
-    background: #1EA78E;
+    background: #F9F9F9;
     text-indent: 35px;
 }
 
@@ -74,16 +75,6 @@
 .sidebar-nav li {
     text-indent: 25px;
     line-height: 35px;
-/*    border-bottom: 1px solid rgba(0,0,0,0.1);
-*/}
-.sidebar-nav .nav-pills li {
-    border-bottom: none;
-}
-.sidebar-nav .nav-pills .active a, .sidebar-nav .nav-pills .active a:focus{
-    background:#17927C;
-}
-.sidebar-nav .nav-pills a{
-    background:#19826F;
 }
 .sidebar-nav h4 {
     color: white;
@@ -94,13 +85,16 @@
 .sidebar-nav li a {
     display: block;
     text-decoration: none;
-    color: #fff;
+    color: #666;
     font-size: 14px;
     padding: 8px;
     font-weight: 300;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+.sidebar-nav li.active a {
+    color:white;
 }
 .sidenav-menu-holder {
     padding-top: 14px !important;
@@ -117,7 +111,7 @@
 }
 
 .sidebar-nav .active {
-    background: rgba(0,0,0,0.1);
+    background: #F9953D;
 }
 
 .sidebar-nav > .sidebar-brand {
