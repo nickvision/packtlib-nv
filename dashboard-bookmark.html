@@ -115,28 +115,42 @@
             </div>
             <div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="container-fluid">               
                 <div class="row">
-                        <div class="col-sm-12">
+                        <div class="col-sm-3">
+                        <div class="panel panel-default">
+                          <!-- Default panel contents -->
+                          <div class="panel-heading"><h4 class="panel-title">Bookmarked Titles</h4></div>
+                          <ul class="list-group">
+                            <a class="list-group-item active" href="dashboard-bookmark.html">    Practical Machine Learning </a>
+                            <a class="list-group-item" href="dashboard-bookmark.html">    Mastering JavaScript </a>  
+                            <a class="list-group-item" href="dashboard-bookmark.html">    Learning NodeJS </a>  
+                            <a class="list-group-item" href="dashboard-bookmark.html">    Mastering MEAN Web Development [Video] </a>    
+                            
+                          </ul>
+                        </div> 
+                      </div>
+                        <div class="col-sm-9">
                           <div ng-show="dashboard_counts.bookmarks > 0" class="panel panel-default">
                             <ul class="list-group">
                                 <!-- ngRepeat: (key, value) in myBookmarks --><span ng-repeat="(key, value) in myBookmarks" class="ng-scope">
-                                    <a href="/packtlib" class="list-group-item list-name disabled">
-                                        <strong ng-bind-html="value.book.title" class="ng-binding">Learning Django Web Development [Video]</strong>
-                                        <span class="animate-switch-container hidden-xs" ng-switch="" on="value.book.field_book_series">
-                                            <!-- ngSwitchWhen: learning --><span class="badge-learn badge pull-right ng-scope" ng-switch-when="learning">Learner</span><!-- end ngSwitchWhen: -->
-                                            <!-- ngSwitchWhen: beginners guide -->
-                                            <!-- ngSwitchWhen: mastering -->
-                                            <!-- ngSwitchWhen: essentials -->
-                                            <!-- ngSwitchWhen: blueprints -->
-                                            <!-- ngSwitchWhen: cookbook -->
-                                            <!-- ngSwitchWhen: by example -->
-                                            <!-- ngSwitchDefault:  -->
-                                        </span><br>
-                                        <small class="pull-left ng-binding">By Matthew Nuzum</small>
-                                        <br>
-                                        <small class="pull-left title-duration ng-binding"><i class="fa fa-clock-o mr5"></i>1 hour 40 minutes</small><!-- ngIf: value.book.field_date_of_publication_value --><small ng-if="value.book.field_date_of_publication_value" class="pull-right mr10 ng-binding ng-scope">Jun 2015</small><!-- end ngIf: value.book.field_date_of_publication_value -->
-                                        <div class="clearfix">
-                                        </div>
-                                    </a>
+                                    <a ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name">
+                                          <img src="https://d1ldz4te4covpm.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/9689_B03980_Practical%20Machine%20Learning_.jpg" class="img-product-list"/>
+                                              <h1>Practical Machine Learning</h1>
+                                              <p class="mb5">By Sunila Gollapudi</p>
+                                                <!-- Feefo Star Rating -->
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                                <img src="https://dz13w8afd47il.cloudfront.net/sites/all/themes/packt_v4/images/feefo-logo-simple.png" class="simple-feefo-logo">
+                                                <small> 35 review(s)</small>
+                                                <!-- Feefo Star Rating END -->    
+                                              <br>
+
+                                              <small class="pull-left title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small><small ng-if="fivePopular.field_date_of_publication[0].value" class="pull-right mr10 ng-binding ng-scope mt10">Jan 2016</small>
+                                              <div class="clearfix">
+                                              </div>
+                                          </a>
                                     <!-- ngRepeat: (k, v) in value.bookmarks --><a ng-repeat="(k, v) in value.bookmarks" href="/packtlib/video/test/9781783554157/5690/5691/Enabling+the+Django+Debug+Toolbar" class="list-group-item list-name ng-scope">
                                         <span ng-show="v.section_title"><strong ng-bind-html="v.section_title" class="ng-binding">Enabling the Django Debug Toolbar</strong></span>
                                     </a><!-- end ngRepeat: (k, v) in value.bookmarks --><a ng-repeat="(k, v) in value.bookmarks" href="/packtlib/video/test/9781783554157/5685/5687/Changing+Our+Models" class="list-group-item list-name ng-scope">
@@ -147,52 +161,9 @@
                                         <span ng-show="v.section_title"><strong ng-bind-html="v.section_title" class="ng-binding">The User’s Model</strong></span>
                                     </a><!-- end ngRepeat: (k, v) in value.bookmarks -->
                                 </span><!-- end ngRepeat: (key, value) in myBookmarks --><span ng-repeat="(key, value) in myBookmarks" class="ng-scope">
-                                    <a href="/packtlib" class="list-group-item list-name disabled">
-                                        <strong ng-bind-html="value.book.title" class="ng-binding">Learning Predictive Analytics with Python</strong>
-                                        <span class="animate-switch-container hidden-xs" ng-switch="" on="value.book.field_book_series">
-                                            <!-- ngSwitchWhen: learning --><span class="badge-learn badge pull-right ng-scope" ng-switch-when="learning">Learner</span><!-- end ngSwitchWhen: -->
-                                            <!-- ngSwitchWhen: beginners guide -->
-                                            <!-- ngSwitchWhen: mastering -->
-                                            <!-- ngSwitchWhen: essentials -->
-                                            <!-- ngSwitchWhen: blueprints -->
-                                            <!-- ngSwitchWhen: cookbook -->
-                                            <!-- ngSwitchWhen: by example -->
-                                            <!-- ngSwitchDefault:  -->
-                                        </span><br>
-                                        <small class="pull-left ng-binding">By Ashish Kumar</small>
-                                        <br>
-                                        <small class="pull-left title-duration ng-binding"><i class="fa fa-clock-o mr5"></i>10 hours 37 minutes</small><!-- ngIf: value.book.field_date_of_publication_value --><small ng-if="value.book.field_date_of_publication_value" class="pull-right mr10 ng-binding ng-scope">Feb 2016</small><!-- end ngIf: value.book.field_date_of_publication_value -->
-                                        <div class="clearfix">
-                                        </div>
-                                    </a>
-                                    <!-- ngRepeat: (k, v) in value.bookmarks --><a ng-repeat="(k, v) in value.bookmarks" href="/packtlib/book/test/9781783983261/4" class="list-group-item list-name ng-scope">
-                                        <span ng-show="v.section_title"><strong ng-bind-html="v.section_title" class="ng-binding">Chapter 4: Statistical Concepts for Predictive Modelling</strong></span>
-                                    </a><!-- end ngRepeat: (k, v) in value.bookmarks -->
-                                </span><!-- end ngRepeat: (key, value) in myBookmarks --><span ng-repeat="(key, value) in myBookmarks" class="ng-scope">
-                                    <a href="/packtlib" class="list-group-item list-name disabled">
-                                        <strong ng-bind-html="value.book.title" class="ng-binding">Mastering JavaScript</strong>
-                                        <span class="animate-switch-container hidden-xs" ng-switch="" on="value.book.field_book_series">
-                                            <!-- ngSwitchWhen: learning -->
-                                            <!-- ngSwitchWhen: beginners guide -->
-                                            <!-- ngSwitchWhen: mastering --><span class="badge-master badge pull-right ng-scope" ng-switch-when="mastering">Expert</span><!-- end ngSwitchWhen: -->
-                                            <!-- ngSwitchWhen: essentials -->
-                                            <!-- ngSwitchWhen: blueprints -->
-                                            <!-- ngSwitchWhen: cookbook -->
-                                            <!-- ngSwitchWhen: by example -->
-                                            <!-- ngSwitchDefault:  -->
-                                        </span><br>
-                                        <small class="pull-left ng-binding">By Ved Antani</small>
-                                        <br>
-                                        <small class="pull-left title-duration ng-binding"><i class="fa fa-clock-o mr5"></i>7 hours 30 minutes</small><!-- ngIf: value.book.field_date_of_publication_value --><small ng-if="value.book.field_date_of_publication_value" class="pull-right mr10 ng-binding ng-scope">Jan 2016</small><!-- end ngIf: value.book.field_date_of_publication_value -->
-                                        <div class="clearfix">
-                                        </div>
-                                    </a>
-                                    <!-- ngRepeat: (k, v) in value.bookmarks --><a ng-repeat="(k, v) in value.bookmarks" href="/packtlib/book/test/9781785281341/pref05" class="list-group-item list-name ng-scope">
-                                        <span ng-show="v.section_title"><strong ng-bind-html="v.section_title" class="ng-binding">Preface</strong></span>
-                                    </a><!-- end ngRepeat: (k, v) in value.bookmarks -->
-                                </span><!-- end ngRepeat: (key, value) in myBookmarks -->
                             </ul>
                         </div>
+
                         </div>
                         </div>
                   </div><!-- row -->
