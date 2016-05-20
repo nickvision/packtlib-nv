@@ -1356,7 +1356,7 @@ a.text-success:focus {
   color: #3d8b40;
 }
 .text-info {
-  color: #9c27b0;
+  color: #2B5B84;
 }
 a.text-info:hover,
 a.text-info:focus {
@@ -3236,7 +3236,7 @@ fieldset[disabled] .btn-success.focus {
 }
 .btn-info {
   color: #ffffff;
-  background-color: #9c27b0;
+  background-color: #2B5B84;
   border-color: transparent;
 }
 .btn-info:focus,
@@ -3284,11 +3284,11 @@ fieldset[disabled] .btn-info:focus,
 .btn-info.disabled.focus,
 .btn-info[disabled].focus,
 fieldset[disabled] .btn-info.focus {
-  background-color: #9c27b0;
+  background-color: #2B5B84;
   border-color: transparent;
 }
 .btn-info .badge {
-  color: #9c27b0;
+  color: #2B5B84;
   background-color: #ffffff;
 }
 .btn-warning {
@@ -4896,7 +4896,7 @@ a.label:focus {
   background-color: #3d8b40;
 }
 .label-info {
-  background-color: #9c27b0;
+  background-color: #2B5B84;
 }
 .label-info[href]:hover,
 .label-info[href]:focus {
@@ -5076,7 +5076,7 @@ a.thumbnail.active {
 .alert-info {
   background-color: #e1bee7;
   border-color: #cba4dd;
-  color: #9c27b0;
+  color: #2B5B84;
 }
 .alert-info hr {
   border-top-color: #c191d6;
@@ -5177,7 +5177,7 @@ a.thumbnail.active {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
 .progress-bar-info {
-  background-color: #9c27b0;
+  background-color: #2B5B84;
 }
 .progress-striped .progress-bar-info {
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
@@ -5360,12 +5360,12 @@ button.list-group-item-success.active:focus {
   border-color: #4caf50;
 }
 .list-group-item-info {
-  color: #9c27b0;
+  color: #2B5B84;
   background-color: #e1bee7;
 }
 a.list-group-item-info,
 button.list-group-item-info {
-  color: #9c27b0;
+  color: #2B5B84;
 }
 a.list-group-item-info .list-group-item-heading,
 button.list-group-item-info .list-group-item-heading {
@@ -5375,7 +5375,7 @@ a.list-group-item-info:hover,
 button.list-group-item-info:hover,
 a.list-group-item-info:focus,
 button.list-group-item-info:focus {
-  color: #9c27b0;
+  color: #2B5B84;
   background-color: #d8abe0;
 }
 a.list-group-item-info.active,
@@ -5385,8 +5385,8 @@ button.list-group-item-info.active:hover,
 a.list-group-item-info.active:focus,
 button.list-group-item-info.active:focus {
   color: #fff;
-  background-color: #9c27b0;
-  border-color: #9c27b0;
+  background-color: #2B5B84;
+  border-color: #2B5B84;
 }
 .list-group-item-warning {
   color: #ff9800;
@@ -5748,14 +5748,14 @@ button.list-group-item-danger.active:focus {
 }
 .panel-info > .panel-heading {
   color: #ffffff;
-  background-color: #9c27b0;
+  background-color: #2B5B84;
   border-color: #cba4dd;
 }
 .panel-info > .panel-heading + .panel-collapse > .panel-body {
   border-top-color: #cba4dd;
 }
 .panel-info > .panel-heading .badge {
-  color: #9c27b0;
+  color: #2B5B84;
   background-color: #ffffff;
 }
 .panel-info > .panel-footer + .panel-collapse > .panel-body {
@@ -6864,7 +6864,7 @@ button.close {
   background-position: 50%;
 }
 .btn-info:focus {
-  background-color: #9c27b0;
+  background-color: #2B5B84;
 }
 .btn-info:hover,
 .btn-info:active:hover {
@@ -6872,9 +6872,9 @@ button.close {
 }
 .btn-info:active {
   background-color: #701c7e;
-  background-image: -webkit-radial-gradient(circle, #701c7e 10%, #9c27b0 11%);
-  background-image: -o-radial-gradient(circle, #701c7e 10%, #9c27b0 11%);
-  background-image: radial-gradient(circle, #701c7e 10%, #9c27b0 11%);
+  background-image: -webkit-radial-gradient(circle, #701c7e 10%, #2B5B84 11%);
+  background-image: -o-radial-gradient(circle, #701c7e 10%, #2B5B84 11%);
+  background-image: radial-gradient(circle, #701c7e 10%, #2B5B84 11%);
   background-repeat: no-repeat;
   -webkit-background-size: 1000% 1000%;
           background-size: 1000%;
@@ -7416,7 +7416,7 @@ input[type="checkbox"]:disabled:checked:after,
   background-color: #4caf50;
 }
 .alert-info {
-  background-color: #9c27b0;
+  background-color: #2B5B84;
 }
 .alert-warning {
   background-color: #ff9800;
