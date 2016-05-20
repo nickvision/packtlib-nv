@@ -660,8 +660,8 @@ blockquote p {
     -o-box-shadow: inset -3px 1px 9px -4px #ABABAB;
 }
 .sidenav-menu {
-  font-weight: 300;
-  font-size: 15px;
+  font-weight: 700;
+  font-size: 14px;
   float: left;
 }
 /* Hiding the Icons for the sidenav */
@@ -717,12 +717,6 @@ span.input-group-btn button.btn {
     padding-left: 40px;
     padding-bottom: 15px;
     border-bottom: 1px solid #eee;
-}
-.panel-body {
-  background: whitesmoke;
-}
-.modal-body>.panel-body {
-  background: #fff;
 }
 .breadcrumb.title-buttons > li + li:before {
     padding: 0 5px;
