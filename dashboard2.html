@@ -137,7 +137,6 @@
                                     <li class="">
                                         <a href="#recommended" ng-click="$event.preventDefault();" role="tab" data-toggle="tab" aria-controls="recommended" aria-expanded="true" ng-if="libraryController.userRecommendations" class="ng-scope"><h5>What I've Done</h5></a>
                                     </li>
-                                     <button class="btn btn-default pull-right mt20" role="tab" id="headingOne"  data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><i class="fa fa-neuter mr5"></i>  View Path</button>
                                 </ul>
                               </div>
 
@@ -147,7 +146,7 @@
                                     <div class="col-sm-12"> 
                                       <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                                         <div class="panel django panel-default">
-                                          <div class="panel-heading django">
+                                          <div class="panel-heading django clickable"  role="tab" id="headingOne"  data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                               <button type="button" class="close" data-toggle="modal" data-target="#myModal"><span aria-hidden="true">×</span></button>
                                               <img class="tech-icon drop hidden-xs" src="images/tech/django.png"/>
                                               <span class="card-heading mb5 mt0">Production Ready Django</span>
