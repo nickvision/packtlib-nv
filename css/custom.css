@@ -41,6 +41,14 @@ h1, .h1 {
   background: rgba(0,0,0,0.1);
   color: #ffffff;
 }
+.modal-content.django {
+  background: #517D5C;
+  color: #ffffff;
+}
+.django .modal-header {
+  background: rgba(0,0,0,0.1);
+  color: #ffffff;
+}
 .panel.django {
   background: #40684A;
   color: #ffffff;
