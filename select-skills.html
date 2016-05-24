@@ -46,11 +46,11 @@
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header python">
+    <div class="modal-content python">
+      <div class="modal-header ">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
         <img class="tech-icon" src="images/tech/python.png"> 
-                                    <h1 class="card-heading">Python Fundamentals </h1>
+                                    <span class="card-heading">Python Fundamentals </span>
       </div>
       <div class="modal-body python">
         <div class="panel-body">
@@ -59,7 +59,7 @@
               <hr>
             </div>
 
-            <div class="col-sm-12 left-skillcard mb20">
+            <div class="col-sm-12 dashboard-skillcard mb20">
                   <ul class="learning-points">
                     <li>Install and set up Python on Mac, Windows or Linux</li>
                     <li>Write elegant, reusable, and efficient Python code to use in your future projects</li>
@@ -73,7 +73,7 @@
       </div>
       <div class="modal-footer python">
         <a href="dashboard2.html" class="btn btn-success">I know all of this <i class="glyphicon glyphicon-ok ml10"></i></a>
-        <a href="dashboard.html" class="btn btn-primary">Add to In Progress<i class="fa fa-refresh ml10"></i></a>
+        <a href="dashboard.html" class="btn btn-danger">Remove from Path<i class="fa fa-minus ml10"></i></a>
       </div>
     </div>
   </div>
@@ -94,16 +94,16 @@
                     <span class="icon-bar"></span>
                   </button>
                   <a class="navbar-brand toggle-nav" href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars fa-lg"></i></a>
-                  <a class="brand-logo active" href="dashboard.html"><img src="images/mapt-logo.png"/></a>
+                  <a class="brand-logo" href="dashboard.html"><img src="images/mapt.png"/></a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#contact"><i class="fa fa-question-circle fa-lg mr5"></i> Help</a></li>
+                        <li><a href="#contact">Help</a></li>
                         <li class="dropdown">
                         <a href="#" class="dropdown-toggle visible-xs" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account<span class="caret ml5"></span>
                         </a>
                         <a href="#" class="dropdown-toggle navbar-avatar-link hidden-xs" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                            <img src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/8/000/222/015/06be2f6.jpg" alt="..." class="img-circle img-responsive navbar-avatar">
+                            <img src="images/avatar.jpeg" alt="..." class="img-circle img-responsive navbar-avatar">
                         </a>
                         <ul class="dropdown-menu">
                             <li> <a href="#">View Account</a></li> 
@@ -116,10 +116,7 @@
                     </ul>
                     <form class="navbar-form navbar-right search-nav-collapse">
                         <div class="form-group pull-right" style="display:inline;">
-                            <div class="input-group">
-                              <input class="form-control" type="text" placeholder="Search the library...">
-                              <span class="input-group-btn"><button href="search.html" class="btn btn-default" type="button"><i class="fa fa-search"></i></span></button></span>
-                            </div>
+                              <input class="form-control" type="text" placeholder="Search for a title...">
                         </div>
                     </form>
                 </div><!--/.nav-collapse -->
@@ -127,17 +124,15 @@
         </nav>
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
-
             <ul class="sidebar-nav">
-               <li><a href="index.html" class="sidenav-menu-holder"><span class="sidenav-menu">Currently Viewing</span><span class="pull-right mr5"><i class="fa fa-refresh fa-lg"></i></span></a>    </li>
-              <li><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu">Dashboard</span><span class="pull-right mr5"><i class="fa fa-refresh fa-lg"></i></span></a>    </li>
-              <li class="active"><a href="library.html" class="sidenav-menu-holder"><span class="sidenav-menu">Explore The Library </span><span class="pull-right mr5"><i class="fa fa-archive fa-lg"></i></span></a>    </li>
+              <li><a href="index.html" class="sidenav-menu-holder"><span class="sidenav-menu">Currently Viewing</span><span class="pull-right mr5"><i class="fa fa-refresh fa-lg"></i></span></a>    </li>
+              <li class="active"><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu">Dashboard</span><span class="pull-right mr5"><i class="fa fa-refresh fa-lg"></i></span></a>    </li>
+              <li><a href="library.html" class="sidenav-menu-holder"><span class="sidenav-menu">Explore The Library </span><span class="pull-right mr5"><i class="fa fa-archive fa-lg"></i></span></a>    </li>
               <li><a href="dashboard-bookmark.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Bookmarks </span><span class="pull-right mr5">6<i class="fa fa-bookmark fa-lg"></i></span></a>    </li>
               <li><a href="dashboard-collection.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Collection </span><span class="pull-right mr5">12<i class="fa fa-plus fa-lg"></i></span></a>    </li>
               <li><a href="dashboard-owned.html" class="sidenav-menu-holder"><span class="sidenav-menu">Purchases  </span><span class="pull-right mr5">7<i class="fa fa-shopping-bag fa-lg"></i></span></a>    </li>
             </ul>
         </div>
-
         <!-- /#sidebar-wrapper -->
 
         <div id="page-content-wrapper" class="">
@@ -162,7 +157,6 @@
                           </div>
                           <div class="btn-group mb20" id="filters">
                             <button class="btn btn-default active" data-filter="*">Show All</button>
-                            <button class="btn btn-default" data-filter=".owned">My Cards</button>
                             <button class="btn btn-default" data-filter=".program">Programming</button>
                             <button class="btn btn-default" data-filter=".dev">Development</button>
                             <button class="btn btn-default" data-filter=".admin">Administration</button>
@@ -170,248 +164,59 @@
                             <button class="btn btn-default" data-filter=".tech">Technical Concepts and Tasks</button>
                           </div>
 
-                          <div class="grid row">
-                            <!-- Skill Card -->
-                            <div class="element-item program col-sm-3 col-lg-2" data-category="program">
-                              <div class="panel panel-default  clickable sm-card text-center" data-toggle="modal" data-target="#myModal">
-                                <div class="panel-heading python">
-                                      <div class="inner-card-sm">
-                                        <img class="tech-icon-sm" src="images/tech/python.png"/>
-                                        <h1 class="sm-card-heading">Python Fundamentals</h1>
-                                      </div>
-                                </div>
+                          <div class="grid">
+                            <div class="panel panel-default">
+                              <div class="list-group">
+                                <a href="#" class="list-group-item element-item python program pt15 pb15" data-toggle="modal" data-target="#myModal">
+                                  <img class="tech-icon drop hidden-xs" src="images/tech/python.png">
+                                  <span  class="card-heading mb5 mt0">Python Fundamentals<i class="fa fa-refresh pull-right mt15 mr15"></i></span>
+                                </a>
+                                <a href="#" class="list-group-item element-item python program pt15 pb15" data-toggle="modal" data-target="#myModal">
+                                  <img class="tech-icon drop hidden-xs" src="images/tech/python.png">
+                                  <span  class="card-heading mb5 mt0">High Performance Python<i class="fa fa-refresh pull-right mt15 mr15"></i></span>
+                                </a>
+                                <a href="#" class="list-group-item element-item django program pt15 pb15" data-toggle="modal" data-target="#myModal">
+                                  <img class="tech-icon drop hidden-xs" src="images/tech/django.png">
+                                  <span  class="card-heading mb5 mt0">Production Ready Django<i class="fa fa-refresh pull-right mt15 mr15"></i></span>
+                                </a>
+                                <a href="#" class="list-group-item element-item django program pt15 pb15" data-toggle="modal" data-target="#myModal">
+                                  <img class="tech-icon drop hidden-xs" src="images/tech/django.png">
+                                  <span  class="card-heading mb5 mt0">Django Up To Speed<i class="fa fa-check pull-right mt15 mr15"></i></span>
+                                </a>
+                                <a href="#" class="list-group-item element-item java program pt15 pb15" data-toggle="modal" data-target="#myModal">
+                                  <img class="tech-icon drop hidden-xs" src="images/tech/java.png">
+                                  <span  class="card-heading mb5 mt0">RESTful Java Programming<i class="fa fa-check pull-right mt15 mr15"></i></span>
+                                </a>
+                                <a href="#" class="list-group-item element-item java program pt15 pb15" data-toggle="modal" data-target="#myModal">
+                                  <img class="tech-icon drop hidden-xs" src="images/tech/java.png">
+                                  <span  class="card-heading mb5 mt0">Reactive Java Programming</span>
+                                </a>
+                                <a href="#" class="list-group-item element-item mysql pt15 pb15 admin" data-toggle="modal" data-target="#myModal" data-category="admin">
+                                  <img class="tech-icon drop hidden-xs" src="images/tech/mysql.png">
+                                  <span  class="card-heading mb5 mt0">MySQL Administration<i class="fa fa-check pull-right mt15 mr15"></i></span>
+                                </a>
+                                <a href="#" class="list-group-item element-item tech mysql pt15 pb15" data-toggle="modal" data-target="#myModal">
+                                  <img class="tech-icon drop hidden-xs" src="images/tech/mysql.png">
+                                  <span  class="card-heading mb5 mt0">MySQL Basics</span>
+                                </a>
+                                <a href="#" class="list-group-item element-item dev git pt15 pb15" data-toggle="modal" data-target="#myModal">
+                                  <img class="tech-icon drop hidden-xs" src="images/tech/git.png">
+                                  <span class="card-heading mb5 mt0">Git Fundamentals<i class="fa fa-check pull-right mt15 mr15"></i></span>
+                                </a>
+                                <a href="#" class="list-group-item element-item dev android pt15 pb15" data-toggle="modal" data-target="#myModal">
+                                  <img class="tech-icon drop hidden-xs" src="images/tech/android.png">
+                                  <span class="card-heading mb5 mt0">Android Fundamentals</span>
+                                </a>
+                                <a href="#" class="list-group-item element-item dev android pt15 pb15" data-toggle="modal" data-target="#myModal">
+                                  <img class="tech-icon drop hidden-xs" src="images/tech/android.png">
+                                  <span class="card-heading mb5 mt0">Android Studio Basics</span>
+                                </a>
+                                <a href="#" class="list-group-item element-item jira pt15 pb15" data-toggle="modal" data-target="#myModal">
+                                  <img class="tech-icon drop hidden-xs" src="images/tech/jira.png">
+                                  <span class="card-heading mb5 mt0">Jira Administration</span>
+                                </a>
                               </div>
                             </div>
-                            <!-- Skill Card END -->
-                            <!-- Skill Card -->
-                            <div class="element-item program col-sm-3 col-lg-2" data-category="program">
-                              <div class="panel panel-default  clickable sm-card text-center" data-toggle="modal" data-target="#myModal">
-                                <div class="panel-heading python">
-                                    <div class="inner-card-sm">
-                                      <img class="tech-icon-sm" src="images/tech/python.png"/>
-                                      <h1 class="sm-card-heading">High Performance Python</h1>
-                                    </div>
-                                </div>
-                              </div>
-                            </div>
-                            <!-- Skill Card END -->
-                            <!-- Skill Card -->
-                            <div class="element-item program col-sm-3 col-lg-2" data-category="program">
-                              <div class="panel panel-default  clickable sm-card text-center" data-toggle="modal" data-target="#myModal">
-                                <div class="panel-heading python">
-                                    <div class="inner-card-sm">
-                                      <img class="tech-icon-sm" src="images/tech/python.png"/>
-                                      <h1 class="sm-card-heading">Unlocking Python Objects</h1>
-                                    </div>
-                                </div>
-                              </div>
-                            </div>
-                            <!-- Skill Card END -->
-                            <!-- Skill Card -->
-                            <div class="element-item dev col-sm-3 col-lg-2" data-category="dev">
-                              <div class="panel panel-default  clickable sm-card text-center" data-toggle="modal" data-target="#myModal">
-                                <div class="panel-heading python">
-                                    <div class="inner-card-sm">
-                                      <img class="tech-icon-sm" src="images/tech/python.png"/>
-                                      <h1 class="sm-card-heading">Testing Python</h1>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <!-- Skill Card END -->
-                            <!-- Skill Card -->
-                            <div class="element-item tech col-sm-3 col-lg-2" data-category="tech">
-                              <div class="panel panel-default  clickable sm-card text-center" data-toggle="modal" data-target="#myModal">
-                                <div class="panel-heading python">
-                                    <div class="inner-card-sm">
-                                      <img class="tech-icon-sm" src="images/tech/python.png"/>
-                                      <h1 class="sm-card-heading">Data Analysis with Python</h1>
-                                    </div>
-                                </div>
-                              </div>
-                            </div>
-                            <!-- Skill Card END -->
-                            <!-- Skill Card -->
-                            <div class="element-item program col-sm-3 col-lg-2" data-category="program">
-                              <div class="panel panel-default  clickable sm-card text-center" data-toggle="modal" data-target="#myModal">
-                                <div class="panel-heading django">
-                                    <div class="inner-card-sm">
-                                      <img class="tech-icon-sm" src="images/tech/django.png"/>
-                                      <h1 class="sm-card-heading">Production Ready Django</h1>
-                                    </div>
-                                </div>
-                              </div>
-                            </div>
-                            <!-- Skill Card END -->
-                            <!-- Skill Card -->
-                            <div class="element-item owned dev col-sm-3 col-lg-2" data-category="dev">
-                              <div class="panel panel-default  clickable sm-card text-center" data-toggle="modal" data-target="#myModal">
-                                <div class="panel-heading django ">
-                                    <div class="inner-card-sm">
-                                      <img class="tech-icon-sm" src="images/tech/django.png"/>
-                                      <h1 class="sm-card-heading">Django Up to Speed</h1>
-                                    </div>
-                                </div>
-                              </div>
-                            </div>
-                            <!-- Skill Card END -->
-                            <!-- Skill Card -->
-                            <div class="element-item program owned col-sm-3 col-lg-2" data-category="program">
-                              <div class="panel panel-default  clickable sm-card text-center" data-toggle="modal" data-target="#myModal">
-                                <div class="panel-heading java">
-                                    <div class="inner-card-sm">
-                                      <img class="tech-icon-sm" src="images/tech/java.png"/>
-                                      <h1 class="sm-card-heading">Reactive Java Programming</h1>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <!-- Skill Card END -->
-                            <!-- Skill Card -->
-                            <div class="element-item program owned col-sm-3 col-lg-2" data-category="program">
-                              <div class="panel panel-default  clickable sm-card text-center" data-toggle="modal" data-target="#myModal">
-                                <div class="panel-heading java">
-                                    <div class="inner-card-sm">
-                                      <img class="tech-icon-sm" src="images/tech/java.png"/>
-                                      <h1 class="sm-card-heading">RESTful Java Programming</h1>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <!-- Skill Card END -->
-                            <!-- Skill Card -->
-                            <div class="element-item program col-sm-3 col-lg-2" data-category="program">
-                              <div class="panel panel-default  clickable sm-card text-center" data-toggle="modal" data-target="#myModal">
-                                <div class="panel-heading java">
-                                    <div class="inner-card-sm">
-                                      <img class="tech-icon-sm" src="images/tech/java.png"/>
-                                      <h1 class="sm-card-heading">RESTful Java Programming</h1>
-                                    </div>
-                                </div>
-                              </div>
-                            </div>
-                            <!-- Skill Card END -->
-                            <!-- Skill Card -->
-                            <div class="element-item dev col-sm-3 col-lg-2" data-category="dev">
-                              <div class="panel panel-default  clickable sm-card text-center" data-toggle="modal" data-target="#myModal">
-                                <div class="panel-heading android">
-                                    <div class="inner-card-sm">
-                                      <img class="tech-icon-sm" src="images/tech/android.png"/>
-                                      <h1 class="sm-card-heading">Android Development Fundamentals</h1>
-                                    </div>
-                                </div>
-                              </div>
-                            </div>
-                            <!-- Skill Card END -->
-                            <!-- Skill Card -->
-                            <div class="element-item dev col-sm-3 col-lg-2" data-category="dev">
-                              <div class="panel panel-default  clickable sm-card text-center" data-toggle="modal" data-target="#myModal">
-                                <div class="panel-heading android">
-                                    <div class="inner-card-sm">
-                                      <img class="tech-icon-sm" src="images/tech/android.png"/>
-                                      <h1 class="sm-card-heading">Android UI Design</h1>
-                                    </div>
-                                </div>
-                              </div>
-                            </div>
-                            <!-- Skill Card END -->
-                            <!-- Skill Card -->
-                            <div class="element-item tech col-sm-3 col-lg-2" data-category="tech">
-                              <div class="panel panel-default  clickable sm-card text-center" data-toggle="modal" data-target="#myModal">
-                                <div class="panel-heading android">
-                                    <div class="inner-card-sm">
-                                      <img class="tech-icon-sm" src="images/tech/android.png"/>
-                                      <h1 class="sm-card-heading">Advanced Android Development</h1>
-                                    </div>
-                                </div>
-                              </div>
-                            </div>
-                            <!-- Skill Card END -->
-                            <!-- Skill Card -->
-                            <div class="element-item program col-sm-3 col-lg-2" data-category="program">
-                              <div class="panel panel-default  clickable sm-card text-center" data-toggle="modal" data-target="#myModal">
-                                <div class="panel-heading android">
-                                    <div class="inner-card-sm">
-                                      <img class="tech-icon-sm" src="images/tech/android.png"/>
-                                      <h1 class="sm-card-heading">Android High Performance Programming</h1>
-                                    </div>
-                                </div>
-                              </div>
-                            </div>
-                            <!-- Skill Card END -->
-                            <!-- Skill Card -->
-                            <div class="element-item tech col-sm-3 col-lg-2" data-category="tech">
-                              <div class="panel panel-default  clickable sm-card text-center" data-toggle="modal" data-target="#myModal">
-                                <div class="panel-heading android">
-                                    <div class="inner-card-sm">
-                                      <img class="tech-icon-sm" src="images/tech/android.png"/>
-                                      <h1 class="sm-card-heading">Android Studio Basics</h1>
-                                    </div>
-                                </div>
-                              </div>
-                            </div>
-                            <!-- Skill Card END -->
-                            <!-- Skill Card -->
-                            <div class="element-item tech col-sm-3 col-lg-2" data-category="tech">
-                              <div class="panel panel-default  clickable sm-card text-center" data-toggle="modal" data-target="#myModal">
-                                <div class="panel-heading git">
-                                    <div class="inner-card-sm">
-                                      <img class="tech-icon-sm" src="images/tech/git.png"/>
-                                      <h1 class="sm-card-heading">Git Fundamentals</h1>
-                                    </div>
-                                </div>
-                              </div>
-                            </div>
-                            <!-- Skill Card END -->
-                            <!-- Skill Card -->
-                            <div class="element-item admin col-sm-3 col-lg-2" data-category="admin">
-                              <div class="panel panel-default  clickable sm-card text-center" data-toggle="modal" data-target="#myModal">
-                                <div class="panel-heading jira">
-                                    <div class="inner-card-sm">
-                                      <img class="tech-icon-sm" src="images/tech/jira.png"/>
-                                      <h1 class="sm-card-heading">Jira Administration</h1>
-                                    </div>
-                                </div>
-                              </div>
-                            </div>
-                            <!-- Skill Card END -->
-                            <!-- Skill Card -->
-                            <div class="element-item tech col-sm-3 col-lg-2" data-category="tech">
-                              <div class="panel panel-default  clickable sm-card text-center" data-toggle="modal" data-target="#myModal">
-                                <div class="panel-heading docker">
-                                    <div class="inner-card-sm">
-                                      <img class="tech-icon-sm" src="images/tech/docker.png"/>
-                                      <h1 class="sm-card-heading">Docker Fundamentals</h1>
-                                    </div>
-                                </div>
-                              </div>
-                            </div>
-                            <!-- Skill Card END -->
-                            
-                            <!-- Skill Card -->
-                            <div class="element-item tech col-sm-3 col-lg-2" data-category="tech">
-                              <div class="panel panel-default  clickable sm-card text-center" data-toggle="modal" data-target="#myModal">
-                                <div class="panel-heading mysql">
-                                    <div class="inner-card-sm">
-                                      <img class="tech-icon-sm" src="images/tech/mysql.png"/>
-                                      <h1 class="sm-card-heading">MySQL Basics</h1>
-                                    </div>
-                                </div>
-                              </div>
-                            </div>
-                            <!-- Skill Card END -->
-                            <!-- Skill Card -->
-                            <div class="element-item admin owned col-sm-3 col-lg-2" data-category="admin">
-                              <div class="panel panel-default  clickable sm-card text-center" data-toggle="modal" data-target="#myModal">
-                                <div class="panel-heading mysql">
-                                    <div class="inner-card-sm">
-                                      <img class="tech-icon-sm" src="images/tech/mysql.png"/>
-                                      <h1 class="sm-card-heading">MySQL Administration</h1>
-                                    </div>
-                                </div>
-                              </div>
-                            </div>
-                            <!-- Skill Card END -->
                           </div>
                         </div>
                   </div><!-- row -->
@@ -441,7 +246,7 @@
   // init Isotope
   var $container = $('.grid').isotope({
     itemSelector: '.element-item',
-    layoutMode: 'fitRows',
+    layoutMode: 'vertical',
     filter: function() {
       var $this = $(this);
       var searchResult = qsRegex ? $this.text().match( qsRegex ) : true;
