@@ -96,7 +96,9 @@
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#contact">Help</a></li>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="index.html">Viewing</a></li>
+                        <li class="active"><a href="library.html">Library</a></li>
                         <li class="dropdown">
                         <a href="#" class="dropdown-toggle visible-xs" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account<span class="caret ml5"></span>
                         </a>
@@ -124,9 +126,7 @@
         <div id="sidebar-wrapper">
 
             <ul class="sidebar-nav">
-               <li><a href="index.html" class="sidenav-menu-holder"><span class="sidenav-menu">Currently Viewing</span><span class="pull-right mr5"><i class="fa fa-refresh fa-lg"></i></span></a>    </li>
-              <li><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu">Dashboard</span><span class="pull-right mr5"><i class="fa fa-refresh fa-lg"></i></span></a>    </li>
-              <li class="active"><a href="library.html" class="sidenav-menu-holder"><span class="sidenav-menu">Explore The Library </span><span class="pull-right mr5"><i class="fa fa-archive fa-lg"></i></span></a>    </li>
+              <li class="active"><a href="library.html" class="sidenav-menu-holder"><span class="sidenav-menu">Library </span><span class="pull-right mr5"><i class="fa fa-archive fa-lg"></i></span></a>    </li>
               <li><a href="dashboard-bookmark.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Bookmarks </span><span class="pull-right mr5">6<i class="fa fa-bookmark fa-lg"></i></span></a>    </li>
               <li><a href="dashboard-collection.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Collection </span><span class="pull-right mr5">12<i class="fa fa-plus fa-lg"></i></span></a>    </li>
               <li><a href="dashboard-owned.html" class="sidenav-menu-holder"><span class="sidenav-menu">Purchases  </span><span class="pull-right mr5">7<i class="fa fa-shopping-bag fa-lg"></i></span></a>    </li>
@@ -150,7 +150,7 @@ the world.</li>
             <div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="container-fluid">               
                 <div class="row">
                   <div class="col-sm-12">
-                      <div class="col-sm-3 col-lg-3 col-xl-2">
+                      <div class="col-sm-3 col-lg-offset-1 col-lg-2">
                         <div class="panel panel-default">
                           <!-- Default panel contents -->
                           <div class="panel-heading"><h4 class="panel-title">Browse Topics</h4></div>
@@ -187,7 +187,7 @@ the world.</li>
                           </ul>
                         </div> 
                       </div>
-                      <div class="col-sm-9 col-lg-9 col-xl-7">
+                      <div class="col-sm-9 col-lg-8">
                           <ul id="recommendationTabs" class="nav nav-pills nav-stacked text-center mt25 mb25 visible-xs" role="tablist">
                               <li class="active">
                                   <a href="#popular" role="tab" data-toggle="tab" aria-controls="popular" ng-click="$event.preventDefault();" aria-expanded="true">Popular</a>

@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/prism.css">
 
     <!-- Fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat|Lato:400,500,700' rel='stylesheet' type='text/css'>
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -114,7 +114,9 @@
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#contact">Help</a></li>
+                        <li class="active"><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="index.html">Viewing</a></li>
+                        <li><a href="library.html">Library</a></li>
                         <li class="dropdown">
                         <a href="#" class="dropdown-toggle visible-xs" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account<span class="caret ml5"></span>
                         </a>
@@ -141,12 +143,9 @@
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
-              <li><a href="index.html" class="sidenav-menu-holder"><span class="sidenav-menu">Currently Viewing</span><span class="pull-right mr5"><i class="fa fa-refresh fa-lg"></i></span></a>    </li>
-              <li class="active"><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu">Dashboard</span><span class="pull-right mr5"><i class="fa fa-refresh fa-lg"></i></span></a>    </li>
-              <li><a href="library.html" class="sidenav-menu-holder"><span class="sidenav-menu">Explore The Library </span><span class="pull-right mr5"><i class="fa fa-archive fa-lg"></i></span></a>    </li>
-              <li><a href="dashboard-bookmark.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Bookmarks </span><span class="pull-right mr5">6<i class="fa fa-bookmark fa-lg"></i></span></a>    </li>
-              <li><a href="dashboard-collection.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Collection </span><span class="pull-right mr5">12<i class="fa fa-plus fa-lg"></i></span></a>    </li>
-              <li><a href="dashboard-owned.html" class="sidenav-menu-holder"><span class="sidenav-menu">Purchases  </span><span class="pull-right mr5">7<i class="fa fa-shopping-bag fa-lg"></i></span></a>    </li>
+              <li class="active"><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Map</span><span class="pull-right mr15"><i class="fa fa-map fa-lg"></i></span></a>    </li>
+              <li ><a href="select-skills.html" class="sidenav-menu-holder"><span class="sidenav-menu">Skills</span><span class="pull-right mr15"><i class="fa fa-dot-circle-o fa-lg"></i></span></a>    </li>
+              <li><a href="select-goal.html" class="sidenav-menu-holder"><span class="sidenav-menu">Roles</span><span class="pull-right mr15"><i class="fa fa-suitcase fa-lg"></i></span></a>    </li>
             </ul>
         </div>
 
@@ -156,31 +155,22 @@
             <div class="jumbotron heading mb0">
                 <div class="container-fluid">
                   <div class="col-sm-12">
-                    <h1 class="">Oli Huggins </h1>
-                      <p class="active mt0"><b>Current Role:</b> Python Developer <a href="select-goal.html" class="btn btn-default btn-sm pull-right"><small><i class="fa fa-refresh mr5"></i> Change Role</small></a></p>                    
+                    <h1 class="mb5">Oli Huggins </h1>
+                    <p>Your friend is quite a mercenary. I wonder if he really cares about anything...or anyone. I care! </p>
                   </div>
                 </div>
             </div>
             <div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="container-fluid">               
                 <div class="row">
                         <div class="">
-                            <div class="col-sm-12">
-                              <div class="col-sm-12 mb20">
-                                <ul id="recommendationTabs" class="nav nav-tabs hidden-xs" role="tablist">
-                                    <li class="active">
-                                        <a href="#popular" role="tab" data-toggle="tab" aria-controls="popular" ng-click="$event.preventDefault();" aria-expanded="false"><h5>Current Path</h5></a>
-                                    </li>
-                                    <li class="">
-                                        <a href="#recommended" ng-click="$event.preventDefault();" role="tab" data-toggle="tab" aria-controls="recommended" aria-expanded="true" ng-if="libraryController.userRecommendations" class="ng-scope"><h5>What I've Done</h5></a>
-                                    </li>
-                     
-                                </ul>
-                              </div>
+                            <div class="col-sm-12 col-lg-offset-1 col-lg-10">
 
                               <div class="tab-content mt15">
                                   <div role="tabpanel" class="tab-pane fade active in" id="popular" aria-labelledby="popular-tab">
 
-                                    <div class="col-sm-12"> 
+                                    <div class="col-sm-12">
+                                      <h4>Your friend is quite a mercenary</h4>
+                                      <hr>
                                       <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                                         <div class="panel python panel-default">
                                           <div class="panel-heading python clickable" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -188,85 +178,168 @@
                                               <img class="tech-icon drop hidden-xs" src="images/tech/python.png"/>
                                               <span class="card-heading mb5 mt0">Python Fundamentals</span>
                                           </div>
-                                          <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-                                            <div class="list-group">
-                                              <a href="#" class="list-group-item pt15 pb15">
-                                                <button type="button" class="close" data-toggle="modal" data-target="#myModal"><span aria-hidden="true">×</span></button>
-                                                <img class="tech-icon drop hidden-xs" src="images/tech/python.png"/>
-                                                <span class="card-heading mb5 mt0">High Performance Python </span>
-                                              </a>
-                                              <a href="dashboard2.html" class="list-group-item pt15 pb15">
-                                                <button type="button" class="close" data-toggle="modal" data-target="#myModal"><span aria-hidden="true">×</span></button>
-                                                <img class="tech-icon drop hidden-xs" src="images/tech/django.png"/>
-                                                <span class="card-heading mb5 mt0">Production Ready Django </span>
-                                              </a>
-                                              <a href="select-skills.html" class="list-group-item pt15 pb15 text-center">
-                                                <b style="color:rgba(0,0,0,0.4);"><i class="fa fa-plus mr15"></i>Add New Skill Nodes to your Path</b>
-                                              </a>
-                                            </div>
-                                          </div>
-                                          <div class="panel-body">
-                                            <div class="col-sm-5 col-xl-6">
-                                              <div class="">
-                                                <div class="dashboard-skillcard">
-                                                  <ul class="learning-points">
-                                                      <li>Install and set up Python on Mac, Windows or Linux</li>
-                                                      <li>Write elegant, reusable, and efficient Python code to use in your future projects</li>
-                                                      <li>Use Git to manage your Python code</li>
-                                                      <li>Write Python scripts to automate daily tasks, and other software</li>
-                                                      <li>Use unit tests to write better code, faster</li>
-                                                  </ul>
-                                                  <a href="dashboard2.html" class="btn btn-default btn-block mt10 mb5">I know all of this <i class="glyphicon glyphicon-ok ml10"></i></a>
+                                          <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                            <div class="panel-body">
+                                              <div class="col-sm-5 col-xl-6">
+                                                <div class="">
+                                                  <div class="dashboard-skillcard">
+                                                    <ul class="learning-points mt20">
+                                                        <li>Install and set up Python on Mac, Windows or Linux</li>
+                                                        <li>Write elegant, reusable, and efficient Python code to use in your future projects</li>
+                                                        <li>Use Git to manage your Python code</li>
+                                                        <li>Write Python scripts to automate daily tasks, and other software</li>
+                                                        <li>Use unit tests to write better code, faster</li>
+                                                    </ul>
+                                                    <div class="text-center">
+                                                    <a href="dashboard2.html" class="btn btn-success btn-lg mt10 mb5 pl25 pr25">I know all of this <i class="glyphicon glyphicon-ok ml10"></i></a>
+                                                  </div>
+                                                  </div>
                                                 </div>
                                               </div>
-                                            </div>
-                                            <div class="col-sm-7 col-xl-6">
-                                              <div class="panel panel-default">
-                                                <ul class="list-group">
-                                                    <a href="index.html" ng-repeat="(key, fivePopular) in fivePopular" class="list-group-item list-name ng-scope">
-                                                    <img src="https://d1ldz4te4covpm.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/9689_B03980_Practical%20Machine%20Learning_.jpg" class="img-product-list"/>
-                                                        <h1>Python Essentials</strong>
-                                                        </h1>
-                                                        <p class="mb5">By Steven Lott</p>
-                                                          <!-- Feefo Star Rating -->
-                                                          <i class="fa fa-star" aria-hidden="true"></i>
-                                                          <i class="fa fa-star" aria-hidden="true"></i>
-                                                          <i class="fa fa-star" aria-hidden="true"></i>
-                                                          <i class="fa fa-star" aria-hidden="true"></i>
-                                                          <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                                          <img src="https://dz13w8afd47il.cloudfront.net/sites/all/themes/packt_v4/images/feefo-logo-simple.png" class="simple-feefo-logo">  
-                                                          <small> 14 review(s)</small>  
-                                                          <!-- Feefo Star Rating END -->    
-                                                        <br>
-                                                        <p class="concat mb0 mt10"><strong>Last Viewed:</strong> Chapter 9: Advancing Python</p>
+                                              <div class="col-sm-7 col-xl-6">
+                                                <div class="panel panel-default">
+                                                  <ul class="list-group">
+                                                      <li href="index.html" ng-repeat="(key, fivePopular) in fivePopular" class="list-group-item list-name ng-scope">
+                                                      <img src="https://d1ldz4te4covpm.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/9689_B03980_Practical%20Machine%20Learning_.jpg" class="img-product-list"/>
+                                                          <h1>Python Essentials</strong>
+                                                          </h1>
+                                                          <p class="mb5">By Steven Lott</p>
+                                                          <p class="concat mb0 mt10"><strong>Last Viewed:</strong> Chapter 9: Advancing Python</p>
+                                                          <br>
+                                                          
+                                                          <a href="index.html" class="btn btn-info pull-right btn-lg">Continue Viewing <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
 
-                                                        
-                                                        
-                                                      </a>
-                                                    <a href="index.html" ng-repeat="(key, fivePopular) in fivePopular" class="list-group-item list-name ng-scope">
-                                                        <img src="https://d1ldz4te4covpm.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/8751OS_1698_Learning%20Drupal%208.jpg" class="img-product-list"/>
-                                                        <h1>Learning Drupal 8</h1>
-                                                        <p class="mb5">By Nick Abbott</p>
-                                                        <!-- Feefo Star Rating -->
-                                                          <i class="fa fa-star" aria-hidden="true"></i>
-                                                          <i class="fa fa-star" aria-hidden="true"></i>
-                                                          <i class="fa fa-star" aria-hidden="true"></i>
-                                                          <i class="fa fa-star" aria-hidden="true"></i>
-                                                          <i class="fa fa-star-o" aria-hidden="true"></i>
-                                                          <img src="https://dz13w8afd47il.cloudfront.net/sites/all/themes/packt_v4/images/feefo-logo-simple.png" class="simple-feefo-logo"> 
-                                                          <small> 16 review(s)</small>  
-                                                          <!-- Feefo Star Rating END --> 
-                                                        <br>
-                                                        <p class="concat mb0 mt10"><strong>Last Viewed:</strong> Chapter 2: Beginning Drupal</p>
-                                                    </a>
-                                                  </ul>
+                                                          
+                                                          
+                                                        </li>
+                                                      <li href="index.html" ng-repeat="(key, fivePopular) in fivePopular" class="list-group-item list-name ng-scope">
+                                                          <img src="https://d1ldz4te4covpm.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/8751OS_1698_Learning%20Drupal%208.jpg" class="img-product-list"/>
+                                                          <h1>Learning Drupal 8</h1>
+                                                          <p class="mb5">By Nick Abbott</p>
+                                                          <p class="concat mb0 mt10"><strong>Last Viewed:</strong> Chapter 2: Beginning Drupal</p>
+                                                          <br>
+                                                          
+                                                          <a href="index.html" class="btn btn-info pull-right  btn-lg">Continue Viewing<i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
+                                                      </li>
+                                                    </ul>
+                                                  </div>
                                                 </div>
                                               </div>
                                             </div>
+                                          </div> <!-- Panel -->
+                                          <div class="panel python panel-default">
+                                          <div class="panel-heading python clickable" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                              <button type="button" class="close" data-toggle="modal" data-target="#myModal"><span aria-hidden="true">×</span></button>
+                                              <img class="tech-icon drop hidden-xs" src="images/tech/python.png"/>
+                                              <span class="card-heading mb5 mt0">High Performance Python</span>
                                           </div>
-                                        </div>
-                                      </div>
-                                    </div>
+                                          <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                            <div class="panel-body">
+                                              <div class="col-sm-5 col-xl-6">
+                                                <div class="">
+                                                  <div class="dashboard-skillcard">
+                                                    <ul class="learning-points">
+                                                        <li>Install and set up Python on Mac, Windows or Linux</li>
+                                                        <li>Write elegant, reusable, and efficient Python code to use in your future projects</li>
+                                                        <li>Use Git to manage your Python code</li>
+                                                        <li>Write Python scripts to automate daily tasks, and other software</li>
+                                                        <li>Use unit tests to write better code, faster</li>
+                                                    </ul>
+                                                    <div class="text-center">
+                                                    <a href="dashboard2.html" class="btn btn-success btn-lg mt10 mb5 pl25 pr25">I know all of this <i class="glyphicon glyphicon-ok ml10"></i></a>
+                                                  </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div class="col-sm-7 col-xl-6">
+                                                <div class="panel panel-default">
+                                                  <ul class="list-group">
+                                                      <li href="index.html" ng-repeat="(key, fivePopular) in fivePopular" class="list-group-item list-name ng-scope">
+                                                      <img src="https://d1ldz4te4covpm.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/9689_B03980_Practical%20Machine%20Learning_.jpg" class="img-product-list"/>
+                                                          <h1>Python Essentials</strong>
+                                                          </h1>
+                                                          <p class="mb5">By Steven Lott</p>
+                                                          <p class="concat mb0 mt10"><strong>Last Viewed:</strong> Chapter 9: Advancing Python</p>
+                                                          <br>
+                                                          
+                                                          <a href="index.html" class="btn btn-info pull-right btn-lg">Continue Viewing <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
+
+                                                          
+                                                          
+                                                        </li>
+                                                      <li href="index.html" ng-repeat="(key, fivePopular) in fivePopular" class="list-group-item list-name ng-scope">
+                                                          <img src="https://d1ldz4te4covpm.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/8751OS_1698_Learning%20Drupal%208.jpg" class="img-product-list"/>
+                                                          <h1>Learning Drupal 8</h1>
+                                                          <p class="mb5">By Nick Abbott</p>
+                                                          <p class="concat mb0 mt10"><strong>Last Viewed:</strong> Chapter 2: Beginning Drupal</p>
+                                                          <br>
+                                                          
+                                                          <a href="index.html" class="btn btn-info pull-right  btn-lg">Continue Viewing<i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
+                                                      </li>
+                                                    </ul>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div> <!-- Panel -->
+                                          <div class="panel django panel-default">
+                                          <div class="panel-heading django clickable" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                              <button type="button" class="close" data-toggle="modal" data-target="#myModal"><span aria-hidden="true">×</span></button>
+                                              <img class="tech-icon drop hidden-xs" src="images/tech/django.png"/>
+                                              <span class="card-heading mb5 mt0">Production Ready Django</span>
+                                          </div>
+                                          <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                            <div class="panel-body">
+                                              <div class="col-sm-5 col-xl-6">
+                                                <div class="">
+                                                  <div class="dashboard-skillcard">
+                                                    <ul class="learning-points">
+                                                        <li>Install and set up Python on Mac, Windows or Linux</li>
+                                                        <li>Write elegant, reusable, and efficient Python code to use in your future projects</li>
+                                                        <li>Use Git to manage your Python code</li>
+                                                        <li>Write Python scripts to automate daily tasks, and other software</li>
+                                                        <li>Use unit tests to write better code, faster</li>
+                                                    </ul>
+                                                    <div class="text-center">
+                                                    <a href="dashboard2.html" class="btn btn-success btn-lg mt10 mb5 pl25 pr25">I know all of this <i class="glyphicon glyphicon-ok ml10"></i></a>
+                                                  </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div class="col-sm-7 col-xl-6">
+                                                <div class="panel panel-default">
+                                                  <ul class="list-group">
+                                                      <li href="index.html" ng-repeat="(key, fivePopular) in fivePopular" class="list-group-item list-name ng-scope">
+                                                      <img src="https://d1ldz4te4covpm.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/9689_B03980_Practical%20Machine%20Learning_.jpg" class="img-product-list"/>
+                                                          <h1>Python Essentials</strong>
+                                                          </h1>
+                                                          <p class="mb5">By Steven Lott</p>
+                                                          <p class="concat mb0 mt10"><strong>Last Viewed:</strong> Chapter 9: Advancing Python</p>
+                                                          <br>
+                                                          
+                                                          <a href="index.html" class="btn btn-info pull-right btn-lg">Continue Viewing <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
+
+                                                          
+                                                          
+                                                        </li>
+                                                      <li href="index.html" ng-repeat="(key, fivePopular) in fivePopular" class="list-group-item list-name ng-scope">
+                                                          <img src="https://d1ldz4te4covpm.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/8751OS_1698_Learning%20Drupal%208.jpg" class="img-product-list"/>
+                                                          <h1>Learning Drupal 8</h1>
+                                                          <p class="mb5">By Nick Abbott</p>
+                                                          <p class="concat mb0 mt10"><strong>Last Viewed:</strong> Chapter 2: Beginning Drupal</p>
+                                                          <br>
+                                                          
+                                                          <a href="index.html" class="btn btn-info pull-right  btn-lg">Continue Viewing<i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
+                                                      </li>
+                                                    </ul>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div> <!-- Panel -->
+                                        </div><!-- Panel group -->
+                                      </div> <!-- col-sm-12 -->
+                                    </div> <!-- Close Tab -->
 
 
                                   <div role="tabpanel" class="tab-pane fade" id="recommended" aria-labelledby="recommended-tab">
