@@ -630,7 +630,7 @@ blockquote p {
     font-size: 14px;
 }
 .jumbotron ol>li {
-      color: rgba(0,0,0,0.7) !important;
+      color: rgba(255,255,255,0.7) !important;
 }
 .jumbotron ol a:hover,.jumbotron ol a:focus {
     text-decoration: none;
@@ -883,10 +883,17 @@ span.input-group-btn button.btn {
   border-right: none;
   border-bottom: none;
   border-top: none;
+  border-radius: 0;
+}
+.list-group li:last-child {
+  border-radius: 0;
 }
 .list-group li {
   border-right: none;
   border-bottom: none;
+}
+.list-group {
+  border-radius: 0;
 }
 .list-group-item.python {
   background: #2b5b84;
