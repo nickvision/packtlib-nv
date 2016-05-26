@@ -60,42 +60,6 @@
     </div>
   </div>
 </div>
-
-<!-- Modal -->
-<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content django">
-      <div class="modal-header ">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-        <img class="tech-icon" src="images/tech/django.png"> 
-                                    <span class="card-heading">Django Up To Speed </span>
-      </div>
-      <div class="modal-body django">
-        <div class="panel-body">
-            <div class="col-sm-12">
-              <p>Python is one of the easiest languages to get started with. It has a human readable syntax, and fully featured (“batteries included”) standard library to help you get things done right away. It is your portal in to a new world of productive development.</p>
-              <hr>
-            </div>
-
-            <div class="col-sm-12 dashboard-skillcard mb20">
-                  <ul class="learning-points">
-                    <li>Install and set up Python on Mac, Windows or Linux</li>
-                    <li>Write elegant, reusable, and efficient Python code to use in your future projects</li>
-                    <li>Use Git to manage your Python code</li>
-                    <li>Write Python scripts to automate daily tasks, and other software</li>
-                    <li>Use unit tests to write better code, faster</li>
-                  </ul>
-              
-            </div>
-          </div>
-      </div>
-      <div class="modal-footer python">
-        <a href="dashboard2.html" class="btn btn-default">Add to Path<i class="fa fa-plus ml10"></i></a>
-        <a href="dashboard.html" class="btn btn-danger">Remove Skill<i class="fa fa-minus ml10"></i></a>
-      </div>
-    </div>
-  </div>
-</div>
   
 
     <div id="wrapper">
@@ -174,7 +138,7 @@
                                         <br>
 
                                       <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                                        <div class="panel python panel-default">
+                                        <div class="panel python panel-default" id="myDiv">
                                           <div class="panel-heading python clickable" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                               <button type="button" class="close" data-toggle="modal" data-target="#myModal"><span aria-hidden="true">×</span></button>
                                               <img class="tech-icon drop hidden-xs" src="images/tech/python.png"/>
@@ -193,7 +157,7 @@
                                                         <li>Use unit tests to write better code, faster</li>
                                                     </ul>
                                                     <div class="text-center">
-                                                    <a href="dashboard2.html" class="btn btn-success btn-lg mt10 mb5 pl25 pr25">I know all of this <i class="glyphicon glyphicon-ok ml10"></i></a>
+                                                    <a id="myButton" href="#myDiv" class="btn btn-success btn-lg mt10 mb5 pl25 pr25">I know all of this <i class="glyphicon glyphicon-ok ml10"></i></a>
                                                   </div>
                                                   </div>
                                                 </div>
@@ -248,7 +212,7 @@
                                                         <li>Use unit tests to write better code, faster</li>
                                                     </ul>
                                                     <div class="text-center">
-                                                    <a href="dashboard2.html" class="btn btn-success btn-lg mt10 mb5 pl25 pr25">I know all of this <i class="glyphicon glyphicon-ok ml10"></i></a>
+                                                    <a href="dashboard.html" class="btn btn-success btn-lg mt10 mb5 pl25 pr25">I know all of this <i class="glyphicon glyphicon-ok ml10"></i></a>
                                                   </div>
                                                   </div>
                                                 </div>
@@ -303,7 +267,7 @@
                                                         <li>Use unit tests to write better code, faster</li>
                                                     </ul>
                                                     <div class="text-center">
-                                                    <a href="dashboard2.html" class="btn btn-success btn-lg mt10 mb5 pl25 pr25">I know all of this <i class="glyphicon glyphicon-ok ml10"></i></a>
+                                                    <a href="dashboard.html" class="btn btn-success btn-lg mt10 mb5 pl25 pr25">I know all of this <i class="glyphicon glyphicon-ok ml10"></i></a>
                                                   </div>
                                                   </div>
                                                 </div>
@@ -377,6 +341,15 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- Sidebar Toggle Script -->
     <script src="js/simple-sidebar.js"></script>
+    <script type="text/javascript">
+    $("#myButton").click(function() {
+         $("#myDiv").fadeTo("slow", 0.01, function(){ //fade
+             $(this).slideUp("slow", function() { //slide up
+                 $(this).remove(); //then remove from the DOM
+                });
+             });
+    });
+    </script>
 </body>
 
 </html>
