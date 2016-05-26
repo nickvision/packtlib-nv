@@ -16,6 +16,9 @@ h1, .h1 {
 .element-item {
   width: 100%
 }
+.skill-na {
+  opacity: 0.3;
+}
 .jumbotron.heading .btn {
   background: rgba(255,255,255,0.2);
   color: white;
@@ -740,6 +743,9 @@ span.input-group-btn button.btn {
     font-family: fontAwesome;
     content: "\00a0";
 }
+.inprogress {
+  opacity: 0.3;
+}
 .tech-icon {
     height: 80px;
     margin-right: 10px;
@@ -787,7 +793,7 @@ span.input-group-btn button.btn {
 }
 .card-heading {
   margin-top: 15px;
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 300;
   margin-bottom: 20px;
 }
@@ -894,39 +900,6 @@ span.input-group-btn button.btn {
 }
 .list-group {
   border-radius: 0;
-}
-.list-group-item.python {
-  background: #2b5b84;
-  color: white;
-}
-.list-group-item.mysql {
-  background:  #187EAB;
-  color: white;
-} 
-
-.list-group-item.django {
-  background: #517D5C;
-  color: white;
-}
-.list-group-item.java {
-  background: #044871 ;
-  color: white;
-}
-.list-group-item.docker {
-  background: #46b0e7;
-  color: white;
-}
-.list-group-item.jira {
-  background: #3A628C;
-  color: white;
-}
-.list-group-item.android {
-  background: #78A02E;
-  color: white;
-}
-.list-group-item.git {
- background: #BD4C38;
- color: white;
 }
 .ni-progress {
   border:dashed 2px #ccc;
