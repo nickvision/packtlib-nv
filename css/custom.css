@@ -157,19 +157,15 @@ h1, .h1 {
     border-top-left-radius: 0px;
     margin-top: -1px;
 }
-.input-group .form-control:last-child, .input-group-addon:last-child, .input-group-btn:last-child>.btn, .input-group-btn:last-child>.btn-group>.btn, .input-group-btn:last-child>.dropdown-toggle, .input-group-btn:first-child>.btn:not(:first-child), .input-group-btn:first-child>.btn-group:not(:first-child)>.btn {
-    border-bottom-right-radius: 4px;
-    border-top-right-radius: 4px;
-}
 .toggle-nav {
 	  font-size: 18px;
     margin-left: 0px;
 }
-.radio input[type="radio"], .radio-inline input[type="radio"], .checkbox input[type="checkbox"], .checkbox-inline input[type="checkbox"] {
-    margin-top: 11px;
-}
 .course-listing {
 	margin-bottom: 0px;
+}
+.radio, .checkbox {
+    margin-top: 0px;
 }
 .navbar-default .in .search-nav-collapse {
 	height: 58px;
