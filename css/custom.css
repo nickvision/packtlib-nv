@@ -16,6 +16,10 @@ h1, .h1 {
 .element-item {
   width: 100%
 }
+.jumbotron.heading .btn {
+  background: rgba(255,255,255,0.2);
+  color: white;
+}
 .modal-content.python {
   background: #335775;
   color: #ffffff;

@@ -134,62 +134,63 @@
                     <h1>Downloading and Installing Linux</h1>
                     
 
-                    <ol class="breadcrumb title-buttons row mt0">
-                      <li class="mt5"><a href="#" class="mr5"><i class="fa fa-bookmark-o fa-lg"></i><span class="hidden-xs ml5"> Bookmark</span></a></li>
-                      <li class="mt5">
+                    <div class="btn-group mb10" role="group">
+                        <button class="btn btn-default">
+                        <i class="fa fa-bookmark-o fa-lg"></i>
+                        <span class="hidden-xs ml5">Bookmark</span></button>
                         <div class="btn-group" role="group">
-                            <a href="#" type="button" class="mr5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              <i class="fa fa-shopping-cart fa-lg"></i><span class="hidden-xs ml5"> Buy Video</span>
-                            </a>
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+                                <i class="fa fa-shopping-cart fa-lg"></i>
+                                <span class="hidden-xs ml5"> Buy Video</span>
+                                <span class="hidden-xs caret"></span>
+                            </button>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a href="big-data-and-business-intelligence/r-deep-learning-essentials" target="_self">Buy from Store</a>
+                                    <a href="big-data-and-business-intelligence/python-machine-learning" target="_self">Buy from Store</a>
                                 </li>
-                                <li ng-show="tokens_available > 0" ng-if="login_status == true" class="ng-scope">
+                                <li>
                                     <a href="#" data-toggle="modal" data-target="#claimModal">Claim using Token</a>
                                 </li>
-                                <li role="separator" class="divider ng-scope" ng-if="login_status == true"></li>
-                                <li class="disabled ng-scope" ng-if="login_status == true">
-                                    <a href="#">You have <strong class="ng-binding">4</strong> Token(s) Remaining</a>
+                                <li role="separator" class="divider" ></li>
+                                <li class="disabled">
+                                    <a href="#">You have <strong>3</strong> Token(s) Remaining</a>
                                 </li>
                             </ul>
                         </div>
-                      <li class="mt5"><a href="#" class=""><i class="fa fa-file fa-lg mr5"></i> Code Files</a></li>  
-                      <li class="mt5"><a href="#" class=""><i class="fa fa-moon-o fa-lg"></i></a></li>
-                      <li class="mt5">
+                        <button class="btn btn-default">
+                        <i class="fa fa-file fa-lg"></i>
+                        <span class="hidden-xs ml5">Code Files</span></button>
+                        <button class="btn nightmode-toggle btn-default"><i class="fa fa-moon-o fa-lg no-text-padding"></i></button>
                         <div class="btn-group" role="group">
-                            <a href="#" type="button" class="mr5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              <i class="fa fa-font fa-lg"></i>
-                            </a>
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-font fa-lg no-text-padding"></i>
+                            </button>
                             <ul class="dropdown-menu">
-                              <li class="disabled"><a class="disabled text-center"><b>Font Size (rem)</b></a></li>
-                              <li role="separator" class="divider"></li>
-                              <li><a href="#">1.5 </a></li>
-                              <li><a href="#">1.6</a></li>
-                              <li><a href="#">1.7</a></li>
-                              <li><a href="#">1.8</a></li>
-                              <li><a href="#">1.9</a></li>
-                              <li><a href="#">2.0</a></li>
+                                <li class="disabled"><a class="disabled text-center"><b>Font size (rem)</b></a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="" target="_self">1.5</a></li>
+                                <li><a href="" target="_self">1.6</a></li>
+                                <li><a href="" target="_self">1.7</a></li>
+                                <li><a href="" target="_self">1.8</a></li>
+                                <li><a href="" target="_self">1.9</a></li>
+                                <li><a href="" target="_self">2.0</a></li>
                             </ul>
                         </div>
-                      </li>
-                      <li class="mt5">
                         <div class="btn-group" role="group">
-                            <a href="#" type="button" class="mr5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              <i class="fa fa-share fa-lg"></i>
-                            </a>
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-share fa-lg no-text-padding"></i>
+                            </button>
                             <ul class="dropdown-menu">
-                              <li class="disabled"><a class="disabled text-center"><b>Share</b></a></li>
-                              <li role="separator" class="divider"></li>
-                              <li><a href="#">Facebook </a></li>
-                              <li><a href="#">Email</a></li>
-                              
-                              <li><a href="#">Tweet</a></li>
-                              <li><a href="#">Reddit</a></li>
+                                <li class="disabled"><a href="#" class="disabled text-center"><b>Share</b></a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#" ng-click="facebookShare();">Facebook</a></li>
+                                <li><a href="mailto:?Subject=Packt Book: Python Machine Learning&amp;body=Packt Book link: https://www.packtpub.com/packtlib/book/Big-Data-and-Business-Intelligence/9781783555130" target="_top" ng-click="emailShare();">Email</a></li>
+                                <li><a href="#" ng-click="twitterShare();">Twitter</a></li>
+                                <li><a href="#" ng-click="redditShare();">Reddit</a></li>
                             </ul>
                         </div>
-
-                    </ol>
+                    </div>
+                  </div>
                   </div>
 
                 </div>
