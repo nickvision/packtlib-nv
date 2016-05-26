@@ -157,10 +157,11 @@
             </div>
         </nav>
         <!-- Sidebar -->
-        <div id="sidebar-wrapper">
+         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
-              <li ><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Map</span><span class="pull-right mr15"><i class="fa fa-map fa-lg"></i></span></a>    </li>
+              <li><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Map</span><span class="pull-right mr15"><i class="fa fa-map fa-lg"></i></span></a>    </li>
               <li class="active"><a href="skills.html" class="sidenav-menu-holder"><span class="sidenav-menu">Skills</span><span class="pull-right mr15"><i class="fa fa-dot-circle-o fa-lg"></i></span></a>    </li>
+              <li><a href="dashboard-profile.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Progress</span><span class="pull-right mr15"><i class="fa fa-line-chart fa-lg"></i></span></a>    </li>
               <li><a href="select-goal.html" class="sidenav-menu-holder"><span class="sidenav-menu">Roles</span><span class="pull-right mr15"><i class="fa fa-suitcase fa-lg"></i></span></a>    </li>
             </ul>
         </div>
@@ -181,19 +182,27 @@
           <div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="container-fluid">               
               <div class="row">
                 <div class="col-sm-12 col-lg-offset-1 col-lg-10">
-                  <div class="input-group input-group-lg mb30 mt30">
-                      <span class="input-group-addon" id="basic-addon1"><i class="fa fa-search"></i></span>
-                      <input id="searchinput" type="text" class="form-control quicksearch input-lg" placeholder="Search for a Skill">
-                  </div>
-                  <div class="btn-group btn-group-lg mb20">
-                    <button class="btn btn-default active">Show All</button>
-                    <button class="btn btn-default">Programming</button>
-                    <button class="btn btn-default">Development</button>
-                    <button class="btn btn-default">Administration</button>
-                    <button class="btn btn-default">Soft Skills</button>
-                    <button class="btn btn-default">Technical Concepts and Tasks</button>
-                  </div>
+                  <div>
 
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" role="tablist">
+                      <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab"><h5>My Skills</h5></a></li>
+                      <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab"><h5>Programming</h5></a></li>
+                      <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab"><h5>Development</h5></a></li>
+                      <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab"><h5>Administration</h5></a></li>
+                      <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab"><h5>SoftSkills</h5></a></li>
+                      <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab"><h5>Technical Concepts</h5></a></li>
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                      <div role="tabpanel" class="tab-pane active" id="home">...</div>
+                      <div role="tabpanel" class="tab-pane" id="profile">...</div>
+                      <div role="tabpanel" class="tab-pane" id="messages">...</div>
+                      <div role="tabpanel" class="tab-pane" id="settings">...</div>
+                    </div>
+
+                  </div>
                   <div class="">
                     <div class="panel panel-default">
                       <div class="list-group" id="searchlist">

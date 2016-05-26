@@ -200,10 +200,10 @@
             <div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="ng-scope container-fluid">               
                 <div class="reader-container col-sm-12 col-xl-offset-2 col-xl-8 col-lg-offset-1 col-lg-10">
                     <div class="row">
-                        
+
                         <div class="">
                             <div class="row">
-                                <ul id="myTabs" class="nav nav-pills nav-justified hidden-xs" role="tablist">
+                                <ul id="myTabs" class="nav nav-tabs nav-justified hidden-xs" role="tablist">
                                     <li class="active">
                                         <a href="#about" role="tab" id="about-tab" data-toggle="tab" aria-controls="about" ng-click="$event.preventDefault();" aria-expanded="true">Course features</a>
                                     </li>
@@ -219,18 +219,24 @@
                                 </ul>
 
                                 <div id="myTabContent" class="tab-content">
-                                    <div role="tabpanel" class="tab-pane fade in active pt30" id="about" aria-labelledby="about-tab">
-                                    <div class="visible-xs">
-                                        <h4 class="mobile-title">Course Features</h4>
-                                        <hr>
-                                    </div>
-                                        <div ng-bind-html="book_data.about" class="ng-binding"><ul>
-                <li>Harness the ability to build algorithms for unsupervised data using deep learning concepts with R</li>
-                <li>Master the common problems faced such as overfitting of data, anomalous datasets, image recognition, and performance tuning while building the models</li>
-                <li>Build models relating to neural networks, prediction and deep prediction</li>
-                </ul></div>
-                                    </div>
-                                    <div role="tabpanel" class="tab-pane fade pt30" id="learn" aria-labelledby="learn-tab">
+                                    
+                                    <div role="tabpanel" class="tab-pane fade in active" id="about" aria-labelledby="about-tab">
+                                        <div class="col-sm-3">
+                                        <a href="front-page.html"><img src="images/book1.jpg" class="img-responsive"/></a>
+                                        </div>
+                                        <div class="col-sm-9">
+                                            <div class="visible-xs">
+                                                <h4 class="mobile-title">Course Features</h4>
+                                                <hr>
+                                            </div>
+                                            <div ng-bind-html="book_data.about" class="ng-binding"><ul>
+                                                <li>Harness the ability to build algorithms for unsupervised data using deep learning concepts with R</li>
+                                                <li>Master the common problems faced such as overfitting of data, anomalous datasets, image recognition, and performance tuning while building the models</li>
+                                                <li>Build models relating to neural networks, prediction and deep prediction</li>
+                                                </ul></div><a href="index.html" class="btn btn-info btn-lg btn-block">Continue Viewing <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
+                                            </div>
+                                        </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="learn" aria-labelledby="learn-tab">
                                         <div class="visible-xs">
                                             <h4 class="mobile-title">What you'll learn</h4>
                                             <hr>
@@ -243,7 +249,7 @@
                 <li>Build generalizable models using regularization to avoid overfitting the training data</li>
                 </ul></div>
                                     </div> 
-                                    <div role="tabpanel" class="tab-pane fade pt30" id="detail" aria-labelledby="detail-tab">
+                                    <div role="tabpanel" class="tab-pane fade" id="detail" aria-labelledby="detail-tab">
                                         <div class="visible-xs">
                                             <h4 class="mobile-title">Find out more</h4>
                                             <hr>
@@ -252,7 +258,7 @@
                 <p>This book will introduce you to the deep learning package H2O with R and help you understand the concepts of deep learning. We will start by setting up important deep learning packages available in R and then move towards building models related to neural networks, prediction, and deep prediction, all of this with the help of real-life examples.</p>
                 <p>After installing the H2O package, you will learn about prediction algorithms. Moving ahead, concepts such as overfitting data, anomalous data, and deep prediction models are explained. Finally, the book will cover concepts relating to tuning and optimizing models.</p></div>
                                     </div>
-                                    <div role="tabpanel" class="tab-pane fade pt30" id="author" aria-labelledby="author-tab">
+                                    <div role="tabpanel" class="tab-pane fade" id="author" aria-labelledby="author-tab">
                                         <div class="visible-xs">
                                             <h4 class="mobile-title">About the Author</h4>
                                             <hr>
@@ -261,7 +267,7 @@
                                         <div ng-bind-html="book_data.author_description" class="ng-binding"><p>Dr. Joshua F. Wiley is a lecturer at Monash University and a senior partner at Elkhart Group Limited, a statistical consultancy. He earned his PhD from the University of California, Los Angeles. His research focuses on using advanced quantitative methods to understand the complex interplays of psychological, social, and physiological processes in relation to psychological and physical health. In statistics and data science, Joshua focuses on biostatistics and is interested in reproducible research and graphical displays of data and statistical models. Through consulting at Elkhart Group Limited and his former work at the UCLA Statistical Consulting Group, Joshua has helped a wide array of clients, ranging from experienced researchers to biotechnology companies. He develops or codevelops a number of R packages including varian, a package to conduct Bayesian scale-location structural equation models, and MplusAutomation, a popular package that links R to the commercial Mplus software.</p></div>
                                     </div>
                                 </div>
-                                <a href="index.html" class="btn btn-info btn-block btn-lg">Continue Viewing <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
+                                
                                 <hr>
                                 <div class="text-center col-sm-12 mb35">
                                     <small class="ng-binding">ISBN 9781785280580 © Packt Publishing Limited. All Rights Reserved </small>
