@@ -33,10 +33,6 @@
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
-    /*box-shadow: inset -3px 1px 9px -4px #ABABAB;
-    -webkit-box-shadow: inset -3px 1px 9px -4px #ABABAB;
-    -moz-box-shadow: inset -3px 1px 9px -4px #ABABAB;
-    -o-box-shadow: inset -3px 1px 9px -4px #ABABAB;*/
 }
 
 #wrapper.toggled #sidebar-wrapper {
@@ -45,9 +41,7 @@
 
 #page-content-wrapper {
     width: 100%;
-    /*top: 50px; removed for SP*/
     position: absolute;
-    /*padding: 15px; removed for SP*/
     padding: 0px;
 }
 
@@ -105,8 +99,19 @@ li.sub-nav {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+.active a#contents-tab, .active a#bookmark-tab {
+    background: #222;
+}
+a#bookmark-tab, a#contents-tab {
+    background: #444;
+}
 .sidebar-nav li.active a {
     color:white;
+}
+.sidenav-menu {
+  font-weight: 500;
+  font-size: 14px;
+  float: left;
 }
 .sidenav-menu i {
     text-indent: 0;
