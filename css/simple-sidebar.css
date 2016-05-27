@@ -69,7 +69,7 @@
 .sidebar-nav li {
     text-indent: 25px;
     line-height: 45px;
-    border-bottom: 1px solid rgba(0,0,0,0.3);
+    border-bottom: 1px solid rgba(0,0,0,0.2);
 }
 li.sub-nav {
     border-bottom: none;
@@ -97,8 +97,8 @@ li.sub-nav {
 .sidebar-nav li a {
     display: block;
     text-decoration: none;
-    color: #FFF;
-    font-size: 16px;
+    color: #BBBBBB;
+    font-size: 14px;
     padding: 8px;
     font-weight: 500;
     white-space: nowrap;
