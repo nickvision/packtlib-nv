@@ -116,11 +116,12 @@
             </div>
             <div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="container-fluid">               
                 <div class="row">
+                        <div class="col-sm-offset-8 col-sm-4 col-lg-offset-8 col-lg-3 mb20">
+                              <select ng-change="sort_myList($event)" class="form-control ng-pristine ng-untouched ng-valid" name="sorted_myList" data-ng-options="o.name for o in dropdown_options_sort track by o.id" data-ng-model="dropdown_selectedOption_sort"><option value="mostRecent" selected="selected" label="Sort by Most Recent">Sort by Most Recent</option><option value="mostPopular" label="Sort by Most Popular">Sort by Most Popular</option><option value="oldest" label="Sort by Oldest">Sort by Oldest</option><option value="sortAZ" label="Sort A-Z">Sort A-Z</option><option value="sortZA" label="Sort Z-A">Sort Z-A</option></select>
+                        </div>
                         <div class="col-sm-12 col-lg-offset-1 col-lg-10">
-                          <div ng-show="dashboard_counts.owned > 0" class="col-sm-offset-6 col-md-offset-8 col-lg-offset-9 col-sm-6 col-md-4 col-lg-3 mb20">
-                              <select ng-change="sort_myOwned($event)" class="form-control ng-pristine ng-untouched ng-valid" name="sorted_myOwned" data-ng-options="o.name for o in dropdown_options_sort_owned track by o.id" data-ng-model="dropdown_selectedOption_sort"><option value="mostRecent" selected="selected" label="Sort by Most Recent">Sort by Most Recent</option><option value="oldest" label="Sort by Oldest">Sort by Oldest</option><option value="sortAZ" label="Sort A-Z">Sort A-Z</option><option value="sortZA" label="Sort Z-A">Sort Z-A</option></select>
-                          </div>
-                          <div class="col-sm-12">
+                          
+                          <div class="">
                             <div ng-show="dashboard_counts.owned > 0" class="">
                                 <ul class="list-group">
                                     <li ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">

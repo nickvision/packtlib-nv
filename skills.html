@@ -41,78 +41,7 @@
 
 </head>
 
-<body class="language-markup">
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content python">
-      <div class="modal-header ">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-        <img class="tech-icon" src="images/tech/python.png"> 
-                                    <span class="card-heading">Python Fundamentals </span>
-      </div>
-      <div class="modal-body python">
-        <div class="panel-body">
-            <div class="col-sm-12">
-              <p>Python is one of the easiest languages to get started with. It has a human readable syntax, and fully featured (“batteries included”) standard library to help you get things done right away. It is your portal in to a new world of productive development.</p>
-              <hr>
-            </div>
-
-            <div class="col-sm-12 dashboard-skillcard mb20">
-                  <ul class="learning-points">
-                    <li>Install and set up Python on Mac, Windows or Linux</li>
-                    <li>Write elegant, reusable, and efficient Python code to use in your future projects</li>
-                    <li>Use Git to manage your Python code</li>
-                    <li>Write Python scripts to automate daily tasks, and other software</li>
-                    <li>Use unit tests to write better code, faster</li>
-                  </ul>
-              
-            </div>
-          </div>
-      </div>
-      <div class="modal-footer python">
-        <a href="dashboard.html" class="btn btn-success">I know all of this <i class="glyphicon glyphicon-ok ml10"></i></a>
-        <a href="dashboard.html" class="btn btn-danger">Remove from Path<i class="fa fa-minus ml10"></i></a>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Modal -->
-<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content java">
-      <div class="modal-header ">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-        <img class="tech-icon" src="images/tech/java.png"> 
-                                    <span class="card-heading">Reactive Java Programming</span>
-      </div>
-      <div class="modal-body python">
-        <div class="panel-body">
-            <div class="col-sm-12">
-              <p>Python is one of the easiest languages to get started with. It has a human readable syntax, and fully featured (“batteries included”) standard library to help you get things done right away. It is your portal in to a new world of productive development.</p>
-              <hr>
-            </div>
-
-            <div class="col-sm-12 dashboard-skillcard mb20">
-                  <ul class="learning-points">
-                    <li>Install and set up Python on Mac, Windows or Linux</li>
-                    <li>Write elegant, reusable, and efficient Python code to use in your future projects</li>
-                    <li>Use Git to manage your Python code</li>
-                    <li>Write Python scripts to automate daily tasks, and other software</li>
-                    <li>Use unit tests to write better code, faster</li>
-                  </ul>
-              
-            </div>
-          </div>
-      </div>
-      <div class="modal-footer python">
-        <a href="dashboard.html" class="btn btn-success">I know all of this <i class="glyphicon glyphicon-ok ml10"></i></a>
-        <a href="dashboard.html" class="btn btn-default">Add to Path<i class="fa fa-plus ml10"></i></a>
-      </div>
-    </div>
-  </div>
-</div>
-  
+<body class="language-markup">  
 
     <div id="wrapper">
 
@@ -182,28 +111,26 @@
           </div>
           <div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="container-fluid">               
               <div class="row">
-                <div class="">
-
                 <div class="col-sm-12 col-lg-offset-2 col-lg-8 mt40 mb30">
-                        <div class="input-group input-group-lg mb30">
-                          <span class="input-group-addon" id="basic-addon1"><i class="fa fa-search"></i></span>
-                          <input id="searchinput" type="text" class="form-control quicksearch input-lg" placeholder="Search for a Skill">
-                        </div>
-                      </div>
-                    <div class="col-sm-3 col-lg-offset-1 col-lg-3 col-xl-2">
-                        <div class="panel panel-default">
-                          <!-- Default panel contents -->
-                          <div class="panel-heading"><h4 class="panel-title">Categories</h4></div>
-                          <ul class="list-group">
-                            <a class="list-group-item active" href="skill-category.html">    My Skills </a>
-                            <a class="list-group-item" href="skill-category.html">    Programming </a> 
-                            <a class="list-group-item" href="skill-category.html">    Development </a>   
-                            <a class="list-group-item" href="skill-category.html">    Administration </a>   
-                            <a class="list-group-item" href="skill-category.html">    Soft Skills </a>   
-                            <a class="list-group-item" href="skill-category.html">    Technical Concepts and Tasks </a>            
-                          </ul>
-                        </div> 
-                      </div>
+                  <div class="input-group input-group-lg mb30">
+                    <span class="input-group-addon" id="basic-addon1"><i class="fa fa-search"></i></span>
+                    <input id="searchinput" type="text" class="form-control quicksearch input-lg" placeholder="Search for a Skill">
+                  </div>
+                </div>
+                <div class="col-sm-3 col-lg-offset-1 col-lg-3 col-xl-2">
+                    <div class="panel panel-default">
+                      <!-- Default panel contents -->
+                      <div class="panel-heading"><h4 class="panel-title">Categories</h4></div>
+                      <ul class="list-group">
+                        <a class="list-group-item active" href="skill-category.html">    My Skills </a>
+                        <a class="list-group-item" href="skill-category.html">    Programming </a> 
+                        <a class="list-group-item" href="skill-category.html">    Development </a>   
+                        <a class="list-group-item" href="skill-category.html">    Administration </a>   
+                        <a class="list-group-item" href="skill-category.html">    Soft Skills </a>   
+                        <a class="list-group-item" href="skill-category.html">    Technical Concepts and Tasks </a>            
+                      </ul>
+                    </div> 
+                  </div>
                       <div class="col-sm-9 col-lg-7 col-xl-8">
                         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                                         <div class="panel python panel-default">
@@ -364,7 +291,6 @@
 
                               </div>
                           </div>
-                </div>
               </div><!-- row -->
     			</div><!-- /#book-wrapper -->
     		</div><!-- /#page-content-wrapper -->
