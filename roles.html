@@ -161,9 +161,9 @@
          <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
               <li><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Map</span><span class="pull-right mr15"><i class="fa fa-map fa-lg"></i></span></a>    </li>
-              <li><a href="skills.html" class="sidenav-menu-holder"><span class="sidenav-menu">Skills</span><span class="pull-right mr15"><i class="fa fa-dot-circle-o fa-lg"></i></span></a>    </li>
+              <li ><a href="skills.html" class="sidenav-menu-holder"><span class="sidenav-menu">Skills</span><span class="pull-right mr15"><i class="fa fa-dot-circle-o fa-lg"></i></span></a>    </li>
               <li><a href="dashboard-profile.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Progress</span><span class="pull-right mr15"><i class="fa fa-line-chart fa-lg"></i></span></a>    </li>
-              <li class="active"><a href="select-goal.html" class="sidenav-menu-holder"><span class="sidenav-menu">Roles</span><span class="pull-right mr15"><i class="fa fa-suitcase fa-lg"></i></span></a>    </li>
+              <li class="active"><a href="roles.html" class="sidenav-menu-holder"><span class="sidenav-menu">Roles</span><span class="pull-right mr15"><i class="fa fa-suitcase fa-lg"></i></span></a>    </li>
             </ul>
         </div>
 
@@ -175,328 +175,80 @@
                 <div class="col-sm-12">
                   <h1 >Roles</h1>
                     <ol class="breadcrumb row mt0">
-                      <li class="active mt5">Select a Role that best fits your current responsibilities and work</li>
+                      <li class="active mt5">Select a Role that best fits what you are currently working as</li>
                     </ol>
                 </div>
               </div>
           </div>
           <div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="container-fluid">               
               <div class="row">
-                <div class="">
-
-                <div class="col-sm-12 mt5">
-                          <ul id="recommendationTabs" class="nav nav-tabs nav-justified hidden-xs mb40" role="tablist">
-                              <li class="active">
-                                  <a href="#web" role="tab" data-toggle="tab" aria-controls="web" ng-click="$event.preventDefault();" aria-expanded="false"><h5>Web Development</h5></a>
-                              </li>
-                              <li class="">
-                                  <a href="#app" role="tab" data-toggle="tab" aria-controls="app" ng-click="$event.preventDefault();libraryController.getFiveRecent($event);" aria-expanded="false"><h5>App Development</h5></a>
-                              </li>
-                              <li class="">
-                                  <a href="#game" role="tab" data-toggle="tab" aria-controls="game" ng-click="$event.preventDefault();libraryController.getFiveRecent($event);" aria-expanded="false"><h5>Game Development</h5></a>
-                              </li>
-                              <li class="">
-                                  <a href="#data" role="tab" data-toggle="tab" aria-controls="data" ng-click="$event.preventDefault();libraryController.getFiveRecent($event);" aria-expanded="false"><h5>Data Science</h5></a>
-                              </li>
-                              <li class="">
-                                  <a href="#dev" role="tab" data-toggle="tab" aria-controls="dev" ng-click="$event.preventDefault();libraryController.getFiveRecent($event);" aria-expanded="false"><h5>DevOps</h5></a>
-                              </li>
+                <div class="mt45">
+                    <div class="col-sm-3 col-lg-offset-1 col-lg-3 col-xl-2">
+                        <div class="panel panel-default">
+                          <!-- Default panel contents -->
+                          <div class="panel-heading"><h4 class="panel-title">Categories</h4></div>
+                          <ul class="list-group">
+                            <a class="list-group-item active" href="roles.html">    Web Development </a>
+                            <a class="list-group-item" href="roles.html">    App Development </a> 
+                            <a class="list-group-item" href="roles.html">    Game Development </a>   
+                            <a class="list-group-item" href="roles.html">    Data Science </a>   
+                            <a class="list-group-item" href="roles.html">    DevOps </a>   
+                            <a class="list-group-item" href="roles.html">    Security </a>            
                           </ul>
+                        </div> 
                       </div>
-                    
-                      <div class="col-sm-12 col-lg-offset-1 col-lg-10">
-                        <div class="tab-content mt15">
-                              <div role="tabpanel" class="tab-pane fade active in" id="web" aria-labelledby="web-tab">
-                                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                                                <div class="panel python panel-default">
-                                                  <div class="panel-heading python clickable" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
-                                                      <!-- <img class="tech-icon drop hidden-xs" src="images/tech/python.png"/> -->
-                                                      <span class="card-heading mb5 mt0">Front-end Web Developer</span>
+                      <div class="col-sm-9 col-lg-7 col-xl-8">
+                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                        <div class="panel python panel-default">
+                                          <div class="panel-heading python clickable" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                                              
+                                              <span class="card-heading mb5 mt0">Front End Web Developer</span>
+                                          </div>
+                                          <div id="collapseFive" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                            <div class="panel-body">
+                                              <div class="col-sm-12">
+                                                <div class="">
+                                                  <div class="dashboard-skillcard">
+                                                    <h5>Informed by over <b>3,200</b> Front End Web Developers</h5>
+                                                    <small>Recommended Skills are informed by the following companies:</small>
+                                                    <img class="img-responsive mt0" src="images/webdevcompanies.jpg">
+
+                                                    <p>Luke, help me take this mask off. But you'll die. Nothing can stop that now. Just for once... let me look on you with my own eyes. Now...go, my son. Leave me. No. You're coming with me. I can't leave you here. I've got to save you. You already have, Luke. You were right about me. Tell your sister...you were right. Father...I won't leave you. There it is! All right, Wedge. Go for the power regulator on the north tower. Copy, Gold Leader. I'm already on my way out. Move the fleet away from the Death Star.</p>
+                                                    <a href="dashboard.html" class="btn btn-info btn-lg mt10 mb5 pl25 pr25 pull-right">Select Role<i class="fa fa-chevron-right ml10"></i></a>
                                                   </div>
-                                                  <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-                                                    <div class="panel-body">
-                                                      <div class="col-sm-12">
-                                                        <div class="">
-                                                          <div class="dashboard-skillcard">
-                                                            <ul class="learning-points mt20">
-                                                                <li>Install and set up Python on Mac, Windows or Linux</li>
-                                                                <li>Write elegant, reusable, and efficient Python code to use in your future projects</li>
-                                                                <li>Use Git to manage your Python code</li>
-                                                                <li>Write Python scripts to automate daily tasks, and other software</li>
-                                                                <li>Use unit tests to write better code, faster</li>
-                                                            </ul>
-                                                            <div class="">
-                                                                <a href="dashboard.html" class="btn btn-info btn-lg mt10 mb5 pl25 pr25 pull-right">Select Role<i class="fa fa-chevron-right ml10"></i></a>
-                                                            </div>
-                                                          </div>
-                                                        </div>
-                                                      </div>
-                                                      
-                                                      </div>
-                                                    </div>
-                                                  </div> <!-- Panel -->
-                                                <div class="panel python panel-default">
-                                                  <div class="panel-heading python clickable" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-                                                      <!-- <img class="tech-icon drop hidden-xs" src="images/tech/java.png"/> -->
-                                                      <span class="card-heading mb5 mt0">Back-end Web Developer</span>
-                                                  </div>
-                                                  <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-                                                    <div class="panel-body">
-                                                      <div class="col-sm-12">
-                                                        <div class="">
-                                                          <div class="dashboard-skillcard">
-                                                            <ul class="learning-points mt20">
-                                                                <li>Install and set up Python on Mac, Windows or Linux</li>
-                                                                <li>Write elegant, reusable, and efficient Python code to use in your future projects</li>
-                                                                <li>Use Git to manage your Python code</li>
-                                                                <li>Write Python scripts to automate daily tasks, and other software</li>
-                                                                <li>Use unit tests to write better code, faster</li>
-                                                            </ul>
-                                                            <div class="">
-                                                                <a href="dashboard.html" class="btn btn-info btn-lg mt10 mb5 pl25 pr25 pull-right">Select Role<i class="fa fa-chevron-right ml10"></i></a>
-                                                            </div>
-                                                          </div>
-                                                        </div>
-                                                      </div>
-                                                      
-                                                      </div>
-                                                    </div>
-                                                  </div> <!-- Panel -->
-                                                <div class="panel python panel-default">
-                                                  <div class="panel-heading python clickable" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                      <!-- <img class="tech-icon drop hidden-xs" src="images/tech/django.png"/> -->
-                                                      <span class="card-heading mb5 mt0">Full-stack Web Developer</span>
-                                                  </div>
-                                                  <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-                                                    <div class="panel-body">
-                                                      <div class="col-sm-12">
-                                                        <div class="">
-                                                          <div class="dashboard-skillcard">
-                                                            <ul class="learning-points mt20">
-                                                                <li>Install and set up Python on Mac, Windows or Linux</li>
-                                                                <li>Write elegant, reusable, and efficient Python code to use in your future projects</li>
-                                                                <li>Use Git to manage your Python code</li>
-                                                                <li>Write Python scripts to automate daily tasks, and other software</li>
-                                                                <li>Use unit tests to write better code, faster</li>
-                                                            </ul>
-                                                            <div class="">
-                                                                <a href="dashboard.html" class="btn btn-info btn-lg mt10 mb5 pl25 pr25 pull-right">Select Role<i class="fa fa-chevron-right ml10"></i></a>
-                                                            </div>
-                                                          </div>
-                                                        </div>
-                                                      </div>
-                                                      
-                                                      </div>
-                                                    </div>
-                                                  </div> 
-                                                </div><!-- Panel group -->
-                                              </div><!-- Tab Panel Close -->
-                                              <div role="tabpanel" class="tab-pane fade active" id="app" aria-labelledby="app-tab">
-                                                <div class="panel-group" id="accordion2" role="tablist" aria-multiselectable="true">
-                                                <div class="panel python panel-default">
-                                                  <div class="panel-heading python clickable" data-toggle="collapse" data-parent="#accordion2" href="#monkey3" aria-expanded="true" aria-controls="monkey3">
-                                                      <!-- <img class="tech-icon drop hidden-xs" src="images/tech/python.png"/> -->
-                                                      <span class="card-heading mb5 mt0">Python Developer</span>
-                                                  </div>
-                                                  <div id="monkey3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-                                                    <div class="panel-body">
-                                                      <div class="col-sm-12">
-                                                        <div class="">
-                                                          <div class="dashboard-skillcard">
-                                                            <ul class="learning-points mt20">
-                                                                <li>Install and set up Python on Mac, Windows or Linux</li>
-                                                                <li>Write elegant, reusable, and efficient Python code to use in your future projects</li>
-                                                                <li>Use Git to manage your Python code</li>
-                                                                <li>Write Python scripts to automate daily tasks, and other software</li>
-                                                                <li>Use unit tests to write better code, faster</li>
-                                                            </ul>
-                                                            <div class="">
-                                                                <a href="dashboard.html" class="btn btn-info btn-lg mt10 mb5 pl25 pr25 pull-right">Select Role<i class="fa fa-chevron-right ml10"></i></a>
-                                                            </div>
-                                                          </div>
-                                                        </div>
-                                                      </div>
-                                                      
-                                                      </div>
-                                                    </div>
-                                                  </div> <!-- Panel -->
-                                                <div class="panel python panel-default">
-                                                  <div class="panel-heading python clickable" data-toggle="collapse" data-parent="#accordion2" href="#monkey2" aria-expanded="true" aria-controls="monkey2">
-                                                      <!-- <img class="tech-icon drop hidden-xs" src="images/tech/java.png"/> -->
-                                                      <span class="card-heading mb5 mt0">Android Developer</span>
-                                                  </div>
-                                                  <div id="monkey2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-                                                    <div class="panel-body">
-                                                      <div class="col-sm-12">
-                                                        <div class="">
-                                                          <div class="dashboard-skillcard">
-                                                            <ul class="learning-points mt20">
-                                                                <li>Install and set up Python on Mac, Windows or Linux</li>
-                                                                <li>Write elegant, reusable, and efficient Python code to use in your future projects</li>
-                                                                <li>Use Git to manage your Python code</li>
-                                                                <li>Write Python scripts to automate daily tasks, and other software</li>
-                                                                <li>Use unit tests to write better code, faster</li>
-                                                            </ul>
-                                                            <div class="">
-                                                                <a href="dashboard.html" class="btn btn-info btn-lg mt10 mb5 pl25 pr25 pull-right">Select Role<i class="fa fa-chevron-right ml10"></i></a>
-                                                            </div>
-                                                          </div>
-                                                        </div>
-                                                      </div>
-                                                      
-                                                      </div>
-                                                    </div>
-                                                  </div> <!-- Panel -->
-                                                <div class="panel python panel-default">
-                                                  <div class="panel-heading python clickable" data-toggle="collapse" data-parent="#accordion2" href="#monkey1" aria-expanded="true" aria-controls="monkey1">
-                                                      <!-- <img class="tech-icon drop hidden-xs" src="images/tech/django.png"/> -->
-                                                      <span class="card-heading mb5 mt0">iOS Developer</span>
-                                                  </div>
-                                                  <div id="monkey1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-                                                    <div class="panel-body">
-                                                      <div class="col-sm-12">
-                                                        <div class="">
-                                                          <div class="dashboard-skillcard">
-                                                            <ul class="learning-points mt20">
-                                                                <li>Install and set up Python on Mac, Windows or Linux</li>
-                                                                <li>Write elegant, reusable, and efficient Python code to use in your future projects</li>
-                                                                <li>Use Git to manage your Python code</li>
-                                                                <li>Write Python scripts to automate daily tasks, and other software</li>
-                                                                <li>Use unit tests to write better code, faster</li>
-                                                            </ul>
-                                                            <div class="">
-                                                                <a href="dashboard.html" class="btn btn-info btn-lg mt10 mb5 pl25 pr25 pull-right">Select Role<i class="fa fa-chevron-right ml10"></i></a>
-                                                            </div>
-                                                          </div>
-                                                        </div>
-                                                      </div>
-                                                      
-                                                      </div>
-                                                    </div>
-                                                  </div> 
-                                                </div><!-- Panel group -->
-                                              </div><!-- Tab Panel Close -->
-                                              <div role="tabpanel" class="tab-pane fade active" id="game" aria-labelledby="game-tab">
-                                                <div class="panel-group" id="accordion3" role="tablist" aria-multiselectable="true">
-                                                <div class="panel python panel-default">
-                                                  <div class="panel-heading python clickable" data-toggle="collapse" data-parent="#accordion3" href="#bunny1" aria-expanded="true" aria-controls="bunny1">
-                                                      <!-- <img class="tech-icon drop hidden-xs" src="images/tech/python.png"/> -->
-                                                      <span class="card-heading mb5 mt0">Unity Developer</span>
-                                                  </div>
-                                                  <div id="bunny1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-                                                    <div class="panel-body">
-                                                      <div class="col-sm-12">
-                                                        <div class="">
-                                                          <div class="dashboard-skillcard">
-                                                            <ul class="learning-points mt20">
-                                                                <li>Install and set up Python on Mac, Windows or Linux</li>
-                                                                <li>Write elegant, reusable, and efficient Python code to use in your future projects</li>
-                                                                <li>Use Git to manage your Python code</li>
-                                                                <li>Write Python scripts to automate daily tasks, and other software</li>
-                                                                <li>Use unit tests to write better code, faster</li>
-                                                            </ul>
-                                                            <div class="">
-                                                                <a href="dashboard.html" class="btn btn-info btn-lg mt10 mb5 pl25 pr25 pull-right">Select Role<i class="fa fa-chevron-right ml10"></i></a>
-                                                            </div>
-                                                          </div>
-                                                        </div>
-                                                      </div>
-                                                      
-                                                      </div>
+                                                </div>
+                                              </div>
+                                              
+                                              </div>
+                                            </div>
+                                          </div> <!-- Panel -->
+                                        <div class="panel python panel-default">
+                                          <div class="panel-heading python clickable" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                              
+                                              <span class="card-heading mb5 mt0">Full Stack Web Developer</span>
+                                          </div>
+                                          <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                            <div class="panel-body">
+                                              <div class="col-sm-12">
+                                                <div class="">
+                                                  <div class="dashboard-skillcard">
+                                                    <ul class="learning-points mt20">
+                                                        <li>Install and set up Python on Mac, Windows or Linux</li>
+                                                        <li>Write elegant, reusable, and efficient Python code to use in your future projects</li>
+                                                        <li>Use Git to manage your Python code</li>
+                                                        <li>Write Python scripts to automate daily tasks, and other software</li>
+                                                        <li>Use unit tests to write better code, faster</li>
+                                                    </ul>
+                                                    <a href="dashboard.html" class="btn btn-info btn-lg mt10 mb5 pl25 pr25 pull-right">Select Role<i class="fa fa-chevron-right ml10"></i></a>
                                                     </div>
                                                   </div>
-                                                </div><!-- Panel group -->
-                                              </div><!-- Tab Panel Close -->
-                                              <div role="tabpanel" class="tab-pane fade active" id="data" aria-labelledby="data-tab">
-                                                <div class="panel-group" id="accordion4" role="tablist" aria-multiselectable="true">
-                                                <div class="panel python panel-default">
-                                                  <div class="panel-heading python clickable" data-toggle="collapse" data-parent="#accordion3" href="#hedgehog" aria-expanded="true" aria-controls="hedgehog">
-                                                      <!-- <img class="tech-icon drop hidden-xs" src="images/tech/python.png"/> -->
-                                                      <span class="card-heading mb5 mt0">Data Scientist</span>
-                                                  </div>
-                                                  <div id="hedgehog" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-                                                    <div class="panel-body">
-                                                      <div class="col-sm-12">
-                                                        <div class="">
-                                                          <div class="dashboard-skillcard">
-                                                            <ul class="learning-points mt20">
-                                                                <li>Install and set up Python on Mac, Windows or Linux</li>
-                                                                <li>Write elegant, reusable, and efficient Python code to use in your future projects</li>
-                                                                <li>Use Git to manage your Python code</li>
-                                                                <li>Write Python scripts to automate daily tasks, and other software</li>
-                                                                <li>Use unit tests to write better code, faster</li>
-                                                            </ul>
-                                                            <div class="">
-                                                                <a href="dashboard.html" class="btn btn-info btn-lg mt10 mb5 pl25 pr25 pull-right">Select Role<i class="fa fa-chevron-right ml10"></i></a>
-                                                            </div>
-                                                          </div>
-                                                        </div>
-                                                      </div>
-                                                      
-                                                      </div>
-                                                    </div>
-                                                  </div>
-                                                </div><!-- Panel group -->
-                                              </div><!-- Tab Panel Close -->
-                                              <div role="tabpanel" class="tab-pane fade active" id="dev" aria-labelledby="dev-tab">
-                                                <div class="panel-group" id="accordion4" role="tablist" aria-multiselectable="true">
-                                                <div class="panel python panel-default">
-                                                  <div class="panel-heading python clickable" data-toggle="collapse" data-parent="#accordion3" href="#plo" aria-expanded="true" aria-controls="plo">
-                                                      <!-- <img class="tech-icon drop hidden-xs" src="images/tech/python.png"/> -->
-                                                      <span class="card-heading mb5 mt0">Penetration Tester</span>
-                                                  </div>
-                                                  <div id="plo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-                                                    <div class="panel-body">
-                                                      <div class="col-sm-12">
-                                                        <div class="">
-                                                          <div class="dashboard-skillcard">
-                                                            <ul class="learning-points mt20">
-                                                                <li>Install and set up Python on Mac, Windows or Linux</li>
-                                                                <li>Write elegant, reusable, and efficient Python code to use in your future projects</li>
-                                                                <li>Use Git to manage your Python code</li>
-                                                                <li>Write Python scripts to automate daily tasks, and other software</li>
-                                                                <li>Use unit tests to write better code, faster</li>
-                                                            </ul>
-                                                            <div class="">
-                                                                <a href="dashboard.html" class="btn btn-info btn-lg mt10 mb5 pl25 pr25 pull-right">Select Role<i class="fa fa-chevron-right ml10"></i></a>
-                                                            </div>
-                                                          </div>
-                                                        </div>
-                                                      </div>
-                                                      
-                                                      </div>
-                                                    </div>
-                                                  </div>
-                                                  <div class="panel python panel-default">
-                                                  <div class="panel-heading python clickable" data-toggle="collapse" data-parent="#accordion3" href="#plo1" aria-expanded="true" aria-controls="plo1">
-                                                      <!-- <img class="tech-icon drop hidden-xs" src="images/tech/python.png"/> -->
-                                                      <span class="card-heading mb5 mt0">Big Data Engineer</span>
-                                                  </div>
-                                                  <div id="plo1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-                                                    <div class="panel-body">
-                                                      <div class="col-sm-12">
-                                                        <div class="">
-                                                          <div class="dashboard-skillcard">
-                                                            <ul class="learning-points mt20">
-                                                                <li>Install and set up Python on Mac, Windows or Linux</li>
-                                                                <li>Write elegant, reusable, and efficient Python code to use in your future projects</li>
-                                                                <li>Use Git to manage your Python code</li>
-                                                                <li>Write Python scripts to automate daily tasks, and other software</li>
-                                                                <li>Use unit tests to write better code, faster</li>
-                                                            </ul>
-                                                            <div class="">
-                                                                <a href="dashboard.html" class="btn btn-info btn-lg mt10 mb5 pl25 pr25 pull-right">Select Role<i class="fa fa-chevron-right ml10"></i></a>
-                                                            </div>
-                                                          </div>
-                                                        </div>
-                                                      </div>
-                                                      
-                                                      </div>
-                                                    </div>
-                                                  </div>
-                                                </div><!-- Panel group -->
-                                              </div><!-- Tab Panel Close -->
-                                            </div><!-- Tab Content End-->
+                                                </div>
+                                              </div>
+                                              
+                                              </div>
+                                            </div>
+                                          </div> 
+                                        </div><!-- Panel group -->
                           
 
                       </div>
@@ -508,9 +260,9 @@
                           </div>
                 </div>
               </div><!-- row -->
-    			</div><!-- /#book-wrapper -->
-    		</div><!-- /#page-content-wrapper -->
-    	</div><!-- /#wrapper -->
+          </div><!-- /#book-wrapper -->
+        </div><!-- /#page-content-wrapper -->
+      </div><!-- /#wrapper -->
     
 
     <!-- JAVASCRIPT BLOCKS -->
