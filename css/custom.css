@@ -118,6 +118,11 @@ span.input-group-btn button.btn {
       font-size: 32px;
   }
 }
+@media (max-width: 767px) {
+  .jumbotron.heading {
+    background-image: none;
+  }
+}
 /* Jumbotron Header Styles END */
 
 
@@ -189,6 +194,9 @@ span.input-group-btn button.btn {
 }
 .navbar-default .in .search-nav-collapse {
 	height: 58px;
+}
+.navbar-inverse .in .search-nav-collapse {
+  height: 58px;
 }
 .logout-wrapper {
 	padding: none;
