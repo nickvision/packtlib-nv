@@ -193,8 +193,6 @@
                     </div>
                   </div>
                   </div>
-
-                </div>
             </div>
 
             <div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="ng-scope container-fluid">               
@@ -217,12 +215,26 @@
                                         <a href="#author" role="tab" id="author-tab" data-toggle="tab" aria-controls="author" ng-click="$event.preventDefault();" aria-expanded="false">About the Author</a>
                                     </li>
                                 </ul>
+                                <ul id="myTabs" class="nav nav-pills text-center nav-stacked visible-xs mb60" role="tablist">
+                                    <li class="active">
+                                        <a href="#about" role="tab" id="about-tab" data-toggle="tab" aria-controls="about" ng-click="$event.preventDefault();" aria-expanded="true">Course features</a>
+                                    </li>
+                                    <li>
+                                        <a href="#learn" role="tab" id="learn-tab" data-toggle="tab" aria-controls="learn" ng-click="$event.preventDefault();" aria-expanded="false">What you'll learn</a>
+                                    </li>
+                                    <li>
+                                        <a href="#detail" role="tab" id="detail-tab" data-toggle="tab" aria-controls="detail" ng-click="$event.preventDefault();" aria-expanded="false">Find out more</a>
+                                    </li>
+                                    <li>
+                                        <a href="#author" role="tab" id="author-tab" data-toggle="tab" aria-controls="author" ng-click="$event.preventDefault();" aria-expanded="false">About the Author</a>
+                                    </li>
+                                </ul>
 
                                 <div id="myTabContent" class="tab-content">
                                     
                                     <div role="tabpanel" class="tab-pane fade in active" id="about" aria-labelledby="about-tab">
                                         <div class="col-sm-3">
-                                        <a href="front-page.html"><img src="images/book1.jpg" class="img-responsive"/></a>
+                                        <a href="front-page.html"><img src="images/book1.jpg" class="img-responsive hidden-xs"/></a>
                                         </div>
                                         <div class="col-sm-9">
                                             <div class="visible-xs">
