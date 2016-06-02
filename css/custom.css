@@ -251,7 +251,7 @@ span.input-group-btn button.btn {
 .reader-container p, .reader-container ul {
     font-size: 1.6rem;
     font-weight: 400;
-    line-height: 2.2em;
+    line-height: 1.8em;
     margin-bottom: 30px
 }
 .reader-container a {
@@ -430,7 +430,7 @@ span.input-group-btn button.btn {
 	padding-bottom: 1px;
 	padding-right: 25px;
 	padding-left: 25px;
-	margin-bottom: 30px;
+	margin-bottom: 40px;
 	border-radius: 4px;
 }
 .tip h3.title{
@@ -455,7 +455,7 @@ span.input-group-btn button.btn {
 	font-family: 'Roboto', Helvetica, sans-serif;
 	font-weight: 300;
 	font-size: 1em !important;
-	line-height: 1.5em !important;
+	line-height: 1.7em !important;
 	background: #456F9E;
 }
 .tip p a {
@@ -476,7 +476,7 @@ code.literal {
 	padding-bottom: 1px;
 	padding-right: 25px;
 	padding-left: 25px;
-	margin-bottom: 30px;
+	margin-bottom: 40px;
 	border-radius: 4px;
 }
 .note h3.title {
@@ -502,7 +502,7 @@ code.literal {
 	font-family: 'Roboto', Helvetica, sans-serif;
 	font-weight: 300;
 	font-size: 1em !important;
-	line-height: 1.5em !important;
+	line-height: 1.7em !important;
 	background: #459E6D;
 
 }
@@ -514,6 +514,7 @@ code.literal {
 .blockquote {
 	padding: 15px;
 	border-radius: 4px;
+  margin-bottom: 30px;
 }
 blockquote {
     background: #51A796;
@@ -600,8 +601,8 @@ blockquote p {
 @media(min-width:768px) {
 	.reader-container p {
 		font-size: 1.6rem;
-		line-height: 1.6em;
-		margin-bottom: 30px
+		line-height: 1.8em;
+		margin-bottom: 40px
 	}
 }
 @media(min-width:992px) {
