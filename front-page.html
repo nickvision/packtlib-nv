@@ -142,7 +142,7 @@
 
             <div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="ng-scope container-fluid">               
                 <div class="row">
-                    <div class="reader-container col-sm-12 col-lg-offset-1 col-lg-10">
+                    <div class="col-sm-12 col-lg-offset-1 col-lg-10">
 
 
                         <div class="">
@@ -198,16 +198,16 @@
                                 
                                 <ul id="myTabs" class="nav nav-tabs hidden-xs mt20" role="tablist">
                                     <li class="active">
-                                        <a href="#about" role="tab" id="about-tab" data-toggle="tab" aria-controls="about" ng-click="$event.preventDefault();" aria-expanded="true">Course features</a>
+                                        <a href="#about" role="tab" id="about-tab" data-toggle="tab" aria-controls="about" ng-click="$event.preventDefault();" aria-expanded="true"><h5>Course Features</h5></a>
                                     </li>
                                     <li>
-                                        <a href="#learn" role="tab" id="learn-tab" data-toggle="tab" aria-controls="learn" ng-click="$event.preventDefault();" aria-expanded="false">What you'll learn</a>
+                                        <a href="#learn" role="tab" id="learn-tab" data-toggle="tab" aria-controls="learn" ng-click="$event.preventDefault();" aria-expanded="false"><h5>What you'll learn</h5></a>
                                     </li>
                                     <li>
-                                        <a href="#detail" role="tab" id="detail-tab" data-toggle="tab" aria-controls="detail" ng-click="$event.preventDefault();" aria-expanded="false">Find out more</a>
+                                        <a href="#detail" role="tab" id="detail-tab" data-toggle="tab" aria-controls="detail" ng-click="$event.preventDefault();" aria-expanded="false"><h5>Info</h5></a>
                                     </li>
                                     <li>
-                                        <a href="#author" role="tab" id="author-tab" data-toggle="tab" aria-controls="author" ng-click="$event.preventDefault();" aria-expanded="false">About the Author</a>
+                                        <a href="#author" role="tab" id="author-tab" data-toggle="tab" aria-controls="author" ng-click="$event.preventDefault();" aria-expanded="false"><h5>About Author</h5></a>
                                     </li>
                                 </ul>
                                 <ul id="myTabs" class="nav nav-pills text-center nav-stacked visible-xs mb60" role="tablist">
@@ -225,7 +225,7 @@
                                     </li>
                                 </ul>
 
-                                <div id="myTabContent" class="tab-content">
+                                <div id="myTabContent" class="tab-content pt30">
                                     
                                     <div role="tabpanel" class="tab-pane fade in active" id="about" aria-labelledby="about-tab">
                                        
@@ -234,11 +234,13 @@
                                                 <h4 class="mobile-title">Course Features</h4>
                                                 <hr>
                                             </div>
-                                            <div ng-bind-html="book_data.about" class="ng-binding"><ul>
+                                            <div ng-bind-html="book_data.about" class="ng-binding">
+                                                <ul>
                                                 <li>Harness the ability to build algorithms for unsupervised data using deep learning concepts with R</li>
                                                 <li>Master the common problems faced such as overfitting of data, anomalous datasets, image recognition, and performance tuning while building the models</li>
                                                 <li>Build models relating to neural networks, prediction and deep prediction</li>
-                                                </ul></div>
+                                                </ul>
+                                        </div>
                                             </div>
                                         </div>
                                     <div role="tabpanel" class="tab-pane fade" id="learn" aria-labelledby="learn-tab">
