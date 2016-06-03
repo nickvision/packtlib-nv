@@ -26,6 +26,9 @@ span.input-group-btn button.btn {
 .panel-heading {
   padding: 15px !important;
 }
+body, .navbar-fixed-top, .navbar-fixed-bottom {
+  margin-right: 0 !important;
+}
 /*Boostrap Overwritten Rules END*/
 
 /* Top Nav Bar Styles */
