@@ -62,7 +62,7 @@
                             <div class="alert alert-danger login-error ng-binding" role="alert" style="display: none;">
                                 Sorry, you entered an invalid email address and password combination. <a href="/account/password" target="_self">Have you forgotten your password?</a>
                             </div>
-                            <input type="submit" class="btn btn-primary btn-block btn-lg" value="Submit">
+                            <a href="dashboard.html" type="submit" class="btn btn-primary btn-block btn-lg">Submit</a>
                         </form>
                         
                   </div>
@@ -119,11 +119,10 @@
                     <span class="icon-bar"></span>
                   </button>
                   <a class="navbar-brand toggle-nav" href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars fa-lg"></i></a>
-                  <a class="brand-logo" href="dashboard.html"><img src="images/mapt.png"/></a>
+                  <a class="brand-logo" href="dashboard-lo.html"><img src="images/mapt.png"/></a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="dashboard.html">About</a></li>
                         <li class="active"><a href="library.html">Library</a></li>
                         <li><button data-toggle="modal" data-target="#myModal" type="button" class="btn btn-warning navbar-btn mr15 ml15">Sign in</button></li>
                         
@@ -229,8 +228,8 @@
                               <div role="tabpanel" class="tab-pane fade active in" id="popular" aria-labelledby="popular-tab">
                                   <div class="tabbed-content">
                                       <ul class="list-group">
-                                          <li ng-repeat="(key, fivePopular) in fivePopular" href="index-lo.html" class="list-group-item list-name ng-scope">
-                                          <a href="index-lo.html"><img src="images/book1.jpg" class="img-product-list hidden-xs"/></a>
+                                          <li ng-repeat="(key, fivePopular) in fivePopular" href="front-page-lo.html" class="list-group-item list-name ng-scope">
+                                          <a href="front-page-lo.html"><img src="images/book1.jpg" class="img-product-list hidden-xs"/></a>
                                               <h1>Practical Machine Learning</h1>
                                               <p class="mb5">By Sunila Gollapudi</p>
                                                 <p class="mb5"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
@@ -247,12 +246,12 @@
                                               <small ng-if="fivePopular.field_date_of_publication[0].value" class=" mr10 ng-binding ng-scope mt10">Jan 2016</small>
                                               <small class=" title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small>
                                               <br>
-                                              <a href="index-lo.html" class="btn btn-info pull-right btn-lg">View Sample <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
+                                              <a href="front-page-lo.html" class="btn btn-info pull-right btn-lg">View Title <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
                                               <div class="clearfix">
                                               </div>
                                           </li>
-                                          <li ng-repeat="(key, fivePopular) in fivePopular" href="index-lo.html" class="list-group-item list-name ng-scope">
-                                              <a href="index-lo.html"><img src="images/book2.jpg" class="img-product-list hidden-xs"/></a>
+                                          <li ng-repeat="(key, fivePopular) in fivePopular" href="front-page-lo.html" class="list-group-item list-name ng-scope">
+                                              <a href="front-page-lo.html"><img src="images/book2.jpg" class="img-product-list hidden-xs"/></a>
                                               <h1>Learning Drupal 8</h1>
                                               <p class="mb5">By Nick Abbott</p>
                                               <p class="mb5"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
@@ -269,7 +268,7 @@
                                               <small ng-if="fivePopular.field_date_of_publication[0].value" class="mr10 ng-binding ng-scope mt10">Jan 2016</small>
                                               <small class="title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>9 hours 50 minutes</small>
                                               <br>
-                                              <a href="index-lo.html" class="btn btn-info pull-right btn-lg">View Sample <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
+                                              <a href="front-page-lo.html" class="btn btn-info pull-right btn-lg">View Title <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
                                               <div class="clearfix">
                                               </div>
                                           </li><li ng-repeat="(key, fivePopular) in fivePopular" href="/packtlib/book/Web-Development/9781785281341" class="list-group-item list-name ng-scope">
@@ -290,10 +289,10 @@
                                               <small ng-if="fivePopular.field_date_of_publication[0].value" class="mr10 ng-binding ng-scope mt10">Jan 2016</small>
                                               <small class=" title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>7 hours 30 minutes</small>
                                               <br>
-                                              <a href="front-page-lo.html" class="btn btn-info pull-right btn-lg">View Sample <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
+                                              <a href="front-page-lo.html" class="btn btn-info pull-right btn-lg">View Title <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
                                               <div class="clearfix">
                                               </div>
-                                          </li><li ng-repeat="(key, fivePopular) in fivePopular" href="index-lo.html" class="list-group-item list-name ng-scope">
+                                          </li><li ng-repeat="(key, fivePopular) in fivePopular" href="front-page-lo.html" class="list-group-item list-name ng-scope">
                                               <a href="front-page-lo.html"><img src="images/book4.jpg" class="img-product-list hidden-xs"/></a>
                                               <h1>Learning Predictive Analytics with Python</h1>
                                               <p class="mb5">By Ashish Kumar</p>
@@ -311,11 +310,11 @@
                                               <small ng-if="fivePopular.field_date_of_publication[0].value" class="mr10 ng-binding ng-scope mt10">Feb 2016</small>
                                               <small class=" title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>10 hours 37 minutes</small>
                                               <br>
-                                              <a href="front-page-lo.html" class="btn btn-info pull-right btn-lg">View Sample <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
+                                              <a href="front-page-lo.html" class="btn btn-info pull-right btn-lg">View Title <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
                                               <div class="clearfix">
                                               </div>
-                                          </li><li ng-repeat="(key, fivePopular) in fivePopular" href="index-lo.html" class="list-group-item list-name ng-scope">
-                                              <a href="index-lo.html"><img src="images/book5.jpg" class="img-product-list hidden-xs"/></a>
+                                          </li><li ng-repeat="(key, fivePopular) in fivePopular" href="front-page-lo.html" class="list-group-item list-name ng-scope">
+                                              <a href="front-page-lo.html"><img src="images/book5.jpg" class="img-product-list hidden-xs"/></a>
                                               <h1>Mastering Django Web Development [Video]</h1>
                                               <p class="mb5">By Kevin Veroneau </p>
                                               <p class="mb5"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
@@ -332,7 +331,7 @@
                                               <small ng-if="fivePopular.field_date_of_publication[0].value" class=" mr10 ng-binding ng-scope mt10">Jan 2016</small>
                                               <small class=" title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>1 hour</small>
                                               <br>
-                                              <a href="index-lo.html" class="btn btn-info pull-right btn-lg">View Sample <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
+                                              <a href="front-page-lo.html" class="btn btn-info pull-right btn-lg">View Title <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
                                               <div class="clearfix">
                                               </div>
                                           </li>
@@ -361,10 +360,10 @@
                                               <small ng-if="fivePopular.field_date_of_publication[0].value" class="mr10 ng-binding ng-scope mt10">Jan 2016</small>
                                               <small class=" title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>7 hours 30 minutes</small>
                                               <br>
-                                              <a href="front-page-lo.html" class="btn btn-info pull-right btn-lg">View Sample <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
+                                              <a href="front-page-lo.html" class="btn btn-info pull-right btn-lg">View Title <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
                                               <div class="clearfix">
                                               </div>
-                                          </li><li ng-repeat="(key, fivePopular) in fivePopular" href="index-lo.html" class="list-group-item list-name ng-scope">
+                                          </li><li ng-repeat="(key, fivePopular) in fivePopular" href="front-page-lo.html" class="list-group-item list-name ng-scope">
                                               <a href="front-page-lo.html"><img src="images/book4.jpg" class="img-product-list hidden-xs"/></a>
                                               <h1>Learning Predictive Analytics with Python</h1>
                                               <p class="mb5">By Ashish Kumar</p>
@@ -382,11 +381,11 @@
                                               <small ng-if="fivePopular.field_date_of_publication[0].value" class="mr10 ng-binding ng-scope mt10">Feb 2016</small>
                                               <small class=" title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>10 hours 37 minutes</small>
                                               <br>
-                                              <a href="front-page-lo.html" class="btn btn-info pull-right btn-lg">View Sample <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
+                                              <a href="front-page-lo.html" class="btn btn-info pull-right btn-lg">View Title <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
                                               <div class="clearfix">
                                               </div>
-                                          </li><li ng-repeat="(key, fivePopular) in fivePopular" href="index-lo.html" class="list-group-item list-name ng-scope">
-                                              <a href="index-lo.html"><img src="images/book5.jpg" class="img-product-list hidden-xs"/></a>
+                                          </li><li ng-repeat="(key, fivePopular) in fivePopular" href="front-page-lo.html" class="list-group-item list-name ng-scope">
+                                              <a href="front-page-lo.html"><img src="images/book5.jpg" class="img-product-list hidden-xs"/></a>
                                               <h1>Mastering Django Web Development [Video]</h1>
                                               <p class="mb5">By Kevin Veroneau </p>
                                               <p class="mb5"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
@@ -403,12 +402,12 @@
                                               <small ng-if="fivePopular.field_date_of_publication[0].value" class=" mr10 ng-binding ng-scope mt10">Jan 2016</small>
                                               <small class=" title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>1 hour</small>
                                               <br>
-                                              <a href="index-lo.html" class="btn btn-info pull-right btn-lg">View Sample <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
+                                              <a href="front-page-lo.html" class="btn btn-info pull-right btn-lg">View Title <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
                                               <div class="clearfix">
                                               </div>
                                           </li>
-                                          <li ng-repeat="(key, fivePopular) in fivePopular" href="index-lo.html" class="list-group-item list-name ng-scope">
-                                          <a href="index-lo.html"><img src="images/book1.jpg" class="img-product-list hidden-xs"/></a>
+                                          <li ng-repeat="(key, fivePopular) in fivePopular" href="front-page-lo.html" class="list-group-item list-name ng-scope">
+                                          <a href="front-page-lo.html"><img src="images/book1.jpg" class="img-product-list hidden-xs"/></a>
                                               <h1>Practical Machine Learning</h1>
                                               <p class="mb5">By Sunila Gollapudi</p>
                                                 <p class="mb5"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
@@ -425,12 +424,12 @@
                                               <small ng-if="fivePopular.field_date_of_publication[0].value" class=" mr10 ng-binding ng-scope mt10">Jan 2016</small>
                                               <small class=" title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small>
                                               <br>
-                                              <a href="index-lo.html" class="btn btn-info pull-right btn-lg">View Sample <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
+                                              <a href="front-page-lo.html" class="btn btn-info pull-right btn-lg">View Title <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
                                               <div class="clearfix">
                                               </div>
                                           </li>
-                                          <li ng-repeat="(key, fivePopular) in fivePopular" href="index-lo.html" class="list-group-item list-name ng-scope">
-                                              <a href="index-lo.html"><img src="images/book2.jpg" class="img-product-list hidden-xs"/></a>
+                                          <li ng-repeat="(key, fivePopular) in fivePopular" href="front-page-lo.html" class="list-group-item list-name ng-scope">
+                                              <a href="front-page-lo.html"><img src="images/book2.jpg" class="img-product-list hidden-xs"/></a>
                                               <h1>Learning Drupal 8</h1>
                                               <p class="mb5">By Nick Abbott</p>
                                               <p class="mb5"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
@@ -447,7 +446,7 @@
                                               <small ng-if="fivePopular.field_date_of_publication[0].value" class="mr10 ng-binding ng-scope mt10">Jan 2016</small>
                                               <small class="title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>9 hours 50 minutes</small>
                                               <br>
-                                              <a href="index-lo.html" class="btn btn-info pull-right btn-lg">View Sample <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
+                                              <a href="front-page-lo.html" class="btn btn-info pull-right btn-lg">View Title <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
                                               <div class="clearfix">
                                               </div>
                                           </li>
@@ -458,8 +457,8 @@
                               <div role="tabpanel" class="tab-pane fade" id="recommended" aria-labelledby="recommended-tab">
                                   <div class="tabbed-content">
                                       <ul class="list-group">
-                                          <li ng-repeat="(key, fivePopular) in fivePopular" href="index-lo.html" class="list-group-item list-name ng-scope">
-                                              <a href="index-lo.html"><img src="images/book5.jpg" class="img-product-list hidden-xs"/></a>
+                                          <li ng-repeat="(key, fivePopular) in fivePopular" href="front-page-lo.html" class="list-group-item list-name ng-scope">
+                                              <a href="front-page-lo.html"><img src="images/book5.jpg" class="img-product-list hidden-xs"/></a>
                                               <h1>Mastering Django Web Development [Video]</h1>
                                               <p class="mb5">By Kevin Veroneau </p>
                                               <p class="mb5"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
@@ -476,12 +475,12 @@
                                               <small ng-if="fivePopular.field_date_of_publication[0].value" class=" mr10 ng-binding ng-scope mt10">Jan 2016</small>
                                               <small class=" title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>1 hour</small>
                                               <br>
-                                              <a href="index-lo.html" class="btn btn-info pull-right btn-lg">View Sample <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
+                                              <a href="front-page-lo.html" class="btn btn-info pull-right btn-lg">View Title <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
                                               <div class="clearfix">
                                               </div>
                                           </li>
-                                          <li ng-repeat="(key, fivePopular) in fivePopular" href="index-lo.html" class="list-group-item list-name ng-scope">
-                                          <a href="index-lo.html"><img src="images/book1.jpg" class="img-product-list hidden-xs"/></a>
+                                          <li ng-repeat="(key, fivePopular) in fivePopular" href="front-page-lo.html" class="list-group-item list-name ng-scope">
+                                          <a href="front-page-lo.html"><img src="images/book1.jpg" class="img-product-list hidden-xs"/></a>
                                               <h1>Practical Machine Learning</h1>
                                               <p class="mb5">By Sunila Gollapudi</p>
                                                 <p class="mb5"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
@@ -498,12 +497,12 @@
                                               <small ng-if="fivePopular.field_date_of_publication[0].value" class=" mr10 ng-binding ng-scope mt10">Jan 2016</small>
                                               <small class=" title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small>
                                               <br>
-                                              <a href="index-lo.html" class="btn btn-info pull-right btn-lg">View Sample <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
+                                              <a href="front-page-lo.html" class="btn btn-info pull-right btn-lg">View Title <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
                                               <div class="clearfix">
                                               </div>
                                           </li>
-                                          <li ng-repeat="(key, fivePopular) in fivePopular" href="index-lo.html" class="list-group-item list-name ng-scope">
-                                              <a href="index-lo.html"><img src="images/book2.jpg" class="img-product-list hidden-xs"/></a>
+                                          <li ng-repeat="(key, fivePopular) in fivePopular" href="front-page-lo.html" class="list-group-item list-name ng-scope">
+                                              <a href="front-page-lo.html"><img src="images/book2.jpg" class="img-product-list hidden-xs"/></a>
                                               <h1>Learning Drupal 8</h1>
                                               <p class="mb5">By Nick Abbott</p>
                                               <p class="mb5"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
@@ -520,7 +519,7 @@
                                               <small ng-if="fivePopular.field_date_of_publication[0].value" class="mr10 ng-binding ng-scope mt10">Jan 2016</small>
                                               <small class="title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>9 hours 50 minutes</small>
                                               <br>
-                                              <a href="index-lo.html" class="btn btn-info pull-right btn-lg">View Sample <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
+                                              <a href="front-page-lo.html" class="btn btn-info pull-right btn-lg">View Title <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
                                               <div class="clearfix">
                                               </div>
                                           </li><li ng-repeat="(key, fivePopular) in fivePopular" href="/packtlib/book/Web-Development/9781785281341" class="list-group-item list-name ng-scope">
@@ -541,10 +540,10 @@
                                               <small ng-if="fivePopular.field_date_of_publication[0].value" class="mr10 ng-binding ng-scope mt10">Jan 2016</small>
                                               <small class=" title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>7 hours 30 minutes</small>
                                               <br>
-                                              <a href="front-page-lo.html" class="btn btn-info pull-right btn-lg">View Sample <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
+                                              <a href="front-page-lo.html" class="btn btn-info pull-right btn-lg">View Title <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
                                               <div class="clearfix">
                                               </div>
-                                          </li><li ng-repeat="(key, fivePopular) in fivePopular" href="index-lo.html" class="list-group-item list-name ng-scope">
+                                          </li><li ng-repeat="(key, fivePopular) in fivePopular" href="front-page-lo.html" class="list-group-item list-name ng-scope">
                                               <a href="front-page-lo.html"><img src="images/book4.jpg" class="img-product-list hidden-xs"/></a>
                                               <h1>Learning Predictive Analytics with Python</h1>
                                               <p class="mb5">By Ashish Kumar</p>
@@ -562,7 +561,7 @@
                                               <small ng-if="fivePopular.field_date_of_publication[0].value" class="mr10 ng-binding ng-scope mt10">Feb 2016</small>
                                               <small class=" title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>10 hours 37 minutes</small>
                                               <br>
-                                              <a href="front-page-lo.html" class="btn btn-info pull-right btn-lg">View Sample <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
+                                              <a href="front-page-lo.html" class="btn btn-info pull-right btn-lg">View Title <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
                                               <div class="clearfix">
                                               </div>
                                           </li>

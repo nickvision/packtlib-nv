@@ -84,7 +84,31 @@ span.input-group-btn button.btn {
     background-position: right;
     color: white;
 }
-.jumbotron h1 {
+.jumbotron.landingheading {
+    padding-bottom: 15px;
+    padding-top: 79px;
+    background: #424242;
+    background-image: url('images/landing.jpg');
+    background-size: cover;
+    color: white;
+}
+.jumbotron.landingheading img {
+    margin-bottom: -15px;
+}
+.jumbotron.heading h1 {
+  font-weight: 100;
+  font-size: 24px;
+  color: white;
+}
+.jumbotron.landingheading h1 {
+  font-weight: 100;
+  font-size: 48px;
+  color: white;
+}
+.jumbotron.landingheading h1 span{
+  color: #FFAB39;
+}
+.jumbotron.landingheading h3 {
   font-weight: 100;
   font-size: 24px;
   color: white;
@@ -138,7 +162,12 @@ span.input-group-btn button.btn {
 }
 /* Jumbotron Header Styles END */
 
-
+/* Landing Page Custom Styles */
+.pricing-body {
+  background-color: #8C8C8C;
+  color: white;
+}
+/* Landing Page Custom Styles END */
 .table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
     border-top: none;
     width: 50%;
