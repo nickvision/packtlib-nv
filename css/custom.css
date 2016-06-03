@@ -167,6 +167,12 @@ span.input-group-btn button.btn {
   background-color: #8C8C8C;
   color: white;
 }
+.navbar-inverse.landing {
+    background-color: rgba(0,0,0,0.4);
+}
+b.landing {
+  color: #FF8F00;
+}
 /* Landing Page Custom Styles END */
 .table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
     border-top: none;
