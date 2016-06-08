@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
     <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
     <link href="css/general.css" rel="stylesheet">
     <link href="css/bootstrap-xl.css" rel="stylesheet">
@@ -70,7 +71,7 @@
 
         <!-- Top Nav Bar -->
         <nav class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="navbar-header">
                   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                     <span class="sr-only">Toggle navigation</span>
@@ -109,9 +110,21 @@
                 </div><!--/.nav-collapse -->
             </div>
         </nav>
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+              <li class="active"><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Map</span><span class="pull-right mr15"><i class="fa fa-map fa-lg"></i></span></a>    </li>
+              <li ><a href="skills.html" class="sidenav-menu-holder"><span class="sidenav-menu">Skills</span><span class="pull-right mr15"><i class="fa fa-dot-circle-o fa-lg"></i></span></a>    </li>
+              <li><a href="dashboard-profile.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Progress</span><span class="pull-right mr15"><i class="fa fa-line-chart fa-lg"></i></span></a>    </li>
+              <li><a href="roles.html" class="sidenav-menu-holder"><span class="sidenav-menu">Roles</span><span class="pull-right mr15"><i class="fa fa-suitcase fa-lg"></i></span></a>    </li>
+            </ul>
+        </div>
+
+        <!-- /#sidebar-wrapper -->
+
         <div id="page-content-wrapper" class="">
             <div class="jumbotron heading mb0">
-                <div class="container">
+                <div class="container-fluid">
                   <div class="col-sm-12">
                     <h1 >I am a <a href ="roles.html">Python Developer</a></h1>
 
@@ -126,7 +139,7 @@
                   </div>
                 </div>
             </div>
-            <div id="book-wrapper" class="container">               
+            <div id="book-wrapper" class="container-fluid">               
                 <div class="row">
                             <div class="col-sm-12 col-lg-offset-1 col-lg-10">
 
@@ -412,6 +425,7 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
     <!-- Sidebar Toggle Script -->
+    <script src="js/simple-sidebar.js"></script>
     <script type="text/javascript">
     $("#myButton").click(function() {
          $("#myDiv").fadeTo("slow", 0.01, function(){ //fade
