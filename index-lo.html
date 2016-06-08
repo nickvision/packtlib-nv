@@ -40,6 +40,7 @@
 </head>
 
 <body class="language-markup">
+
 <!-- Modal -->
             <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
               <div class="modal-dialog login-modal" role="document">
@@ -99,6 +100,7 @@
                 </div>
               </div>
             </div>
+  
 
     <div id="wrapper">
 
@@ -113,14 +115,12 @@
                     <span class="icon-bar"></span>
                   </button>
                   <a class="navbar-brand toggle-nav" href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars fa-lg"></i></a>
-                  <a class="brand-logo" href="dashboard-lo.html"><img src="images/mapt.png"/></a>
+                  <a class="brand-logo" href="dashboard.html"><img src="images/mapt.png"/></a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="library.html">Library</a></li>
+                        <li><a href="library-lo.html">Courses</a></li>
                         <li><button data-toggle="modal" data-target="#myModal" type="button" class="btn btn-warning navbar-btn mr15 ml15">Sign in</button></li>
-                        
-                    
                     </ul>
                     <form class="navbar-form navbar-right search-nav-collapse">
                         <div class="form-group pull-right" style="display:inline;">
@@ -132,8 +132,16 @@
         </nav>
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
-
             <ul class="sidebar-nav">
+                <li><a href="front-page-lo.html" class="incomplete-section"><strong>Reactive Programming with JavaScript</strong></a></li>
+                <ul id="toc" class="nav nav-pills nav-justified" role="tablist">
+                    <li class="active toc-tab">
+                        <a href="#contents" id="contents-tab" role="tab" data-toggle="tab" aria-controls="contents" aria-expanded="true">Contents</a>
+                    </li>
+                    <li class="toc-tab">
+                        <a href="#bookmark" role="tab" id="bookmark-tab" data-toggle="tab" aria-controls="bookmark" aria-expanded="false">Bookmarks (2)</a>
+                    </li>
+                </ul>
                 <div id="TocContent" class="tab-content">
                     <div role="tabpanel" class="tab-pane fade in active pt15" id="contents" aria-labelledby="contents-tab"> 
                         <form class="col-sm-12 mb15 ng-pristine ng-valid ng-scope" ng-submit="sidebarSearchSubmit()" ng-if="currentPage != 'video'">
@@ -141,11 +149,11 @@
                         </form>
                         <div class="clearfix"></div>
                         <li></li>
-                        <li><a href="front-page-lo.html" class="incomplete-section">Reactive Programming with JavaScript</a></li>
+                        
                         <li><a href="#" class="completed-section">Preface</a></li>
                         <li><a href="#" class="completed-section">1. Preparing your Data</a></li>
                         <li><a class="completed-section" href="#">2. Driving Visual Analysis with Automated Automobiles</a></li>
-                        <li ><a href="index-lo.html" class="incomplete-section">3. Looping</a></li> 
+                        <li ><a href="index.html" class="incomplete-section">3. Looping</a></li> 
                         <li class="active sub-nav"><a href="for-loop.html" class="incomplete-section">The for loop</a></li>
                         <li class="sub-nav"><a href="#" class="completed-section">The for/while loop</a></li>
                         <li class="sub-nav"><a href="#" class="incomplete-section">The 'if' loop</a></li>
@@ -167,13 +175,12 @@
         <!-- /#sidebar-wrapper -->
 
         <div id="page-content-wrapper" class="book-page ng-scope">
-          <div class="jumbotron heading">
-                <div class="container-fluid">
-                  <div class="col-sm-12">
-                    <a class="hidden-xs" href="front-page-lo.html"><img src="images/book1.jpg" class="img-product-header"/></a>
-                    <h1>Reactive Programming with JavaScript</h1>
-                    <div class="btn-group mb10 mt10" role="group">
-                        
+
+    <!-- ngInclude:  --><div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="ng-scope container-fluid"> 
+                          
+                <div class="reader-container col-sm-12 col-lg-offset-1 col-lg-10  mt40">
+                    <div class="btn-group mb10 mt50 pull-right" role="group">
+
                         <div class="btn-group" role="group">
                             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
                                 <i class="fa fa-shopping-cart fa-lg"></i>
@@ -200,19 +207,13 @@
                                 <li><a href="#" ng-click="redditShare();">Reddit</a></li>
                             </ul>
                         </div>
-                    </div>
-                  </div>
-                </div>
-            </div>
-
-    <!-- ngInclude:  --><div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="ng-scope container-fluid">               
-                <div class="reader-container col-sm-12 col-xl-offset-2 col-xl-8 col-lg-offset-1 col-lg-10">
-                    
+                    </div>    
+                    <div class="clearfix"></div>
                     <div class="row">
-                    
+                            
                         <div style="position:relative;" class="book-content" ng-non-bindable="">
-                                <div class="packtlib-version v2"><!--?xml version="1.0" encoding="UTF-8"?-->
-                                    <div class="titlepage"><div><div><h2 class="title"><a id="ch05"></a>The for loop</h2><hr></div></div></div>
+                                <div class="packtlib-version v2">
+                                  <div class="titlepage"><div><div><h2 class="title"><a id="ch05"></a>The for loop</h2><hr></div></div></div>
 <p>
                                     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="generator" content="DocBook XSL Stylesheets V1.74.0"><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div></div></div></div><p>Now that <a id="id89" class="indexterm"></a>we have created our URL and interpreted by the routing system, we must ensure that a view (which is a controller in the MVC pattern) meets the customer's demand.</p><p>This is the function of the second parameter of the URLs present in <code class="literal language-markup">urls.py</code>. This parameter will define the method that will play the role of a view. Take, for example, our first URL: </p><div class="informalexample"><pre class="programlisting  language-markup">url (r'^$', 'TasksManager.views.index.page'), </pre></div><p>Firstly, as we have seen when studying regular expressions, this URL will be valid only if we browse the <code class="literal language-markup">http://localhost:8000</code> URL. The second parameter in the URL means that in the <code class="literal language-markup">index.py</code> file, there is a method called <code class="literal language-markup">page</code> that will process the request. In our <code class="literal language-markup">index.py</code> file, we will create a method called <code class="literal language-markup">page()</code>. This method will return an HTML page<a id="id91" class="indexterm"></a> to the client. The page is being returned by the HTTP protocol, so we will use the <code class="literal language-markup">HttpResponse()</code> function and its importation. The argument of this <code class="literal language-markup">HttpResponse()</code> function returns the HTML content that we will return<a id="id92" class="indexterm"></a> to the browser. To simplify reading this example, we do not use a proper HTML structure, because we just return <code class="literal language-markup">Hello world!</code> to the client, as shown in the following code:</p>    </div>
                                     </div><div class="fade-out"></div>                                                          </div>

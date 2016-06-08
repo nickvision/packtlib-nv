@@ -157,12 +157,14 @@
             </div>
         </nav>
         <!-- Sidebar -->
-         <div id="sidebar-wrapper">
+        <div id="sidebar-wrapper">
+          <h4 class="sidebar-title"> Learning Map </h4>
+          <hr class="mb0">
             <ul class="sidebar-nav">
-              <li><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Map</span><span class="pull-right mr15"><i class="fa fa-map fa-lg"></i></span></a>    </li>
-              <li ><a href="skills.html" class="sidenav-menu-holder"><span class="sidenav-menu">Skills</span><span class="pull-right mr15"><i class="fa fa-dot-circle-o fa-lg"></i></span></a>    </li>
-              <li class="active"><a href="dashboard-profile.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Progress</span><span class="pull-right mr15"><i class="fa fa-line-chart fa-lg"></i></span></a>    </li>
-              <li><a href="roles.html" class="sidenav-menu-holder"><span class="sidenav-menu">Roles</span><span class="pull-right mr15"><i class="fa fa-suitcase fa-lg"></i></span></a>    </li>
+              <li ><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu">Backlog</span><span class="pull-right mr15">3<i class="fa fa-square-o fa-lg"></i></span></a>    </li>
+              <li class="active"><a href="dashboard-profile.html" class="sidenav-menu-holder"><span class="sidenav-menu">Done</span><span class="pull-right mr15">7<i class="fa fa-check-square fa-lg"></i></span></a>    </li>
+              <li><a href="roles.html" class="sidenav-menu-holder"><span class="sidenav-menu">Explore Roles</span><span class="pull-right mr15"><i class="fa fa-suitcase fa-lg"></i></span></a>    </li>
+              <li ><a href="skills.html" class="sidenav-menu-holder"><span class="sidenav-menu">All Skills</span><span class="pull-right mr15"><i class="fa fa-dot-circle-o fa-lg"></i></span></a>    </li>
             </ul>
         </div>
 
@@ -172,18 +174,185 @@
           <div class="jumbotron heading mb0">
               <div class="container-fluid">
                 <div class="col-sm-12">
-                  <h1 >My Progress</h1>
+                  <h1 >Done</h1>
                     <ol class="breadcrumb row mt0">
-                      <li class="active mt5">From here you will be able to view how much you've learned</li>
+                      <li class="active mt5">From here you will be able to view all the Skills you know</li>
                     </ol>
                 </div>
               </div>
           </div>
           <div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="container-fluid">               
               <div class="row">
+                <div class="col-sm-3 col-lg-offset-1 col-lg-3 col-xl-2 mt30">
+                    <div class="panel panel-default">
+                      <!-- Default panel contents -->
+                      <div class="panel-heading"><h4 class="panel-title">Categories</h4></div>
+                      <ul class="list-group">
+                        <a class="list-group-item active" href="skill-category.html">    All </a>
+                        <a class="list-group-item" href="skill-category.html">    Programming </a> 
+                        <a class="list-group-item" href="skill-category.html">    Development </a>   
+                        <a class="list-group-item" href="skill-category.html">    Administration </a>   
+                        <a class="list-group-item" href="skill-category.html">    Soft Skills </a>   
+                        <a class="list-group-item" href="skill-category.html">    Technical Concepts and Tasks </a>            
+                      </ul>
+                    </div> 
+                  </div>
+                
+
+                <div class="col-sm-9 col-lg-7 col-xl-8 mt30">
+                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                        <div class="panel python panel-default">
+                                          <div class="panel-heading python clickable" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                                              <img class="tech-icon drop hidden-xs" src="images/tech/python.png">
+                                              <span class="card-heading mb5 mt0">Unlocking Python Objects<i class="fa fa-check-square-o pull-right mt10"></i></span>
+                                          </div>
+                                          <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                            <div class="panel-body">
+                                              <div class="col-sm-12">
+                                                <div class="">
+                                                  <div class="dashboard-skillcard">
+                                                    <ul class="learning-points mt20">
+                                                        <li>Install and set up Python on Mac, Windows or Linux</li>
+                                                        <li>Write elegant, reusable, and efficient Python code to use in your future projects</li>
+                                                        <li>Use Git to manage your Python code</li>
+                                                        <li>Write Python scripts to automate daily tasks, and other software</li>
+                                                        <li>Use unit tests to write better code, faster</li>
+                                                    </ul>
+                                                    <div class="text-center">
+                                                      <div class="btn-group">
+                                                        <a href="dashboard.html" class="btn btn-default btn-lg mt10 mb5 pl25 pr25">Add to Map<i class="glyphicon glyphicon-plus ml10"></i></a>
+                                                        <a href="dashboard.html" class="btn btn-danger btn-lg mt10 mb5 pl25 pr25">Remove from Skills<i class="glyphicon glyphicon-remove ml10"></i></a>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              
+                                              </div>
+                                            </div>
+                                          </div> <!-- Panel -->
+                                        <div class="panel python panel-default">
+                                          <div class="panel-heading python clickable" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                              <img class="tech-icon drop hidden-xs" src="images/tech/java.png">
+                                              <span class="card-heading mb5 mt0">RESTful Java Programming<i class="fa fa-check-square-o pull-right mt10"></i></span>
+                                          </div>
+                                          <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                            <div class="panel-body">
+                                              <div class="col-sm-12">
+                                                <div class="">
+                                                  <div class="dashboard-skillcard">
+                                                    <ul class="learning-points mt20">
+                                                        <li>Install and set up Python on Mac, Windows or Linux</li>
+                                                        <li>Write elegant, reusable, and efficient Python code to use in your future projects</li>
+                                                        <li>Use Git to manage your Python code</li>
+                                                        <li>Write Python scripts to automate daily tasks, and other software</li>
+                                                        <li>Use unit tests to write better code, faster</li>
+                                                    </ul>
+                                                    <div class="text-center">
+                                                      <div class="btn-group">
+                                                        <a href="dashboard.html" class="btn btn-default btn-lg mt10 mb5 pl25 pr25">Add to Map<i class="glyphicon glyphicon-plus ml10"></i></a>
+                                                        <a href="dashboard.html" class="btn btn-danger btn-lg mt10 mb5 pl25 pr25">Remove from Skills<i class="glyphicon glyphicon-remove ml10"></i></a>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              
+                                              </div>
+                                            </div>
+                                          </div> <!-- Panel -->
+                                        <div class="panel python panel-default">
+                                          <div class="panel-heading python clickable" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                              <img class="tech-icon drop hidden-xs" src="images/tech/django.png">
+                                              <span class="card-heading mb5 mt0">Django Up to Speed<i class="fa fa-check-square-o pull-right mt10"></i></span>
+                                          </div>
+                                          <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                            <div class="panel-body">
+                                              <div class="col-sm-12">
+                                                <div class="">
+                                                  <div class="dashboard-skillcard">
+                                                    <ul class="learning-points mt20">
+                                                        <li>Install and set up Python on Mac, Windows or Linux</li>
+                                                        <li>Write elegant, reusable, and efficient Python code to use in your future projects</li>
+                                                        <li>Use Git to manage your Python code</li>
+                                                        <li>Write Python scripts to automate daily tasks, and other software</li>
+                                                        <li>Use unit tests to write better code, faster</li>
+                                                    </ul>
+                                                    <div class="text-center">
+                                                      <div class="btn-group">
+                                                        <a href="dashboard.html" class="btn btn-default btn-lg mt10 mb5 pl25 pr25">Add to Map<i class="glyphicon glyphicon-plus ml10"></i></a>
+                                                        <a href="dashboard.html" class="btn btn-danger btn-lg mt10 mb5 pl25 pr25">Remove from Skills<i class="glyphicon glyphicon-remove ml10"></i></a>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              
+                                              </div>
+                                            </div>
+                                          </div> <!-- Panel -->
+                                          <div class="panel python panel-default">
+                                          <div class="panel-heading python clickable" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                              <img class="tech-icon drop hidden-xs" src="images/tech/git.png">
+                                              <span class="card-heading mb5 mt0">Git Fundamentals<i class="fa fa-check-square-o pull-right mt10"></i></span>
+                                          </div>
+                                          <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                            <div class="panel-body">
+                                              <div class="col-sm-12">
+                                                <div class="">
+                                                  <div class="dashboard-skillcard">
+                                                    <ul class="learning-points mt20">
+                                                        <li>Install and set up Python on Mac, Windows or Linux</li>
+                                                        <li>Write elegant, reusable, and efficient Python code to use in your future projects</li>
+                                                        <li>Use Git to manage your Python code</li>
+                                                        <li>Write Python scripts to automate daily tasks, and other software</li>
+                                                        <li>Use unit tests to write better code, faster</li>
+                                                    </ul>
+                                                    <div class="text-center">
+                                                      <div class="btn-group">
+                                                        <a href="dashboard.html" class="btn btn-default btn-lg mt10 mb5 pl25 pr25">Add to Map<i class="glyphicon glyphicon-plus ml10"></i></a>
+                                                        <a href="dashboard.html" class="btn btn-danger btn-lg mt10 mb5 pl25 pr25">Remove from Skills<i class="glyphicon glyphicon-remove ml10"></i></a>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                
+                                              </div>
+                                            </div>
+                                          </div> <!-- Panel -->
+                                          <div class="panel django panel-default">
+                                          <div class="panel-heading django clickable" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                              <img class="tech-icon drop hidden-xs" src="images/tech/mysql.png">
+                                              <span class="card-heading mb5 mt0">MySQL Administration<i class="fa fa-check-square-o pull-right mt10"></i></span>
+                                          </div>
+                                          <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                            <div class="panel-body">
+                                              <div class="col-sm-12">
+                                                <div class="">
+                                                  <div class="dashboard-skillcard">
+                                                    <ul class="learning-points mt20">
+                                                        <li>Install and set up Python on Mac, Windows or Linux</li>
+                                                        <li>Write elegant, reusable, and efficient Python code to use in your future projects</li>
+                                                        <li>Use Git to manage your Python code</li>
+                                                        <li>Write Python scripts to automate daily tasks, and other software</li>
+                                                        <li>Use unit tests to write better code, faster</li>
+                                                    </ul>
+                                                    <div class="text-center">
+                                                      <div class="btn-group">
+                                                        <a href="dashboard.html" class="btn btn-default btn-lg mt10 mb5 pl25 pr25">Add to Map<i class="glyphicon glyphicon-plus ml10"></i></a>
+                                                        <a href="dashboard.html" class="btn btn-danger btn-lg mt10 mb5 pl25 pr25">Remove from Skills<i class="glyphicon glyphicon-remove ml10"></i></a>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div> <!-- Panel -->
+                                        </div><!-- Panel group -->
+                                      </div>
+                                    </div>
                 <div class="col-sm-12 col-lg-offset-1 col-lg-10">
-                  <div class="">
-                    <h4 class="text-center mb45 mt45"> You have learned a total of <a href="skills.html">5 Skills</a></h4>
                       <div class="panel panel-default ng-scope">
                            <div class="panel-heading">
                                 <h3 class="panel-title">Monthly Progress Tracker:</h3>

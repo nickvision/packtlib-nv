@@ -26,7 +26,14 @@ span.input-group-btn button.btn {
 .panel-heading {
   padding: 15px !important;
 }
-
+.sidebar-title {
+  color: white;
+  margin-left:  30px;
+  margin-top: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 /*Boostrap Overwritten Rules END*/
 
 /* Top Nav Bar Styles */
@@ -79,9 +86,9 @@ span.input-group-btn button.btn {
 .jumbotron.heading {
     padding-bottom: 15px;
     padding-top: 79px;
-    background: #272828;
-    background-image: url('images/sidebar.png');
-    background-repeat: no-repeat;
+    background: #2B2B2B;
+/*    background-image: url('images/sidebar.png');
+*/    background-repeat: no-repeat;
     background-position: right;
     color: white;
 }
@@ -89,8 +96,8 @@ span.input-group-btn button.btn {
     padding-bottom: 15px;
     padding-top: 79px;
     background: #424242;
-    background-image: url('images/landing.jpg');
-    background-size: cover;
+/*    background-image: url('images/landing.jpg');
+*/    background-size: cover;
     color: white;
 }
 .jumbotron.landingheading img {
@@ -749,17 +756,10 @@ blockquote p {
     color: #8c8c8c;
 }
 .list-group li:first-child {
-  border-right: none;
-  border-bottom: none;
-  border-top: none;
   border-radius: 0;
 }
 .list-group li:last-child {
   border-radius: 0;
-}
-.list-group li {
-  border-right: none;
-  border-bottom: none;
 }
 .list-group {
   border-radius: 0;

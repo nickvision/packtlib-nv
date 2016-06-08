@@ -103,7 +103,7 @@ li.sub-nav {
     background: #222;
 }
 a#bookmark-tab, a#contents-tab {
-    background: #444;
+    background: #333;
 }
 .sidebar-nav li.active a {
     color:white;
@@ -131,7 +131,7 @@ a#bookmark-tab, a#contents-tab {
 }
 
 .sidebar-nav .active {
-    background: #F9953D;
+    background: #505050;
 }
 
 .sidebar-nav > .sidebar-brand {
