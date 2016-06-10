@@ -65,7 +65,7 @@
     </div>
   </div>
 </div>
-  
+
 
     <div id="wrapper">
 
@@ -84,9 +84,9 @@
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="active"><a href="dashboard.html">Learning Map</a></li>
+                        <li class="active"><a href="dashboard.html">Skill Map</a></li>
                         <li><a href="index.html">Current Course</a></li>
-                        <li> <a href="library.html">Courses</a></li>
+                        <li> <a href="library.html">Courses Library</a></li>
                         <li class="dropdown">
                         <a href="#" class="dropdown-toggle visible-xs" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account<span class="caret ml5"></span>
                         </a>
@@ -94,17 +94,17 @@
                             <img src="images/avatar.jpeg" alt="..." class="img-circle img-responsive navbar-avatar">
                         </a>
                         <ul class="dropdown-menu">
-                            <li> <a href="#">View Account</a></li> 
-                            <li><a href="#">View Subscriptions</a></li> 
-                            <li><a href="#">View Licences</a></li> 
-                            <li role="separator" class="divider"></li> 
-                            <li><a href="library-lo.html">Logout</a></li> 
-                        </ul> 
+                            <li> <a href="#">View Account</a></li>
+                            <li><a href="#">View Subscriptions</a></li>
+                            <li><a href="#">View Licences</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="library-lo.html">Logout</a></li>
+                        </ul>
                     </li>
                     </ul>
                     <form class="navbar-form navbar-right search-nav-collapse">
                         <div class="form-group pull-right" style="display:inline;">
-                              <input class="form-control" type="text" placeholder="Search for a title...">
+                              <input class="form-control" type="text" placeholder="Search for a course...">
                         </div>
                     </form>
                 </div><!--/.nav-collapse -->
@@ -112,12 +112,12 @@
         </nav>
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
-          <h4 class="sidebar-title"> Learning Map </h4>
+          <h4 class="sidebar-title">Skill Map </h4>
           <hr class="mb0">
             <ul class="sidebar-nav">
-              <li class="active"><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu">Backlog</span><span class="pull-right mr15">3<i class="fa fa-square-o fa-lg"></i></span></a>    </li>
-              <li><a href="dashboard-profile.html" class="sidenav-menu-holder"><span class="sidenav-menu">Done</span><span class="pull-right mr15">7<i class="fa fa-check-square fa-lg"></i></span></a>    </li>
-              <li><a href="roles.html" class="sidenav-menu-holder"><span class="sidenav-menu">Explore Roles</span><span class="pull-right mr15"><i class="fa fa-suitcase fa-lg"></i></span></a>    </li>
+              <li class="active"><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu">Skill Plan</span><span class="pull-right mr15">3<i class="fa fa-square-o fa-lg"></i></span></a>    </li>
+              <li><a href="dashboard-profile.html" class="sidenav-menu-holder"><span class="sidenav-menu">Completed Skills</span><span class="pull-right mr15">7<i class="fa fa-check-square fa-lg"></i></span></a>    </li>
+              <li><a href="roles.html" class="sidenav-menu-holder"><span class="sidenav-menu">Explore Skills</span><span class="pull-right mr15"><i class="fa fa-suitcase fa-lg"></i></span></a>    </li>
               <li ><a href="skills.html" class="sidenav-menu-holder"><span class="sidenav-menu">All Skills</span><span class="pull-right mr15"><i class="fa fa-dot-circle-o fa-lg"></i></span></a>    </li>
             </ul>
         </div>
@@ -128,10 +128,10 @@
             <div class="jumbotron heading mb0">
                 <div class="container-fluid">
                   <div class="col-sm-12">
-                    <h1 >Backlog</h1>
+                    <h1 >Skill Plan</h1>
 
                     <ol class="breadcrumb row mt0">
-                      <li class="mt5">From here you can see what skills you have queued up to learn next</li>
+                      <li class="mt5">From here you can see what skills you have queued up to learn next.</li>
                     </ol>
                     <!-- <div class="progress mb0">
                       <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
@@ -141,15 +141,15 @@
                   </div>
                 </div>
             </div>
-            <div id="book-wrapper" class="container-fluid">               
+            <div id="book-wrapper" class="container-fluid">
                 <div class="row">
                             <div class="col-sm-12 col-lg-offset-1 col-lg-10">
 
                                     <div class="mt30">
-                                    <h4 >Python Developer</h4>
+                                    <h4 ><strong>Python Developer</strong> Skill Plan </h4>
                                     <hr class="mb30">
-                                        
-                                      
+
+
                                       <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                                         <div class="panel panel-default" id="myDiv">
                                           <div class="panel-heading clickable" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -191,7 +191,7 @@
                                                 <i class="fa fa-star-half-o" aria-hidden="true"></i>
                                                 <img src="https://dz13w8afd47il.cloudfront.net/sites/all/themes/packt_v4/images/feefo-logo-simple.png" class="simple-feefo-logo">
                                                 <small> 35 review(s)</small>
-                                                <!-- Feefo Star Rating END -->    
+                                                <!-- Feefo Star Rating END -->
                                               <br>
                                               <small ng-if="fivePopular.field_date_of_publication[0].value" class=" mr10 ng-binding ng-scope mt10">Jan 2016</small>
                                               <small class=" title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small>
@@ -213,7 +213,7 @@
                                                 <i class="fa fa-star-o" aria-hidden="true"></i>
                                                 <img src="https://dz13w8afd47il.cloudfront.net/sites/all/themes/packt_v4/images/feefo-logo-simple.png" class="simple-feefo-logo">
                                                 <small> 12 review(s)</small>
-                                                <!-- Feefo Star Rating END -->   
+                                                <!-- Feefo Star Rating END -->
                                               <br>
                                               <small ng-if="fivePopular.field_date_of_publication[0].value" class="mr10 ng-binding ng-scope mt10">Jan 2016</small>
                                               <small class="title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>9 hours 50 minutes</small>
@@ -268,7 +268,7 @@
                                                 <i class="fa fa-star-o" aria-hidden="true"></i>
                                                 <img src="https://dz13w8afd47il.cloudfront.net/sites/all/themes/packt_v4/images/feefo-logo-simple.png" class="simple-feefo-logo">
                                                 <small> 0 review(s)</small>
-                                                <!-- Feefo Star Rating END -->  
+                                                <!-- Feefo Star Rating END -->
                                               <br>
                                               <small ng-if="fivePopular.field_date_of_publication[0].value" class="mr10 ng-binding ng-scope mt10">Jan 2016</small>
                                               <small class=" title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>7 hours 30 minutes</small>
@@ -288,8 +288,8 @@
                                                 <i class="fa fa-star" aria-hidden="true"></i>
                                                 <i class="fa fa-star-o" aria-hidden="true"></i>
                                                 <img src="https://dz13w8afd47il.cloudfront.net/sites/all/themes/packt_v4/images/feefo-logo-simple.png" class="simple-feefo-logo">
-                                                <small> 1 review(s)</small>   
-                                                <!-- Feefo Star Rating END -->   
+                                                <small> 1 review(s)</small>
+                                                <!-- Feefo Star Rating END -->
                                               <br>
                                               <small ng-if="fivePopular.field_date_of_publication[0].value" class="mr10 ng-binding ng-scope mt10">Feb 2016</small>
                                               <small class=" title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>10 hours 37 minutes</small>
@@ -308,9 +308,9 @@
                                                 <i class="fa fa-star" aria-hidden="true"></i>
                                                 <i class="fa fa-star" aria-hidden="true"></i>
                                                 <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                                <img src="https://dz13w8afd47il.cloudfront.net/sites/all/themes/packt_v4/images/feefo-logo-simple.png" class="simple-feefo-logo">   
+                                                <img src="https://dz13w8afd47il.cloudfront.net/sites/all/themes/packt_v4/images/feefo-logo-simple.png" class="simple-feefo-logo">
                                                 <small> 56 review(s)</small>
-                                                <!-- Feefo Star Rating END -->  
+                                                <!-- Feefo Star Rating END -->
                                               <br>
                                               <small ng-if="fivePopular.field_date_of_publication[0].value" class=" mr10 ng-binding ng-scope mt10">Jan 2016</small>
                                               <small class=" title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>1 hour</small>
@@ -365,7 +365,7 @@
                                                 <i class="fa fa-star-half-o" aria-hidden="true"></i>
                                                 <img src="https://dz13w8afd47il.cloudfront.net/sites/all/themes/packt_v4/images/feefo-logo-simple.png" class="simple-feefo-logo">
                                                 <small> 35 review(s)</small>
-                                                <!-- Feefo Star Rating END -->    
+                                                <!-- Feefo Star Rating END -->
                                               <br>
                                               <small ng-if="fivePopular.field_date_of_publication[0].value" class=" mr10 ng-binding ng-scope mt10">Jan 2016</small>
                                               <small class=" title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small>
@@ -387,7 +387,7 @@
                                                 <i class="fa fa-star-o" aria-hidden="true"></i>
                                                 <img src="https://dz13w8afd47il.cloudfront.net/sites/all/themes/packt_v4/images/feefo-logo-simple.png" class="simple-feefo-logo">
                                                 <small> 12 review(s)</small>
-                                                <!-- Feefo Star Rating END -->   
+                                                <!-- Feefo Star Rating END -->
                                               <br>
                                               <small ng-if="fivePopular.field_date_of_publication[0].value" class="mr10 ng-binding ng-scope mt10">Jan 2016</small>
                                               <small class="title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>9 hours 50 minutes</small>
@@ -408,13 +408,13 @@
 
                               </div>
                           </div>
-                          
+
 
                   </div><!-- row -->
 			</div><!-- /#book-wrapper -->
 		</div><!-- /#page-content-wrapper -->
 	</div><!-- /#wrapper -->
-    
+
 
     <!-- JAVASCRIPT BLOCKS -->
 
