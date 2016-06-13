@@ -47,7 +47,7 @@
     <div class="modal-content python">
       <div class="modal-header ">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-        <img class="tech-icon" src="images/tech/python.png"> 
+        <img class="tech-icon" src="images/tech/python.png">
                                     <span class="card-heading">Python Fundamentals </span>
       </div>
       <div class="modal-body python">
@@ -65,7 +65,7 @@
                     <li>Write Python scripts to automate daily tasks, and other software</li>
                     <li>Use unit tests to write better code, faster</li>
                   </ul>
-              
+
             </div>
           </div>
       </div>
@@ -82,7 +82,7 @@
     <div class="modal-content java">
       <div class="modal-header ">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-        <img class="tech-icon" src="images/tech/java.png"> 
+        <img class="tech-icon" src="images/tech/java.png">
                                     <span class="card-heading">Reactive Java Programming</span>
       </div>
       <div class="modal-body python">
@@ -100,7 +100,7 @@
                     <li>Write Python scripts to automate daily tasks, and other software</li>
                     <li>Use unit tests to write better code, faster</li>
                   </ul>
-              
+
             </div>
           </div>
       </div>
@@ -111,7 +111,7 @@
     </div>
   </div>
 </div>
-  
+
 
     <div id="wrapper">
 
@@ -130,9 +130,9 @@
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="active"><a href="dashboard.html">Dashboard</a></li>
-                        <li><a href="index.html">Viewing</a></li>
-                        <li><a href="library.html">Library</a></li>
+                        <li class="active"><a href="dashboard.html">Skill Map</a></li>
+                        <li><a href="index.html">Current Course</a></li>
+                        <li><a href="library.html">Course Library</a></li>
                         <li class="dropdown">
                         <a href="#" class="dropdown-toggle visible-xs" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account<span class="caret ml5"></span>
                         </a>
@@ -140,17 +140,17 @@
                             <img src="images/avatar.jpeg" alt="..." class="img-circle img-responsive navbar-avatar">
                         </a>
                         <ul class="dropdown-menu">
-                            <li> <a href="#">View Account</a></li> 
-                            <li><a href="#">View Subscriptions</a></li> 
-                            <li><a href="#">View Licences</a></li> 
-                            <li role="separator" class="divider"></li> 
-                            <li><a href="library-lo.html">Logout</a></li> 
-                        </ul> 
+                            <li> <a href="#">View Account</a></li>
+                            <li><a href="#">View Subscriptions</a></li>
+                            <li><a href="#">View Licences</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="library-lo.html">Logout</a></li>
+                        </ul>
                     </li>
                     </ul>
                     <form class="navbar-form navbar-right search-nav-collapse">
                         <div class="form-group pull-right" style="display:inline;">
-                              <input class="form-control" type="text" placeholder="Search for a title...">
+                              <input class="form-control" type="text" placeholder="Search for a course...">
                         </div>
                     </form>
                 </div><!--/.nav-collapse -->
@@ -158,12 +158,12 @@
         </nav>
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
-          <h4 class="sidebar-title"> Learning Map </h4>
+          <h4 class="sidebar-title"> SKill Map </h4>
           <hr class="mb0">
             <ul class="sidebar-nav">
-              <li ><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu">Backlog</span><span class="pull-right mr15">3<i class="fa fa-square-o fa-lg"></i></span></a>    </li>
-              <li class="active"><a href="dashboard-profile.html" class="sidenav-menu-holder"><span class="sidenav-menu">Done</span><span class="pull-right mr15">7<i class="fa fa-check-square fa-lg"></i></span></a>    </li>
-              <li><a href="roles.html" class="sidenav-menu-holder"><span class="sidenav-menu">Explore Roles</span><span class="pull-right mr15"><i class="fa fa-suitcase fa-lg"></i></span></a>    </li>
+              <li ><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu">Skill Plan</span><span class="pull-right mr15">3<i class="fa fa-square-o fa-lg"></i></span></a>    </li>
+              <li class="active"><a href="dashboard-profile.html" class="sidenav-menu-holder"><span class="sidenav-menu">Completed Skills</span><span class="pull-right mr15">7<i class="fa fa-check-square fa-lg"></i></span></a>    </li>
+              <li><a href="roles.html" class="sidenav-menu-holder"><span class="sidenav-menu">Explore Skill Plans</span><span class="pull-right mr15"><i class="fa fa-suitcase fa-lg"></i></span></a>    </li>
               <li ><a href="skills.html" class="sidenav-menu-holder"><span class="sidenav-menu">All Skills</span><span class="pull-right mr15"><i class="fa fa-dot-circle-o fa-lg"></i></span></a>    </li>
             </ul>
         </div>
@@ -174,14 +174,14 @@
           <div class="jumbotron heading mb0">
               <div class="container-fluid">
                 <div class="col-sm-12">
-                  <h1 >Done</h1>
+                  <h1 >Completed Skills</h1>
                     <ol class="breadcrumb row mt0">
-                      <li class="active mt5">From here you will be able to view all the Skills you know</li>
+                      <li class="active mt5">From here you can view all the Skills you know.</li>
                     </ol>
                 </div>
               </div>
           </div>
-          <div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="container-fluid">               
+          <div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="container-fluid">
               <div class="row">
                 <div class="col-sm-3 col-lg-offset-1 col-lg-3 col-xl-2 mt30">
                     <div class="panel panel-default">
@@ -189,15 +189,15 @@
                       <div class="panel-heading"><h4 class="panel-title">Categories</h4></div>
                       <ul class="list-group">
                         <a class="list-group-item active" href="skill-category.html">    All </a>
-                        <a class="list-group-item" href="skill-category.html">    Programming </a> 
-                        <a class="list-group-item" href="skill-category.html">    Development </a>   
-                        <a class="list-group-item" href="skill-category.html">    Administration </a>   
-                        <a class="list-group-item" href="skill-category.html">    Soft Skills </a>   
-                        <a class="list-group-item" href="skill-category.html">    Technical Concepts and Tasks </a>            
+                        <a class="list-group-item" href="skill-category.html">    Programming </a>
+                        <a class="list-group-item" href="skill-category.html">    Development </a>
+                        <a class="list-group-item" href="skill-category.html">    Administration </a>
+                        <a class="list-group-item" href="skill-category.html">    Soft Skills </a>
+                        <a class="list-group-item" href="skill-category.html">    Technical Concepts and Tasks </a>
                       </ul>
-                    </div> 
+                    </div>
                   </div>
-                
+
 
                 <div class="col-sm-9 col-lg-7 col-xl-8 mt30">
                         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
@@ -227,7 +227,7 @@
                                                   </div>
                                                 </div>
                                               </div>
-                                              
+
                                               </div>
                                             </div>
                                           </div> <!-- Panel -->
@@ -257,7 +257,7 @@
                                                   </div>
                                                 </div>
                                               </div>
-                                              
+
                                               </div>
                                             </div>
                                           </div> <!-- Panel -->
@@ -287,7 +287,7 @@
                                                   </div>
                                                 </div>
                                               </div>
-                                              
+
                                               </div>
                                             </div>
                                           </div> <!-- Panel -->
@@ -317,7 +317,7 @@
                                                   </div>
                                                 </div>
                                               </div>
-                
+
                                               </div>
                                             </div>
                                           </div> <!-- Panel -->
@@ -384,7 +384,7 @@
                 </div><!-- /#book-wrapper -->
             </div><!-- /#page-content-wrapper -->
         </div><!-- /#wrapper -->
-    
+
 
     <!-- JAVASCRIPT BLOCKS -->
 
@@ -396,7 +396,7 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- Sidebar Toggle Script -->
     <script src="js/simple-sidebar.js"></script>
-    
+
 </body>
 
 </html>
